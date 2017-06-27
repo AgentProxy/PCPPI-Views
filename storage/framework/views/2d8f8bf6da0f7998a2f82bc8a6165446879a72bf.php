@@ -13,12 +13,17 @@
     <!-- Styles -->
     <?php echo $__env->yieldContent('head'); ?>
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
 
     <style type="text/css">
 
-        html,body{
+        body{
+            padding-top: 70px
+            
+        }
+
+        body,html{
             height: 100%;
-            height:100vh;
         }
 
         .navbar-brand .logo{
@@ -148,6 +153,20 @@
             height: 40px;
         }
 
+        #external-sites{
+            position: relative;
+            top: 40px;
+            right: 250px;
+            /*right: 10%;
+            left: 20%;*/
+            /*padding-left: 50px;*/
+        }
+
+        #external-sites img {
+
+            /*margin-left: 10px;*/
+        }
+
         #links,a img:hover{ position: relative; 
              top: -5px;} 
 /*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
@@ -158,16 +177,25 @@
     <script src="<?php echo e(asset('js/app.js')); ?>"></script>
     <script type="text/javascript" src="/js/js.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
-
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>;
     </script>
+     <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
 </head>
-<body>
+<body id="page-top">
     <div id="app">
-        <nav class="navbar navbar-static-top">
+        <nav class="navbar navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#navbar" style="background-color: grey; margin-top: 5%; text-align: center;">
@@ -213,12 +241,12 @@
             <a href="https://www.pepsiphilippines.com/index.php">
                 <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
             </a>
-            <div id="external-sites">
+            <div id="external-sites" class="pull-right">
                 <a href="https://www.facebook.com/PepsiPhilippines">
                     <img class="footer-links" src="/img/fb.png" />
                 </a>
                 <a href="#">
-                    <img class="footer-links" src="/img/linkedin.png" />
+                    <img class="footer-links" src="/img/linkedin.png" style="margin-left: 20px;" />
                 </a>
             </div>
         </div> 
