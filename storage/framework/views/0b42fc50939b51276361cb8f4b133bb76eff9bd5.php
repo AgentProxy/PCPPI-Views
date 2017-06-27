@@ -143,7 +143,7 @@
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>     
                     </button>
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="https://www.pepsiphilippines.com/index.php">
                     <div class="logo-bar">                        
                         <img class="logo responsive" id="logo" src="/img/pcppi3.png" /> <span id="pcppi"> Pepsi-Cola Products Philippines Inc. </span>
                     </div>
