@@ -90,6 +90,21 @@
         body{
             background-color: grey;
         }
+
+        footer .logo-footer {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer{
+            background-color: white;
+        }
+
+        #logo-footer{
+            width: 100px;
+            height: 100px;
+        }
+
     </style>
 
     <!-- Scripts -->
@@ -144,7 +159,14 @@
         <?php echo $__env->yieldContent('content'); ?>
     </div>
 
+    <footer class="container-fluid text-center">
+        <div id="">
+             <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
+        </div> 
+        <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
+    </footer>
+
     <!-- Scripts -->
-    <script src="<?php echo e(asset('js/app.js')); ?>"></script>
-</body>
+    <!-- <script src="<?php echo e(asset('js/app.js')); ?>"></script>
+ --></body>
 </html>
