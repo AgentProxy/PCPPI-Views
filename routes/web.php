@@ -18,3 +18,19 @@ Route::get('/', function () {
 Route::get('/careers-home', function () {
     return view('home');
 });
+
+Route::get('/careers-internform', function () {
+    return view('internform');
+});
+
+Route::get('/careers-proform', function () {
+    return view('proform');
+});
+
+Route::get('/careers-careersearch', function () {
+    return view('careersearch');
+});
+
+Route::get('/careers-success', function () {
+    return view('success');
+});

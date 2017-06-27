@@ -105,6 +105,36 @@
             height: 100px;
         }
 
+        .glyphicon.glyphicon-check {
+            color: green;
+            font-size: 100px;
+            text-align: center;
+            display:block;
+        }
+
+        #title{
+            text-align: center;
+        }     
+
+        #padbot{
+            padding-bottom: 30px;
+        }
+
+        #pad{
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        #btnpad{
+            padding-top: 15px;
+            padding-bottom: 60px;
+        }
+
+        #titlepad{
+            padding-top: 60px;
+            text-align: center;
+        }
+
     </style>
 
     <!-- Scripts -->
