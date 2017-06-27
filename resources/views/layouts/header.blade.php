@@ -108,6 +108,7 @@
     </style>
 
     <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="/js/js.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
 
@@ -166,7 +167,6 @@
         <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
     </footer>
 
-    <!-- Scripts -->
-    <!-- <script src="{{ asset('js/app.js') }}"></script>
- --></body>
+
+</body>
 </html>
