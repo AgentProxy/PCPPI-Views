@@ -68,6 +68,8 @@
             line-height: 70px;
             height: 70px;
             padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 10px;
         }
 
         .navbar-nav > li{
@@ -105,11 +107,11 @@
         <nav class="navbar navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#navbar" style="background-color: grey">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#navbar" style="background-color: grey; margin-top: 5%; text-align: center;">
 
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>     
+                        <span class="icon-bar" style="background-color: white"></span>
+                        <span class="icon-bar" style="background-color: white"></span>
+                        <span class="icon-bar" style="background-color: white"></span>     
                     </button>
                     <a class="navbar-brand" href="/">
                     <div class="logo-bar">                        
