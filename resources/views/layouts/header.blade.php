@@ -93,7 +93,8 @@
 
         footer .logo-footer {
             font-size: 20px;
-            margin-bottom: 20px;
+            /*margin-bottom: 10px;*/
+            padding-top: 10px;
         }
 
         footer{
@@ -101,10 +102,12 @@
         }
 
         #logo-footer{
-            width: 100px;
-            height: 100px;
+            /*padding-top: 20px;*/
+            width: 130px;
+            height: 130px;
         }
 
+/*<<<<<<< HEAD*/
         .glyphicon.glyphicon-check {
             color: green;
             font-size: 100px;
@@ -134,6 +137,19 @@
             padding-top: 60px;
             text-align: center;
         }
+=======
+        footer{
+            padding: 10px;
+        }
+
+        .footer-links{
+            width: 40px;
+            height: 40px;
+        }
+
+        #links,a img:hover{ position: relative; 
+             top: -5px;} 
+>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e
 
     </style>
 
@@ -159,7 +175,7 @@
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>     
                     </button>
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="https://www.pepsiphilippines.com/index.php">
                     <div class="logo-bar">                        
                         <img class="logo responsive" id="logo" src="/img/pcppi3.png" /> <span id="pcppi"> Pepsi-Cola Products Philippines Inc. </span>
                     </div>
@@ -184,6 +200,7 @@
                         </li>
                     </ul>
                 </div>
+
             </div>       
         </nav>
 
@@ -191,8 +208,18 @@
     </div>
 
     <footer class="container-fluid text-center">
-        <div id="">
-             <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
+        <div id="links">
+            <a href="https://www.pepsiphilippines.com/index.php">
+                <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
+            </a>
+            <div id="external-sites">
+                <a href="https://www.facebook.com/PepsiPhilippines">
+                    <img class="footer-links" src="/img/fb.png" />
+                </a>
+                <a href="#">
+                    <img class="footer-links" src="/img/linkedin.png" />
+                </a>
+            </div>
         </div> 
         <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
     </footer>
