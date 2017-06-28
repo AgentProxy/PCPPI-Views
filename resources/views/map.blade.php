@@ -2,7 +2,7 @@
 
 @section('content')
 
-		<div id="map" class="center-block"></div>
+		<div id="map" class="container"></div>
 		<div id="search-bar" class="container">
             <div class="form-group col-md-4">
                 <input type="text" class="form-control" id="job" placeholder="Job">

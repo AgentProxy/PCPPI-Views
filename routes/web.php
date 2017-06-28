@@ -38,3 +38,7 @@ Route::get('/careers-success', function () {
 Route::get('/careers-map', function () {
     return view('map');
 });
+
+Route::get('/master', function () {
+    return view('layouts.master');
+});
