@@ -32,6 +32,13 @@
             padding: 0;
         }
 
+        #map {
+            height: 100vh;
+            width: 50%;
+            margin-top: 20px;
+            
+        }
+
         .navbar{
             margin-bottom: 0;
             /*height: 7em;*/
@@ -177,6 +184,10 @@
             position: relative;
             left: 40px;
         }
+
+        #search-bar{
+            margin-top: 50px;
+        }
 /*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
 
     </style>
@@ -233,7 +244,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="careers-home">Careers Home</a></li>
                                 <li><a href="careers-internform">Internships</a></li>
-                                <li><a href="careers-proform">Professionals</a></li>
+                                <li><a href="careers-map">Professionals</a></li>
                                 <li><a href="careers-search">Search Careers</a></li>
                             </ul>
                            <!--  <li class="active"><a href="/careers-home"> Careers </a></li> -->
