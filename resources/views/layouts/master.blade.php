@@ -18,7 +18,7 @@
     <style type="text/css">
 
         body{
-            padding-top: 70px
+            padding-top: 150px;
             
         }
 
@@ -175,8 +175,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script type="text/javascript" src="/js/js.js"></script>
-    <script type="text/javascript" src="/js/script.js"></script>
+    <!-- <script type="text/javascript" src="/js/js.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script> -->
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -191,6 +191,9 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
 
 </head>
 <body id="page-top">
