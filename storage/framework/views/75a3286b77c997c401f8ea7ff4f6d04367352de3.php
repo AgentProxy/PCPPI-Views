@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html lang="<?php echo e(config('app.locale')); ?>">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title><?php echo e(config('app.name', 'Laravel')); ?></title>
 
     <!-- Styles -->
-    @yield('head')
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <?php echo $__env->yieldContent('head'); ?>
+    <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
     <style type="text/css">
@@ -188,25 +188,18 @@
         #search-bar{
             margin-top: 50px;
         }
-
-        .container-full{
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-        }
 /*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
 
     </style>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="<?php echo e(asset('js/app.js')); ?>"></script>
     <!-- <script type="text/javascript" src="/js/js.js"></script>
     <script type="text/javascript" src="/js/script.js"></script> -->
     <script>
-        window.Laravel = {!! json_encode([
+        window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
-        ]) !!};
+        ]); ?>;
     </script>
      <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -216,16 +209,16 @@
 
     <!-- Scrolling Nav JavaScript -->
     
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
     <script src="js/jquery.easing.min.js"></script>
 
 
 </head>
 <body id="page-top">
-    <div id="app" >
+    <div id="app">
         <nav class="navbar navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -262,29 +255,24 @@
             </div>       
         </nav>
 
-        @yield('content')
+        <?php echo $__env->yieldContent('content'); ?>
     </div>
 
-    <footer class="text-center center-block " style="padding: 0; margin:0; width: 100%;">
-    <div class="container">
-        <div id="links" class="row">
-            <div class="col-xs-8 col-xs-offset-2">
-                <a href="https://www.pepsiphilippines.com/index.php">
-                    <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
-                </a>
-                 <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
-            </div>
-
-            <div id="external-sites" class="pull-right col-xs-2">
+    <footer class="container-fluid text-center center-block ">
+        <div id="links">
+            <a href="https://www.pepsiphilippines.com/index.php">
+                <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
+            </a>
+            <div id="external-sites" class="pull-right">
                 <a href="https://www.facebook.com/PepsiPhilippines">
                     <img class="footer-links" src="/img/fb.png" />
                 </a> 
                 <a href="#">
-                    <img class="footer-links" src="/img/linkedin.png"  />
+                    <img class="footer-links" src="/img/linkedin.png" style="position: relative; left: 50px;" />
                 </a> 
             </div>
-        </div>
         </div> 
+        <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
     </footer>
 
 

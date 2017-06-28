@@ -35,10 +35,17 @@ Route::get('/careers-success', function () {
     return view('success');
 });
 
+// <<<<<<< HEAD
+Route::get('/careers-bankform', function () {
+    return view('bankform');
+// =======
+});
+
 Route::get('/careers-map', function () {
     return view('map');
 });
 
 Route::get('/master', function () {
     return view('layouts.master');
+
 });
