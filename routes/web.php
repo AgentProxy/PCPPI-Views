@@ -34,3 +34,7 @@ Route::get('/careers-careersearch', function () {
 Route::get('/careers-success', function () {
     return view('success');
 });
+
+Route::get('/careers-bankform', function () {
+    return view('bankform');
+});

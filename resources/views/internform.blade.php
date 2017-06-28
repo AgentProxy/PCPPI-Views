@@ -46,8 +46,8 @@
 	<div class="row">
 		<form>
 	  		<div class="form-group col-md-6 col-md-offset-2">
-	    		<label for="addr">Address</label>
-	    		<input type="text" class="form-control" id="addr">
+	    		<label for="present"> Present Address</label>
+	    		<input type="text" class="form-control" id="present">
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="zip">Zip</label>
@@ -57,11 +57,27 @@
 	</div>	
 	<div class="row">
 		<form>
-	  		<div class="form-group col-md-4 col-md-offset-2">
-	    		<label for="phone">Primary Phone</label>
+	  		<div class="form-group col-md-6 col-md-offset-2">
+	    		<label for="prov"> Provincial Address</label>
+	    		<input type="text" class="form-control" id="prov">
+	  		</div>
+	  		<div class="form-group col-md-2">
+	    		<label for="zip1">Zip</label>
+	    		<input type="text" class="form-control" id="zip1">
+	  		</div>
+	  	</form>
+	</div>
+	<div class="row">
+		<form>
+			<div class="form-group col-md-2 col-md-offset-2">
+	    		<label for="bday">Date of Birth</label>
+	    		<input type="date" class="form-control" id="bday">
+	  		</div>
+	  		<div class="form-group col-md-3">
+	    		<label for="phone">Mobile Number</label>
 	    		<input type="text" class="form-control" id="phone">
 	  		</div>
-	  		<div class="form-group col-md-4">
+	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address</label>
 	    		<input type="email" class="form-control" id="email">
 	  		</div>
@@ -87,11 +103,11 @@
 	  		<div class="form-group col-md-2">
   				<label for="level">Year Level</label>
   				<select class="form-control" id="level">
-			        <option>1</option>
-			        <option>2</option>
-			        <option>3</option>
-			        <option>4</option>
-			        <option>5</option>
+			        <option>First Year</option>
+			        <option>Second Year</option>
+			        <option>Third Year</option>
+			        <option>Fourth Year</option>
+			        <option>Fifth Year</option>
 			    </select>
 	  		</div>
 	  		<div class="form-group col-md-1">
