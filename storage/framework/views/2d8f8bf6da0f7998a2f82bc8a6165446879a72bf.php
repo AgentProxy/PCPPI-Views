@@ -18,7 +18,7 @@
     <style type="text/css">
 
         body{
-            padding-top: 150px;
+            padding-top: 130px;
             
         }
 
@@ -189,10 +189,12 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
+    
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
 
 
 </head>
@@ -237,18 +239,18 @@
         <?php echo $__env->yieldContent('content'); ?>
     </div>
 
-    <footer class="container-fluid text-center">
+    <footer class="container-fluid text-center center-block ">
         <div id="links">
             <a href="https://www.pepsiphilippines.com/index.php">
                 <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
             </a>
             <div id="external-sites" class="pull-right">
-                <a href="https://www.facebook.com/PepsiPhilippines">
+               <!--  <a href="https://www.facebook.com/PepsiPhilippines">
                     <img class="footer-links" src="/img/fb.png" />
-                </a>
-                <a href="#">
-                    <img class="footer-links" src="/img/linkedin.png" style="margin-left: 20px;" />
-                </a>
+                </a> -->
+               <!--  <a href="#">
+                    <img class="footer-links" src="/img/linkedin.png" style="position: relative; left: -20px;" />
+                </a> -->
             </div>
         </div> 
         <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
