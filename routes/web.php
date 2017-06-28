@@ -27,7 +27,7 @@ Route::get('/careers-proform', function () {
     return view('proform');
 });
 
-Route::get('/careers-careersearch', function () {
+Route::get('/careers-search', function () {
     return view('careersearch');
 });
 

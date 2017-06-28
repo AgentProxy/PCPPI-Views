@@ -75,8 +75,8 @@
 
         /*.navbar-brand,*/
         .navbar-nav li a {
-            line-height: 70px;
-            height: 70px;
+            line-height: 50px;
+            height: 50px;
             padding-top: 0;
             padding-bottom: 0;
             margin-bottom: 10px;
@@ -109,7 +109,7 @@
 
         #logo-footer{
             /*padding-top: 20px;*/
-            width: 100px;
+            width: 95px;
             height: 100px;
         }
 
@@ -202,7 +202,6 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#navbar" style="background-color: grey; margin-top: 5%; text-align: center;">
-
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>     
@@ -219,14 +218,13 @@
                         <li><a href="https://www.pepsiphilippines.com/company.php">Our Company</a></li>
                         <li><a href="https://www.pepsiphilippines.com/products.php">Products</a></li>
                         <li><a href="">Engagements</a></li>
-
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Careers <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li class="active"><a href="#">Careers Home</a></li>
-                                <li><a href="#">Internships</a></li>
-                                <li><a href="#">Professionals</a></li>
-                                <li><a href="#">Search Careers</a></li>
+                                <li><a href="careers-home">Careers Home</a></li>
+                                <li><a href="careers-internform">Internships</a></li>
+                                <li><a href="careers-proform">Professionals</a></li>
+                                <li><a href="careers-search">Search Careers</a></li>
                             </ul>
                            <!--  <li class="active"><a href="/careers-home"> Careers </a></li> -->
                         </li>
