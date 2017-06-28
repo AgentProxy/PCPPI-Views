@@ -14,6 +14,10 @@
     <?php echo $__env->yieldContent('head'); ?>
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
+    <!-- Validator Styles -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- End of Validator Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <style type="text/css">
 
@@ -34,9 +38,9 @@
 
         #map {
             height: 100vh;
-            width: 50%;
+            width: 70%;
             margin-top: 20px;
-            
+            border: solid white 5px;
         }
 
         .navbar{
@@ -62,12 +66,19 @@
 
         @media(max-width:768px){   
             .navbar {min-height:7em;}
+            #items>li{ display: block; text-align: center; }
+            #items{
+                /*border: solid black 2px;*/
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+            }
         }
 
         @media (min-width: 767px) {
             .navbar{
                 margin-bottom: 0;
-                
+                min-height:7em;
                 border-bottom: 5px solid rgb(0, 133, 202);
                 background-color: white;
             }
@@ -146,7 +157,7 @@
         }
 
         #btnpad{
-            padding-top: 15px;
+            padding-top: 20px;
             padding-bottom: 60px;
         }
 
@@ -162,6 +173,7 @@
         .footer-links{
             width: 40px;
             height: 40px;
+            /*margin-left: 100px;*/
         }
 
         #external-sites{
@@ -180,6 +192,9 @@
         #links,a img:hover{ position: relative; 
              top: -5px;} 
 
+        #items>li>a:hover{ position: relative; 
+             top: -5px;} 
+
         #links{
             position: relative;
             left: 40px;
@@ -189,18 +204,14 @@
             margin-top: 50px;
         }
 
-        .container-full{
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-/*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
+        /*#dropdown-menu>li{
+            border-bottom: solid grey 1px;
+        }*/
 
     </style>
 
     <!-- Scripts -->
-    <script src="<?php echo e(asset('js/app.js')); ?>"></script>
+    <!-- <script src="<?php echo e(asset('js/app.js')); ?>"></script> -->
     <!-- <script type="text/javascript" src="/js/js.js"></script>
     <script type="text/javascript" src="/js/script.js"></script> -->
     <script>
@@ -216,20 +227,20 @@
 
     <!-- Scrolling Nav JavaScript -->
     
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     
     <script src="js/scrolling-nav.js"></script>
     <script src="js/jquery.easing.min.js"></script>
-
+    <script src="js/validation/validator.js"></script>
 
 </head>
 <body id="page-top">
     <div id="app" >
         <nav class="navbar navbar-fixed-top">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#navbar" style="background-color: grey; margin-top: 5%; text-align: center;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="background-color: grey; margin-top: 5%; text-align: center;">
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>     
@@ -242,48 +253,42 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul id="items" class="nav navbar-nav">
-                        <li><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Home</a></li>
-                        <li><a href="https://www.pepsiphilippines.com/company.php">Our Company</a></li>
-                        <li><a href="https://www.pepsiphilippines.com/products.php">Products</a></li>
+                        <li class="active"><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Home</a></li>
+                        <li><a href="https://www.pepsiphilippines.com/company.php" target="_blank">Our Company</a></li>
+                        <li><a href="https://www.pepsiphilippines.com/products.php" target="_blank">Products</a></li>
                         <li><a href="">Engagements</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Careers <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
+                            <ul id="dropdown-menu" class="dropdown-menu">
                                 <li><a href="careers-home">Careers Home</a></li>
                                 <li><a href="careers-internform">Internships</a></li>
                                 <li><a href="careers-map">Professionals</a></li>
-                                <li><a href="careers-search">Search Careers</a></li>
                             </ul>
-                           <!--  <li class="active"><a href="/careers-home"> Careers </a></li> -->
                         </li>
                     </ul>
                 </div>
 
             </div>       
         </nav>
-
         <?php echo $__env->yieldContent('content'); ?>
     </div>
 
-    <footer class="text-center center-block " style="padding: 0; margin:0; width: 100%;">
-    <div class="container">
-        <div id="links" class="row">
-            <div class="col-xs-8 col-xs-offset-2">
+    <footer class="text-center" >
+        <div class="container" >
+            <div style="margin-left: 11%;">
                 <a href="https://www.pepsiphilippines.com/index.php">
                     <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
                 </a>
-                 <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
-            </div>
-
-            <div id="external-sites" class="pull-right col-xs-2">
-                <a href="https://www.facebook.com/PepsiPhilippines">
-                    <img class="footer-links" src="/img/fb.png" />
+                <span class="" style="position: relative; left: 20%;">
+                <a  href="https://www.facebook.com/PepsiPhilippines">
+                    <img id="linkedin-link" class="footer-links" src="/img/fb.png" />
                 </a> 
-                <a href="#">
-                    <img class="footer-links" src="/img/linkedin.png"  />
+                <a href="#" style="margin-left: 5%;">
+                    <img id="fb-link" class="footer-links" src="/img/linkedin.png"  />
                 </a> 
+                </span>  
             </div>
-        </div>
+            <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
         </div> 
     </footer>
 
