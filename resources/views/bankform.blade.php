@@ -1,8 +1,10 @@
-<?php $__env->startSection('content'); ?>
+@extends('layouts.master')
+
+@section('content')
 <div class="container">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-home" class="btn btn-warning btn-lg" role="button">Back to Careers</a>
+			<button type="button" class="btn btn-warning btn-lg">Back to Careers</button>
 		</div>
 	</div>
 	<div class="row">
@@ -267,5 +269,4 @@
 		</div>
 	</div>
 </div>
-<?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+@endsection

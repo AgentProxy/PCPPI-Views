@@ -19,6 +19,10 @@
 
         body{
             padding-top: 130px;
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 853ed464f4a5d74b0b69c98dc8e8aa13bf06bbb3
         }
 
         body,html{
@@ -31,6 +35,16 @@
             padding: 0;
         }
 
+<<<<<<< HEAD
+=======
+        #map {
+            height: 100vh;
+            width: 50%;
+            margin-top: 20px;
+            
+        }
+
+>>>>>>> 853ed464f4a5d74b0b69c98dc8e8aa13bf06bbb3
         .navbar{
             margin-bottom: 0;
             /*height: 7em;*/
@@ -72,6 +86,13 @@
             float: right;
         }
 
+<<<<<<< HEAD
+=======
+        #navbar{
+            padding-bottom: 10px;
+        }
+
+>>>>>>> 853ed464f4a5d74b0b69c98dc8e8aa13bf06bbb3
         /*.navbar-brand,*/
         .navbar-nav li a {
             line-height: 50px;
@@ -134,7 +155,11 @@
         }
 
         #btnpad{
+<<<<<<< HEAD
             padding-top: 15px;
+=======
+            padding-top: 20px;
+>>>>>>> 853ed464f4a5d74b0b69c98dc8e8aa13bf06bbb3
             padding-bottom: 60px;
         }
 
@@ -162,12 +187,29 @@
         }
 
         #external-sites img {
+<<<<<<< HEAD
 
             /*margin-left: 10px;*/
         }
 
         #links,a > img:hover{ position: relative; 
              top: -5px;} 
+=======
+            /*margin-left: 60px;*/
+        }
+
+        #links,a img:hover{ position: relative; 
+             top: -5px;} 
+
+        #links{
+            position: relative;
+            left: 40px;
+        }
+
+        #search-bar{
+            margin-top: 50px;
+        }
+>>>>>>> 853ed464f4a5d74b0b69c98dc8e8aa13bf06bbb3
 /*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
 
     </style>
@@ -224,7 +266,11 @@
                             <ul class="dropdown-menu">
                                 <li><a href="careers-home">Careers Home</a></li>
                                 <li><a href="careers-internform">Internships</a></li>
+<<<<<<< HEAD
                                 <li><a href="careers-proform">Professionals</a></li>
+=======
+                                <li><a href="careers-map">Professionals</a></li>
+>>>>>>> 853ed464f4a5d74b0b69c98dc8e8aa13bf06bbb3
                                 <li><a href="careers-search">Search Careers</a></li>
                             </ul>
                            <!--  <li class="active"><a href="/careers-home"> Careers </a></li> -->
@@ -244,12 +290,21 @@
                 <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
             </a>
             <div id="external-sites" class="pull-right">
+<<<<<<< HEAD
                <!--  <a href="https://www.facebook.com/PepsiPhilippines">
                     <img class="footer-links" src="/img/fb.png" />
                 </a> -->
                <!--  <a href="#">
                     <img class="footer-links" src="/img/linkedin.png" style="position: relative; left: -20px;" />
                 </a> -->
+=======
+                <a href="https://www.facebook.com/PepsiPhilippines">
+                    <img class="footer-links" src="/img/fb.png" />
+                </a> 
+                <a href="#">
+                    <img class="footer-links" src="/img/linkedin.png" style="position: relative; left: 50px;" />
+                </a> 
+>>>>>>> 853ed464f4a5d74b0b69c98dc8e8aa13bf06bbb3
             </div>
         </div> 
         <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
