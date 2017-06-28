@@ -15,7 +15,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
-    <style type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+        <style type="text/css">
 
         body{
             padding-top: 130px;
@@ -61,6 +64,10 @@
 
         @media(max-width:768px){   
             .navbar {min-height:7em;}
+
+            body{
+            padding-top: 100px;
+        }
         }
 
         @media (min-width: 767px) {
@@ -123,7 +130,7 @@
             height: 100px;
         }
 
-/*<<<<<<< HEAD*/
+
         .glyphicon.glyphicon-check {
             color: green;
             font-size: 100px;
@@ -153,7 +160,7 @@
             padding-top: 60px;
             text-align: center;
         }
-/*=======*/
+
         footer{
             padding: 10px;
         }
@@ -194,7 +201,7 @@
             margin-right: auto;
             margin-left: auto;
         }
-/*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
+
 
     </style>
 
