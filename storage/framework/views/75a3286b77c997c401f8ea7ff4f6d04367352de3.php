@@ -15,11 +15,13 @@
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
-    <style type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+        <style type="text/css">
 
         body{
             padding-top: 130px;
-            
         }
 
         body,html{
@@ -62,6 +64,10 @@
 
         @media(max-width:768px){   
             .navbar {min-height:7em;}
+
+            body{
+            padding-top: 100px;
+        }
         }
 
         @media (min-width: 767px) {
@@ -124,7 +130,7 @@
             height: 100px;
         }
 
-/*<<<<<<< HEAD*/
+
         .glyphicon.glyphicon-check {
             color: green;
             font-size: 100px;
@@ -134,7 +140,11 @@
 
         #title{
             text-align: center;
-        }     
+        }  
+
+        #padtop{
+            padding-top: 30px;
+        }   
 
         #padbot{
             padding-bottom: 30px;
@@ -154,7 +164,7 @@
             padding-top: 60px;
             text-align: center;
         }
-/*=======*/
+
         footer{
             padding: 10px;
         }
@@ -177,7 +187,7 @@
             /*margin-left: 60px;*/
         }
 
-        #links,a img:hover{ position: relative; 
+        #links,a > img:hover{ position: relative; 
              top: -5px;} 
 
         #links{
@@ -188,7 +198,18 @@
         #search-bar{
             margin-top: 50px;
         }
+
+        .container-full{
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+<<<<<<< HEAD
 /*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
+=======
+
+>>>>>>> 175891cd23441824130d6eedcad7a326905561d8
 
     </style>
 
@@ -209,16 +230,16 @@
 
     <!-- Scrolling Nav JavaScript -->
     
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
     <script src="js/scrolling-nav.js"></script>
     <script src="js/jquery.easing.min.js"></script>
 
 
 </head>
 <body id="page-top">
-    <div id="app">
+    <div id="app" >
         <nav class="navbar navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -258,21 +279,26 @@
         <?php echo $__env->yieldContent('content'); ?>
     </div>
 
-    <footer class="container-fluid text-center center-block ">
-        <div id="links">
-            <a href="https://www.pepsiphilippines.com/index.php">
-                <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
-            </a>
-            <div id="external-sites" class="pull-right">
+    <footer class="text-center center-block " style="padding: 0; margin:0; width: 100%;">
+    <div class="container">
+        <div id="links" class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <a href="https://www.pepsiphilippines.com/index.php">
+                    <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
+                </a>
+                 <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
+            </div>
+
+            <div id="external-sites" class="pull-right col-xs-2">
                 <a href="https://www.facebook.com/PepsiPhilippines">
                     <img class="footer-links" src="/img/fb.png" />
                 </a> 
                 <a href="#">
-                    <img class="footer-links" src="/img/linkedin.png" style="position: relative; left: 50px;" />
+                    <img class="footer-links" src="/img/linkedin.png"  />
                 </a> 
             </div>
+        </div>
         </div> 
-        <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
     </footer>
 
 

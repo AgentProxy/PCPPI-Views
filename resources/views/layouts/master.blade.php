@@ -19,11 +19,13 @@
     <!-- End of Validator Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <style type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+        <style type="text/css">
 
         body{
             padding-top: 130px;
-            
         }
 
         body,html{
@@ -66,6 +68,7 @@
 
         @media(max-width:768px){   
             .navbar {min-height:7em;}
+
             #items>li{ display: block; text-align: center; }
             #items{
                 /*border: solid black 2px;*/
@@ -73,6 +76,12 @@
                 margin-right: auto;
                 margin-left: auto;
             }
+
+
+            body{
+            padding-top: 100px;
+        }
+
         }
 
         @media (min-width: 767px) {
@@ -135,7 +144,7 @@
             height: 100px;
         }
 
-/*<<<<<<< HEAD*/
+
         .glyphicon.glyphicon-check {
             color: green;
             font-size: 100px;
@@ -145,7 +154,11 @@
 
         #title{
             text-align: center;
-        }     
+        }  
+
+        #padtop{
+            padding-top: 30px;
+        }   
 
         #padbot{
             padding-bottom: 30px;
@@ -165,7 +178,7 @@
             padding-top: 60px;
             text-align: center;
         }
-/*=======*/
+
         footer{
             padding: 10px;
         }
@@ -189,7 +202,7 @@
             /*margin-left: 60px;*/
         }
 
-        #links,a img:hover{ position: relative; 
+        #links,a > img:hover{ position: relative; 
              top: -5px;} 
 
         #items>li>a:hover{ position: relative; 
@@ -203,10 +216,6 @@
         #search-bar{
             margin-top: 50px;
         }
-
-        /*#dropdown-menu>li{
-            border-bottom: solid grey 1px;
-        }*/
 
     </style>
 
