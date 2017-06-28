@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row" id="btnpad">
 		<div>
-			<button type="button" class="btn btn-warning btn-lg">Back to Careers</button>
+			<a href="careers-home" class="btn btn-warning btn-lg" role="button">Back to Careers</a>
 		</div>
 	</div>
 	<div class="row">
