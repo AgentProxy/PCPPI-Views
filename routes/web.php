@@ -27,7 +27,7 @@ Route::get('/careers-proform', function () {
     return view('proform');
 });
 
-Route::get('/careers-careersearch', function () {
+Route::get('/careers-search', function () {
     return view('careersearch');
 });
 
@@ -35,6 +35,13 @@ Route::get('/careers-success', function () {
     return view('success');
 });
 
+// <<<<<<< HEAD
 Route::get('/careers-bankform', function () {
     return view('bankform');
+// =======
+});
+
+Route::get('/careers-map', function () {
+    return view('map');
+// >>>>>>> 5f2e39077968351cb443f6c5efcfcc9158f19194
 });

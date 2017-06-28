@@ -18,7 +18,7 @@
     <style type="text/css">
 
         body{
-            padding-top: 70px
+            padding-top: 130px;
             
         }
 
@@ -30,6 +30,13 @@
             width: 30px;
             height: 30px;
             padding: 0;
+        }
+
+        #map {
+            height: 100vh;
+            width: 50%;
+            margin-top: 20px;
+            
         }
 
         .navbar{
@@ -73,10 +80,14 @@
             float: right;
         }
 
+        #navbar{
+            padding-bottom: 10px;
+        }
+
         /*.navbar-brand,*/
         .navbar-nav li a {
-            line-height: 70px;
-            height: 70px;
+            line-height: 50px;
+            height: 50px;
             padding-top: 0;
             padding-bottom: 0;
             margin-bottom: 10px;
@@ -109,7 +120,7 @@
 
         #logo-footer{
             /*padding-top: 20px;*/
-            width: 100px;
+            width: 95px;
             height: 100px;
         }
 
@@ -163,20 +174,28 @@
         }
 
         #external-sites img {
-
-            /*margin-left: 10px;*/
+            /*margin-left: 60px;*/
         }
 
         #links,a img:hover{ position: relative; 
              top: -5px;} 
+
+        #links{
+            position: relative;
+            left: 40px;
+        }
+
+        #search-bar{
+            margin-top: 50px;
+        }
 /*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
 
     </style>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script type="text/javascript" src="/js/js.js"></script>
-    <script type="text/javascript" src="/js/script.js"></script>
+    <!-- <script type="text/javascript" src="/js/js.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script> -->
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -189,8 +208,13 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+
 
 </head>
 <body id="page-top">
@@ -199,7 +223,6 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#navbar" style="background-color: grey; margin-top: 5%; text-align: center;">
-
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>     
@@ -216,14 +239,13 @@
                         <li><a href="https://www.pepsiphilippines.com/company.php">Our Company</a></li>
                         <li><a href="https://www.pepsiphilippines.com/products.php">Products</a></li>
                         <li><a href="">Engagements</a></li>
-
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Careers <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li class="active"><a href="#">Careers Home</a></li>
-                                <li><a href="#">Internships</a></li>
-                                <li><a href="#">Professionals</a></li>
-                                <li><a href="#">Search Careers</a></li>
+                                <li><a href="careers-home">Careers Home</a></li>
+                                <li><a href="careers-internform">Internships</a></li>
+                                <li><a href="careers-map">Professionals</a></li>
+                                <li><a href="careers-search">Search Careers</a></li>
                             </ul>
                            <!--  <li class="active"><a href="/careers-home"> Careers </a></li> -->
                         </li>
@@ -236,7 +258,7 @@
         @yield('content')
     </div>
 
-    <footer class="container-fluid text-center">
+    <footer class="container-fluid text-center center-block ">
         <div id="links">
             <a href="https://www.pepsiphilippines.com/index.php">
                 <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
@@ -244,10 +266,10 @@
             <div id="external-sites" class="pull-right">
                 <a href="https://www.facebook.com/PepsiPhilippines">
                     <img class="footer-links" src="/img/fb.png" />
-                </a>
+                </a> 
                 <a href="#">
-                    <img class="footer-links" src="/img/linkedin.png" style="margin-left: 20px;" />
-                </a>
+                    <img class="footer-links" src="/img/linkedin.png" style="position: relative; left: 50px;" />
+                </a> 
             </div>
         </div> 
         <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
