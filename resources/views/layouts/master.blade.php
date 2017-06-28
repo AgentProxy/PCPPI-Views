@@ -133,7 +133,11 @@
 
         #title{
             text-align: center;
-        }     
+        }  
+
+        #padtop{
+            padding-top: 30px;
+        }   
 
         #padbot{
             padding-bottom: 30px;
