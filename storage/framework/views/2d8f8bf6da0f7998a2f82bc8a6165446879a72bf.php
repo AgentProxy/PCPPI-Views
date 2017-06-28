@@ -73,6 +73,10 @@
             float: right;
         }
 
+        #navbar{
+            padding-bottom: 10px;
+        }
+
         /*.navbar-brand,*/
         .navbar-nav li a {
             line-height: 50px;
