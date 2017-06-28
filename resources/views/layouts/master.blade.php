@@ -167,12 +167,16 @@
         }
 
         #external-sites img {
-
-            /*margin-left: 10px;*/
+            /*margin-left: 60px;*/
         }
 
         #links,a img:hover{ position: relative; 
              top: -5px;} 
+
+        #links{
+            position: relative;
+            left: 40px;
+        }
 /*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
 
     </style>
@@ -249,12 +253,12 @@
                 <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
             </a>
             <div id="external-sites" class="pull-right">
-               <!--  <a href="https://www.facebook.com/PepsiPhilippines">
+                <a href="https://www.facebook.com/PepsiPhilippines">
                     <img class="footer-links" src="/img/fb.png" />
-                </a> -->
-               <!--  <a href="#">
-                    <img class="footer-links" src="/img/linkedin.png" style="position: relative; left: -20px;" />
-                </a> -->
+                </a> 
+                <a href="#">
+                    <img class="footer-links" src="/img/linkedin.png" style="position: relative; left: 50px;" />
+                </a> 
             </div>
         </div> 
         <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
