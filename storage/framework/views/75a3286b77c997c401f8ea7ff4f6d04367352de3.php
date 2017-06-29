@@ -78,10 +78,30 @@
                 margin-left: auto;
             }
 
+<<<<<<< HEAD
 
             body{
             padding-top: 0px;
         }
+=======
+            #sk{
+                padding-top: 10px;
+            }
+
+            img{
+                width: 60%;
+            }
+
+            body, h1, h2, h3, h4, li, p, label{
+            font-size: 80%;
+            }
+
+            .btn-lg {
+                padding: 5px 10px;
+                font-size: 10px;
+                border-radius: 10px;
+            }
+>>>>>>> 274b8d7d1973cfa7052c485c1ba4e65c799ed311
 
         }
 
@@ -218,6 +238,7 @@
             margin-top: 50px;
         }
 
+<<<<<<< HEAD
         /* diri ka nag add */
 
         .img-responsive {
@@ -284,6 +305,50 @@
                 text-align: center;
                 margin: 2-5px 0;
             }
+=======
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+        .btn-circle-xs {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            padding: 2px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+        .btn-circle.btn-lg {
+            width: 50px;
+            height: 50px;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 25px;
+        }
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            font-size: 24px;
+            line-height: 1.33;
+            border-radius: 35px;
+        }
+        #container1{
+            background-color: lightgray;
+        }
+
+        .container{
+            width: 100%;
+
+>>>>>>> 274b8d7d1973cfa7052c485c1ba4e65c799ed311
         }
 
         
@@ -312,6 +377,7 @@
     <script src="js/scrolling-nav.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/validation/validator.js"></script>
+    <script src="js/validation/proform.js"></script>
 
 </head>
 <body id="page-top">

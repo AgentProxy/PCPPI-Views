@@ -194,9 +194,15 @@
 		    <div class="checkbox">
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
-		    <button type="button" class="btn btn-warning">
-      			<span class="glyphicon glyphicon-plus"></span> Add a Skill
-    		</button>
+		    <div class="row">
+		    	<div class="col-md-3">
+				    <input type="text" id="skill" class="form-control" placeholder="Other Skills">
+				    <div id="sk"></div>
+				    <button type="button" id="add-skill" class="btn btn-warning btn-lg add-skill">
+		      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
+		    		</button>
+		    	</div>
+    		</div>
 		<!--</form>-->
 	</div>
 	<div class="row">

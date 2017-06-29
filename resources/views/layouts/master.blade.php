@@ -79,9 +79,23 @@
             }
 
 
-            body{
-            padding-top: 0px;
-        }
+            #sk{
+                padding-top: 10px;
+            }
+
+            img{
+                width: 60%;
+            }
+
+            body, h1, h2, h3, h4, li, p, label{
+            font-size: 80%;
+            }
+
+            .btn-lg {
+                padding: 5px 10px;
+                font-size: 10px;
+                border-radius: 10px;
+            }
 
         }
 
