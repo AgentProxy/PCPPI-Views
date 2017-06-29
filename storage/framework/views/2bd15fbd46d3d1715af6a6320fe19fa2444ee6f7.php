@@ -111,8 +111,8 @@
 	  		<div class="form-group col-md-1">
   				<label for="sem">Semester</label>
   				<select class="form-control" id="sem">
-			        <option>1</option>
-			        <option>2</option>
+			        <option>1st</option>
+			        <option>2nd</option>
 			     </select>
 	  		</div>
 	  		<div class="form-group col-md-2">
