@@ -77,6 +77,10 @@
                 margin-left: auto;
             }
 
+            #sk{
+                padding-top: 10px;
+            }
+
             img{
                 width: 60%;
             }
@@ -268,10 +272,6 @@
         .container{
             width: 100%;
 
-        }
-
-        #sk{
-            padding-top: 10px;
         }
 
     </style>
