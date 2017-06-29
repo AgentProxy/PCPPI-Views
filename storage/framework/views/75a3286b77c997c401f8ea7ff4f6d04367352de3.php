@@ -225,8 +225,6 @@
         }
 
         .container{
-            margin-left: 0px;
-            margin-right: 0px;
             width: 100%;
         }
 

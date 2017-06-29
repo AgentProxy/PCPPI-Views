@@ -6,7 +6,13 @@
                 <input type="text" class="form-control" id="job" placeholder="Job">
             </div>
             <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="loc" placeholder="Location">
+                <select class="form-control" id="loc">
+                    <option>Region 1</option>
+                    <option>Region 2</option>
+                    <option>Region 3</option>
+                    <option>Region 4</option>
+                    <option>Region 5</option>
+                </select>
             </div>
             <div class="col-md-4">
                 <a href="careers-search" class="btn btn-primary col-md-12" role="button">Search</a>
