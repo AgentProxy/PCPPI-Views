@@ -2,22 +2,22 @@
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-home" class="btn btn-warning btn-lg" role="button">Back to Careers</a>
+			<a href="careers-home" class="btn btn-warning btn-lg col-xs-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
 		</div>
 	</div>
 	<div class="row">
 		<h1 id="title">POSITION</h1>
 		<h4 id="title">Location</h4>
 	</div>
-	<div class="row">
-		<h3>Main Responsibility</h3
+	<div class="row col-md-offset-1">
+		<h3>Main Responsibility</h3>
 		<ul>
   			<li>Responsibility 1</li>
+  			<li>Responsibility 2</li>
   			<li>Responsibility 3</li>
 		</ul>
 	</div>
-  			<li>Responsibility 2</li>
-	<div class="row">
+	<div class="row col-md-offset-1">
 		<h3>Qualifications</h3>
 		<ul>
   			<li>Qualification 1</li>
@@ -328,7 +328,9 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
-	    		<button class="btn btn-danger" style="position: relative; left: 180px; bottom: 35px; visibility: hidden"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	  		</div>
+	  		<div class="row">
+	  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 	  		</div>
 	  	</div>
 	  	<!--</form>-->  	
