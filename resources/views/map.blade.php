@@ -11,7 +11,7 @@
                 <input type="text" class="form-control" id="loc" placeholder="Location">
             </div>
             <div class="col-md-4">
-                <button type="button" class="btn btn-primary col-md-12">Search</button>
+                <a href="careers-search" class="btn btn-primary col-md-12" role="button">Search</a>
             </div>
         </div>
     <script>
