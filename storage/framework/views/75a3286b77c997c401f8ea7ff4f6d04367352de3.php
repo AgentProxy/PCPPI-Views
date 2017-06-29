@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="css/style.css"/>
     <!-- End of Validator Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
         <style type="text/css">
@@ -215,6 +214,36 @@
 
         #search-bar{
             margin-top: 50px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }        
+
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px; 
+        }
+
+        .slideanim {visibility:hidden;}
+
+        @media  screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+        }
+
+        section {
+            padding: 60px 50px;
+            height: 85vh;
         }
 
     </style>
