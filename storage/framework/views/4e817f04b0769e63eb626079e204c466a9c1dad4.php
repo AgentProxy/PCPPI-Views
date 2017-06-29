@@ -183,22 +183,20 @@
 	<div class="row col-md-offset-2">
 		<!--<form>-->
 			<label for="phone">Skills</label>
-			<div id="skill-0" class="checkbox skills">
+			<div id="skill-0" class="checkbox skills" style="display: none">
+		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+		    </div>
+			<div id="skill-1" class="checkbox skills">
   				<label><input type="checkbox" value="">Advanced Excel</label>
 		    </div>
-		    <div id="skill-1" class="checkbox skills">
-		      <label><input type="checkbox" value="">Photoshop</label>
-		    </div>
 		    <div id="skill-2" class="checkbox skills">
-		      <label><input type="checkbox" value="">Programming</label>
+		      <label><input type="checkbox" value="">Photoshop</label>
 		    </div>
 		    <div id="skill-3" class="checkbox skills">
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
-		    <div id="skill-additional-0" class="checkbox skills" style="display: none">
-		    	<button class="btn btn-danger btn-circle-xs" ><span class="glyphicon glyphicon-minus"></span></button> 
-		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
-		    </div>
+		    
 		    <input type="text" id="skill" placeholder="Other Skills">
 		    <button type="button" id="add-skill" class="btn btn-warning add-skill">
       			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
@@ -329,7 +327,9 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
-	    		<button class="btn btn-danger" style="position: relative; left: 180px; bottom: 35px; visibility: hidden"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	  		</div>
+	  		<div class="row">
+	  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 	  		</div>
 	  	</div>
 	  	<!--</form>-->  	
