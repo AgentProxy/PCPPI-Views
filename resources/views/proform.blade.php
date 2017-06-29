@@ -11,15 +11,15 @@
 		<h1 id="title">POSITION</h1>
 		<h4 id="title">Location</h4>
 	</div>
-	<div class="row">
-		<h3>Main Responsibility</h3
+	<div class="row col-md-offset-1">
+		<h3>Main Responsibility</h3>
 		<ul>
   			<li>Responsibility 1</li>
+  			<li>Responsibility 2</li>
   			<li>Responsibility 3</li>
 		</ul>
 	</div>
-  			<li>Responsibility 2</li>
-	<div class="row">
+	<div class="row col-md-offset-1">
 		<h3>Qualifications</h3>
 		<ul>
   			<li>Qualification 1</li>
