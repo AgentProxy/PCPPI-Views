@@ -10,13 +10,13 @@
 		<h4 id="title">Location</h4>
 	</div>
 	<div class="row">
-		<h3>Main Responsibility</h3>
+		<h3>Main Responsibility</h3
 		<ul>
   			<li>Responsibility 1</li>
-  			<li>Responsibility 2</li>
   			<li>Responsibility 3</li>
 		</ul>
 	</div>
+  			<li>Responsibility 2</li>
 	<div class="row">
 		<h3>Qualifications</h3>
 		<ul>
@@ -52,8 +52,6 @@
 		<small class="text-danger"><strong>Fields with * are </strong></small>
 		<br><br><br>
 		</div>
-		
-		
 	</div>
 
 	<form name="proform" id="proform" method="GET" action="" onsubmit="return validate()" data-toggle="validator">
@@ -83,7 +81,6 @@
 	    		<label for="zip">Zip</label>
 	    		<input type="text" class="form-control" id="zip">
 	  		</div>
-	  		
 	  	<!--</form>-->
 	</div>	
 	<div class="row">
@@ -186,22 +183,20 @@
 	<div class="row col-md-offset-2">
 		<!--<form>-->
 			<label for="phone">Skills</label>
-			<div id="skill-0" class="checkbox skills">
+			<div id="skill-0" class="checkbox skills" style="display: none">
+		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+		    </div>
+			<div id="skill-1" class="checkbox skills">
   				<label><input type="checkbox" value="">Advanced Excel</label>
 		    </div>
-		    <div id="skill-1" class="checkbox skills">
-		      <label><input type="checkbox" value="">Photoshop</label>
-		    </div>
 		    <div id="skill-2" class="checkbox skills">
-		      <label><input type="checkbox" value="">Programming</label>
+		      <label><input type="checkbox" value="">Photoshop</label>
 		    </div>
 		    <div id="skill-3" class="checkbox skills">
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
-		    <div id="skill-additional-0" class="checkbox skills" style="display: none">
-		    	<button class="btn btn-danger btn-circle-xs" ><span class="glyphicon glyphicon-minus"></span></button> 
-		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
-		    </div>
+		    
 		    <input type="text" id="skill" placeholder="Other Skills">
 		    <button type="button" id="add-skill" class="btn btn-warning add-skill">
       			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
@@ -243,35 +238,54 @@
 			</div>
 		<!--</form>-->
 	</div>
-	<div class="container">
 	<div class="row">
 		<br><br><h4 class="col-md-4 col-md-offset-2">CHARACTER REFERENCES</h4><br><br><br>
 	</div>
-	<div id="references" class="row table-editable">
-	    <table class="table table-bordered">
-	      <tr>
-	        <th id="title" width="23%">Name</th>
-	        <th id="title" width="13%">Contact Number</th>
-	        <th id="title" width="23%">Relationship</th>
-	      </tr>
-	      <tr>
-	        <td contenteditable="true"></td>
-	        <td contenteditable="true"></td>
-	        <td contenteditable="true"></td>
-	      </tr>
-	      <tr>
-	        <td contenteditable="true"></td>
-	        <td contenteditable="true"></td>
-	        <td contenteditable="true"></td>
-	      </tr>
-	      <tr>
-	        <td contenteditable="true"></td>
-	        <td contenteditable="true"></td>
-	        <td contenteditable="true"></td>
-	      </tr>
-	    </table>
-	  </div>
-	  </div>
+	<div class="row">
+		<div class="form-group col-md-3 col-md-offset-2">
+    		<label for="name1">Name</label>
+    		<input type="text" class="form-control" id="name1" placeholder="e.g. Julia Baretto" data-error="Please input your last name" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-2">
+    		<label for="num1">Contact Number</label>
+    		<input type="text" class="form-control" id="num1" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-3">
+    		<label for="rel1">Relationship</label>
+    		<input type="text" class="form-control" id="rel1" placeholder="e.g. College Teacher" data-error="Please input your last name" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-3 col-md-offset-2">
+    		<input type="text" class="form-control" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input your last name" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-2">
+    		<input type="text" class="form-control" id="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-3">
+    		<input type="text" class="form-control" id="rel2" placeholder="e.g. College Teacher" data-error="Please input your last name" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-3 col-md-offset-2">
+    		<input type="text" class="form-control" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input your last name" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-2">
+    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>.
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-3">
+    		<input type="text" class="form-control" id="rel3" placeholder="e.g. College Teacher" data-error="Please input your last name" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+	</div>
 	<div class="row">
 		<br><br><h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4><br><br><br>
 	</div>
@@ -342,7 +356,7 @@
 	</div>
 	<div class="row">
 		<div id="pad">
-			<input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application" />
+			<input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application">
 		</div>
 	</div>
 	</form>

@@ -2,6 +2,7 @@ $(document).ready(function(){
     $(document).on("change", "#resume", check_upload);
     $(document).on("click",".add-work", add_work);
     $(document).on("click",".delete-work", delete_work);
+    $(document).on("click",".delete-skill", delete_skill);
     $(document).on("click",".add-skill", add_skill);
 })
 
@@ -42,14 +43,23 @@ function delete_work(){
 }
 
 function add_skill(){
-  skill = document.getElementById('skill').value;
-  console.log(skill);
-  if(skill != ""){
+  skill = document.getElementById('skill');
+  console.log(skill.value);
+  if(skill.value != ""){
     i = document.getElementsByClassName('skills');
-    $('#skill-additional-0').clone().attr('id','skill-'+(i.length-1)).insertAfter('#skill-' + (i.length- 2));
-    document.getElementById('skill-'+(i.length-2)).style = "display: block;";
-    document.getElementById('skill-'+(i.length-2)).lastChild.previousSibling.innerHTML = skill;
-    
-    //document.getElementById('skill-'+(i.length-1)).value = skill;
+    $('#skill-0').clone().attr('id','skill-'+(i.length)).insertAfter('#skill-' + (i.length-1));
+    document.getElementById('skill-'+(i.length-1)).style = "display: block;";
+    document.getElementById('skill-'+(i.length-1)).lastChild.previousSibling.innerHTML = skill.value;
+    skill.value ="";
+  }
+
+}
+
+function delete_skill(){
+  $(this).parent().remove();
+  i = document.getElementsByClassName('skills');
+  console.log(i);
+  for(x=0;x<i.length;x++){
+    i[x].id = "skill-" + x;
   }
 }
