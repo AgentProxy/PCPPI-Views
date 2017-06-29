@@ -100,6 +100,7 @@
 
         footer{
             background-color: white;
+            padding: 10px;
         }
 
         #logo-footer{
@@ -108,7 +109,7 @@
             height: 100px;
         }
 
-/*<<<<<<< HEAD*/
+
         .glyphicon.glyphicon-check {
             color: green;
             font-size: 100px;
@@ -138,10 +139,6 @@
             padding-top: 60px;
             text-align: center;
         }
-/*=======*/
-        footer{
-            padding: 10px;
-        }
 
         .footer-links{
             width: 40px;
@@ -150,7 +147,6 @@
 
         #links,a img:hover{ position: relative; 
              top: -5px;} 
-/*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
 
     </style>
 

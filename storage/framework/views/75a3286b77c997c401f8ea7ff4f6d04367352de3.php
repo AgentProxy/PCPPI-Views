@@ -140,7 +140,11 @@
 
         #title{
             text-align: center;
-        }     
+        }  
+
+        #padtop{
+            padding-top: 30px;
+        }   
 
         #padbot{
             padding-bottom: 30px;
@@ -201,7 +205,11 @@
             margin-right: auto;
             margin-left: auto;
         }
+<<<<<<< HEAD
+/*>>>>>>> 19fc61fa7714cbe2e3499172173a28214ef30f5e*/
+=======
 
+>>>>>>> 175891cd23441824130d6eedcad7a326905561d8
 
     </style>
 
