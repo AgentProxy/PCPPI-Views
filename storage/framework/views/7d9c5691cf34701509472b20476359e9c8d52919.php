@@ -49,24 +49,25 @@
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
 		<h4 >PERSONAL INFORMATION</h4>
-		<small class="text-danger"><strong>Fields with * are required</strong></small>
+		<small class="text-danger"><strong>Fields with * are </strong></small>
 		<br><br><br>
 		</div>
 		
 		
 	</div>
-	<form id="proform" method="GET" action="" data-toggle="validator">
+
+	<form name="proform" id="proform" method="GET" action="" onsubmit="return validate()" data-toggle="validator">
 
 	<div class="row">
 		<!--<form>-->
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" id="fname" data-error="Please input your first name" required>
+	    		<input type="text" class="form-control" id="fname" data-error="Please input your first name" >
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" id="lname" data-error="Please input your last name" required>
+	    		<input type="text" class="form-control" id="lname" data-error="Please input your last name" >
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  	<!--</form>-->
@@ -75,7 +76,7 @@
 		<!-- <form > -->
 	  		<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
-	    		<input type="text" class="form-control" id="present" data-error="Please input your present address" required>
+	    		<input type="text" class="form-control" id="present" data-error="Please input your present address" >
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 	  		<div class="form-group col-md-2">
@@ -89,7 +90,7 @@
 		<!--<form>-->
 	  		<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
-	    		<input type="text" class="form-control" id="prov" data-error="Please input your provincial address" required>
+	    		<input type="text" class="form-control" id="prov" data-error="Please input your provincial address" >
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -102,18 +103,18 @@
 		<!--<form>-->
 			<div class="form-group col-md-2 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
-	    		<input type="date" class="form-control" id="bday" data-error="Please input your birthdate" required>
+	    		<input type="date" class="form-control" id="bday" data-error="Please input your birthdate" >
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="phone">Mobile Number *</label>
-	    		<input type="text" class="form-control" id="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-error="Please input your mobile number" required>
+	    		<input type="text" class="form-control" id="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-error="Please input your mobile number" >
 	    		<div class="help-block with-errors"></div>
 	    		<div class="help-block">Should have 11 digits</div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" id="email" data-error="Please input a valid email address" required>
+	    		<input type="email" class="form-control" id="email" data-error="Please input a valid email address" >
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  	<!--</form>-->
@@ -122,21 +123,21 @@
 		<!--<form>-->
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="course">Bachelor's Degree *</label>
-	    		<input type="text" class="form-control" id="course" data-error="Please input your bachelor's degree" required>
+	    		<input type="text" class="form-control" id="course" data-error="Please input your bachelor's degree" >
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="from1"><small> From (School Year) * </small></label>
-	    		<!-- <input type="date" class="form-control" id="from1" data-error="Please input this field" required> -->
-	    		<select class="form-control year" id="from1" required">
+	    		<!-- <input type="date" class="form-control" id="from1" data-error="Please input this field" > -->
+	    		<select class="form-control year" id="from1" ">
 	    			<option selected disabled>--</option>
 	    		</select>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="to1"><small> To (School Year) * </small></label>
-	    		<!-- <input type="date" class="form-control" id="to1" data-error="Please input this field" required> -->
-	    		<select class="form-control year" id="from1" required>
+	    		<!-- <input type="date" class="form-control" id="to1" data-error="Please input this field" > -->
+	    		<select class="form-control year" id="from1" >
 	    			<option selected disabled>--</option>
 	    		</select>
 	    		<div class="help-block with-errors"></div>
@@ -147,7 +148,7 @@
 		<!--<form>-->
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school1">School/College/University *</label>
-	    		<input type="text" class="form-control" id="school1" data-error="Please input this field" required>
+	    		<input type="text" class="form-control" id="school1" data-error="Please input this field" >
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  	<!--</form>-->
@@ -161,14 +162,14 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="from2"><small> From (School Year) </small></label>
 	    		<!-- <input type="date" class="form-control" id="from2"> -->
-	    		<select class="form-control year" id="from1" required="">
+	    		<select class="form-control year" id="from1" ="">
 	    			<option selected disabled>--</option>
 	    		</select>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="to2"><small> To (School Year) </small></label>
 	    		<!-- <input type="date" class="form-control" id="to2"> -->
-	    		<select class="form-control year" id="from1" required="">
+	    		<select class="form-control year" id="from1" ="">
 	    			<option selected disabled>--</option>
 	    		</select>
 	  		</div>
@@ -185,17 +186,25 @@
 	<div class="row col-md-offset-2">
 		<!--<form>-->
 			<label for="phone">Skills</label>
-			<div class="checkbox">
+			<div id="skill-0" class="checkbox skills">
   				<label><input type="checkbox" value="">Advanced Excel</label>
 		    </div>
-		    <div class="checkbox">
+		    <div id="skill-1" class="checkbox skills">
 		      <label><input type="checkbox" value="">Photoshop</label>
 		    </div>
-		    <div class="checkbox">
+		    <div id="skill-2" class="checkbox skills">
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
-		    <button type="button" class="btn btn-warning">
-      			<span class="glyphicon glyphicon-plus"></span> Add a Skill
+		    <div id="skill-3" class="checkbox skills">
+		      <label><input type="checkbox" value="">Programming</label>
+		    </div>
+		    <div id="skill-additional-0" class="checkbox skills" style="display: none">
+		    	<button class="btn btn-danger btn-circle-xs" ><span class="glyphicon glyphicon-minus"></span></button> 
+		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+		    </div>
+		    <input type="text" id="skill" placeholder="Other Skills">
+		    <button type="button" id="add-skill" class="btn btn-warning add-skill">
+      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
     		</button>
 		<!--</form>-->
 	</div>
@@ -203,7 +212,7 @@
 		<!--<form>-->
 			<!-- <div class="form-group col-md-3 col-md-offset-2">
 				<label for="dept"><br>Preferred Department *</label>
-				<select class="form-control" id="dept" required>
+				<select class="form-control" id="dept" >
 					<option selected disabled>Select a Department</option>
 			        <option>Department 1</option>
 			        <option>Department 2</option>
@@ -267,7 +276,8 @@
 		<br><br><h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4><br><br><br>
 	</div>
 	<div class="row">
-		<!--<form>-->
+		<!-- Start of Work History Template-->
+		<div class="work-history" id="work-history-0" style="display: none;">
 	  		<div class="form-group col-md-2 col-md-offset-2">
 	    		<label for="company">Company Name</label>
 	    		<input type="text" class="form-control" id="company">
@@ -283,12 +293,35 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
+	    		<button class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 	  		</div>
+	  	</div>
+	  	<!-- End of Work History Template-->
+	  	<div class="work-history" id="work-history-1" style="display:block;">
+	  		<div class="form-group col-md-2 col-md-offset-2">
+	    		<label for="company">Company Name</label>
+	    		<input type="text" class="form-control" id="company">
+	  		</div>
+	  		<div class="form-group col-md-2">
+	    		<label for="position">Position/Title</label>
+	    		<input type="text" class="form-control" id="position">
+	  		</div>
+	  		<div class="form-group col-md-2">
+	    		<label for="frdate">From</label>
+	    		<input type="date" class="form-control" id="frdate">
+	  		</div>
+	  		<div class="form-group col-md-2">
+	    		<label for="todate">To</label>
+	    		<input type="date" class="form-control" id="todate">
+	    		<button class="btn btn-danger" style="position: relative; left: 180px; bottom: 35px; visibility: hidden"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	  		</div>
+	  	</div>
 	  	<!--</form>-->  	
 	</div>
+
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
-			<button type="button" class="btn btn-warning">
+			<button type="button" class="btn btn-warning add-work">
       			<span class="glyphicon glyphicon-plus"></span> Add
     		</button>
 		</div>
@@ -301,9 +334,10 @@
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
 
-			<label class="btn btn-primary btn-lg">Upload
-					<input type="file" name="resume" style="display: none" />	
+			<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
+					<input type="file" id="resume" style="display: none" />	
 			</label>
+			<div class="help-block with-errors" id="upload-error" style="color:red;"></div>
 		</div>
 	</div>
 	<div class="row">

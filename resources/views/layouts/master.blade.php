@@ -217,6 +217,41 @@
             margin-top: 50px;
         }
 
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+        .btn-circle-xs {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            padding: 2px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+        .btn-circle.btn-lg {
+            width: 50px;
+            height: 50px;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 25px;
+        }
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            font-size: 24px;
+            line-height: 1.33;
+            border-radius: 35px;
+        }
+
     </style>
 
     <!-- Scripts -->
@@ -242,6 +277,7 @@
     <script src="js/scrolling-nav.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/validation/validator.js"></script>
+    <script src="js/validation/proform.js"></script>
 
 </head>
 <body id="page-top">
