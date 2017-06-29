@@ -40,7 +40,7 @@
 
         #map {
             height: 100vh;
-            width: 70%;
+            width: 50%;
             margin-top: 20px;
             border: solid white 5px;
         }
@@ -77,6 +77,9 @@
                 margin-left: auto;
             }
 
+            img{
+                width: 60%;
+            }
 
             body{
             padding-top: 100px;
@@ -217,6 +220,7 @@
             margin-top: 50px;
         }
 
+
         .btn-circle {
             width: 30px;
             height: 30px;
@@ -250,6 +254,14 @@
             font-size: 24px;
             line-height: 1.33;
             border-radius: 35px;
+        }
+        #container1{
+            background-color: lightgray;
+        }
+
+        .container{
+            width: 100%;
+
         }
 
     </style>
