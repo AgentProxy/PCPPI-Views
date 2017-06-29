@@ -297,7 +297,7 @@
 	</div>
 	<div class="row">
 		<div id="pad">
-			<input type="submit" class="btn btn-success btn-lg center-block">Submit Application</button>
+			<button type="submit" class="btn btn-success btn-lg center-block">Submit Application</button>
 		</div>
 	</div>
 	</form>
