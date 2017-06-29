@@ -14,9 +14,6 @@
     <?php echo $__env->yieldContent('head'); ?>
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
-    <!-- Validator Styles -->
-    <link rel="stylesheet" href="css/style.css"/>
-    <!-- End of Validator Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -294,6 +291,12 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/validation/validator.js"></script>
     <script src="js/validation/proform.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+       // function onSubmit(token) {
+       //   document.getElementById("i-recaptcha").submit();
+       // }
+     </script>
 
 </head>
 <body id="page-top">

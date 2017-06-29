@@ -1,15 +1,21 @@
 <?php $__env->startSection('content'); ?>
 		<h1 class="text-center"> Find Your Career </h1>
-		<div id="map" class="container"></div>
+		<div id="map" class="container center"></div>
 		<div id="search-bar" class="container">
             <div class="form-group col-md-4">
                 <input type="text" class="form-control" id="job" placeholder="Job">
             </div>
             <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="loc" placeholder="Location">
+                <select class="form-control" id="loc">
+                    <option>Region 1</option>
+                    <option>Region 2</option>
+                    <option>Region 3</option>
+                    <option>Region 4</option>
+                    <option>Region 5</option>
+                </select>
             </div>
             <div class="col-md-4">
-                <button type="button" class="btn btn-primary col-md-12">Search</button>
+                <a href="careers-search" class="btn btn-primary col-md-12" role="button">Search</a>
             </div>
         </div>
     <script>

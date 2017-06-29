@@ -8,46 +8,44 @@ $(document).ready(function(){
 
   
 
-function validate(){
-    resume = document.getElementById('resume').value;
+function validate(token){
+    resume = $("#resume").val();
     filetype = resume.split('.').pop();
     if(resume==''){
-        document.getElementById('upload-error').innerHTML="Please upload your resume";
+        $("#upload-error").text("Please upload your resume");
         return false;
     }
     else if (filetype!="doc"&&filetype!="docx"&&filetype!="pdf"&&
       filetype!="DOC"&&filetype!="DOCX"&&filetype!="PDF"){
-        document.getElementById('upload-error').innerHTML="Please upload in PDF, DOC, or DOCX format";
+        $("#upload-error").text("Please upload in PDF, DOC, or DOCX format");
         return false;
     }
+    document.getElementById("i-recaptcha").submit();
     console.log(filetype);
 }
 
 function check_upload(){
-  resume = document.getElementById('resume').value;
+  resume = $("#resume").val();
   if(resume!=""){
       resume = resume.split(/(\\|\/)/g).pop()
-      // document.getElementById("upload-text").innerHTML = "Change";
       $("#upload-text").text("Change");
-
-      document.getElementById("uploaded-file").innerHTML = resume;
+      $("#uploaded-file").text(resume);
       document.getElementById("upload").className = "btn btn-success btn-lg";
-      document.getElementById('upload-error').innerHTML="";
-      console.log(resume.split('.').pop());
+      $("#upload").attr('class', "btn btn-success btn-lg");
+      $("#upload-error").text("");
   }
 }
 
 function add_work(){
   i = document.getElementsByClassName('work-history');
   $('#work-history-0').clone().attr('id','work-history-'+(i.length)).insertAfter('#work-history-' + (i.length- 1));
-  //$('#requirements-1').attr('id','requirements-'+(i.length));
-  document.getElementById("work-history-" + (i.length-1)).style.display = "block";
+  // document.getElementById("work-history-" + (i.length-1)).style.display = "block";
+  $("#work-history-"+(i.length-1)).css("display", "block");
 }
 
 function delete_work(){
   $(this).parent().parent().remove();
   i = document.getElementsByClassName('work-history');
-  console.log(i);
   for(x=1;x<i.length;x++){
     i[x].id = "work-history-" + x;
   }
@@ -55,11 +53,12 @@ function delete_work(){
 
 function add_skill(){
   skill = document.getElementById('skill');
-  console.log(skill.value);
+
   if(skill.value != ""){
     i = document.getElementsByClassName('skills');
     $('#skill-0').clone().attr('id','skill-'+(i.length)).insertAfter('#skill-' + (i.length-1));
-    document.getElementById('skill-'+(i.length-1)).style = "display: block;";
+    // document.getElementById('skill-'+(i.length-1)).style = "display: block;";
+    $("#skill-"+(i.length-1)).css("display", "block");
     document.getElementById('skill-'+(i.length-1)).lastChild.previousSibling.innerHTML = skill.value;
     skill.value ="";
   }

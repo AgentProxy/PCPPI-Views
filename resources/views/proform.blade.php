@@ -1,10 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
+
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-home" class="btn btn-warning btn-lg col-xs-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
+			<a href="careers-search" class="btn btn-success btn-lg col-xs-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
 		</div>
 	</div>
 	<div class="row">
@@ -56,18 +57,18 @@
 		</div>
 	</div>
 
-	<form name="proform" id="proform" method="GET" action="" onsubmit="return validate()" data-toggle="validator">
+	<form name="proform" id='i-recaptcha' method="GET" action="" data-toggle="validator">
 
 	<div class="row">
 		<!--<form>-->
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" id="fname" data-error="Please input your first name" >
+	    		<input type="text" class="form-control" id="fname" data-error="Please input your first name" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" id="lname" data-error="Please input your last name" >
+	    		<input type="text" class="form-control" id="lname" data-error="Please input your last name" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  	<!--</form>-->
@@ -76,7 +77,7 @@
 		<!-- <form > -->
 	  		<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
-	    		<input type="text" class="form-control" id="present" data-error="Please input your present address" >
+	    		<input type="text" class="form-control" id="present" data-error="Please input your present address" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 	  		<div class="form-group col-md-2">
@@ -89,7 +90,7 @@
 		<!--<form>-->
 	  		<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
-	    		<input type="text" class="form-control" id="prov" data-error="Please input your provincial address" >
+	    		<input type="text" class="form-control" id="prov" data-error="Please input your provincial address" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -102,18 +103,18 @@
 		<!--<form>-->
 			<div class="form-group col-md-2 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
-	    		<input type="date" class="form-control" id="bday" data-error="Please input your birthdate" >
+	    		<input type="date" class="form-control" id="bday" data-error="Please input your birthdate" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="phone">Mobile Number *</label>
-	    		<input type="text" class="form-control" id="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-error="Please input your mobile number" >
+	    		<input type="text" class="form-control" id="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-error="Please input your mobile number" required>
 	    		<div class="help-block with-errors"></div>
 	    		<div class="help-block">Should have 11 digits</div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" id="email" data-error="Please input a valid email address" >
+	    		<input type="email" class="form-control" id="email" data-error="Please input a valid email address" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  	<!--</form>-->
@@ -122,7 +123,7 @@
 		<!--<form>-->
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="course">Bachelor's Degree *</label>
-	    		<input type="text" class="form-control" id="course" data-error="Please input your bachelor's degree" >
+	    		<input type="text" class="form-control" id="course" data-error="Please input your bachelor's degree" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -147,7 +148,7 @@
 		<!--<form>-->
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school1">School/College/University *</label>
-	    		<input type="text" class="form-control" id="school1" data-error="Please input this field" >
+	    		<input type="text" class="form-control" id="school1" data-error="Please input this field" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  	<!--</form>-->
@@ -199,8 +200,8 @@
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
 		    <div class="row">
-			    <input type="text" id="skill" class="form-control col-md-2" placeholder="Other Skills">
-			    <button type="button" id="add-skill" class="btn btn-warning add-skill">
+			    <input type="text" id="skill" placeholder="Other Skills">
+			    <button type="button" id="add-skill" class="btn btn-success add-skill">
 	      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 	    		</button>
     		</div>
@@ -340,7 +341,7 @@
 
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
-			<button type="button" class="btn btn-warning add-work">
+			<button type="button" class="btn btn-success add-work">
       			<span class="glyphicon glyphicon-plus"></span> Add
     		</button>
 		</div>
@@ -361,8 +362,18 @@
 		</div>
 	</div>
 	<div class="row">
+
 		<div id="pad">
-			<input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application">
+			<!-- <button
+			class="g-recaptcha btn-success btn btn-lg center-block"
+			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
+			data-callback="validate">
+			Submit Application
+			</button> -->
+			<input type="submit" class="g-recaptcha btn-success btn btn-lg center-block"
+			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
+			data-callback="validate" value="Submit Application">
+			<input id="submit_handle" type="submit" style="display: none">
 		</div>
 	</div>
 	</form>

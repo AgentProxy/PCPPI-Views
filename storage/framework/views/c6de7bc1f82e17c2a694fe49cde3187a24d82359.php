@@ -1,16 +1,15 @@
 <?php $__env->startSection('content'); ?>
-
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-search" class="btn btn-success btn-lg col-xs-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
+			<a href="careers-home" class="btn btn-warning btn-lg" role="button">Back to Careers</a>
 		</div>
 	</div>
 	<div class="row">
 		<h1 id="title">POSITION</h1>
 		<h4 id="title">Location</h4>
 	</div>
-	<div class="row col-md-offset-1">
+	<div class="row">
 		<h3>Main Responsibility</h3>
 		<ul>
   			<li>Responsibility 1</li>
@@ -18,7 +17,7 @@
   			<li>Responsibility 3</li>
 		</ul>
 	</div>
-	<div class="row col-md-offset-1">
+	<div class="row">
 		<h3>Qualifications</h3>
 		<ul>
   			<li>Qualification 1</li>
@@ -54,8 +53,7 @@
 		<br><br><br>
 		</div>
 	</div>
-
-	<form name="proform" id='i-recaptcha' method="GET" action="" data-toggle="validator">
+	<form id="proform" method="GET" action="" data-toggle="validator">
 
 	<div class="row">
 		<!--<form>-->
@@ -82,6 +80,7 @@
 	    		<label for="zip">Zip</label>
 	    		<input type="text" class="form-control" id="zip">
 	  		</div>
+	  		
 	  	<!--</form>-->
 	</div>	
 	<div class="row">
@@ -126,16 +125,16 @@
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="from1"><small> From (School Year) * </small></label>
-	    		<!-- <input type="date" class="form-control" id="from1" data-error="Please input this field" > -->
-	    		<select class="form-control year" id="from1" ">
+	    		<!-- <input type="date" class="form-control" id="from1" data-error="Please input this field" required> -->
+	    		<select class="form-control year" id="from1" required">
 	    			<option selected disabled>--</option>
 	    		</select>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="to1"><small> To (School Year) * </small></label>
-	    		<!-- <input type="date" class="form-control" id="to1" data-error="Please input this field" > -->
-	    		<select class="form-control year" id="from1" >
+	    		<!-- <input type="date" class="form-control" id="to1" data-error="Please input this field" required> -->
+	    		<select class="form-control year" id="from1" required>
 	    			<option selected disabled>--</option>
 	    		</select>
 	    		<div class="help-block with-errors"></div>
@@ -160,14 +159,14 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="from2"><small> From (School Year) </small></label>
 	    		<!-- <input type="date" class="form-control" id="from2"> -->
-	    		<select class="form-control year" id="from1" ="">
+	    		<select class="form-control year" id="from1" required="">
 	    			<option selected disabled>--</option>
 	    		</select>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="to2"><small> To (School Year) </small></label>
 	    		<!-- <input type="date" class="form-control" id="to2"> -->
-	    		<select class="form-control year" id="from1" ="">
+	    		<select class="form-control year" id="from1" required="">
 	    			<option selected disabled>--</option>
 	    		</select>
 	  		</div>
@@ -198,8 +197,8 @@
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
 		    <div class="row">
-			    <input type="text" id="skill" placeholder="Other Skills">
-			    <button type="button" id="add-skill" class="btn btn-success add-skill">
+			    <input type="text" id="skill" class="form-control col-md-2" placeholder="Other Skills">
+			    <button type="button" id="add-skill" class="btn btn-warning add-skill">
 	      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 	    		</button>
     		</div>
@@ -207,9 +206,9 @@
 	</div>
 	<div class="row">
 		<!--<form>-->
-			<!-- <div class="form-group col-md-3 col-md-offset-2">
+			<div class="form-group col-md-3 col-md-offset-2">
 				<label for="dept"><br>Preferred Department *</label>
-				<select class="form-control" id="dept" >
+				<select class="form-control" id="dept" required>
 					<option selected disabled>Select a Department</option>
 			        <option>Department 1</option>
 			        <option>Department 2</option>
@@ -228,8 +227,8 @@
 			        <option>Region 4</option>
 			        <option>Region 5</option>
 			    </select>
-			</div> -->
-			<div class="form-group col-md-2 col-md-offset-2">
+			</div>
+			<div class="form-group col-md-2">
 				<br/>
 				<label for="reloc">Willing to relocate? *</label>
 				<select class="form-control" id="reloc">
@@ -280,7 +279,7 @@
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
-    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>
+    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>.
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
@@ -336,10 +335,9 @@
 	  	</div>
 	  	<!--</form>-->  	
 	</div>
-
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
-			<button type="button" class="btn btn-success add-work">
+			<button type="button" class="btn btn-warning add-work">
       			<span class="glyphicon glyphicon-plus"></span> Add
     		</button>
 		</div>
@@ -360,18 +358,8 @@
 		</div>
 	</div>
 	<div class="row">
-
 		<div id="pad">
-			<!-- <button
-			class="g-recaptcha btn-success btn btn-lg center-block"
-			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
-			data-callback="validate">
-			Submit Application
-			</button> -->
-			<input type="submit" class="g-recaptcha btn-success btn btn-lg center-block"
-			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
-			data-callback="validate" value="Submit Application">
-			<input id="submit_handle" type="submit" style="display: none">
+			<input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application">
 		</div>
 	</div>
 	</form>

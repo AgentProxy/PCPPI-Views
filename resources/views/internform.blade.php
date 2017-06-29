@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-home" class="btn btn-warning btn-lg" role="button">Back to Careers</a>
+			<a href="careers-home" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"> Back to Careers Home</a>
 		</div>
 	</div>
 	<div class="row">
@@ -39,7 +39,7 @@
 		<h4 class="col-md-4 col-md-offset-2">PERSONAL INFORMATION</h4><br><br><br>
 	</div>
 
-	<form id="proform" method="GET" action="" data-toggle="validator">
+	<form id='i-recaptcha' method="GET" onsubmit="return validate()" action="" data-toggle="validator">
 		<div class="row">
 			<!-- <form> -->
 		  	<div class="form-group col-md-4 col-md-offset-2">
@@ -148,18 +148,23 @@
 		  	<!-- </form> -->  	
 		</div>
 		<div class="row">
-			<div>
-				<br><br><br><h4 class="col-md-4 col-md-offset-2">Upload Resume</h4>
-			</div>
-		</div>
-		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
-				<button type="button" class="btn btn-primary btn-lg">Upload</button>
+				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
+						<input type="file" id="resume" style="display: none" />	
+				</label>
+				<p> Uploaded File: <span id="uploaded-file"> </span></p>
+				<div class="help-block with-errors" id="upload-error" style="color:red;"></div>
 			</div>
 		</div>
 		<div class="row">
 			<div id="pad">
-				<button type="button" class="btn btn-success btn-lg center-block">Submit Application</button>
+				<button
+				class="g-recaptcha btn-success btn btn-lg center-block"
+				data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
+				data-callback="onsubmit">
+				Submit Application
+				</button>
+				<!-- <input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application"> -->
 			</div>
 		</div>
 	</form>
