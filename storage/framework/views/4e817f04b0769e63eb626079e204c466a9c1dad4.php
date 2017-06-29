@@ -2,7 +2,7 @@
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-home" class="btn btn-warning btn-lg" role="button">Back to Careers</a>
+			<a href="careers-home" class="btn btn-warning btn-lg col-md-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
 		</div>
 	</div>
 	<div class="row">
@@ -49,7 +49,7 @@
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
 		<h4 >PERSONAL INFORMATION</h4>
-		<small class="text-danger"><strong>Fields with * are </strong></small>
+		<small class="text-danger"><strong>Fields with * are required</strong></small>
 		<br><br><br>
 		</div>
 	</div>
@@ -180,27 +180,33 @@
 	  		</div>
 	  	<!--</form>-->
 	</div>
-	<div class="row col-md-offset-2">
+	<div class="row">
 		<!--<form>-->
-			<label for="phone">Skills</label>
-			<div id="skill-0" class="checkbox skills" style="display: none">
-		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
-		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
-		    </div>
-			<div id="skill-1" class="checkbox skills">
-  				<label><input type="checkbox" value="">Advanced Excel</label>
-		    </div>
-		    <div id="skill-2" class="checkbox skills">
-		      <label><input type="checkbox" value="">Photoshop</label>
-		    </div>
-		    <div id="skill-3" class="checkbox skills">
-		      <label><input type="checkbox" value="">Programming</label>
-		    </div>
-		    
-		    <input type="text" id="skill" placeholder="Other Skills">
-		    <button type="button" id="add-skill" class="btn btn-warning add-skill">
-      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
-    		</button>
+			<div class=" col-md-offset-2">
+				<label for="phone">Skills</label>
+				<div id="skill-0" class="checkbox skills" style="display: none">
+			    	<button class="btn btn-danger btn-circle-md delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+			    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+			    </div>
+				<div id="skill-1" class="checkbox skills">
+	  				<label><input type="checkbox" value="">Advanced Excel</label>
+			    </div>
+			    <div id="skill-2" class="checkbox skills">
+			      <label><input type="checkbox" value="">Photoshop</label>
+			    </div>
+			    <div id="skill-3" class="checkbox skills">
+			      <label><input type="checkbox" value="">Programming</label>
+			    </div>
+			    <div class="row">
+			    	<div class="col-md-3">
+					    <input type="text" id="skill" class="form-control" placeholder="Other Skills">
+					    <div id="sk"></div>
+					    <button type="button" id="add-skill" class="btn btn-warning btn-lg add-skill">
+			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
+			    		</button>
+			    	</div>
+	    		</div>
+	    	</div>
 		<!--</form>-->
 	</div>
 	<div class="row">
@@ -278,7 +284,7 @@
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
-    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>.
+    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
@@ -353,6 +359,7 @@
 			<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
 					<input type="file" id="resume" style="display: none" />	
 			</label>
+			<p> Uploaded File: <span id="uploaded-file"> </span></p>
 			<div class="help-block with-errors" id="upload-error" style="color:red;"></div>
 		</div>
 	</div>

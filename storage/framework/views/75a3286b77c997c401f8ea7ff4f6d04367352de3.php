@@ -81,13 +81,15 @@
                 width: 60%;
             }
 
-            #addwork{
+            body, h1, h2, h3, h4, li, p, label{
+            font-size: 80%;
             }
 
-            body{
-            padding-top: 100px;
-            font-size: 75%;
-        }
+            .btn-lg {
+                padding: 5px 10px;
+                font-size: 10px;
+                border-radius: 10px;
+            }
 
         }
 
@@ -266,6 +268,10 @@
         .container{
             width: 100%;
 
+        }
+
+        #sk{
+            padding-top: 10px;
         }
 
     </style>
