@@ -6,23 +6,34 @@ $(document).ready(function(){
     $(document).on("click",".add-skill", add_skill);
 })
 
+  
+
 function validate(){
-    if(document.getElementById('resume').value==''){
-        console.log("Hello");
+    resume = document.getElementById('resume').value;
+    filetype = resume.split('.').pop();
+    if(resume==''){
         document.getElementById('upload-error').innerHTML="Please upload your resume";
         return false;
     }
-    else{
-      console.log(document.getElementById('resume').value);
+    else if (filetype!="doc"&&filetype!="docx"&&filetype!="pdf"&&
+      filetype!="DOC"&&filetype!="DOCX"&&filetype!="PDF"){
+        document.getElementById('upload-error').innerHTML="Please upload in PDF, DOC, or DOCX format";
+        return false;
     }
-    console.log("Hello");
+    console.log(filetype);
 }
 
 function check_upload(){
-  if(document.getElementById('upload').value!=""){
-      document.getElementById("upload-text").innerHTML = "Change";
+  resume = document.getElementById('resume').value;
+  if(resume!=""){
+      resume = resume.split(/(\\|\/)/g).pop()
+      // document.getElementById("upload-text").innerHTML = "Change";
+      $("#upload-text").text("Change");
+
+      document.getElementById("uploaded-file").innerHTML = resume;
       document.getElementById("upload").className = "btn btn-success btn-lg";
       document.getElementById('upload-error').innerHTML="";
+      console.log(resume.split('.').pop());
   }
 }
 

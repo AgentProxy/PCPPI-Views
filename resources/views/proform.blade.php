@@ -51,7 +51,7 @@
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
 		<h4 >PERSONAL INFORMATION</h4>
-		<small class="text-danger"><strong>Fields with * are </strong></small>
+		<small class="text-danger"><strong>Fields with * are required</strong></small>
 		<br><br><br>
 		</div>
 	</div>
@@ -198,11 +198,12 @@
 		    <div id="skill-3" class="checkbox skills">
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
-		    
-		    <input type="text" id="skill" placeholder="Other Skills">
-		    <button type="button" id="add-skill" class="btn btn-warning add-skill">
-      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
-    		</button>
+		    <div class="row">
+			    <input type="text" id="skill" class="form-control col-md-2" placeholder="Other Skills">
+			    <button type="button" id="add-skill" class="btn btn-warning add-skill">
+	      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
+	    		</button>
+    		</div>
 		<!--</form>-->
 	</div>
 	<div class="row">
@@ -280,7 +281,7 @@
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
-    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>.
+    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
@@ -353,6 +354,7 @@
 			<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
 					<input type="file" id="resume" style="display: none" />	
 			</label>
+			<p> Uploaded File: <span id="uploaded-file"> </span></p>
 			<div class="help-block with-errors" id="upload-error" style="color:red;"></div>
 		</div>
 	</div>
