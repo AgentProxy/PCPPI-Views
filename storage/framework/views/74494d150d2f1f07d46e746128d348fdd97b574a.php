@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="row" id="padbot">
-            <h4>Can't find any vacant position in desired location and position? Leave your resume <a href="careers-bankform"> here </a>.  </h4>
+            <h4>Can't find any vacant position in desired location and position? Leave your resume <a href="careers-bankform"> here</a>.  </h4>
             <!-- <button type="button" class="btn btn-primary">Upload</button> -->
         </div>
     </div>

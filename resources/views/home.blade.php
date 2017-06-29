@@ -17,14 +17,14 @@
 </div>
 <!-- Page content -->
 <div id="about">
-    <div class="container">
+    <div class="container" id="container1">
         <div class="row">
             <div class="col-md-6">
                 <h1>Why Join Pepsi?</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit in eros ut fermentum. Suspendisse eget dui dictum, mattis nisl hendrerit, consequat libero. Suspendisse vel rutrum sapien, ut congue leo. Sed porta, quam eget lacinia dictum, nunc purus mollis nunc, eu imperdiet felis ligula sit amet nibh. Nullam auctor dolor sit amet orci eleifend, in eleifend nibh gravida. Pellentesque mollis sed nisi sed suscipit. Suspendisse eu nisi a ligula ornare pulvinar. Curabitur lacinia ullamcorper eros, vitae dapibus orci iaculis eu. Aliquam tellus mi, gravida ac tristique sit amet, sagittis vel tortor. Etiam luctus mollis pharetra. Aliquam nec rutrum mi, ut maximus tellus. Sed pretium ante urna, at sodales nulla venenatis vel.</p>
                 </div>
-            <div class="col-md-6">
-                    
+            <div class="center-block col-md-6">
+                    <img src="img/1.png">   
             </div>
         </div>
     </div>
@@ -32,8 +32,8 @@
 <div>
     <div class="container">
         <div class="row">
-        <div class="col-md-6">
-                    
+        <div class="center-block col-md-6">
+            <img src="img/1.png">        
         </div>
         <div class="col-md-6">
             <h1>Our Company</h1>

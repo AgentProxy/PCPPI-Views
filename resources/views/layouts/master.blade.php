@@ -40,7 +40,7 @@
 
         #map {
             height: 100vh;
-            width: 70%;
+            width: 50%;
             margin-top: 20px;
             border: solid white 5px;
         }
@@ -77,6 +77,9 @@
                 margin-left: auto;
             }
 
+            img{
+                width: 60%;
+            }
 
             body{
             padding-top: 100px;
@@ -215,6 +218,16 @@
 
         #search-bar{
             margin-top: 50px;
+        }
+
+        #container1{
+            background-color: lightgray;
+        }
+
+        .container{
+            margin-left: 0px;
+            margin-right: 0px;
+            width: 100%;
         }
 
     </style>

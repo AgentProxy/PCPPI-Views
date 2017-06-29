@@ -2,7 +2,7 @@
 
 @section('content')
 		<h1 class="text-center"> Find Your Career </h1>
-		<div id="map" class="container"></div>
+		<div id="map" class="container center"></div>
 		<div id="search-bar" class="container">
             <div class="form-group col-md-4">
                 <input type="text" class="form-control" id="job" placeholder="Job">
