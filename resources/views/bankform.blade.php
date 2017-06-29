@@ -203,7 +203,7 @@
 	</div>
 	<div class="row">
 		<!--<form>-->
-			<!-- <div class="form-group col-md-3 col-md-offset-2">
+			<div class="form-group col-md-3 col-md-offset-2">
 				<label for="dept"><br>Preferred Department *</label>
 				<select class="form-control" id="dept" required>
 					<option selected disabled>Select a Department</option>
@@ -224,8 +224,8 @@
 			        <option>Region 4</option>
 			        <option>Region 5</option>
 			    </select>
-			</div> -->
-			<div class="form-group col-md-2 col-md-offset-2">
+			</div>
+			<div class="form-group col-md-2">
 				<br/>
 				<label for="reloc">Willing to relocate? *</label>
 				<select class="form-control" id="reloc">
