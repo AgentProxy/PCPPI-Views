@@ -18,13 +18,14 @@
     <link rel="stylesheet" href="css/style.css"/>
     <!-- End of Validator Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 
 
         <style type="text/css">
 
         body{
-            padding-top: 130px;
+            padding-top: 0px;
         }
 
         body,html{
@@ -49,6 +50,7 @@
             /*height: 7em;*/
             border-bottom: 5px solid rgb(0, 133, 202);
             background-color: white;
+            padding: 0;
         }
 
         #pcppi {
@@ -78,7 +80,7 @@
 
 
             body{
-            padding-top: 100px;
+            padding-top: 0px;
         }
 
         }
@@ -216,36 +218,75 @@
             margin-top: 50px;
         }
 
+        /* diri ka nag add */
+
+        .img-responsive {
+            padding: auto;
+            display: block;
+        }
+
+        #next, #section {
+            padding: 40px 30px;
+        }
+
         .bg-grey {
             background-color: #f6f6f6;
-        }        
+        }
 
         .thumbnail {
-            padding: 0 0 15px 0;
-            border: none;
-            border-radius: 8px;
+            border: 1px solid #0A62EA;
+            border-radius: 20px;
+            transition: box-shadow 0.5s;
+            padding: 10px;
         }
 
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            margin-bottom: 10px; 
+        .thumbnail > img {
+            border-radius: 20px 20px 0 0;
         }
 
-        .slideanim {visibility:hidden;}
+        .thumbnail:hover {
+            box-shadow: 5px 0px 20px black;
+        }
 
-        @media screen and (max-width: 768px) {
-            .col-sm-4 {
-                text-align: center;
-                margin: 25px 0;
+        .slideanim { visibility: hidden; }
+
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name:slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
             }
         }
 
-        section {
-            padding: 60px 50px;
-            height: 85vh;
+        @media screen and (max-width:  768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 2-5px 0;
+            }
         }
 
+        
     </style>
 
     <!-- Scripts -->
@@ -275,7 +316,7 @@
 </head>
 <body id="page-top">
     <div id="app" >
-        <nav class="navbar navbar-fixed-top">
+        <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="background-color: grey; margin-top: 5%; text-align: center;">
@@ -317,11 +358,11 @@
                 <a href="https://www.pepsiphilippines.com/index.php">
                     <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
                 </a>
-                <span class="" style="position: relative; left: 20%;">
+                <span class="" style="position: relative; left: 10%;">
                 <a  href="https://www.facebook.com/PepsiPhilippines">
                     <img id="linkedin-link" class="footer-links" src="/img/fb.png" />
                 </a> 
-                <a href="#" style="margin-left: 5%;">
+                <a href="#" style="margin-left: 2%;">
                     <img id="fb-link" class="footer-links" src="/img/linkedin.png"  />
                 </a> 
                 </span>  

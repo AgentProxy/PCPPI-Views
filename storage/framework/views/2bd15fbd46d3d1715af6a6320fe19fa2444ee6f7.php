@@ -96,44 +96,10 @@
 	    		<input type="email" class="form-control" id="email" data-error="Please input a valid email address" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-<<<<<<< HEAD
-	  		<div class="form-group col-md-2">
-  				<label for="level">Year Level</label>
-  				<select class="form-control" id="level">
-			        <option>First Year</option>
-			        <option>Second Year</option>
-			        <option>Third Year</option>
-			        <option>Fourth Year</option>
-			        <option>Fifth Year</option>
-			    </select>
-	  		</div>
-	  		<div class="form-group col-md-1">
-  				<label for="sem">Semester</label>
-  				<select class="form-control" id="sem">
-			        <option>1st</option>
-			        <option>2nd</option>
-			     </select>
-	  		</div>
-	  		<div class="form-group col-md-2">
-  				<label for="hrs">Hours Required</label>
-  				<select class="form-control" id="hrs">
-  					<option>100-200</option>
-			        <option>200-300</option>
-			        <option>300-400</option>
-			        <option>500-above</option>
-			     </select>
-	  		</div>
-	  	</form>  	
-	</div>
-	<div class="row">
-		<div>
-			<br><br><br><h4 class="col-md-4 col-md-offset-2">Upload Resume</h4>
-=======
 		  	<!-- </form> -->
 		</div>	
 		<div class="row">
 			<br><br><br><h4 class="col-md-4 col-md-offset-2">INTERNSHIP DETAILS</h4><br><br><br>
->>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 		</div>
 		<div class="row">
 			<!-- <form> -->
