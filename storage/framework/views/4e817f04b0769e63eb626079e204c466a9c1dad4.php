@@ -58,12 +58,20 @@
 	<div class="row">
 		<!--<form>-->
 	  		<div class="form-group col-md-4 col-md-offset-2">
+<<<<<<< HEAD
+	    		<label for="fname">First Name</label>
+=======
 	    		<label for="fname">First Name *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<input type="text" class="form-control" id="fname" data-error="Please input your first name" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
+<<<<<<< HEAD
+	    		<label for="lname">Last Name</label>
+=======
 	    		<label for="lname">Last Name *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<input type="text" class="form-control" id="lname" data-error="Please input your last name" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
@@ -72,7 +80,11 @@
 	<div class="row">
 		<!-- <form > -->
 	  		<div class="form-group col-md-6 col-md-offset-2">
+<<<<<<< HEAD
+	    		<label for="present"> Present Address</label>
+=======
 	    		<label for="present"> Present Address *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<input type="text" class="form-control" id="present" data-error="Please input your present address" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
@@ -80,12 +92,20 @@
 	    		<label for="zip">Zip</label>
 	    		<input type="text" class="form-control" id="zip">
 	  		</div>
+<<<<<<< HEAD
+	  		
+=======
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	  	<!--</form>-->
 	</div>	
 	<div class="row">
 		<!--<form>-->
 	  		<div class="form-group col-md-6 col-md-offset-2">
+<<<<<<< HEAD
+	    		<label for="prov"> Provincial Address</label>
+=======
 	    		<label for="prov"> Provincial Address *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<input type="text" class="form-control" id="prov" data-error="Please input your provincial address" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
@@ -98,18 +118,30 @@
 	<div class="row">
 		<!--<form>-->
 			<div class="form-group col-md-2 col-md-offset-2">
+<<<<<<< HEAD
+	    		<label for="bday">Date of Birth</label>
+=======
 	    		<label for="bday">Date of Birth *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<input type="date" class="form-control" id="bday" data-error="Please input your birthdate" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
+<<<<<<< HEAD
+	    		<label for="phone">Mobile Number</label>
+=======
 	    		<label for="phone">Mobile Number *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<input type="text" class="form-control" id="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-error="Please input your mobile number" required>
 	    		<div class="help-block with-errors"></div>
 	    		<div class="help-block">Should have 11 digits</div>
 	  		</div>
 	  		<div class="form-group col-md-3">
+<<<<<<< HEAD
+	    		<label for="email">Email Address</label>
+=======
 	    		<label for="email">Email Address *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<input type="email" class="form-control" id="email" data-error="Please input a valid email address" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
@@ -118,22 +150,38 @@
 	<div class="row">
 		<!--<form>-->
 	  		<div class="form-group col-md-4 col-md-offset-2">
+<<<<<<< HEAD
+	    		<label for="course">Bachelor's Degree</label>
+=======
 	    		<label for="course">Bachelor's Degree *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<input type="text" class="form-control" id="course" data-error="Please input your bachelor's degree" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
+<<<<<<< HEAD
+	    		<label for="from1">From (School Year)</label>
+	    		<!-- <input type="date" class="form-control" id="from1" data-error="Please input this field" required> -->
+	    		<select class="form-control year" id="from1" required="">
+=======
 	    		<label for="from1"><small> From (School Year) * </small></label>
 	    		<!-- <input type="date" class="form-control" id="from1" data-error="Please input this field" required> -->
 	    		<select class="form-control year" id="from1" required">
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    			<option selected disabled>--</option>
 	    		</select>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
+<<<<<<< HEAD
+	    		<label for="to1">To (School Year)</label>
+	    		<!-- <input type="date" class="form-control" id="to1" data-error="Please input this field" required> -->
+	    		<select class="form-control year" id="from1" required="">
+=======
 	    		<label for="to1"><small> To (School Year) * </small></label>
 	    		<!-- <input type="date" class="form-control" id="to1" data-error="Please input this field" required> -->
 	    		<select class="form-control year" id="from1" required>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    			<option selected disabled>--</option>
 	    		</select>
 	    		<div class="help-block with-errors"></div>
@@ -143,7 +191,11 @@
 	<div class="row">
 		<!--<form>-->
 	  		<div class="form-group col-md-8 col-md-offset-2">
+<<<<<<< HEAD
+	    		<label for="school1">School/College/University</label>
+=======
 	    		<label for="school1">School/College/University *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<input type="text" class="form-control" id="school1" data-error="Please input this field" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
@@ -156,14 +208,22 @@
 	    		<input type="text" class="form-control" id="gradcourse">
 	  		</div>
 	  		<div class="form-group col-md-2">
+<<<<<<< HEAD
+	    		<label for="from2">From (School Year)</label>
+=======
 	    		<label for="from2"><small> From (School Year) </small></label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<!-- <input type="date" class="form-control" id="from2"> -->
 	    		<select class="form-control year" id="from1" required="">
 	    			<option selected disabled>--</option>
 	    		</select>
 	  		</div>
 	  		<div class="form-group col-md-2">
+<<<<<<< HEAD
+	    		<label for="to2">To (School Year)</label>
+=======
 	    		<label for="to2"><small> To (School Year) </small></label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	    		<!-- <input type="date" class="form-control" id="to2"> -->
 	    		<select class="form-control year" id="from1" required="">
 	    			<option selected disabled>--</option>
@@ -191,15 +251,23 @@
 		    <div class="checkbox">
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
+<<<<<<< HEAD
+=======
 		    <button type="button" class="btn btn-warning">
       			<span class="glyphicon glyphicon-plus"></span> Add a Skill
     		</button>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 		<!--</form>-->
 	</div>
 	<div class="row">
 		<!--<form>-->
+<<<<<<< HEAD
+			<div class="form-group col-md-3 col-md-offset-2">
+				<label for="dept"><br>Preferred Department</label>
+=======
 			<!-- <div class="form-group col-md-3 col-md-offset-2">
 				<label for="dept"><br>Preferred Department *</label>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 				<select class="form-control" id="dept" required>
 					<option selected disabled>Select a Department</option>
 			        <option>Department 1</option>
@@ -231,9 +299,37 @@
 			</div>
 		<!--</form>-->
 	</div>
+	<div class="container">
 	<div class="row">
 		<br><br><h4 class="col-md-4 col-md-offset-2">CHARACTER REFERENCES</h4><br><br><br>
 	</div>
+<<<<<<< HEAD
+	<div id="references" class="row table-editable">
+	    <table class="table table-bordered">
+	      <tr>
+	        <th id="title" width="23%">Name</th>
+	        <th id="title" width="13%">Contact Number</th>
+	        <th id="title" width="23%">Relationship</th>
+	      </tr>
+	      <tr>
+	        <td contenteditable="true"></td>
+	        <td contenteditable="true"></td>
+	        <td contenteditable="true"></td>
+	      </tr>
+	      <tr>
+	        <td contenteditable="true"></td>
+	        <td contenteditable="true"></td>
+	        <td contenteditable="true"></td>
+	      </tr>
+	      <tr>
+	        <td contenteditable="true"></td>
+	        <td contenteditable="true"></td>
+	        <td contenteditable="true"></td>
+	      </tr>
+	    </table>
+	  </div>
+	  </div>
+=======
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
     		<label for="name1">Name</label>
@@ -279,6 +375,7 @@
     		<div class="help-block with-errors"></div>
   		</div>
 	</div>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 	<div class="row">
 		<br><br><h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4><br><br><br>
 	</div>
@@ -324,7 +421,11 @@
 	</div>
 	<div class="row">
 		<div id="pad">
+<<<<<<< HEAD
+			<input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application">
+=======
 			<button type="submit" class="btn btn-success btn-lg center-block">Submit Application</button>
+>>>>>>> d2819f5bb42187b3d02e61644e091d5e91d0e21d
 		</div>
 	</div>
 	</form>
