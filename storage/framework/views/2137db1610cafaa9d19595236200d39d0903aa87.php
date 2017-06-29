@@ -327,7 +327,7 @@
 	</div>
 	<div class="row">
 		<div id="pad">
-			<button type="submit" class="btn btn-success btn-lg center-block">Submit Application</button>n
+			<button type="submit" class="btn btn-success btn-lg center-block">Submit Application</button>
 		</div>
 	</div>
 	</form>
