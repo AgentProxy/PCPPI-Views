@@ -81,8 +81,12 @@
                 width: 60%;
             }
 
+            #addwork{
+            }
+
             body{
             padding-top: 100px;
+            font-size: 75%;
         }
 
         }
