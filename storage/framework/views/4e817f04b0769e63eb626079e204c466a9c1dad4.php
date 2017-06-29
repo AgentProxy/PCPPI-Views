@@ -9,14 +9,14 @@
 		<h1 id="title">POSITION</h1>
 		<h4 id="title">Location</h4>
 	</div>
-	<div class="row">
-		<h3>Main Responsibility</h3>
+	<div class="row">>
+		<h3>Main Responsibility</h3
 		<ul>
   			<li>Responsibility 1</li>
-  			<li>Responsibility 2</li>
   			<li>Responsibility 3</li>
 		</ul>
 	</div>
+  			<li>Responsibility 2</li>
 	<div class="row">
 		<h3>Qualifications</h3>
 		<ul>
@@ -52,8 +52,6 @@
 		<small class="text-danger"><strong>Fields with * are required</strong></small>
 		<br><br><br>
 		</div>
-		
-		
 	</div>
 	<form id="proform" method="GET" action="" data-toggle="validator">
 
@@ -82,7 +80,6 @@
 	    		<label for="zip">Zip</label>
 	    		<input type="text" class="form-control" id="zip">
 	  		</div>
-	  		
 	  	<!--</form>-->
 	</div>	
 	<div class="row">
@@ -327,7 +324,7 @@
 	</div>
 	<div class="row">
 		<div id="pad">
-			<button type="submit" class="btn btn-success btn-lg center-block">Submit Application</button>n
+			<button type="submit" class="btn btn-success btn-lg center-block">Submit Application</button>
 		</div>
 	</div>
 	</form>
