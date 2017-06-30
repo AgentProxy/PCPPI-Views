@@ -10,11 +10,11 @@
 	</div>
 	<div id="pad" class="row">
 		<div class="col-sm-3 col-sm-offset-3">
-			<a href="careers-map" class="btn btn-primary btn-lg center-block" role="button">Back to Map</a>
+			<a href="careers-map" class="btn btn-primary btn-lg center-block" role="button">Back to Vacancies Map</a>
 		</div>
 		<div id="sk"></div>
 		<div class="col-sm-3 col-sm-3-offset">
-			<a href="careers-home" class="btn btn-primary btn-lg center-block" role="button">Back to Home</a>
+			<a href="careers-home" class="btn btn-primary btn-lg center-block" role="button">Back to Careers Home</a>
 		</div>
 	</div>
 </div>

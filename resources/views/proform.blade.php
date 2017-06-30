@@ -265,28 +265,34 @@
 	</div>
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
+    		<label for="name2" id="relation">Name *</label>
     		<input type="text" class="form-control" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
+    		<label for="num2" id="relation">Contact Number *</label>
     		<input type="text" class="form-control" id="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
+    		<label for="rel2" id="relation">Relationship *</label>
     		<input type="text" class="form-control" id="rel2" placeholder="e.g. College Teacher" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
 	</div>
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
+    		<label for="name3" id="relation">Name *</label>
     		<input type="text" class="form-control" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
+    		<label for="num3" id="relation">Contact Number *</label>
     		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
+    		<label for="rel3" id="relation">Relationship *</label>
     		<input type="text" class="form-control" id="rel3" placeholder="e.g. College Teacher" data-error="Please input your last name" required>
     		<div class="help-block with-errors"></div>
   		</div>
@@ -312,7 +318,7 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
-	    		<button class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 	  		</div>
 	  	</div>
 	  	<!-- End of Work History Template-->
@@ -332,8 +338,6 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
-	  		</div>
-	  		<div class="row">
 	  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 	  		</div>
 	  	</div>

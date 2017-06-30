@@ -4,7 +4,7 @@
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"> Back to Careers</a>
+			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
 		</div>
 	</div>
 	<div class="row">
@@ -310,7 +310,7 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
-	    		<button class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 	  		</div>
 	  	</div>
 	  	<!-- End of Work History Template-->

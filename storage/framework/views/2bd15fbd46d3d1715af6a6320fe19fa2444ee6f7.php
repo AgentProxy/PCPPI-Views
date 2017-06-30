@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-home" class="btn btn-warning btn-lg" role="button">Back to Careers</a>
+			<a href="careers-home" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers Home</a>
 		</div>
 	</div>
 	<div class="row">
@@ -37,7 +37,7 @@
 		<h4 class="col-md-4 col-md-offset-2">PERSONAL INFORMATION</h4><br><br><br>
 	</div>
 
-	<form id="proform" method="GET" action="" data-toggle="validator">
+	<form id='i-recaptcha' method="GET" onsubmit="return validate()" action="" data-toggle="validator">
 		<div class="row">
 			<!-- <form> -->
 		  	<div class="form-group col-md-4 col-md-offset-2">
@@ -113,12 +113,12 @@
 		<div class="row">
 			<!-- <form> -->
 		  		<div class="form-group col-md-3 col-md-offset-2">
-		    		<label for="course">Undergraduate Course</label>
+		    		<label for="course">Undergraduate Course *</label>
 		    		<input type="text" class="form-control" id="course" data-error="Please input this field" required>
 	    			<div class="help-block with-errors"></div>
 		  		</div>
 		  		<div class="form-group col-md-2">
-	  				<label for="level">Year Level</label>
+	  				<label for="level">Year Level *</label>
 	  				<select class="form-control" id="level">
 				        <option>First Year</option>
 				        <option>Second Year</option>
@@ -128,14 +128,14 @@
 				    </select>
 		  		</div>
 		  		<div class="form-group col-md-1">
-	  				<label for="sem">Semester</label>
+	  				<label for="sem">Sem *</label>
 	  				<select class="form-control" id="sem">
 				        <option>1st</option>
 				        <option>2nd</option>
 				     </select>
 		  		</div>
 		  		<div class="form-group col-md-2">
-	  				<label for="hrs">Hours Required</label>
+	  				<label for="hrs">Hours Required *</label>
 	  				<select class="form-control" id="hrs">
 	  					<option>100-200</option>
 				        <option>200-300</option>
@@ -146,21 +146,30 @@
 		  	<!-- </form> -->  	
 		</div>
 		<div class="row">
-			<div>
-				<br><br><br><h4 class="col-md-4 col-md-offset-2">Upload Resume</h4>
-			</div>
-		</div>
-		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
-				<button type="button" class="btn btn-primary btn-lg">Upload</button>
+				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
+						<input type="file" id="resume" style="display: none" />	
+				</label>
+				<p> Uploaded File: <span id="uploaded-file"> </span></p>
+				<div class="help-block with-errors" id="upload-error" style="color:red;"></div>
 			</div>
 		</div>
 		<div class="row">
 			<div id="pad">
-				<button type="button" class="btn btn-success btn-lg center-block">Submit Application</button>
+				<!-- <button
+				class="g-recaptcha btn-success btn btn-lg center-block"
+				data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
+				data-callback="onsubmit">
+				Submit Application
+				</button> -->
+				<input id="submit_handle" type="submit" style="display: none">
+				<!-- <input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application"> -->
 			</div>
 		</div>
 	</form>
+	<button class="g-recaptcha btn-success btn btn-lg center-block"
+	data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
+	data-callback="validate"> Submit Application </button>
 </div>
 
 <script type="text/javascript">
