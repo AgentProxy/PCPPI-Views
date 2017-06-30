@@ -356,11 +356,6 @@
     <script src="js/validation/validator.js"></script>
     <script src="js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script>
-       // function onSubmit(token) {
-       //   document.getElementById("i-recaptcha").submit();
-       // }
-     </script>
 
 </head>
 <body id="page-top">

@@ -6,8 +6,6 @@ $(document).ready(function(){
     $(document).on("click",".add-skill", add_skill);
 })
 
-  
-
 function validate(token){
     resume = $("#resume").val();
     filetype = resume.split('.').pop();
@@ -18,10 +16,9 @@ function validate(token){
     else if (filetype!="doc"&&filetype!="docx"&&filetype!="pdf"&&
       filetype!="DOC"&&filetype!="DOCX"&&filetype!="PDF"){
         $("#upload-error").text("Please upload in PDF, DOC, or DOCX format");
-        return false;
+        return false; 
     }
-    document.getElementById("i-recaptcha").submit();
-    console.log(filetype);
+    $('[type="submit"]').click();
 }
 
 function check_upload(){

@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
 <div class="container">
 	<div class="row" id="padtop">
-		<span class="glyphicon glyphicon-check"></span>
+		 <img class="center-block" src="/img/check.png" width="10%">
 	</div>
 	<div class="row">
 		<h1 id="title">APPLICATION SENT</h1>
@@ -10,10 +10,11 @@
 	</div>
 	<div id="pad" class="row">
 		<div class="col-sm-3 col-sm-offset-3">
-			<button type="button" class="btn btn-warning btn-lg center-block">Back to Map</button>
+			<a href="careers-map" class="btn btn-primary btn-lg center-block" role="button">Back to Map</a>
 		</div>
+		<div id="sk"></div>
 		<div class="col-sm-3 col-sm-3-offset">
-			<button type="button" class="btn btn-warning btn-lg center-block">Back to Home</button>
+			<a href="careers-home" class="btn btn-primary btn-lg center-block" role="button">Back to Home</a>
 		</div>
 	</div>
 </div>
