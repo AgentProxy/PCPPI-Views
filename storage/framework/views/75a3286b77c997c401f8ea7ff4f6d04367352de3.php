@@ -19,13 +19,13 @@
     <!-- End of Validator Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
 
         <style type="text/css">
 
         body{
-            padding-top: 130px;
+            padding-top: 0px;
         }
 
         body,html{
@@ -40,7 +40,7 @@
 
         #map {
             height: 100vh;
-            width: 50%;
+            width: 70%;
             margin-top: 20px;
             border: solid white 5px;
         }
@@ -50,6 +50,7 @@
             /*height: 7em;*/
             border-bottom: 5px solid rgb(0, 133, 202);
             background-color: white;
+            padding: 0;
         }
 
         #pcppi {
@@ -77,17 +78,30 @@
                 margin-left: auto;
             }
 
+<<<<<<< HEAD
+
+            body{
+            padding-top: 0px;
+        }
+=======
+            #sk{
+                padding-top: 10px;
+            }
+
             img{
                 width: 60%;
             }
 
-            #addwork{
+            body, h1, h2, h3, h4, li, p, label{
+            font-size: 80%;
             }
 
-            body{
-            padding-top: 100px;
-            font-size: 75%;
-        }
+            .btn-lg {
+                padding: 5px 10px;
+                font-size: 10px;
+                border-radius: 10px;
+            }
+>>>>>>> 274b8d7d1973cfa7052c485c1ba4e65c799ed311
 
         }
 
@@ -224,6 +238,74 @@
             margin-top: 50px;
         }
 
+<<<<<<< HEAD
+        /* diri ka nag add */
+
+        .img-responsive {
+            padding: auto;
+            display: block;
+        }
+
+        #next, #section {
+            padding: 40px 30px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        .thumbnail {
+            border: 1px solid #0A62EA;
+            border-radius: 20px;
+            transition: box-shadow 0.5s;
+            padding: 10px;
+        }
+
+        .thumbnail > img {
+            border-radius: 20px 20px 0 0;
+        }
+
+        .thumbnail:hover {
+            box-shadow: 5px 0px 20px black;
+        }
+
+        .slideanim { visibility: hidden; }
+
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name:slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+
+        @keyframes  slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @media  screen and (max-width:  768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 2-5px 0;
+            }
+=======
 
         .btn-circle {
             width: 30px;
@@ -266,8 +348,10 @@
         .container{
             width: 100%;
 
+>>>>>>> 274b8d7d1973cfa7052c485c1ba4e65c799ed311
         }
 
+        
     </style>
 
     <!-- Scripts -->
@@ -298,7 +382,7 @@
 </head>
 <body id="page-top">
     <div id="app" >
-        <nav class="navbar navbar-fixed-top">
+        <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="background-color: grey; margin-top: 5%; text-align: center;">
@@ -340,11 +424,11 @@
                 <a href="https://www.pepsiphilippines.com/index.php">
                     <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
                 </a>
-                <span class="" style="position: relative; left: 20%;">
+                <span class="" style="position: relative; left: 10%;">
                 <a  href="https://www.facebook.com/PepsiPhilippines">
                     <img id="linkedin-link" class="footer-links" src="/img/fb.png" />
                 </a> 
-                <a href="#" style="margin-left: 5%;">
+                <a href="#" style="margin-left: 2%;">
                     <img id="fb-link" class="footer-links" src="/img/linkedin.png"  />
                 </a> 
                 </span>  

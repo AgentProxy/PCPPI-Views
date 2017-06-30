@@ -57,7 +57,7 @@
 		</div>
 	</div>
 
-	<form name="proform" id='i-recaptcha' method="GET" action="" data-toggle="validator">
+	<form name="proform" id='i-recaptcha' onsubmit="return validate()" method="GET" action="" data-toggle="validator">
 
 	<div class="row">
 		<!--<form>-->
@@ -370,10 +370,13 @@
 			data-callback="validate">
 			Submit Application
 			</button> -->
-			<input type="submit" class="g-recaptcha btn-success btn btn-lg center-block"
+			<!-- <input type="submit" class="g-recaptcha btn-success btn btn-lg center-block"
 			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
 			data-callback="validate" value="Submit Application">
-			<input id="submit_handle" type="submit" style="display: none">
+			<input id="submit_handle" type="submit" style="display: none"> -->
+			<input type="submit" class="g-recaptcha btn-success btn btn-lg center-block"
+			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
+			data-callback="validate" value="Submit Application"/>
 		</div>
 	</div>
 	</form>
