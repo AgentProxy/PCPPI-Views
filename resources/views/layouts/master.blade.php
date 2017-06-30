@@ -27,15 +27,13 @@
             padding-bottom: 200px; 
             background-repeat: no-repeat; 
             background-image: url('img/HOMEbg-1.jpg') ;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        height:100%;
-
-
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            height:100%;
         }
 
         body{
@@ -83,6 +81,12 @@
 
         @media(max-width:768px){   
             .navbar {min-height:7em;}
+
+            #addwork{
+            position: relative;
+            left: -180px;
+            top: 20px;
+        }
 
             .jumbotron{
                 padding-bottom: 0px;
@@ -400,11 +404,11 @@
     <footer class="text-center" >
         <div class="container" >
             <div style="margin-left: 11%;">
-                <a href="https://www.pepsiphilippines.com/index.php">
+                <a style="text-decoration: none;" href="https://www.pepsiphilippines.com/index.php">
                     <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
                 </a>
                 <span class="" style="position: relative; left: 10%;">
-                <a  href="https://www.facebook.com/PepsiPhilippines">
+                <a style="text-decoration: none;" href="https://www.facebook.com/PepsiPhilippines">
                     <img id="linkedin-link" class="footer-links" src="/img/fb.png" />
                 </a> 
                 <a href="#" style="margin-left: 2%;">

@@ -49,7 +49,7 @@
             <a href="careers-internform" style="text-decoration: none;">
             <div class="thumbnail">
                 <img class="img-responsive" src="/img/professionals.jpg" alt="professionals" width="400" height="300">
-                <h2>Intership</h2>
+                <h2>Internship</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             </a>

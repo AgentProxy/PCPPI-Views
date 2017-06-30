@@ -14,7 +14,7 @@
 		</div>
 		<div id="sk"></div>
 		<div class="col-sm-3 col-sm-3-offset">
-			<a href="careers-home" class="btn btn-primary btn-lg center-block" role="button">Back to Home</a>
+			<a href="careers-home" class="btn btn-primary btn-lg center-block" role="button">Back to Careers Home</a>
 		</div>
 	</div>
 </div>

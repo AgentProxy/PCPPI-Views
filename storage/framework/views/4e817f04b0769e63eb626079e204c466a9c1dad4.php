@@ -309,7 +309,7 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
-	    		<button class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 	  		</div>
 	  	</div>
 	  	<!-- End of Work History Template-->
@@ -329,8 +329,6 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
-	  		</div>
-	  		<div class="row">
 	  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 	  		</div>
 	  	</div>
