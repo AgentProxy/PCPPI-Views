@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <?php echo $__env->yieldContent('head'); ?>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,6 +21,10 @@
 
 
         <style type="text/css">
+
+        #relation{
+            visibility: hidden;
+        }
 
         .jumbotron{
             /*background-image: url("img/HOMEbg-1.jpg");*/      
@@ -37,7 +42,9 @@
         }
 
         body{
+            font-family: 'Quicksand', sans-serif;
             padding-top: 0px;
+            background-color: #7fd6ff;
         }
 
         body,html{
@@ -83,10 +90,14 @@
             .navbar {min-height:7em;}
 
             #addwork{
-            position: relative;
-            left: -180px;
-            top: 20px;
-        }
+                position: relative;
+                left: -180px;
+                top: 20px;
+            }
+
+            #relation{
+                visibility: visible;
+            }
 
             .jumbotron{
                 padding-bottom: 0px;
@@ -356,11 +367,6 @@
     <script src="js/validation/validator.js"></script>
     <script src="js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script>
-       // function onSubmit(token) {
-       //   document.getElementById("i-recaptcha").submit();
-       // }
-     </script>
 
 </head>
 <body id="page-top">

@@ -4,7 +4,7 @@
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"> Back to Careers</a>
+			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
 		</div>
 	</div>
 	<div class="row">
