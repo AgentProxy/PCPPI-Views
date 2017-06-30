@@ -104,7 +104,7 @@
 		<div class="row">
 			<!-- <form> -->
 		  		<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="school">School/College/University</label>
+		    		<label for="school">School/College/University *</label>
 		    		<input type="text" class="form-control" id="school" data-error="Please input this field" required>
 	    			<div class="help-block with-errors"></div>
 		  		</div>

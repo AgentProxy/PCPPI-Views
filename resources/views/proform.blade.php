@@ -129,16 +129,16 @@
 	  		<div class="form-group col-md-2">
 	    		<label for="from1"><small> From (School Year) * </small></label>
 	    		<!-- <input type="date" class="form-control" id="from1" data-error="Please input this field" > -->
-	    		<select class="form-control year" id="from1" ">
-	    			<option selected disabled>--</option>
+	    		<select class="form-control year" id="from1" required>
+	    			<option value="" selected disabled>--</option>
 	    		</select>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="to1"><small> To (School Year) * </small></label>
 	    		<!-- <input type="date" class="form-control" id="to1" data-error="Please input this field" > -->
-	    		<select class="form-control year" id="from1" >
-	    			<option selected disabled>--</option>
+	    		<select class="form-control year" id="from1" required>
+	    			<option value="" selected disabled>--</option>
 	    		</select>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
@@ -234,12 +234,13 @@
 			<div class="form-group col-md-2 col-md-offset-2">
 				<br/>
 				<label for="reloc">Willing to relocate? *</label>
-				<select class="form-control" id="reloc">
-				<option selected disabled>--</option>
+				<select class="form-control" id="reloc" required>
+				<option selected value="" disabled>--</option>
 			        <option>Yes</option>
 			        <option>No</option>
 			    </select>
 			</div>
+			<div class="help-block with-errors"></div>
 		<!--</form>-->
 	</div>
 	<div class="row">
@@ -362,26 +363,16 @@
 		</div>
 	</div>
 	<div class="row">
-
 		<div id="pad">
-			<!-- <button
-			class="g-recaptcha btn-success btn btn-lg center-block"
-			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
-			data-callback="validate">
-			Submit Application
-			</button> -->
-			<!-- <input type="submit" class="g-recaptcha btn-success btn btn-lg center-block"
-			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
-			data-callback="validate" value="Submit Application">
-			-->
-			<input id="submit_handle" type="submit" style="display: none"> 
+			<!-- <input id="submit_handle" type="submit" style="display: block">  -->
 		</div>
 	</div>
 
 	</form>
 	<button class="g-recaptcha btn-success btn btn-lg center-block"
 	data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
-	data-callback="validate"> Submit Application </button>
+	data-callback="validate"> Submit Application 
+	</button>
 </div>
 
 <script type="text/javascript">

@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $(document).on("change", "#resume", check_upload);
+    //$(document).on("ready", this, check_upload);
     $(document).on("click",".add-work", add_work);
     $(document).on("click",".delete-work", delete_work);
     $(document).on("click",".delete-skill", delete_skill);
@@ -7,30 +8,48 @@ $(document).ready(function(){
 })
 
 function validate(token){
+  if(grecaptcha.getResponse() !=""){
+    console.log("hi");
+    var submit= $('<input id="Submit" type="submit" value="submit"/>');
+    $("#i-recaptcha").append(submit);
+    $('[type="submit"]').click();
     resume = $("#resume").val();
+    filesize = resume.size;
     filetype = resume.split('.').pop();
+
     if(resume==''){
-        $("#upload-error").text("Please upload your resume");
-        return false;
+      $("#upload-error").text("Please upload your resume");
+      return false;
     }
     else if (filetype!="doc"&&filetype!="docx"&&filetype!="pdf"&&
       filetype!="DOC"&&filetype!="DOCX"&&filetype!="PDF"){
-        $("#upload-error").text("Please upload in PDF, DOC, or DOCX format");
-        return false; 
+      $("#upload-error").text("Please upload in PDF, DOC, or DOCX format");
+      return false; 
     }
-    $('[type="submit"]').click();
+  }
 }
 
 function check_upload(){
-  resume = $("#resume").val();
-  if(resume!=""){
-      resume = resume.split(/(\\|\/)/g).pop()
-      $("#upload-text").text("Change");
-      $("#uploaded-file").text(resume);
-      document.getElementById("upload").className = "btn btn-success btn-lg";
-      $("#upload").attr('class', "btn btn-success btn-lg");
-      $("#upload-error").text("");
+  console.log("helo");
+  resume = document.getElementById('resume')
+  upload = $("#resume").val();
+  filesize = resume.size;
+  alert(resume.files[0].size);
+  filetype = upload.split('.').pop();
+
+  if (filetype!="doc"&&filetype!="docx"&&filetype!="pdf"&&
+      filetype!="DOC"&&filetype!="DOCX"&&filetype!="PDF"){
+        $("#uploaded-file").text(upload);
+        document.getElementById("upload").className = "btn btn-success btn-lg";
+        $("#upload").attr('class', "btn btn-success btn-lg");
+        $("#upload-error").text("Please upload in PDF, DOC, or DOCX format"); 
+        return false;
+    }
+  else if(upload==""){
+    $("#upload-error").text("Please upload your resume");
+    return false;
   }
+  
 }
 
 function add_work(){
