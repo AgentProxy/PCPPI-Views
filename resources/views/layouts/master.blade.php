@@ -21,6 +21,23 @@
 
         <style type="text/css">
 
+        .jumbotron{
+            /*background-image: url("img/HOMEbg-1.jpg");*/      
+            padding-top: 200px;
+            padding-bottom: 200px; 
+            background-repeat: no-repeat; 
+            background-image: url('img/HOMEbg-1.jpg') ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height:100%;
+
+
+        }
+
         body{
             padding-top: 0px;
         }
@@ -67,6 +84,12 @@
         @media(max-width:768px){   
             .navbar {min-height:7em;}
 
+            .jumbotron{
+                padding-bottom: 0px;
+                padding-top: 40px;
+                background-size: cover;
+            }
+
             #items>li{ display: block; text-align: center; }
             #items{
                 /*border: solid black 2px;*/
@@ -74,7 +97,6 @@
                 margin-right: auto;
                 margin-left: auto;
             }
-
 
             #sk{
                 padding-top: 10px;
@@ -85,13 +107,18 @@
             }
 
             body, h1, h2, h3, h4, li, p, label{
-            font-size: 80%;
+            font-size: 90%;
             }
 
-            .btn-lg {
+            .btn {
                 padding: 5px 10px;
                 font-size: 10px;
                 border-radius: 10px;
+            }
+
+            #btnpad{
+                position: relative;
+                top: 30px;                
             }
 
         }
@@ -323,7 +350,6 @@
     <script src="js/scrolling-nav.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/validation/validator.js"></script>
-<<<<<<< HEAD
     <script src="js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script>
@@ -331,8 +357,6 @@
        //   document.getElementById("i-recaptcha").submit();
        // }
      </script>
-=======
->>>>>>> 467c66e649786594e389c06307f1171282a90fe7
 
 </head>
 <body id="page-top">

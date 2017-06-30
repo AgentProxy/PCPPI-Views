@@ -14,15 +14,29 @@
     <?php echo $__env->yieldContent('head'); ?>
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
-    <!-- Validator Styles -->
-    <link rel="stylesheet" href="css/style.css"/>
-    <!-- End of Validator Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
 
 
         <style type="text/css">
+
+        .jumbotron{
+            /*background-image: url("img/HOMEbg-1.jpg");*/      
+            padding-top: 200px;
+            padding-bottom: 200px; 
+            background-repeat: no-repeat; 
+            background-image: url('img/HOMEbg-1.jpg') ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height:100%;
+
+
+        }
 
         body{
             padding-top: 0px;
@@ -70,6 +84,12 @@
         @media(max-width:768px){   
             .navbar {min-height:7em;}
 
+            .jumbotron{
+                padding-bottom: 0px;
+                padding-top: 40px;
+                background-size: cover;
+            }
+
             #items>li{ display: block; text-align: center; }
             #items{
                 /*border: solid black 2px;*/
@@ -78,12 +98,6 @@
                 margin-left: auto;
             }
 
-<<<<<<< HEAD
-
-            body{
-            padding-top: 0px;
-        }
-=======
             #sk{
                 padding-top: 10px;
             }
@@ -93,15 +107,19 @@
             }
 
             body, h1, h2, h3, h4, li, p, label{
-            font-size: 80%;
+            font-size: 90%;
             }
 
-            .btn-lg {
+            .btn {
                 padding: 5px 10px;
                 font-size: 10px;
                 border-radius: 10px;
             }
->>>>>>> 274b8d7d1973cfa7052c485c1ba4e65c799ed311
+
+            #btnpad{
+                position: relative;
+                top: 30px;                
+            }
 
         }
 
@@ -238,7 +256,6 @@
             margin-top: 50px;
         }
 
-<<<<<<< HEAD
         /* diri ka nag add */
 
         .img-responsive {
@@ -305,50 +322,6 @@
                 text-align: center;
                 margin: 2-5px 0;
             }
-=======
-
-        .btn-circle {
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            padding: 6px 0;
-            font-size: 12px;
-            line-height: 1.428571429;
-            border-radius: 15px;
-        }
-        .btn-circle-xs {
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            padding: 2px 0;
-            font-size: 12px;
-            line-height: 1.428571429;
-            border-radius: 15px;
-        }
-        .btn-circle.btn-lg {
-            width: 50px;
-            height: 50px;
-            padding: 10px 16px;
-            font-size: 18px;
-            line-height: 1.33;
-            border-radius: 25px;
-        }
-        .btn-circle.btn-xl {
-            width: 70px;
-            height: 70px;
-            padding: 10px 16px;
-            font-size: 24px;
-            line-height: 1.33;
-            border-radius: 35px;
-        }
-        #container1{
-            background-color: lightgray;
-        }
-
-        .container{
-            width: 100%;
-
->>>>>>> 274b8d7d1973cfa7052c485c1ba4e65c799ed311
         }
 
         
@@ -378,6 +351,12 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/validation/validator.js"></script>
     <script src="js/validation/proform.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+       // function onSubmit(token) {
+       //   document.getElementById("i-recaptcha").submit();
+       // }
+     </script>
 
 </head>
 <body id="page-top">

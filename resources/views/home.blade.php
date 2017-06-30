@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="jumbotron text-center" style="margin: 0px;">
+<div class="img-responsive jumbotron text-center" style="margin: 0px;">
     <h1>Company</h1>
     <p>Blablablablablablablablabla</p>
     <a class="btn btn-default page-scroll" href="#next"><span class="glyphicon glyphicon-chevron-down"></span></a>
@@ -37,7 +37,7 @@
     <br />
     <div class="row text-center sideanim">
         <div class="col-sm-4 col-sm-offset-2 slideanim">
-            <a href="#" style="text-decoration: none;">
+            <a href="careers-map" style="text-decoration: none;">
             <div class="thumbnail">
                 <img class="img-responsive" src="/img/professionals.jpg" alt="professionals" width="400" height="300">
                 <h2>Professionals</h2>
@@ -46,7 +46,7 @@
             </a>
         </div>
         <div class="col-sm-4 slideanim">
-            <a href="#" style="text-decoration: none;">
+            <a href="careers-internform" style="text-decoration: none;">
             <div class="thumbnail">
                 <img class="img-responsive" src="/img/professionals.jpg" alt="professionals" width="400" height="300">
                 <h2>Intership</h2>

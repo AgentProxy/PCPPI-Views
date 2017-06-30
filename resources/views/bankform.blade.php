@@ -199,20 +199,13 @@
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
 		    <div class="row">
-<<<<<<< HEAD
-			    <input type="text" id="skill" class="form-control col-md-2" placeholder="Other Skills">
-			    <button type="button" id="add-skill" class="btn btn-success add-skill">
-	      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
-	    		</button>
-=======
 		    	<div class="col-md-3">
 				    <input type="text" id="skill" class="form-control" placeholder="Other Skills">
 				    <div id="sk"></div>
-				    <button type="button" id="add-skill" class="btn btn-warning btn-lg add-skill">
+				    <button type="button" id="add-skill" class="btn btn-warning add-skill">
 		      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 		    		</button>
 		    	</div>
->>>>>>> 467c66e649786594e389c06307f1171282a90fe7
     		</div>
 		<!--</form>-->
 	</div>

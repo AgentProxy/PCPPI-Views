@@ -2,7 +2,7 @@
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-home" class="btn btn-warning btn-lg" role="button">Back to Careers</a>
+			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"> Back to Careers</a>
 		</div>
 	</div>
 	<div class="row">
@@ -52,10 +52,8 @@
 		<small class="text-danger"><strong>Fields with * are required</strong></small>
 		<br><br><br>
 		</div>
-		
-		
 	</div>
-	<form id="proform" method="GET" action="" data-toggle="validator">
+	<form id='i-recaptcha' method="GET" action="" data-toggle="validator">
 
 	<div class="row">
 		<!--<form>-->
@@ -185,20 +183,24 @@
 	<div class="row col-md-offset-2">
 		<!--<form>-->
 			<label for="phone">Skills</label>
-			<div class="checkbox">
+			<div id="skill-0" class="checkbox skills" style="display: none">
+		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+		    </div>
+			<div id="skill-1" class="checkbox skills">
   				<label><input type="checkbox" value="">Advanced Excel</label>
 		    </div>
-		    <div class="checkbox">
+		    <div id="skill-2" class="checkbox skills">
 		      <label><input type="checkbox" value="">Photoshop</label>
 		    </div>
-		    <div class="checkbox">
+		    <div id="skill-3" class="checkbox skills">
 		      <label><input type="checkbox" value="">Programming</label>
 		    </div>
 		    <div class="row">
 		    	<div class="col-md-3">
 				    <input type="text" id="skill" class="form-control" placeholder="Other Skills">
 				    <div id="sk"></div>
-				    <button type="button" id="add-skill" class="btn btn-warning btn-lg add-skill">
+				    <button type="button" id="add-skill" class="btn btn-warning add-skill">
 		      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 		    		</button>
 		    	</div>
@@ -292,7 +294,28 @@
 		<br><br><h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4><br><br><br>
 	</div>
 	<div class="row">
-		<!--<form>-->
+		<!-- Start of Work History Template-->
+		<div class="work-history" id="work-history-0" style="display: none;">
+	  		<div class="form-group col-md-2 col-md-offset-2">
+	    		<label for="company">Company Name</label>
+	    		<input type="text" class="form-control" id="company">
+	  		</div>
+	  		<div class="form-group col-md-2">
+	    		<label for="position">Position/Title</label>
+	    		<input type="text" class="form-control" id="position">
+	  		</div>
+	  		<div class="form-group col-md-2">
+	    		<label for="frdate">From</label>
+	    		<input type="date" class="form-control" id="frdate">
+	  		</div>
+	  		<div class="form-group col-md-2">
+	    		<label for="todate">To</label>
+	    		<input type="date" class="form-control" id="todate">
+	    		<button class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	  		</div>
+	  	</div>
+	  	<!-- End of Work History Template-->
+	  	<div class="work-history" id="work-history-1" style="display:block;">
 	  		<div class="form-group col-md-2 col-md-offset-2">
 	    		<label for="company">Company Name</label>
 	    		<input type="text" class="form-control" id="company">
@@ -309,11 +332,15 @@
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
 	  		</div>
+	  		<div class="row">
+	  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	  		</div>
+	  	</div>
 	  	<!--</form>-->  	
 	</div>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
-			<button type="button" class="btn btn-warning">
+			<button type="button" class="btn btn-success add-work">
       			<span class="glyphicon glyphicon-plus"></span> Add
     		</button>
 		</div>
@@ -326,14 +353,22 @@
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
 
-			<label class="btn btn-primary btn-lg">Upload
-					<input type="file" name="resume" style="display: none" />	
+			<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
+					<input type="file" id="resume" style="display: none" />	
 			</label>
+			<p> Uploaded File: <span id="uploaded-file"> </span></p>
+			<div class="help-block with-errors" id="upload-error" style="color:red;"></div>
 		</div>
 	</div>
 	<div class="row">
 		<div id="pad">
-			<button type="submit" class="btn btn-success btn-lg center-block">Submit Application</button>
+			<!-- <input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application"> -->
+			<button
+			class="g-recaptcha btn-success btn btn-lg center-block"
+			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
+			data-callback="onsubmit">
+			Submit Application
+			</button>
 		</div>
 	</div>
 	</form>
