@@ -115,12 +115,12 @@
 		<div class="row">
 			<!-- <form> -->
 		  		<div class="form-group col-md-3 col-md-offset-2">
-		    		<label for="course">Undergraduate Course</label>
+		    		<label for="course">Undergraduate Course *</label>
 		    		<input type="text" class="form-control" id="course" data-error="Please input this field" required>
 	    			<div class="help-block with-errors"></div>
 		  		</div>
 		  		<div class="form-group col-md-2">
-	  				<label for="level">Year Level</label>
+	  				<label for="level">Year Level *</label>
 	  				<select class="form-control" id="level">
 				        <option>First Year</option>
 				        <option>Second Year</option>
@@ -130,14 +130,14 @@
 				    </select>
 		  		</div>
 		  		<div class="form-group col-md-1">
-	  				<label for="sem">Semester</label>
+	  				<label for="sem">Sem *</label>
 	  				<select class="form-control" id="sem">
 				        <option>1st</option>
 				        <option>2nd</option>
 				     </select>
 		  		</div>
 		  		<div class="form-group col-md-2">
-	  				<label for="hrs">Hours Required</label>
+	  				<label for="hrs">Hours Required *</label>
 	  				<select class="form-control" id="hrs">
 	  					<option>100-200</option>
 				        <option>200-300</option>
@@ -158,16 +158,20 @@
 		</div>
 		<div class="row">
 			<div id="pad">
-				<button
+				<!-- <button
 				class="g-recaptcha btn-success btn btn-lg center-block"
 				data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
 				data-callback="onsubmit">
 				Submit Application
-				</button>
+				</button> -->
+				<input id="submit_handle" type="submit" style="display: none">
 				<!-- <input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application"> -->
 			</div>
 		</div>
 	</form>
+	<button class="g-recaptcha btn-success btn btn-lg center-block"
+	data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
+	data-callback="validate"> Submit Application </button>
 </div>
 
 <script type="text/javascript">

@@ -55,7 +55,7 @@
 		</div>
 	</div>
 
-	<form name="proform" id='i-recaptcha' onsubmit="return validate()" method="GET" action="" data-toggle="validator">
+	<form name="proform" id='i-recaptcha' method="GET" action="/careers-success" data-toggle="validator">
 
 	<div class="row">
 		<!--<form>-->
@@ -246,41 +246,41 @@
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
     		<label for="name1">Name</label>
-    		<input type="text" class="form-control" id="name1" placeholder="e.g. Julia Baretto" data-error="Please input your last name" required>
+    		<input type="text" class="form-control" id="name1" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
     		<label for="num1">Contact Number</label>
-    		<input type="text" class="form-control" id="num1" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>
+    		<input type="text" class="form-control" id="num1" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
     		<label for="rel1">Relationship</label>
-    		<input type="text" class="form-control" id="rel1" placeholder="e.g. College Teacher" data-error="Please input your last name" required>
+    		<input type="text" class="form-control" id="rel1" placeholder="e.g. College Teacher" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
 	</div>
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
-    		<input type="text" class="form-control" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input your last name" required>
+    		<input type="text" class="form-control" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
-    		<input type="text" class="form-control" id="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>
+    		<input type="text" class="form-control" id="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
-    		<input type="text" class="form-control" id="rel2" placeholder="e.g. College Teacher" data-error="Please input your last name" required>
+    		<input type="text" class="form-control" id="rel2" placeholder="e.g. College Teacher" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
 	</div>
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
-    		<input type="text" class="form-control" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input your last name" required>
+    		<input type="text" class="form-control" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
-    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input your mobile number" required>
+    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
@@ -371,13 +371,15 @@
 			<!-- <input type="submit" class="g-recaptcha btn-success btn btn-lg center-block"
 			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
 			data-callback="validate" value="Submit Application">
-			<input id="submit_handle" type="submit" style="display: none"> -->
-			<input type="submit" class="g-recaptcha btn-success btn btn-lg center-block"
-			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
-			data-callback="validate" value="Submit Application"/>
+			-->
+			<input id="submit_handle" type="submit" style="display: block"> 
 		</div>
 	</div>
+
 	</form>
+	<button class="g-recaptcha btn-success btn btn-lg center-block"
+			data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
+			data-callback="validate"> Submit Application </button>
 </div>
 
 <script type="text/javascript">

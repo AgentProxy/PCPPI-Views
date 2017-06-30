@@ -323,16 +323,9 @@
     <script src="js/scrolling-nav.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/validation/validator.js"></script>
-<<<<<<< HEAD
     <script src="js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script>
-       // function onSubmit(token) {
-       //   document.getElementById("i-recaptcha").submit();
-       // }
-     </script>
-=======
->>>>>>> 467c66e649786594e389c06307f1171282a90fe7
+  
 
 </head>
 <body id="page-top">
