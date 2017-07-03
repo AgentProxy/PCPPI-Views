@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <?php echo $__env->yieldContent('head'); ?>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,8 +22,35 @@
 
         <style type="text/css">
 
+        #submit-btn{
+                padding-bottom: 10px;
+            }
+
+        #relation{
+            visibility: hidden;
+        }
+
+        .jumbotron{
+            /*background-image: url("img/HOMEbg-1.jpg");*/      
+            padding-top: 200px;
+            padding-bottom: 200px; 
+            background-repeat: no-repeat; 
+            background-image: url('img/HOMEbg-1.jpg') ;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            height:100%;
+        }
+
         body{
+            font-family: 'Quicksand', sans-serif;
             padding-top: 0px;
+            background-color: #7fd6ff;
+            background-image: url(img/bubbles.gif);
+            background-size: cover;
         }
 
         body,html{
@@ -64,8 +92,47 @@
             }
         }
 
-        @media(max-width:768px){   
-            .navbar {min-height:7em;}
+        @media(max-width:768px){  
+
+            #addskill{
+                position: relative;
+                left: 20px;
+            }
+
+            #search{
+                padding-bottom: 10px;
+            }
+
+            .navbar {
+                min-height:7em;
+                padding-bottom: 10px;
+            }
+
+            .navbar-brand .logo{
+                width: 10px;
+                height: 10px;
+                margin-top: -20px;
+            }
+
+            #logo{/*
+                padding-bottom: 30px;*/
+            }
+
+            #addwork{
+                position: relative;
+                left: -180px;
+                top: 20px;
+            }
+
+            #relation{
+                visibility: visible;
+            }
+
+            .jumbotron{
+                padding-bottom: 0px;
+                padding-top: 40px;
+                background-size: cover;
+            }
 
             #items>li{ display: block; text-align: center; }
             #items{
@@ -74,7 +141,6 @@
                 margin-right: auto;
                 margin-left: auto;
             }
-
 
             #sk{
                 padding-top: 10px;
@@ -85,13 +151,17 @@
             }
 
             body, h1, h2, h3, h4, li, p, label{
-            font-size: 80%;
+            font-size: 90%;
             }
 
-            .btn-lg {
+            .btn, .btn-danger {
                 padding: 5px 10px;
                 font-size: 10px;
                 border-radius: 10px;
+            }
+
+            #btnpad{
+                padding-top: 10px;                
             }
 
         }
@@ -325,7 +395,6 @@
     <script src="js/validation/validator.js"></script>
     <script src="js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-  
 
 </head>
 <body id="page-top">
@@ -369,11 +438,11 @@
     <footer class="text-center" >
         <div class="container" >
             <div style="margin-left: 11%;">
-                <a href="https://www.pepsiphilippines.com/index.php">
+                <a style="text-decoration: none;" href="https://www.pepsiphilippines.com/index.php">
                     <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
                 </a>
                 <span class="" style="position: relative; left: 10%;">
-                <a  href="https://www.facebook.com/PepsiPhilippines">
+                <a style="text-decoration: none;" href="https://www.facebook.com/PepsiPhilippines">
                     <img id="linkedin-link" class="footer-links" src="/img/fb.png" />
                 </a> 
                 <a href="#" style="margin-left: 2%;">
