@@ -1,19 +1,21 @@
 <?php $__env->startSection('content'); ?>
 
-<div class="img-responsive jumbotron text-center" style="margin: 0px;">
-    <h1 >Company</h1>
-    <p>Blablablablablablablablabla</p>
-    <a class="btn btn-default page-scroll" href="#next"><span class="glyphicon glyphicon-chevron-down"></span></a>
-</div>
+<header class="w3-display-container w3-content w3-center" style="max-width: 1500px; margin-bottom: 5px;">
+  <img class="w3-image" src="/img/HOMEbg-1.jpg" alt="header-img" width="1500" height="400">
+  <a class="page-scroll" href="#next">
+  <div class="w3-circle w3-light-grey w3-display-bottommiddle w3-hide-small" style="bottom: 26px; ">
+    <span class="glyphicon glyphicon-chevron-down" style="padding: 12px 12px;font-size: 26px; text-align: center; color: #0A62EA;"></span></a>
+  </div>
+</header>
 
 <div id="next" class="container-fluid bg-grey">
     <div class="row">
         <div class="col-sm-8">
             <h1>Why Join Pepsi?</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <div class="col-sm-4 sidep slide">
+        <div class="col-sm-4 slideanim slide">
             <img class="img-responsive slideanim" src="/img/1.png" alt="pic">
         </div>
     </div>
@@ -34,7 +36,7 @@
     <h1>Careers</h1>
     <br />
     <div class="row text-center sideanim">
-        <div class="col-sm-4 col-sm-offset-2 slideanim">
+        <div class="col-sm-4 col-sm-offset-2 col-xs-6 slideanim">
             <a href="careers-map" style="text-decoration: none;">
             <div class="thumbnail">
                 <img class="img-responsive" src="/img/professionals.jpg" alt="professionals" width="400" height="300">
@@ -43,7 +45,7 @@
             </div>
             </a>
         </div>
-        <div class="col-sm-4 slideanim">
+        <div class="col-sm-4 col-xs-6 slideanim">
             <a href="careers-internform" style="text-decoration: none;">
             <div class="thumbnail">
                 <img class="img-responsive" src="/img/professionals.jpg" alt="professionals" width="400" height="300">

@@ -16,6 +16,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 
@@ -82,6 +83,8 @@
             font-weight: bold;
         }
 
+
+
         @media(max-width: 1000px){
             #pcppi{
                 display: none;
@@ -91,8 +94,15 @@
                 width: 100px;
             }
         }
+                #next, #section {
+            padding: 40px 30px;
+        }
 
         @media(max-width:768px){  
+
+            #next, #section {
+                padding: 30px 20px;
+            }
 
             #addskill{
                 position: relative;
@@ -146,9 +156,17 @@
                 padding-top: 10px;
             }
 
-            img{
+           a > img {
                 width: 60%;
             }
+
+            .col-sm-4 > img {
+                width: 65%;
+                display: block;
+                margin: auto;
+            }
+
+
 
             body, h1, h2, h3, h4, li, p, label{
             font-size: 90%;
@@ -172,6 +190,27 @@
                 min-height:7em;
                 border-bottom: 5px solid rgb(0, 133, 202);
                 background-color: white;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .col-sm-4 > img {
+                width: 45%;
+                display: block;
+                margin: auto;
+            }
+
+            .glyphicon.glyphicon-chevron-down {
+                font-size: 7px;
+                padding: 1px
+            }
+
+            .btn {
+                padding: 1px 2px;
+            }
+
+            body {
+                font-size: 55%;
             }
         }
 
@@ -306,9 +345,7 @@
             display: block;
         }
 
-        #next, #section {
-            padding: 40px 30px;
-        }
+
 
         .bg-grey {
             background-color: #f6f6f6;
@@ -437,7 +474,7 @@
 
     <footer class="text-center" >
         <div class="container" >
-            <div style="margin-left: 11%;">
+            <div style="margin-left: 11%; padding-bottom: 10px;">
                 <a style="text-decoration: none;" href="https://www.pepsiphilippines.com/index.php">
                     <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
                 </a>
