@@ -22,6 +22,14 @@
 
         <style type="text/css">
 
+        .noscriptmsg{
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 50px;
+            background-color: #7fd6ff;
+      /*      height: 80%;*/
+        } 
         #sxspad{
             padding-bottom: 50px;
         }
@@ -435,8 +443,19 @@
 
             </div>       
         </nav>
+    
         @yield('content')
     </div>
+    <noscript>
+        <div class="noscriptmsg">
+                <style>
+                    #app {
+                        display:none;
+                    }
+                </style>
+                You don't have javascript enabled.  Please enable it and reload the page.
+        </div>
+    </noscript>
 
     <footer class="text-center" >
         <div class="container" >

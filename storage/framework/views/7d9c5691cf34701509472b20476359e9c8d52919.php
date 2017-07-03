@@ -1,3 +1,8 @@
+<!-- if
+	naka set ang complete nga session
+	redirect to link
+ -->
+
 <?php $__env->startSection('content'); ?>
 <script>
 	$(window).on('beforeunload', function() {
@@ -59,7 +64,7 @@
 		</div>
 	</div>
 
-	<form name="proform" id='i-recaptcha' method="POST" action="/careers-success" data-toggle="validator" >	
+	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation" data-toggle="validator" >	
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
