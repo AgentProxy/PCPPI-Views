@@ -22,6 +22,10 @@
 
         <style type="text/css">
 
+        #submit-btn{
+                padding-bottom: 10px;
+            }
+
         #relation{
             visibility: hidden;
         }
@@ -46,7 +50,6 @@
             padding-top: 0px;
             background-color: #7fd6ff;
             background-image: url(img/bubbles.gif);
-            /*background-repeat: no-repeat;*/
             background-size: cover;
         }
 
@@ -89,8 +92,31 @@
             }
         }
 
-        @media(max-width:768px){   
-            .navbar {min-height:7em;}
+        @media(max-width:768px){  
+
+            #addskill{
+                position: relative;
+                left: 20px;
+            }
+
+            #search{
+                padding-bottom: 10px;
+            }
+
+            .navbar {
+                min-height:7em;
+                padding-bottom: 10px;
+            }
+
+            .navbar-brand .logo{
+                width: 10px;
+                height: 10px;
+                margin-top: -20px;
+            }
+
+            #logo{/*
+                padding-bottom: 30px;*/
+            }
 
             #addwork{
                 position: relative;
@@ -128,15 +154,14 @@
             font-size: 90%;
             }
 
-            .btn {
+            .btn, .btn-danger {
                 padding: 5px 10px;
                 font-size: 10px;
                 border-radius: 10px;
             }
 
             #btnpad{
-                position: relative;
-                top: 30px;                
+                padding-top: 10px;                
             }
 
         }

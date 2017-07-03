@@ -104,7 +104,7 @@
 		<div class="row">
 			<!-- <form> -->
 		  		<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="school">School/College/University</label>
+		    		<label for="school">School/College/University *</label>
 		    		<input type="text" class="form-control" id="school" data-error="Please input this field" required>
 	    			<div class="help-block with-errors"></div>
 		  		</div>
@@ -167,10 +167,11 @@
 			</div>
 		</div>
 	</form>
-	<button class="g-recaptcha btn-success btn btn-lg center-block"
+	<button class="g-recaptcha btn-success btn btn-lg center-block" 
 	data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
 	data-callback="validate"> Submit Application </button>
 </div>
+	<div id="submit-btn"></div>
 
 <script type="text/javascript">
 	for (i = new Date().getFullYear(); i > 1900; i--){
