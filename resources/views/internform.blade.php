@@ -121,29 +121,35 @@
 		  		</div>
 		  		<div class="form-group col-md-2">
 	  				<label for="level">Year Level *</label>
-	  				<select class="form-control" id="level">
+	  				<select class="form-control" id="level" required>
+	  					<option value="" selected disabled>--</option>
 				        <option>First Year</option>
 				        <option>Second Year</option>
 				        <option>Third Year</option>
 				        <option>Fourth Year</option>
 				        <option>Fifth Year</option>
 				    </select>
+				    <div class="help-block with-errors"></div>
 		  		</div>
 		  		<div class="form-group col-md-1">
 	  				<label for="sem">Sem *</label>
-	  				<select class="form-control" id="sem">
+	  				<select class="form-control" id="sem" required>
+	  					<option value="" selected disabled>--</option>
 				        <option>1st</option>
 				        <option>2nd</option>
 				     </select>
+				     <div class="help-block with-errors"></div>
 		  		</div>
 		  		<div class="form-group col-md-2">
 	  				<label for="hrs">Hours Required *</label>
-	  				<select class="form-control" id="hrs">
-	  					<option>100-200</option>
+	  				<select class="form-control" id="hrs" required>
+	  					<option value="" selected disabled>--</option>
+	  					<option>100-200</option> 
 				        <option>200-300</option>
 				        <option>300-400</option>
 				        <option>500-above</option>
 				     </select>
+				     <div class="help-block with-errors"></div>
 		  		</div>
 		  	<!-- </form> -->  	
 		</div>
@@ -158,14 +164,6 @@
 		</div>
 		<div class="row">
 			<div id="pad">
-				<!-- <button
-				class="g-recaptcha btn-success btn btn-lg center-block"
-				data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
-				data-callback="onsubmit">
-				Submit Application
-				</button> -->
-				<input id="submit_handle" type="submit" style="display: none">
-				<!-- <input type="submit" class="btn btn-success btn-lg center-block" value="Submit Application"> -->
 			</div>
 		</div>
 	</form>
