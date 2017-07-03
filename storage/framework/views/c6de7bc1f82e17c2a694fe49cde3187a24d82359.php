@@ -327,7 +327,7 @@
 	</div>
 	<div class="row">
 		<div>
-			<br><br><br><h4 class="col-md-4 col-md-offset-2">Upload Resume *</h4>
+			<br><br><br><h4 class="col-md-4 col-md-offset-2">Attach Resume *</h4>
 		</div>
 	</div>
 	<div class="row">
@@ -337,7 +337,7 @@
 					<input type="file" id="resume" style="display: none" />	
 			</label>
 			<p> Uploaded File: <span id="uploaded-file"> </span></p>
-			<div class="help-block with-errors" id="upload-error" style="color:red;"></div>
+			<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 		</div>
 	</div>
 	<div class="g-recaptcha col-md-offset-2" data-sitekey="6LdzbCcUAAAAACh-aC1TOyC1t1M_fL-qDYU5ZJCk"></div>
