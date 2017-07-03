@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+<script type="text/javascript">
+	$(window).on('beforeunload', function() {
+    return 'Your own message goes here...';
+});
+</script>
+
 @section('content')
 <div class="container">
 	<div class="row" id="btnpad">

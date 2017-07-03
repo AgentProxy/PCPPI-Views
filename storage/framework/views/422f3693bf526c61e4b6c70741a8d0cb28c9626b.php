@@ -1,3 +1,9 @@
+<script type="text/javascript">
+	$(window).on('beforeunload', function() {
+    return 'Your own message goes here...';
+});
+</script>
+
 <?php $__env->startSection('content'); ?>
 <div class="container">
 	<div class="row" id="btnpad">

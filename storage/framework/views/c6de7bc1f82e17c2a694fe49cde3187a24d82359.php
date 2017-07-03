@@ -53,7 +53,7 @@
 		<br><br><br>
 		</div>
 	</div>
-	<form id='i-recaptcha' method="GET" action="/careers-success" data-toggle="validator">
+	<form id='i-recaptcha' method="POST" action="/careers-success" data-toggle="validator">
 	<div class="row">
   		<div class="form-group col-md-4 col-md-offset-2">
     		<label for="fname">First Name *</label>
@@ -160,7 +160,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-offset-2">
-			<label for="phone">&nbsp&nbsp&nbsp Skills</label>
+			<label for="skills">&nbsp&nbsp&nbsp Skills</label>
 			<div id="skill-0" class="checkbox skills" style="display: none">
 		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
 		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>

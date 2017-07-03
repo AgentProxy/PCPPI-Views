@@ -6,7 +6,7 @@ $(document).ready(function(){
     $(document).on("click",".delete-skill", delete_skill);
     $(document).on("click",".add-skill", add_skill);
 })
-
+  
 function check(e){
   if(grecaptcha.getResponse().length === 0){
     e.preventDefault();

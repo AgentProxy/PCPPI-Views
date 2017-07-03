@@ -1,5 +1,9 @@
 <?php $__env->startSection('content'); ?>
-
+<script>
+	$(window).on('beforeunload', function() {
+    return 'Your own message goes here...';
+});
+</script>
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
@@ -55,7 +59,7 @@
 		</div>
 	</div>
 
-	<form name="proform" id='i-recaptcha' method="GET" action="/careers-success" data-toggle="validator">	
+	<form name="proform" id='i-recaptcha' method="POST" action="/careers-success" data-toggle="validator" >	
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
@@ -160,27 +164,31 @@
 	    		<input type="text" class="form-control" id="school2">
 	  		</div> 
 		</div>
-		<div class="row col-md-offset-2">
-			<label for="phone">Skills</label>
-			<div id="skill-0" class="checkbox skills" style="display: none">
-		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
-		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+		<div class="row">
+			<div class="col-md-offset-2">
+				<label for="skills">&nbsp&nbsp&nbsp Skills</label>
+				<div id="skill-0" class="checkbox skills" style="display: none">
+			    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+			    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+			    </div>
+			    <div class="col-md-offset-1">
+					<div id="skill-1" class="checkbox skills">
+		  				<label><input type="checkbox" value="">Advanced Excel</label>
+				    </div>
+				    <div id="skill-2" class="checkbox skills">
+				      <label><input type="checkbox" value="">Photoshop</label>
+				    </div>
+				    <div id="skill-3" class="checkbox skills">
+				      <label><input type="checkbox" value="">Programming</label>
+				    </div>
+				    <div class="row" id="addskill">
+					    <input type="text" id="skill" placeholder="Other Skills">
+					    <button type="button" id="add-skill" class="btn btn-success add-skill">
+			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
+			    		</button>
+		    		</div>
+		    	</div>
 		    </div>
-			<div id="skill-1" class="checkbox skills">
-  				<label><input type="checkbox" value="">Advanced Excel</label>
-		    </div>
-		    <div id="skill-2" class="checkbox skills">
-		      <label><input type="checkbox" value="">Photoshop</label>
-		    </div>
-		    <div id="skill-3" class="checkbox skills">
-		      <label><input type="checkbox" value="">Programming</label>
-		    </div>
-		    <div class="row">
-			    <input type="text" id="skill" placeholder="Other Skills">
-			    <button type="button" id="add-skill" class="btn btn-success add-skill">
-	      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
-	    		</button>
-    		</div> 
 		</div>
 		<div class="row">
 			<br><br><h4 class="col-md-4 col-md-offset-2">CHARACTER REFERENCES</h4><br><br><br>
