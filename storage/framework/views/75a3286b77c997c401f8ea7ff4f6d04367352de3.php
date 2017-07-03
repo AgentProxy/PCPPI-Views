@@ -22,6 +22,10 @@
 
         <style type="text/css">
 
+        #sxspad{
+            padding-bottom: 50px;
+        }
+
         #submit-btn{
                 padding-bottom: 10px;
             }
@@ -82,13 +86,21 @@
             font-weight: bold;
         }
 
-        @media(max-width: 1000px){
+        @media (min-width: 767px) and (max-width: 1000px){
             #pcppi{
                 display: none;
             }
 
             .logo-bar{
                 width: 100px;
+            }
+
+            #pad{
+                width: 250px; 
+            }
+
+            #sk{
+                padding-top: 10px;
             }
         }
 
@@ -112,10 +124,6 @@
                 width: 10px;
                 height: 10px;
                 margin-top: -20px;
-            }
-
-            #logo{/*
-                padding-bottom: 30px;*/
             }
 
             #addwork{
@@ -243,11 +251,6 @@
         }   
 
         #padbot{
-            padding-bottom: 30px;
-        }
-
-        #pad{
-            padding-top: 30px;
             padding-bottom: 30px;
         }
 
