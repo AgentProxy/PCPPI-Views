@@ -169,10 +169,11 @@
 			</div>
 		</div>
 	</form>
-	<button class="g-recaptcha btn-success btn btn-lg center-block"
+	<button class="g-recaptcha btn-success btn btn-lg center-block" 
 	data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
 	data-callback="validate"> Submit Application </button>
 </div>
+	<div id="submit-btn"></div>
 
 <script type="text/javascript">
 	for (i = new Date().getFullYear(); i > 1900; i--){

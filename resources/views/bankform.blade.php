@@ -200,7 +200,7 @@
 				    <div id="skill-3" class="checkbox skills">
 				      <label><input type="checkbox" value="">Programming</label>
 				    </div>
-				    <div class="row">
+				    <div class="row" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills">
 					    <button type="button" id="add-skill" class="btn btn-success add-skill">
 			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
@@ -383,6 +383,7 @@
 			data-callback="validate">
 			Submit Application
 	</button>
+	<div id="submit-btn"></div>
 </div>
 
 <script type="text/javascript">

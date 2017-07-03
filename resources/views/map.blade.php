@@ -16,7 +16,7 @@
                     <option>Region 5</option>
                 </select>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="search">
                 <a href="careers-search" class="btn btn-primary col-md-12" role="button">Search</a>
             </div>
         </div>

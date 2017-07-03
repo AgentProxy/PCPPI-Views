@@ -22,6 +22,10 @@
 
         <style type="text/css">
 
+        #submit-btn{
+                padding-bottom: 10px;
+            }
+
         #relation{
             visibility: hidden;
         }
@@ -88,7 +92,17 @@
             }
         }
 
-        @media(max-width:768px){   
+        @media(max-width:768px){  
+
+            #addskill{
+                position: relative;
+                left: 20px;
+            }
+
+            #search{
+                padding-bottom: 10px;
+            }
+
             .navbar {
                 min-height:7em;
                 padding-bottom: 10px;
