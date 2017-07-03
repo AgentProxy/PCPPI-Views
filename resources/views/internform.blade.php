@@ -38,10 +38,8 @@
 	<div class="row">
 		<h4 class="col-md-4 col-md-offset-2">PERSONAL INFORMATION</h4><br><br><br>
 	</div>
-
-	<form id='i-recaptcha' method="GET" onsubmit="return validate()" action="" data-toggle="validator">
+	<form id='i-recaptcha' method="GET" action="/careers-success" data-toggle="validator">
 		<div class="row">
-			<!-- <form> -->
 		  	<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
 	    		<input type="text" class="form-control" id="fname" data-error="Please input your first name" required>
@@ -52,10 +50,8 @@
 	    		<input type="text" class="form-control" id="lname" data-error="Please input your last name" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-		  	<!-- </form> -->
 		</div>	
 		<div class="row">
-			<!-- <form> -->
 		  	<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
 	    		<input type="text" class="form-control" id="present" data-error="Please input your present address" required>
@@ -65,10 +61,8 @@
 	    		<label for="zip">Zip</label>
 	    		<input type="text" class="form-control" id="zip">
 	  		</div>
-		  	<!-- </form> -->
 		</div>	
 		<div class="row">
-			<!-- <form> -->
 		  	<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
 	    		<input type="text" class="form-control" id="prov" data-error="Please input your provincial address" required>
@@ -78,10 +72,8 @@
 	    		<label for="zip1">Zip</label>
 	    		<input type="text" class="form-control" id="zip1">
 	  		</div>
-		  	<!-- </form> -->
 		</div>
 		<div class="row">
-			<!-- <form> -->
 			<div class="form-group col-md-2 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
 	    		<input type="date" class="form-control" id="bday" data-error="Please input your birthdate" required>
@@ -98,60 +90,55 @@
 	    		<input type="email" class="form-control" id="email" data-error="Please input a valid email address" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-		  	<!-- </form> -->
 		</div>	
 		<div class="row">
 			<br><br><br><h4 class="col-md-4 col-md-offset-2">INTERNSHIP DETAILS</h4><br><br><br>
 		</div>
 		<div class="row">
-			<!-- <form> -->
-		  		<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="school">School/College/University *</label>
-		    		<input type="text" class="form-control" id="school" data-error="Please input this field" required>
-	    			<div class="help-block with-errors"></div>
-		  		</div>
-		  	<!-- </form> -->
+	  		<div class="form-group col-md-8 col-md-offset-2">
+	    		<label for="school">School/College/University *</label>
+	    		<input type="text" class="form-control" id="school" data-error="Please input this field" required>
+    			<div class="help-block with-errors"></div>
+	  		</div>
 		</div>	
 		<div class="row">
-			<!-- <form> -->
-		  		<div class="form-group col-md-3 col-md-offset-2">
-		    		<label for="course">Undergraduate Course *</label>
-		    		<input type="text" class="form-control" id="course" data-error="Please input this field" required>
-	    			<div class="help-block with-errors"></div>
-		  		</div>
-		  		<div class="form-group col-md-2">
-	  				<label for="level">Year Level *</label>
-	  				<select class="form-control" id="level" required>
-	  					<option value="" selected disabled>--</option>
-				        <option>First Year</option>
-				        <option>Second Year</option>
-				        <option>Third Year</option>
-				        <option>Fourth Year</option>
-				        <option>Fifth Year</option>
-				    </select>
-				    <div class="help-block with-errors"></div>
-		  		</div>
-		  		<div class="form-group col-md-1">
-	  				<label for="sem">Sem *</label>
-	  				<select class="form-control" id="sem" required>
-	  					<option value="" selected disabled>--</option>
-				        <option>1st</option>
-				        <option>2nd</option>
-				     </select>
-				     <div class="help-block with-errors"></div>
-		  		</div>
-		  		<div class="form-group col-md-2">
-	  				<label for="hrs">Hours Required *</label>
-	  				<select class="form-control" id="hrs" required>
-	  					<option value="" selected disabled>--</option>
-	  					<option>100-200</option> 
-				        <option>200-300</option>
-				        <option>300-400</option>
-				        <option>500-above</option>
-				     </select>
-				     <div class="help-block with-errors"></div>
-		  		</div>
-		  	<!-- </form> -->  	
+	  		<div class="form-group col-md-3 col-md-offset-2">
+	    		<label for="course">Undergraduate Course *</label>
+	    		<input type="text" class="form-control" id="course" data-error="Please input this field" required>
+    			<div class="help-block with-errors"></div>
+	  		</div>
+	  		<div class="form-group col-md-2">
+  				<label for="level">Year Level *</label>
+  				<select class="form-control" id="level" required>
+  					<option value="" selected disabled>--</option>
+			        <option>First Year</option>
+			        <option>Second Year</option>
+			        <option>Third Year</option>
+			        <option>Fourth Year</option>
+			        <option>Fifth Year</option>
+			    </select>
+			    <div class="help-block with-errors"></div>
+	  		</div>
+	  		<div class="form-group col-md-1">
+  				<label for="sem">Sem *</label>
+  				<select class="form-control" id="sem" required>
+  					<option value="" selected disabled>--</option>
+			        <option>1st</option>
+			        <option>2nd</option>
+			     </select>
+			     <div class="help-block with-errors"></div>
+	  		</div>
+	  		<div class="form-group col-md-2">
+  				<label for="hrs">Hours Required *</label>
+  				<select class="form-control" id="hrs" required>
+  					<option value="" selected disabled>--</option>
+  					<option>100-200</option> 
+			        <option>200-300</option>
+			        <option>300-400</option>
+			        <option>500-above</option>
+			     </select>
+			     <div class="help-block with-errors"></div>
+	  		</div>	
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
@@ -162,17 +149,10 @@
 				<div class="help-block with-errors" id="upload-error" style="color:red;"></div>
 			</div>
 		</div>
-		<div class="row">
-			<div id="pad">
-			</div>
-		</div>
+		<div class="g-recaptcha col-md-offset-2" data-sitekey="6LdzbCcUAAAAACh-aC1TOyC1t1M_fL-qDYU5ZJCk"></div>
+		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
-	<button class="g-recaptcha btn-success btn btn-lg center-block" 
-	data-sitekey="6LfrTCcUAAAAABrv6s-uJ15k5p7q_zPVv_wPT_HA"
-	data-callback="validate"> Submit Application </button>
 </div>
-	<div id="submit-btn"></div>
-
 <script type="text/javascript">
 	for (i = new Date().getFullYear(); i > 1900; i--){
 		$('.year').append($('<option />').val(i).html(i));

@@ -307,7 +307,6 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
-
 				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
 						<input type="file" id="resume" style="display: none" required/>	
 				</label>
@@ -315,15 +314,10 @@
 				<div class="help-block with-errors" id="upload-error" style="color:red;"></div>
 			</div>
 		</div>
-		<div class="row">
-			<div id="pad">
-			</div>
-		</div>
-			<div class="g-recaptcha col-md-offset-2" data-sitekey="6LdzbCcUAAAAACh-aC1TOyC1t1M_fL-qDYU5ZJCk"></div>
-			<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
+		<div class="g-recaptcha col-md-offset-2" data-sitekey="6LdzbCcUAAAAACh-aC1TOyC1t1M_fL-qDYU5ZJCk"></div>
+		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
 </div>
-
 <script type="text/javascript">
 	for (i = new Date().getFullYear(); i > 1900; i--){
 		$('.year').append($('<option />').val(i).html(i));
