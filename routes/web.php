@@ -27,6 +27,8 @@ Route::get('/careers-proform', function () {
     return view('proform');
 });
 
+Route::post('/form_validation', 'FormController@validate');
+
 Route::get('/careers-search', function () {
     return view('careersearch');
 });

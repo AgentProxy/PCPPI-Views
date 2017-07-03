@@ -23,6 +23,18 @@
 
         <style type="text/css">
 
+        .noscriptmsg{
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 50px;
+            background-color: #7fd6ff;
+      /*      height: 80%;*/
+        } 
+        #sxspad{
+            padding-bottom: 50px;
+        }
+
         #submit-btn{
                 padding-bottom: 10px;
             }
@@ -83,9 +95,13 @@
             font-weight: bold;
         }
 
+<<<<<<< HEAD
 
 
         @media(max-width: 1000px){
+=======
+        @media (min-width: 767px) and (max-width: 1000px){
+>>>>>>> 2502b82fbe72ef27da719aae3deefd48c92f70dc
             #pcppi{
                 display: none;
             }
@@ -93,12 +109,28 @@
             .logo-bar{
                 width: 100px;
             }
+
+            #pad{
+                width: 250px; 
+            }
+
+            #sk{
+                padding-top: 10px;
+            }
         }
                 #next, #section {
             padding: 40px 30px;
         }
 
-        @media(max-width:768px){  
+        @media(max-width:768px){
+
+            span{
+                font-size: 60%;
+            }  
+
+            #sxspad{
+                padding-bottom: 0px;
+            }
 
             #next, #section {
                 padding: 30px 20px;
@@ -122,10 +154,6 @@
                 width: 10px;
                 height: 10px;
                 margin-top: -20px;
-            }
-
-            #logo{/*
-                padding-bottom: 30px;*/
             }
 
             #addwork{
@@ -282,11 +310,6 @@
         }   
 
         #padbot{
-            padding-bottom: 30px;
-        }
-
-        #pad{
-            padding-top: 30px;
             padding-bottom: 30px;
         }
 
@@ -469,8 +492,19 @@
 
             </div>       
         </nav>
+    
         @yield('content')
     </div>
+    <noscript>
+        <div class="noscriptmsg">
+                <style>
+                    #app {
+                        display:none;
+                    }
+                </style>
+                You don't have javascript enabled.  Please enable it and reload the page.
+        </div>
+    </noscript>
 
     <footer class="text-center" >
         <div class="container" >

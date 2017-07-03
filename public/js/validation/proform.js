@@ -1,61 +1,60 @@
 $(document).ready(function(){
     $(document).on("change", "#resume", check_upload);
-    //$(document).on("ready", this, check_upload);
+    $(document).on("submit", "#i-recaptcha", check);
     $(document).on("click",".add-work", add_work);
     $(document).on("click",".delete-work", delete_work);
     $(document).on("click",".delete-skill", delete_skill);
     $(document).on("click",".add-skill", add_skill);
 })
-
-function validate(token){
-  if(grecaptcha.getResponse() !=""){
-    console.log("hi");
-    var submit= $('<input id="Submit" type="submit" value="submit"/>');
-    $("#i-recaptcha").append(submit);
-    $('[type="submit"]').click();
-    resume = $("#resume").val();
-    filesize = resume.size;
-    filetype = resume.split('.').pop();
-
-    if(resume==''){
-      $("#upload-error").text("Please upload your resume");
+  
+function check(e){
+  if(grecaptcha.getResponse().length === 0){
+    e.preventDefault();
+    console.log("hey");
+    alert("Please verify that you're human.");
+  }
+  else{
+    if(check_upload()==false){
+      e.preventDefault();
       return false;
     }
-    else if (filetype!="doc"&&filetype!="docx"&&filetype!="pdf"&&
-      filetype!="DOC"&&filetype!="DOCX"&&filetype!="PDF"){
-      $("#upload-error").text("Please upload in PDF, DOC, or DOCX format");
-      return false; 
-    }
+    return true;
   }
+  return false;
 }
-
+    
 function check_upload(){
   console.log("helo");
-  resume = document.getElementById('resume')
-  upload = $("#resume").val();
-  filesize = resume.size;
-  alert(resume.files[0].size);
-  filetype = upload.split('.').pop();
-
-  if (filetype!="doc"&&filetype!="docx"&&filetype!="pdf"&&
-      filetype!="DOC"&&filetype!="DOCX"&&filetype!="PDF"){
-        $("#uploaded-file").text(upload);
-        document.getElementById("upload").className = "btn btn-success btn-lg";
-        $("#upload").attr('class', "btn btn-success btn-lg");
-        $("#upload-error").text("Please upload in PDF, DOC, or DOCX format"); 
-        return false;
+  resume = document.getElementById('resume');
+  if($("#resume").val()!=""){
+    upload = $("#resume").val();
+    filesize = resume.files[0].size;
+    filetype = upload.split('.').pop();
+    upload = upload.split('\\').pop().split('/').pop();
+    $("#uploaded-file").text(upload);
+    $("#upload").attr('class', "btn btn-success btn-lg");
+    $("#upload-text").text("Change");
+    if(filetype!="doc"&&filetype!="docx"&&filetype!="pdf"&&
+        filetype!="DOC"&&filetype!="DOCX"&&filetype!="PDF"){  
+      $("#upload-error").text("Please upload in PDF, DOC, or DOCX format");
     }
-  else if(upload==""){
-    $("#upload-error").text("Please upload your resume");
-    return false;
+    else if(upload==""){
+      $("#upload-error").text("Please upload your resume");
+    }
+    else if(filesize>2097152){
+      $("#upload-error").text("Filesize should only be 2 MB or less");
+    }
+    else{
+      $("#upload-error").text("");
+      return true;
+    }
   }
-  
+  return false;
 }
 
 function add_work(){
   i = document.getElementsByClassName('work-history');
   $('#work-history-0').clone().attr('id','work-history-'+(i.length)).insertAfter('#work-history-' + (i.length- 1));
-  // document.getElementById("work-history-" + (i.length-1)).style.display = "block";
   $("#work-history-"+(i.length-1)).css("display", "block");
 }
 
@@ -69,11 +68,9 @@ function delete_work(){
 
 function add_skill(){
   skill = document.getElementById('skill');
-
   if(skill.value != ""){
     i = document.getElementsByClassName('skills');
     $('#skill-0').clone().attr('id','skill-'+(i.length)).insertAfter('#skill-' + (i.length-1));
-    // document.getElementById('skill-'+(i.length-1)).style = "display: block;";
     $("#skill-"+(i.length-1)).css("display", "block");
     document.getElementById('skill-'+(i.length-1)).lastChild.previousSibling.innerHTML = skill.value;
     skill.value ="";
