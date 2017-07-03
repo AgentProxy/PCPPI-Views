@@ -104,7 +104,15 @@
             }
         }
 
-        @media(max-width:768px){  
+        @media(max-width:768px){
+
+            span{
+                font-size: 60%;
+            }  
+
+            #sxspad{
+                padding-bottom: 0px;
+            }
 
             #addskill{
                 position: relative;
