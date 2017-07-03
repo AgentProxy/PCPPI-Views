@@ -182,28 +182,32 @@
 	  		</div>
 	  	<!--</form>-->
 	</div>
-	<div class="row col-md-offset-2">
+	<div class="row">
 		<!--<form>-->
-			<label for="phone">Skills</label>
-			<div id="skill-0" class="checkbox skills" style="display: none">
-		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
-		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+			<div class="col-md-offset-2">
+				<label for="phone">&nbsp&nbsp&nbsp Skills</label>
+				<div id="skill-0" class="checkbox skills" style="display: none">
+			    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+			    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+			    </div>
+			    <div class="col-md-offset-1">
+					<div id="skill-1" class="checkbox skills">
+		  				<label><input type="checkbox" value="">Advanced Excel</label>
+				    </div>
+				    <div id="skill-2" class="checkbox skills">
+				      <label><input type="checkbox" value="">Photoshop</label>
+				    </div>
+				    <div id="skill-3" class="checkbox skills">
+				      <label><input type="checkbox" value="">Programming</label>
+				    </div>
+				    <div class="row">
+					    <input type="text" id="skill" placeholder="Other Skills">
+					    <button type="button" id="add-skill" class="btn btn-success add-skill">
+			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
+			    		</button>
+		    		</div>
+		    	</div>
 		    </div>
-			<div id="skill-1" class="checkbox skills">
-  				<label><input type="checkbox" value="">Advanced Excel</label>
-		    </div>
-		    <div id="skill-2" class="checkbox skills">
-		      <label><input type="checkbox" value="">Photoshop</label>
-		    </div>
-		    <div id="skill-3" class="checkbox skills">
-		      <label><input type="checkbox" value="">Programming</label>
-		    </div>
-		    <div class="row">
-			    <input type="text" id="skill" placeholder="Other Skills">
-			    <button type="button" id="add-skill" class="btn btn-success add-skill">
-	      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
-	    		</button>
-    		</div>
 		<!--</form>-->
 	</div>
 	<div class="row">
@@ -263,29 +267,35 @@
 	</div>
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
+    		<label for="name2" id="relation">Name *</label>
     		<input type="text" class="form-control" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
+    		<label for="num2" id="relation">Contact Number *</label>
     		<input type="text" class="form-control" id="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
+    		<label for="rel2" id="relation">Relationship *</label>
     		<input type="text" class="form-control" id="rel2" placeholder="e.g. College Teacher" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
 	</div>
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
+    		<label for="name3" id="relation">Name *</label>
     		<input type="text" class="form-control" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
-    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>.
+    		<label for="num3" id="relation">Contact Number *</label>
+    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
-    		<input type="text" class="form-control" id="rel3" placeholder="e.g. College Teacher" data-error="Please input this field" required>
+    		<label for="rel3" id="relation">Relationship *</label>
+    		<input type="text" class="form-control" id="rel3" placeholder="e.g. College Teacher" data-error="Please input your last name" required>
     		<div class="help-block with-errors"></div>
   		</div>
 	</div>

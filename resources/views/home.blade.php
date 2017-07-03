@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="img-responsive jumbotron text-center" style="margin: 0px;">
-    <h1>Company</h1>
+    <h1 >Company</h1>
     <p>Blablablablablablablablabla</p>
     <a class="btn btn-default page-scroll" href="#next"><span class="glyphicon glyphicon-chevron-down"></span></a>
 </div>

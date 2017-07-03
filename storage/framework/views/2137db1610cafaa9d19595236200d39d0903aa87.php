@@ -261,29 +261,35 @@
 	</div>
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
+    		<label for="name2" id="relation">Name *</label>
     		<input type="text" class="form-control" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
+    		<label for="num2" id="relation">Contact Number *</label>
     		<input type="text" class="form-control" id="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
+    		<label for="rel2" id="relation">Relationship *</label>
     		<input type="text" class="form-control" id="rel2" placeholder="e.g. College Teacher" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
 	</div>
 	<div class="row">
 		<div class="form-group col-md-3 col-md-offset-2">
+    		<label for="name3" id="relation">Name *</label>
     		<input type="text" class="form-control" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-2">
-    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>.
+    		<label for="num3" id="relation">Contact Number *</label>
+    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
     		<div class="help-block with-errors"></div>
   		</div>
   		<div class="form-group col-md-3">
-    		<input type="text" class="form-control" id="rel3" placeholder="e.g. College Teacher" data-error="Please input this field" required>
+    		<label for="rel3" id="relation">Relationship *</label>
+    		<input type="text" class="form-control" id="rel3" placeholder="e.g. College Teacher" data-error="Please input your last name" required>
     		<div class="help-block with-errors"></div>
   		</div>
 	</div>

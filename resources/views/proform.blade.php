@@ -183,28 +183,32 @@
 	  		</div>
 	  	<!--</form>-->
 	</div>
-	<div class="row col-md-offset-2">
+	<div class="row">
 		<!--<form>-->
-			<label for="phone">Skills</label>
-			<div id="skill-0" class="checkbox skills" style="display: none">
-		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
-		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+			<div class="col-md-offset-2">
+				<label for="phone">&nbsp&nbsp&nbsp Skills</label>
+				<div id="skill-0" class="checkbox skills" style="display: none">
+			    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+			    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+			    </div>
+			    <div class="col-md-offset-1">
+					<div id="skill-1" class="checkbox skills">
+		  				<label><input type="checkbox" value="">Advanced Excel</label>
+				    </div>
+				    <div id="skill-2" class="checkbox skills">
+				      <label><input type="checkbox" value="">Photoshop</label>
+				    </div>
+				    <div id="skill-3" class="checkbox skills">
+				      <label><input type="checkbox" value="">Programming</label>
+				    </div>
+				    <div class="row">
+					    <input type="text" id="skill" placeholder="Other Skills">
+					    <button type="button" id="add-skill" class="btn btn-success add-skill">
+			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
+			    		</button>
+		    		</div>
+		    	</div>
 		    </div>
-			<div id="skill-1" class="checkbox skills">
-  				<label><input type="checkbox" value="">Advanced Excel</label>
-		    </div>
-		    <div id="skill-2" class="checkbox skills">
-		      <label><input type="checkbox" value="">Photoshop</label>
-		    </div>
-		    <div id="skill-3" class="checkbox skills">
-		      <label><input type="checkbox" value="">Programming</label>
-		    </div>
-		    <div class="row">
-			    <input type="text" id="skill" placeholder="Other Skills">
-			    <button type="button" id="add-skill" class="btn btn-success add-skill">
-	      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
-	    		</button>
-    		</div>
 		<!--</form>-->
 	</div>
 	<div class="row">
