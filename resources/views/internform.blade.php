@@ -44,7 +44,7 @@
 	<div class="row">
 		<h4 class="col-md-4 col-md-offset-2">PERSONAL INFORMATION</h4><br><br><br>
 	</div>
-	<form id='i-recaptcha' method="GET" action="/careers-success" data-toggle="validator">
+	<form id='i-recaptcha' method="POST" action="/form_validation" data-toggle="validator">
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
