@@ -22,6 +22,14 @@
 
         <style type="text/css">
 
+        .noscriptmsg{
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 50px;
+            background-color: #7fd6ff;
+      /*      height: 80%;*/
+        } 
         #sxspad{
             padding-bottom: 50px;
         }
@@ -443,8 +451,40 @@
 
             </div>       
         </nav>
+    
         <?php echo $__env->yieldContent('content'); ?>
     </div>
+    <noscript>
+        <div class="noscriptmsg">
+                <style>
+                    #app {
+                        display:none;
+                    }
+                    .panel{
+                        font-size: 30px;
+                        text-align: justify;
+                    }
+
+                    #jsimg{
+                        width: 85%;
+                        padding-bottom: 70px;
+                        padding-top: 70px;
+                    }
+
+                </style>
+                <div id="nojs">
+                    <div class="row">
+                        <div class="col-sm-4 sidep slide">
+                            <img id="jsimg" src="img/pep.png" alt="pic">
+                        </div>
+                        <div class="col-sm-8">
+                            <br><h1>Javascript Disabled</h1><br>
+                            <h3>You don't have javascript enabled.  Please enable it and reload the page</h3>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </noscript>
 
     <footer class="text-center" >
         <div class="container" >

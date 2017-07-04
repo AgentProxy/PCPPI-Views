@@ -460,8 +460,29 @@
                     #app {
                         display:none;
                     }
+                    .panel{
+                        font-size: 30px;
+                        text-align: justify;
+                    }
+
+                    #jsimg{
+                        width: 85%;
+                        padding-bottom: 70px;
+                        padding-top: 70px;
+                    }
+
                 </style>
-                You don't have javascript enabled.  Please enable it and reload the page.
+                <div id="nojs">
+                    <div class="row">
+                        <div class="col-sm-4 sidep slide">
+                            <img id="jsimg" src="img/pep.png" alt="pic">
+                        </div>
+                        <div class="col-sm-8">
+                            <br><h1>Javascript Disabled</h1><br>
+                            <h3>You don't have javascript enabled.  Please enable it and reload the page</h3>
+                        </div>
+                    </div>
+                </div>
         </div>
     </noscript>
 
