@@ -8,16 +8,16 @@ $(document).ready(function(){
 })
   
 function check(e){
+  $(window).off('beforeunload');
   if(grecaptcha.getResponse().length === 0){
     e.preventDefault();
-    console.log("hey");
     alert("Please verify that you're human.");
   }
   else{
     if(check_upload()==false){
       e.preventDefault();
       return false;
-    }
+    } 
     return true;
   }
   return false;

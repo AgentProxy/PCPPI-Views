@@ -521,16 +521,16 @@
                     }
 
                     #jsimg{
-                        width: 85%;
-                        padding-bottom: 75px;
-                        padding-top: 75px;
+                        width: 90%;
+                        padding-bottom: 110px;
+                        padding-top: 110px;
                     }
 
                 </style>
                 <div id="nojs">
                     <div class="row">
                         <div class="col-sm-4 sidep slide">
-                            <img id="jsimg" class="center-block" src="img/pep.png" alt="pic">
+                            <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
                         </div>
                         <div class="col-sm-8">
                             <br><br><h1>Javascript Disabled</h1><br><br>
