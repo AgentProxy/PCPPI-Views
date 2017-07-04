@@ -8,7 +8,7 @@
 	<div class="row">
 		<h1 id="title">APPLICATION SENT</h1>
 		<h4 id="title">Thank you for contacting us. We will respond to you as soon as possible.</h4>
-		<h4 id="title">Goodluck!</h4>
+		<h4 id="title">Goodluck!</h4><br><br>
 	</div>
 	<div id="sxspad" class="row">
 		<div class="col-md-3 col-md-offset-3">

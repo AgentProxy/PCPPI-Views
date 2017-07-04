@@ -8,7 +8,7 @@
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
+			<a href="careers-search" class="btn btn-success btn-lg"  role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
 		</div>
 	</div>
 	<div class="row">
@@ -59,7 +59,7 @@
 		<br><br><br>
 		</div>
 	</div>
-	<form id='i-recaptcha' method="POST" action="/careers-success" data-toggle="validator">
+	<form id='i-recaptcha' method="POST" action="/form_validation" data-toggle="validator">
 	<div class="row">
   		<div class="form-group col-md-4 col-md-offset-2">
     		<label for="fname">First Name *</label>
