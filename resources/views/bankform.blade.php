@@ -168,7 +168,7 @@
   		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-offset-2">
+		<div class="col-md-10 col-md-offset-2">
 			<label for="skills">&nbsp&nbsp&nbsp Skills</label>
 			<div id="skill-0" class="checkbox skills" style="display: none">
 		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
