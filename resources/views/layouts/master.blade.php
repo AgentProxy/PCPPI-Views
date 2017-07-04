@@ -488,9 +488,9 @@
                     }
 
                     #jsimg{
-                        width: 85%;
-                        padding-bottom: 75px;
-                        padding-top: 75px;
+                        width: 90%;
+                        padding-bottom: 110px;
+                        padding-top: 110px;
                     }
 
                 </style>
