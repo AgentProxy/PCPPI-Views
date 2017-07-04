@@ -16,23 +16,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 
 
         <style type="text/css">
-
-        .noscriptmsg{
-            text-align: center;
-            margin-top: auto;
-            margin-bottom: auto;
-            font-size: 50px;
-            background-color: #7fd6ff;
-      /*      height: 80%;*/
-        } 
-        #sxspad{
-            padding-bottom: 50px;
-        }
 
         #submit-btn{
                 padding-bottom: 10px;
@@ -94,7 +83,9 @@
             font-weight: bold;
         }
 
-        @media (min-width: 767px) and (max-width: 1000px){
+
+
+        @media(max-width: 1000px){
             #pcppi{
                 display: none;
             }
@@ -102,14 +93,9 @@
             .logo-bar{
                 width: 100px;
             }
-
-            #pad{
-                width: 250px; 
-            }
-
-            #sk{
-                padding-top: 10px;
-            }
+        }
+                #next, #section {
+            padding: 40px 30px;
         }
 
         @media(max-width:768px){  
@@ -132,6 +118,10 @@
                 width: 10px;
                 height: 10px;
                 margin-top: -20px;
+            }
+
+            #logo{/*
+                padding-bottom: 30px;*/
             }
 
             #addwork{
@@ -162,9 +152,21 @@
                 padding-top: 10px;
             }
 
-            img{
+            a > img {
                 width: 60%;
             }
+
+            .col-sm-4 > img {
+                width: 75%;
+                display: block;
+                margin: auto;
+            }
+
+            .w3-circle {
+                bottom: 6px;
+            }
+
+            
 
             body, h1, h2, h3, h4, li, p, label{
             font-size: 90%;
@@ -188,6 +190,32 @@
                 min-height:7em;
                 border-bottom: 5px solid rgb(0, 133, 202);
                 background-color: white;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .col-sm-4 > img {
+                width: 45%;
+                display: block;
+                margin: auto;
+            }
+
+
+            #next, #section {
+                padding: 30px 20px;
+            }
+
+            .glyphicon.glyphicon-chevron-down {
+                font-size: 7px;
+                padding: 1px
+            }
+
+            .btn {
+                padding: 1px 2px;
+            }
+
+            body {
+                font-size: 55%;
             }
         }
 
@@ -262,6 +290,10 @@
             padding-bottom: 30px;
         }
 
+        #sxspad{
+            padding-bottom: 30px;
+        }
+
         #btnpad{
             padding-top: 20px;
             padding-bottom: 60px;
@@ -317,9 +349,7 @@
             display: block;
         }
 
-        #next, #section {
-            padding: 40px 30px;
-        }
+
 
         .bg-grey {
             background-color: #f6f6f6;
@@ -443,7 +473,6 @@
 
             </div>       
         </nav>
-    
         @yield('content')
     </div>
     <noscript>
@@ -452,14 +481,36 @@
                     #app {
                         display:none;
                     }
+
+                    h1, h3{
+                        font-size: 30px;
+                        text-align: center;
+                    }
+
+                    #jsimg{
+                        width: 90%;
+                        padding-bottom: 110px;
+                        padding-top: 110px;
+                    }
+
                 </style>
-                You don't have javascript enabled.  Please enable it and reload the page.
+                <div id="nojs">
+                    <div class="row">
+                        <div class="col-sm-4 sidep slide">
+                            <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
+                        </div>
+                        <div class="col-sm-8">
+                            <br><br><h1>Javascript Disabled</h1><br><br>
+                            <h3>You don't have javascript enabled. Please enable it and reload the page</h3>
+                        </div>
+                    </div>
+                </div>
         </div>
     </noscript>
 
     <footer class="text-center" >
         <div class="container" >
-            <div style="margin-left: 11%;">
+            <div style="margin-left: 11%; padding-bottom: 10px;">
                 <a style="text-decoration: none;" href="https://www.pepsiphilippines.com/index.php">
                     <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
                 </a>

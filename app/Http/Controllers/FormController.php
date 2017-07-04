@@ -40,15 +40,32 @@ class FormController extends Controller
             'lname' => $request->lname,
             'email' => $request->email
         );
-        // return $data['fname'];
 
-        Mail::send('mail.professionals', $data, function($message) use ($data){
-
-            $message->from($data['email']);
-            $message->to('ericjoseph.flores1@gmail.com');
-            $message->subject("PCPPI Applicant");
-        });
-
-        // return view('mail.professionals')->withData($data);
+        if($form_type=='1'){
+            return view('mail.professionals',compact('data'));
+            // Mail::send('mail.professionals', $data, function($message) use ($data){
+            //     $message->from($data['email']);
+            //     $message->to('ericjoseph.flores1@gmail.com');
+            //     $message->subject("PCPPI Applicant");
+            // });
+        }
+        else if ($form_type=='2'){
+            return view('mail.bank',compact('data'));
+            // Mail::send('mail.bank', $data, function($message) use ($data){
+            //     $message->from($data['email']);
+            //     $message->to('ericjoseph.flores1@gmail.com');
+            //     $message->subject("PCPPI Applicant");
+            // });
+        }
+        else{
+            return view('mail.interns',compact('data'));
+        //     Mail::send('mail.interns', $data, function($message) use ($data){
+        //         $message->from($data['email']);
+        //         $message->to('ericjoseph.flores1@gmail.com');
+        //         $message->subject("PCPPI Applicant");
+        //     });
+        // }
+         
+         // ->withData($data);
     }
 }
