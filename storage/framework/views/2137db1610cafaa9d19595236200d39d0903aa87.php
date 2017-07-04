@@ -59,7 +59,9 @@
 		<br><br><br>
 		</div>
 	</div>
-	<form id='i-recaptcha' method="POST" action="/form_validation" data-toggle="validator">
+	<form id='i-recaptcha' method="POST" action="/form_validation/2" data-toggle="validator">
+	<?php echo e(csrf_field()); ?>
+
 	<div class="row">
   		<div class="form-group col-md-4 col-md-offset-2">
     		<label for="fname">First Name *</label>

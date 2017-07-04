@@ -533,8 +533,8 @@
                             <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
                         </div>
                         <div class="col-sm-8">
-                            <br><br><h1>Javascript Disabled</h1><br><br>
-                            <h3>You don't have javascript enabled. Please enable it and reload the page</h3>
+                            <br><br><h1><b>Javascript Disabled<b></h1><br><br><br>
+                            <h3><b>You don't have javascript enabled. Please enable it and reload the page<b></h3>
                         </div>
                     </div>
                 </div>
