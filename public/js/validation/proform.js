@@ -72,6 +72,7 @@ function add_skill(){
     i = document.getElementsByClassName('skills');
     $('#skill-0').clone().attr('id','skill-'+(i.length)).insertAfter('#skill-' + (i.length-1));
     $("#skill-"+(i.length-1)).css("display", "block");
+    document.getElementById('skill-'+(i.length-1)).firstChild.nextSibling.value = skill.value;
     document.getElementById('skill-'+(i.length-1)).lastChild.previousSibling.innerHTML = skill.value;
     skill.value ="";
   }

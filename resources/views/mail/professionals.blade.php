@@ -15,8 +15,7 @@
 		<label for="fname">First Name: Julia</label>
 	</div>
 	<div class="fcol-6">
-		<label for="lname">Last Name: Baretto</label>
-		
+		<label for="lname">Last Name: Baretto</label>	
 	</div>
 	<div class="row">
 	  	<div class="form-group col-6">
