@@ -63,8 +63,8 @@ class FormController extends Controller
         //         $message->from($data['email']);
         //         $message->to('ericjoseph.flores1@gmail.com');
         //         $message->subject("PCPPI Applicant");
-        //     });
-        // }
+        //     })
+        }
          
          // ->withData($data);
     }

@@ -20,7 +20,7 @@
 	</div>
 	<div class="row">
 	  	<div class="form-group col-6">
-	    	<label for="email">Email Address: juliabs@pepsi.com</label>
+	    	<label for="email">Email Address: julialovesus@pepsi.com</label>
 	    	
 	  	</div>
 	</div>
