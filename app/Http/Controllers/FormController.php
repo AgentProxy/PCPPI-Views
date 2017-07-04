@@ -35,13 +35,20 @@ class FormController extends Controller
         // $data['fname'] = $request->fname;
         // $data['lname'] = $request->lname;
 
-        $data = array(
-            'fname' => $request->fname,
-            'lname' => $request->lname,
-            'email' => $request->email
-        );
+        // $data = array(
+        //     'fname' => $request->fname,
+        //     'lname' => $request->lname,
+        //     'present'=>$request->present,
+        //     'zip'=>$request->zip,
+        //     'prov'=>$request->prov,
+        //     'zip1'=>$request->zip1
+        //     'email' => $request->email,
+
+        // );
+        $data = $request->all();
 
         if($form_type=='1'){
+            return $data;
             return view('mail.professionals',compact('data'));
             // Mail::send('mail.professionals', $data, function($message) use ($data){
             //     $message->from($data['email']);
@@ -50,6 +57,7 @@ class FormController extends Controller
             // });
         }
         else if ($form_type=='2'){
+            return $data;
             return view('mail.bank',compact('data'));
             // Mail::send('mail.bank', $data, function($message) use ($data){
             //     $message->from($data['email']);
@@ -58,13 +66,14 @@ class FormController extends Controller
             // });
         }
         else{
+            return $data;
             return view('mail.interns',compact('data'));
         //     Mail::send('mail.interns', $data, function($message) use ($data){
         //         $message->from($data['email']);
         //         $message->to('ericjoseph.flores1@gmail.com');
         //         $message->subject("PCPPI Applicant");
         //     });
-        // }
+        }
          
          // ->withData($data);
     }
