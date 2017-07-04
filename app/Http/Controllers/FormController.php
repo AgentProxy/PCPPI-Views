@@ -13,23 +13,6 @@ use Illuminate\Routing\Controller as BaseController;
 
 class FormController extends Controller
 {
-    //
-    function validateForm(Request $request, $form_type){
-    		// if($request->hasFile('resume')){
-      //       $filename = $request->resume->getClientOriginalName();
-      //       //$filename =  $username.$post->id.$filename;
-      //       $filesize= $request->audio->getClientSize();
-      //       $extension = File::extension($filename);
-      //       // $request->audio->move('user-audios',$filename);
-      //       //  DB::table('posts')->where('id',$post->id)
-      //       // ->update(['filename' => $filename]);
-
-      //   }   
-    sendApplication($request);
-
-    // return view('mail.professionals')->withData($data);
-    // echo "$form_type";  
-    }
 
     function sendApplication(Request $request, $form_type){
         // $data['fname'] = $request->fname;
@@ -45,7 +28,40 @@ class FormController extends Controller
         //     'email' => $request->email,
 
         // );
-        $data = $request->all();
+        $this->validate($request, [
+            'g-recaptcha-response' => 'required|recaptcha',
+            'fname' => 'required|max:75',
+            'lname' => 'required|max:75',
+            'present' => 'required|max:150',
+            'prov' => 'required|max:150',
+            'bday'=> 'required',
+            'phone'=> 'required',
+            'email'=> 'required|max:75',
+            'course'=>'email|max:75',
+            'from1'=>'required',
+            'to1'=>'required',
+            'school1'=>'required',
+            'gradecourse'=>'required|max:75',
+            'name1'=>'required',
+            'num1'=>'required',
+            'rel1'=>'required',
+            'name2'=>'required',
+            'num2'=>'required',
+            'rel2'=>'required',
+            'name3'=>'required',
+            'num3'=>'required',
+            'rel3'=>'required',
+            'reloc',=>'required'
+            'resume'=>'required'
+
+        ]);
+
+        $data = array();
+        $data_uncleaned = $request->all();
+        foreach($data_uncleaned as $data_item){
+            $data_clean = strip_tags($data_item);
+            array_push($data, $data_clean);
+        }
 
         if($form_type=='1'){
             return $data;
