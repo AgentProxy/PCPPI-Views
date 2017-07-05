@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Mail;
-// use PHPMailerAutoload; 
-// use PHPMailer;
 use App\User;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
@@ -13,47 +11,60 @@ use Illuminate\Routing\Controller as BaseController;
 
 class FormController extends Controller
 {
-
     function sendApplication(Request $request, $form_type){
-        // $data['fname'] = $request->fname;
-        // $data['lname'] = $request->lname;
-
-        // $data = array(
-        //     'fname' => $request->fname,
-        //     'lname' => $request->lname,
-        //     'present'=>$request->present,
-        //     'zip'=>$request->zip,
-        //     'prov'=>$request->prov,
-        //     'zip1'=>$request->zip1
-        //     'email' => $request->email,
-
-        // );
         $this->validate($request, [
             'g-recaptcha-response' => 'required|recaptcha',
             'fname' => 'required|max:75',
             'lname' => 'required|max:75',
             'present' => 'required|max:150',
+            'zip' => 'max:6',
             'prov' => 'required|max:150',
-            'bday'=> 'required',
-            'phone'=> 'required',
-            'email'=> 'required|max:75',
-            'course'=>'email|max:75',
+            'zip1' => 'max:6',
+            'bday'=> 'required|date',
+            'phone'=> 'required|max:11',
+            'email'=> 'required|email|max:75',
+            'course'=>'required|max:75',
             'from1'=>'required',
             'to1'=>'required',
-            'school1'=>'required',
-            'gradecourse'=>'required|max:75',
-            'name1'=>'required',
-            'num1'=>'required',
-            'rel1'=>'required',
-            'name2'=>'required',
-            'num2'=>'required',
-            'rel2'=>'required',
-            'name3'=>'required',
-            'num3'=>'required',
-            'rel3'=>'required',
-            'reloc',=>'required'
-            'resume'=>'required'
+            'school1'=>'required|max:75',
+            'gradcourse'=>'max:75',
+            'school2'=>'max:75',
+            //from and to grad course
+            //skills 
+            'name1'=>'required|max:75',
+            'num1'=>'required|max:11',
+            'rel1'=>'required|max:75',
+            'name2'=>'required|max:75',
+            'num2'=>'required|max:11',
+            'rel2'=>'required|max:75',
+            'name3'=>'required|max:75',
+            'num3'=>'required|max:11',
+            'rel3'=>'required|max:75',
+            //companies
+            'reloc',=>'required',
+            'resume'=>'required|file|mimes:doc,pdf,docx|max:2097152'
+            /*
+            //for interns 
+            'school' => 'required|max:75',
+            'course'=> 'required|max:75',
+            'level' => 'required',
+            'sem' => 'required',
+            'hrs' => 'required',
+        
+            //for bank forms
+            'dept' => 'required',
+            'loc' => 'required',
+            'reloc' => 'required',
 
+            //for skills
+            foreach($this->request->get('items') as $key => $val)
+              {
+                $rules['items.'.$key] = 'required|max:10';
+              }
+            //
+        
+
+            */
         ]);
 
         $data = array();

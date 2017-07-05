@@ -313,7 +313,8 @@
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 			</div>
 		</div> 
-		<div class="g-recaptcha col-md-offset-2" data-sitekey="6LdzbCcUAAAAACh-aC1TOyC1t1M_fL-qDYU5ZJCk"></div>
+		<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
+		<!-- {!! Recaptcha::render() !!} -->
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
 </div>
