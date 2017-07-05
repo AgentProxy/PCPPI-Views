@@ -53,6 +53,7 @@ class ComposerStaticInit64157ee5f103a703b6f65f6b802913e7
         ),
         'R' => 
         array (
+            'ReCaptcha\\' => 10,
             'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
@@ -73,6 +74,10 @@ class ComposerStaticInit64157ee5f103a703b6f65f6b802913e7
         'I' => 
         array (
             'Illuminate\\' => 11,
+        ),
+        'G' => 
+        array (
+            'Greggilbert\\Recaptcha\\' => 22,
         ),
         'F' => 
         array (
@@ -170,6 +175,10 @@ class ComposerStaticInit64157ee5f103a703b6f65f6b802913e7
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -201,6 +210,10 @@ class ComposerStaticInit64157ee5f103a703b6f65f6b802913e7
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
+        ),
+        'Greggilbert\\Recaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/greggilbert/recaptcha/src',
         ),
         'Faker\\' => 
         array (
@@ -745,6 +758,12 @@ class ComposerStaticInit64157ee5f103a703b6f65f6b802913e7
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
+        'Greggilbert\\Recaptcha\\Facades\\Recaptcha' => __DIR__ . '/..' . '/greggilbert/recaptcha/src/Facades/Recaptcha.php',
+        'Greggilbert\\Recaptcha\\Recaptcha' => __DIR__ . '/..' . '/greggilbert/recaptcha/src/Recaptcha.php',
+        'Greggilbert\\Recaptcha\\RecaptchaServiceProvider' => __DIR__ . '/..' . '/greggilbert/recaptcha/src/RecaptchaServiceProvider.php',
+        'Greggilbert\\Recaptcha\\Service\\CheckRecaptcha' => __DIR__ . '/..' . '/greggilbert/recaptcha/src/Service/CheckRecaptcha.php',
+        'Greggilbert\\Recaptcha\\Service\\CheckRecaptchaV2' => __DIR__ . '/..' . '/greggilbert/recaptcha/src/Service/CheckRecaptchaV2.php',
+        'Greggilbert\\Recaptcha\\Service\\RecaptchaInterface' => __DIR__ . '/..' . '/greggilbert/recaptcha/src/Service/RecaptchaInterface.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',
@@ -2583,6 +2602,15 @@ class ComposerStaticInit64157ee5f103a703b6f65f6b802913e7
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
+        'ReCaptcha\\ReCaptcha' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/ReCaptcha.php',
+        'ReCaptcha\\RequestMethod' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod.php',
+        'ReCaptcha\\RequestMethod\\Curl' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Curl.php',
+        'ReCaptcha\\RequestMethod\\CurlPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/CurlPost.php',
+        'ReCaptcha\\RequestMethod\\Post' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Post.php',
+        'ReCaptcha\\RequestMethod\\Socket' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/Socket.php',
+        'ReCaptcha\\RequestMethod\\SocketPost' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestMethod/SocketPost.php',
+        'ReCaptcha\\RequestParameters' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/RequestParameters.php',
+        'ReCaptcha\\Response' => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha/Response.php',
         'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
