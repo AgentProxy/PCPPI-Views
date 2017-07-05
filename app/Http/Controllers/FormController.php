@@ -75,8 +75,9 @@ class FormController extends Controller
         }
 
         if($form_type=='1'){
-            return $data;
-            return view('mail.professionals',compact('data'));
+            return redirect('careers-success');
+            // return $data;
+            // return view('mail.professionals',compact('data'));
             // Mail::send('mail.professionals', $data, function($message) use ($data){
             //     $message->from($data['email']);
             //     $message->to('ericjoseph.flores1@gmail.com');
@@ -84,8 +85,9 @@ class FormController extends Controller
             // });
         }
         else if ($form_type=='2'){
-            return $data;
-            return view('mail.bank',compact('data'));
+            return redirect('careers-success');
+            // return $data;
+            // return view('mail.bank',compact('data'));
             // Mail::send('mail.bank', $data, function($message) use ($data){
             //     $message->from($data['email']);
             //     $message->to('ericjoseph.flores1@gmail.com');
@@ -93,8 +95,9 @@ class FormController extends Controller
             // });
         }
         else{
-            return $data;
-            return view('mail.interns',compact('data'));
+            return redirect('careers-success');
+        //    return $data;
+        //    return view('mail.interns',compact('data'));
         //     Mail::send('mail.interns', $data, function($message) use ($data){
         //         $message->from($data['email']);
         //         $message->to('ericjoseph.flores1@gmail.com');
