@@ -124,7 +124,7 @@ class FormController extends Controller
               Mail::send('mail.professionals', compact('data'), function($message) use ($data, $input){
                 $message->from($data['email']);
                 $message->to('ericjoseph.flores1@gmail.com');
-                $message->subject("PCPPI Applicant");
+                $message->subject("PCPPI Applicant (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
                         'as'=> $input['resume']->getClientOriginalName()]);
             });
@@ -138,7 +138,7 @@ class FormController extends Controller
              Mail::send('mail.bank', compact('data'), function($message) use ($data, $input){
                 $message->from($data['email']);
                 $message->to('ericjoseph.flores1@gmail.com');
-                $message->subject("PCPPI Applicant");
+                $message->subject("PCPPI Applicant (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
                         'as'=> $input['resume']->getClientOriginalName()]);
             });
@@ -151,7 +151,7 @@ class FormController extends Controller
             Mail::send('mail.interns', compact('data'), function($message) use ($data, $input){
                 $message->from($data['email']);
                 $message->to('ericjoseph.flores1@gmail.com');
-                $message->subject("PCPPI Applicant Intern");
+                $message->subject("PCPPI Applicant Intern (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
                         'as'=> $input['resume']->getClientOriginalName()]);
             });
