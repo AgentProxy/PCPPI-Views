@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
     <title>PCPPI Careers</title>
+    <link rel="icon" type="image/ico" href="/img/pcppi3.ico" />
 
     <!-- Styles -->
     <?php echo $__env->yieldContent('head'); ?>
