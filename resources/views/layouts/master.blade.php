@@ -35,10 +35,16 @@
             background-color: #7fd6ff;
             background-image: url(img/bubbles.gif);
             background-size: cover;
+            font-size: 20px;
         }
 
         body,html{
             height: 100%;
+        }
+
+        #bank{
+            text-decoration: underline;
+            color: red; 
         }
 
         /*.navbar-brand .logo{

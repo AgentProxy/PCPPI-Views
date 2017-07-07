@@ -178,9 +178,9 @@
 <script>
 	var submitted = false;
 	//RETURN LATER IF AFTER DEBUGGING
-	// $(window).on('load',function(){
-	// 	document.getElementById('i-recaptcha').reset();
-	// });
+	$(window).on('load',function(){
+		document.getElementById('i-recaptcha').reset();
+	});
 	$('#i-recaptcha').submit(function() {
    		$(window).off('beforeunload');
    		submitted = true;

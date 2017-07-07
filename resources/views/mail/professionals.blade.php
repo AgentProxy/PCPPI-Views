@@ -160,25 +160,41 @@
 			@foreach($data['company'] as $i => $skill)
 			<div class="form-group col-md-2 col-md-offset-2">
 				<label for="company">Company Name:</label>
+				@if($data['company'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['company'][$i]}}</h4>
+				@else
+				<h4 class="col-md-offset-1">None</h4>
+				@endif
 			</div>
 			@endforeach
 			@foreach($data['position'] as $i => $position)
 			<div class="form-group col-md-2">
 				<label for="position">Position:</label>
+				@if($data['position'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['position'][$i]}}</h4>
+				@else
+				<h4 class="col-md-offset-1">None</h4>
+				@endif
 			</div>
 			@endforeach
 			@foreach($data['frdate'] as $i => $frdate)
 			<div class="form-group col-md-2">
 				<label for="frdate">From:</label>
+				@if($data['frdate'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['frdate'][$i]}}</h4>
+				@else
+				<h4 class="col-md-offset-1">None</h4>
+				@endif
 			</div>
 			@endforeach
 			@foreach($data['todate'] as $i => $todate)
 			<div class="form-group col-md-2">
 				<label for="todate">To:</label>
+				@if($data['todate'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['todate'][$i]}}</h4>
+				@else
+				<h4 class="col-md-offset-1">None</h4>
+				@endif
 			</div>
 			@endforeach
 			

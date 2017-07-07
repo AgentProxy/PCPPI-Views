@@ -14,8 +14,9 @@
     <div class="row">
         <div class="col-sm-8">
             <h1>Why Join Pepsi?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>We believe that our people drive the success of the company, and at the heart of our business stratey is the continuous effort to provide a nurturing work environment and a culture of continuous development for our people.&nbsp
+            We are high-spirited, engaged individuals who are committed to the values of passion, excellence, professionalism, service, and integrity and are deeply involved in building and helping our company and our communities grow. We are Team PCPPI.
+            </p>
         </div>
         <div class="col-sm-4 slideanim slide">
             <img class="img-responsive slideanim" src="/img/1.png" alt="pic">

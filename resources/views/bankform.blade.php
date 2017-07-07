@@ -17,7 +17,7 @@
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-home" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers Home</a>
+			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 		</div>
 	</div>
 	<div class="row">
@@ -323,15 +323,15 @@
 			<div class="work-history" id="work-history-0" style="display: none;">
 		  		<div class="form-group col-md-2 col-md-offset-2">
 		    		<label for="company">Company Name</label>
-		    		<input type="text" class="form-control" id="company" maxlength="75">
+		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" id="position" maxlength="75">
+		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="frdate">From</label>
-		    		<input type="date" class="form-control" id="frdate">
+		    		<input type="date" class="form-control"  name="frdate[]" id="frdate">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
@@ -358,9 +358,9 @@
 <script>
 	var submitted = false;
 	//RETURN LATER IF AFTER DEBUGGING
-	// $(window).on('load',function(){
-	// 	document.getElementById('i-recaptcha').reset();
-	// });
+	$(window).on('load',function(){
+		document.getElementById('i-recaptcha').reset();
+	});
 	$('#i-recaptcha').submit(function() {
    		$(window).off('beforeunload');
    		submitted = true;
