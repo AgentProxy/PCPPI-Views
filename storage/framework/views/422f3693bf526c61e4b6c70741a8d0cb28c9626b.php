@@ -44,59 +44,59 @@
 	<div class="row">
 		<h4 class="col-md-4 col-md-offset-2">PERSONAL INFORMATION</h4><br><br><br>
 	</div>
-	<form id='i-recaptcha' method="POST" action="/form_validation/3" data-toggle="validator">
+	<form id='i-recaptcha' method="POST" action="/form_validation/3" data-toggle="validator" enctype="multipart/form-data">
 		<?php echo e(csrf_field()); ?>
 
 		<input type="text" value="3" name="form_type" style="display: none;">
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" id="fname" name="fname" data-error="Please input your first name" required maxlength="75">
+	    		<input type="text" class="form-control" id="fname" name="fname" data-error="Please input your first name" required maxlength="75" value="<?php echo old('fname'); ?>">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
 	    		<input type="text" class="form-control" id="lname" name="lname" data-error="Please input your last name" required maxlength="75">
-	    		<div class="help-block with-errors"></div>
+	    		<div class="help-block with-errors" value="<?php echo old('lname'); ?>"></div>
 	  		</div>
 		</div>	
 		<div class="row">
 		  	<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
-	    		<input type="text" class="form-control" id="present" name="present" data-error="Please input your present address" required maxlength="150">
+	    		<input type="text" class="form-control" id="present" name="present" data-error="Please input your present address" required maxlength="150" value="<?php echo old('present'); ?>">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 	  		<div class="form-group col-md-2">
 	    		<label for="zip">Zip</label>
-	    		<input type="text" class="form-control" id="zip" name="zip" maxlength="6">
+	    		<input type="text" class="form-control" id="zip" name="zip" maxlength="6" value="<?php echo old('zip'); ?>">
 	  		</div>
 		</div>	
 		<div class="row">
 		  	<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
-	    		<input type="text" class="form-control" id="prov" name="prov" data-error="Please input your provincial address" required maxlength="150">
+	    		<input type="text" class="form-control" id="prov" name="prov" data-error="Please input your provincial address" required maxlength="150" value="<?php echo old('prov'); ?>">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="zip1">Zip</label>
-	    		<input type="text" class="form-control" id="zip1" name="zip1" maxlength="6">
+	    		<input type="text" class="form-control" id="zip1" name="zip1" maxlength="6" value="<?php echo old('zip1'); ?>">
 	  		</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-2 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
-	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required>
+	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="<?php echo old('bday'); ?>">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="phone">Mobile Number *</label>
-	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required>
+	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required value="<?php echo old('phone'); ?>">
 	    		<div class="help-block with-errors"></div>
 	    		<div class="help-block">Should have 11 digits</div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" id="email" name="email" data-error="Please input a valid email address" required maxlength="75">
+	    		<input type="email" class="form-control" id="email" name="email" data-error="Please input a valid email address" required maxlength="75" value="<?php echo old('email'); ?>">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>	
@@ -106,14 +106,14 @@
 		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school">School/College/University *</label>
-	    		<input type="text" class="form-control" id="school" name="school" data-error="Please input this field" required maxlength="75">
+	    		<input type="text" class="form-control" id="school" name="school" data-error="Please input this field" required maxlength="75" value="<?php echo old('school'); ?>">
     			<div class="help-block with-errors"></div>
 	  		</div>
 		</div>	
 		<div class="row">
 	  		<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="course">Undergraduate Course *</label>
-	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75">
+	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="<?php echo old('course'); ?>">
     			<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -157,7 +157,7 @@
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
 				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
-						<input type="file" id="resume" name="resume" style="display: none" required/>	
+						<input type="file" id="resume" name="resume" style="display: none" required value="<?php echo old('resume'); ?>"/>	
 				</label>
 				<p> Uploaded File: <span id="uploaded-file"> </span></p>
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>

@@ -46,8 +46,6 @@ class FormController extends Controller
             //     //companies
                 'company.*' => 'max:75',
                 'position.*' => 'max:75',
-                'frdate.*' => 'max:75',
-                'todate.*' => 'max:75',
 
                 'reloc'=>'required',
                 'resume'=>'required|file|mimes:doc,pdf,docx|max:2048'
@@ -107,10 +105,10 @@ class FormController extends Controller
                 'num3'=>'required|max:11|regex:/^0\d{10}$/',
                 'rel3'=>'required|max:75',
             //     //companies
-                'company.*' => 'max:75',
-                'position.*' => 'max:75',
-                'frdate.*' => 'max:75',
-                'todate.*' => 'max:75',
+                'company.*' => 'nullable|max:75',
+                'position.*' => 'nullable|max:75',
+                'frdate.*' => 'nullable|date',
+                'todate.*' => 'nullable|date',
 
                 'dept' => 'required',
                 'loc' => 'required',
@@ -118,28 +116,6 @@ class FormController extends Controller
 
                 'reloc'=>'required',
                 'resume'=>'required|file|mimes:doc,pdf,docx|max:2048'
-            //     /*
-            //     //for interns 
-            //     'school' => 'required|max:75',
-            //     'course'=> 'required|max:75',
-            //     'level' => 'required',
-            //     'sem' => 'required',
-            //     'hrs' => 'required',
-            
-            //     //for bank forms
-            //     'dept' => 'required',
-            //     'loc' => 'required',
-            //     'reloc' => 'required',
-
-            //     //for skills
-            //     foreach($this->request->get('items') as $key => $val)
-            //       {
-            //         $rules['items.'.$key] = 'required|max:10';
-            //       }
-            //     //
-            
-
-            //     */
             ]);
         }
         else if($form_type=='3'){
@@ -163,23 +139,23 @@ class FormController extends Controller
             ]);
         }
 
-        $data = array();
-        $data_cleaned = $request->all();
-        foreach($data_cleaned as $key => $data_item){
+        
+        $data = $request->all();
+        foreach($data as $key => $data_item){
             if(is_array($data_item)){
                 foreach($data_item as $key2 => $item){
-                    $data_cleaned[$key][$key2] = strip_tags($item);
+                    $data[$key][$key2] = strip_tags($item);
                 }
              }
             else{
-                $data_cleaned[$key] = strip_tags($data_item);
+                $data[$key] = strip_tags($data_item);
             }
        }
         
         if($form_type=='1'){
             //return redirect('careers-success');
-            return $data_cleaned;
-            // return view('mail.professionals',compact('data'));
+            //return $data_cleaned;
+             return view('mail.professionals',compact('data'));
             // Mail::send('mail.professionals', $data, function($message) use ($data){
             //     $message->from($data['email']);
             //     $message->to('ericjoseph.flores1@gmail.com');
@@ -189,8 +165,8 @@ class FormController extends Controller
        
         else if ($form_type=='2'){
             //return redirect('careers-success');
-            return $data_cleaned;
-            // return view('mail.bank',compact('data'));
+            //return $data_cleaned;
+            return view('mail.bank',compact('data'));
             // Mail::send('mail.bank', $data, function($message) use ($data){
             //     $message->from($data['email']);
             //     $message->to('ericjoseph.flores1@gmail.com');
@@ -199,8 +175,8 @@ class FormController extends Controller
         }
         else if ($form_type=='3'){
             //return redirect('careers-success');
-            return $data_cleaned;
-        //    return view('mail.interns',compact('data'));
+            //return $data_cleaned;
+            return view('mail.interns',compact('data'));
         //     Mail::send('mail.interns', $data, function($message) use ($data){
         //         $message->from($data['email']);
         //         $message->to('ericjoseph.flores1@gmail.com');
