@@ -1,3 +1,5 @@
+ 
+
 <script type="text/javascript">
 	$(window).on('beforeunload', function() {
     return 'Your own message goes here...';
@@ -59,7 +61,9 @@
 		<br><br><br>
 		</div>
 	</div>
-	<form id='i-recaptcha' method="POST" action="/form_validation" data-toggle="validator">
+	<form id='i-recaptcha' method="POST" action="/form_validation/2" data-toggle="validator">
+	<?php echo e(csrf_field()); ?>
+
 	<div class="row">
   		<div class="form-group col-md-4 col-md-offset-2">
     		<label for="fname">First Name *</label>
@@ -165,8 +169,8 @@
   		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-offset-2">
-			<label for="skills">&nbsp&nbsp&nbsp Skills</label>
+		<div class="col-md-8 col-md-offset-2">
+			<label for="skills">&nbsp;&nbsp;&nbsp; Skills</label>
 			<div id="skill-0" class="checkbox skills" style="display: none">
 		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
 		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
@@ -181,11 +185,13 @@
 			    <div id="skill-3" class="checkbox skills">
 			      <label><input type="checkbox" value="">Programming</label>
 			    </div>
-			    <div class="row" id="addskill">
+			    <div class="container">
+			    <div class="row"">
 				    <input type="text" id="skill" placeholder="Other Skills">
 				    <button type="button" id="add-skill" class="btn btn-success add-skill">
 		      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 		    		</button>
+	    		</div>
 	    		</div>
 	    	</div>
 	    </div>
@@ -319,8 +325,10 @@
 	    		<label for="todate">To</label>
 	    		<input type="date" class="form-control" id="todate">
 	  		</div>
+	  		<div class="container">
 	  		<div class="row">
 	  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	  		</div>
 	  		</div>
 	  	</div>
 	</div>

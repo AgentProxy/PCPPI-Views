@@ -5,9 +5,17 @@
 
 <?php $__env->startSection('content'); ?>
 <script>
+	var submitted = false;
+	$('#i-recaptcha').submit(function() {
+   		$(window).off('beforeunload');
+   		submitted = true;
+	});
+
 	$(window).on('beforeunload', function() {
-    return 'Your own message goes here...';
-});
+		if(!submitted){
+    		return 'Your own message goes here...';
+    	}
+	});	
 </script>
 <div class="container" id="form">
 	<div class="row" id="btnpad">
@@ -19,7 +27,7 @@
 		<h1 id="title">POSITION</h1>
 		<h4 id="title">Location</h4>
 	</div>
-	<div class="row col-md-offset-1">
+	<div class="row">
 		<h3>Main Responsibility</h3>
 		<ul>
   			<li>Responsibility 1</li>
@@ -27,7 +35,7 @@
   			<li>Responsibility 3</li>
 		</ul>
 	</div>
-	<div class="row col-md-offset-1">
+	<div class="row">
 		<h3>Qualifications</h3>
 		<ul>
   			<li>Qualification 1</li>
@@ -64,39 +72,41 @@
 		</div>
 	</div>
 
-	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation" data-toggle="validator" >	
+	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/1" data-toggle="validator" enctype="multipart/form-data">	
+		<?php echo e(csrf_field()); ?>
+
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" id="fname" data-error="Please input your first name" required>
+	    		<input type="text" class="form-control" name="fname" id="fname" data-error="Please input your first name" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" id="lname" data-error="Please input your last name" required>
+	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
-		<div class="row"> 
+		<!-- <div class="row"> 
 	  		<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
-	    		<input type="text" class="form-control" id="present" data-error="Please input your present address" required>
+	    		<input type="text" class="form-control" id="present" data-error="Please input your present address" required maxlength="150">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 	  		<div class="form-group col-md-2">
 	    		<label for="zip">Zip</label>
-	    		<input type="text" class="form-control" id="zip">
+	    		<input type="text" class="form-control" id="zip" maxlength="6">
 	  		</div>
  		</div>
  		<div class="row">
 	  		<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
-	    		<input type="text" class="form-control" id="prov" data-error="Please input your provincial address" required>
+	    		<input type="text" class="form-control" id="prov" data-error="Please input your provincial address" required maxlength="150">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="zip1">Zip</label>
-	    		<input type="text" class="form-control" id="zip1">
+	    		<input type="text" class="form-control" id="zip1" maxlength="6">
 	  		</div> 
 		</div>
 		<div class="row">
@@ -110,17 +120,17 @@
 	    		<input type="text" class="form-control" id="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-error="Please input your mobile number" required>
 	    		<div class="help-block with-errors"></div>
 	    		<div class="help-block">Should have 11 digits</div>
-	  		</div>
+	  		</div> -->
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" id="email" data-error="Please input a valid email address" required>
+	    		<input type="email" class="form-control" name="email" id="email" data-error="Please input a valid email address" required maxlength="75" enctype="multipart/form-data">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
-		<div class="row"> 
+		<!-- <div class="row"> 
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="course">Bachelor's Degree *</label>
-	    		<input type="text" class="form-control" id="course" data-error="Please input your bachelor's degree" required>
+	    		<input type="text" class="form-control" id="course" data-error="Please input your bachelor's degree" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -141,14 +151,14 @@
 		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school1">School/College/University *</label>
-	    		<input type="text" class="form-control" id="school1" data-error="Please input this field" required>
+	    		<input type="text" class="form-control" id="school1" data-error="Please input this field" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div> 
 		</div>
 		<div class="row"> 
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="gradcourse">Graduate Course</label>
-	    		<input type="text" class="form-control" id="gradcourse">
+	    		<input type="text" class="form-control" id="gradcourse" maxlength="75">
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="from2"><small> From (School Year) </small></label> 
@@ -166,7 +176,7 @@
   		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school2">School/College/University</label>
-	    		<input type="text" class="form-control" id="school2">
+	    		<input type="text" class="form-control" id="school2" maxlength="75">
 	  		</div> 
 		</div>
 		<div class="row">
@@ -187,7 +197,7 @@
 				      <label><input type="checkbox" value="">Programming</label>
 				    </div>
 				    <div class="row" id="addskill">
-					    <input type="text" id="skill" placeholder="Other Skills">
+					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
 					    <button type="button" id="add-skill" class="btn btn-success add-skill">
 			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 			    		</button>
@@ -201,67 +211,67 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name1">Name *</label>
-	    		<input type="text" class="form-control" id="name1" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
+	    		<input type="text" class="form-control" id="name1" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="num1">Contact Number *</label>
-	    		<input type="text" class="form-control" id="num1" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
+	    		<input type="text" class="form-control" id="num1" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="rel1">Relationship *</label>
-	    		<input type="text" class="form-control" id="rel1" placeholder="e.g. College Teacher" data-error="Please input this field" required>
+	    		<input type="text" class="form-control" id="rel1" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name2" id="relation">Name *</label>
-	    		<input type="text" class="form-control" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
+	    		<input type="text" class="form-control" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="num2" id="relation">Contact Number *</label>
-	    		<input type="text" class="form-control" id="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
+	    		<input type="text" class="form-control" id="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="rel2" id="relation">Relationship *</label>
-	    		<input type="text" class="form-control" id="rel2" placeholder="e.g. College Teacher" data-error="Please input this field" required>
+	    		<input type="text" class="form-control" id="rel2" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name3" id="relation">Name *</label>
-	    		<input type="text" class="form-control" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required>
+	    		<input type="text" class="form-control" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="num3" id="relation">Contact Number *</label>
-	    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required>
+	    		<input type="text" class="form-control" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="rel3" id="relation">Relationship *</label>
-	    		<input type="text" class="form-control" id="rel3" placeholder="e.g. College Teacher" data-error="Please input your last name" required>
+	    		<input type="text" class="form-control" id="rel3" placeholder="e.g. College Teacher" data-error="Please input your last name" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row">
 			<br><br><h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4><br><br><br>
 		</div>
-		<div class="row">
+		<div class="row"> -->
 		<!-- Start of Work History Template-->
-			<div class="work-history" id="work-history-0" style="display: none;">
+			<!-- <div class="work-history" id="work-history-0" style="display: none;">
 		  		<div class="form-group col-md-2 col-md-offset-2">
 		    		<label for="company">Company Name</label>
-		    		<input type="text" class="form-control" id="company">
+		    		<input type="text" class="form-control" id="company" maxlength="75">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" id="position">
+		    		<input type="text" class="form-control" id="position" maxlength="75">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="frdate">From</label>
@@ -272,16 +282,16 @@
 		    		<input type="date" class="form-control" id="todate">
 		    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
-	  		</div> 
+	  		</div>  -->
 	  	<!-- End of Work History Template-->
-	  		<div class="work-history" id="work-history-1" style="display:block;">
+	  		<!-- <div class="work-history" id="work-history-1" style="display:block;">
 	  			<div class="form-group col-md-2 col-md-offset-2">
 		    		<label for="company">Company Name</label>
-		    		<input type="text" class="form-control" id="company">
+		    		<input type="text" class="form-control" id="company" maxlength="75">
 	  			</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" id="position">
+		    		<input type="text" class="form-control" id="position" maxlength="75">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="frdate">From</label>
@@ -326,7 +336,7 @@
 				<p> Uploaded File: <span id="uploaded-file"> </span></p>
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 			</div>
-		</div>
+		</div> -->
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="6LdzbCcUAAAAACh-aC1TOyC1t1M_fL-qDYU5ZJCk"></div>
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
