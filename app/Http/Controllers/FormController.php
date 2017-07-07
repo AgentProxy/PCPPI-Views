@@ -18,9 +18,9 @@ class FormController extends Controller
                 'fname' => 'required|max:75',
                 'lname' => 'required|max:75',
                 'present' => 'required|max:150',
-                'zip' => 'max:6',
-                'prov' => 'required|max:150',
                 'zip1' => 'max:6',
+                'prov' => 'required|max:150',
+                'zip2' => 'max:6',
                 'bday'=> 'required|date',
                 'phone'=> 'required|max:11|regex:/^0\d{10}$/',
                 'email'=> 'required|email|max:75',
@@ -79,9 +79,9 @@ class FormController extends Controller
                 'fname' => 'required|max:75',
                 'lname' => 'required|max:75',
                 'present' => 'required|max:150',
-                'zip' => 'max:6',
-                'prov' => 'required|max:150',
                 'zip1' => 'max:6',
+                'prov' => 'required|max:150',
+                'zip2' => 'max:6',
                 'bday'=> 'required|date',
                 'phone'=> 'required|max:11|regex:/^0\d{10}$/',
                 'email'=> 'required|email|max:75',
@@ -112,7 +112,6 @@ class FormController extends Controller
 
                 'dept' => 'required',
                 'loc' => 'required',
-                'reloc' => 'required',
 
                 'reloc'=>'required',
                 'resume'=>'required|file|mimes:doc,pdf,docx|max:2048'
@@ -124,9 +123,9 @@ class FormController extends Controller
                 'fname' => 'required|max:75',
                 'lname' => 'required|max:75',
                 'present' => 'required|max:150',
-                'zip' => 'max:6',
-                'prov' => 'required|max:150',
                 'zip1' => 'max:6',
+                'prov' => 'required|max:150',
+                'zip2' => 'max:6',
                 'bday'=> 'required|date',
                 'phone'=> 'required|max:11|regex:/^0\d{10}$/',
                 'email'=> 'required|email|max:75',
@@ -165,7 +164,7 @@ class FormController extends Controller
        
         else if ($form_type=='2'){
             //return redirect('careers-success');
-            //return $data_cleaned;
+            //return $data;
             return view('mail.bank',compact('data'));
             // Mail::send('mail.bank', $data, function($message) use ($data){
             //     $message->from($data['email']);

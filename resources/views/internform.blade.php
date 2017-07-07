@@ -70,8 +70,8 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 	  		<div class="form-group col-md-2">
-	    		<label for="zip">Zip</label>
-	    		<input type="text" class="form-control" id="zip" name="zip" maxlength="6" value="{!! old('zip') !!}">
+	    		<label for="zip1">Zip</label>
+	    		<input type="text" class="form-control" id="zip1" name="zip1" maxlength="6" value="{!! old('zip1') !!}">
 	  		</div>
 		</div>	
 		<div class="row">
@@ -81,8 +81,8 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
-	    		<label for="zip1">Zip</label>
-	    		<input type="text" class="form-control" id="zip1" name="zip1" maxlength="6" value="{!! old('zip1') !!}">
+	    		<label for="zip2">Zip</label>
+	    		<input type="text" class="form-control" id="zip2" name="zip2" maxlength="6" value="{!! old('zip2') !!}">
 	  		</div>
 		</div>
 		<div class="row">

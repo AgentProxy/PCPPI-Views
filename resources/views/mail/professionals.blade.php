@@ -46,7 +46,7 @@
 		    	<h4 class="col-md-offset-3">Tunasan, Muntinlupa</h4>
 		  	</div>
 		  	<div class="form-group col-md-4">
-		    	<label for="zip">Zip:</label>
+		    	<label for="zip1">Zip:</label>
 		    	<h4 class="col-md-offset-2">4405</h4>
 		  	</div>
 		</div>
@@ -56,7 +56,7 @@
 		    	<h4 class="col-md-offset-3">Los Baños, Laguna</h4>
 		  	</div>
 		  	<div class="form-group col-md-4">
-		    	<label for="zip1">Zip:</label>
+		    	<label for="zip2">Zip:</label>
 		    	<h4 class="col-md-offset-2">4444</h4>
 		  	</div>
 		</div>

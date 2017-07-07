@@ -46,32 +46,32 @@
 		    	<h4 class="col-md-offset-3">{{$data['present']}}</h4>
 		  	</div>
 		  	<div class="form-group col-md-4">
-		    	<label for="zip">Zip:</label>
-		    	<h4 class="col-md-offset-2">4405</h4>
+		    	<label for="zip1">Zip:</label>
+		    	<h4 class="col-md-offset-2">{{$data['zip1']}}</h4>
 		  	</div>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-6 col-md-offset-2">
 		    	<label for="prov">Provincial Address:</label>
-		    	<h4 class="col-md-offset-3">Los Baños, Laguna</h4>
+		    	<h4 class="col-md-offset-3">{{$data['prov']}}</h4>
 		  	</div>
 		  	<div class="form-group col-md-4">
-		    	<label for="zip1">Zip:</label>
-		    	<h4 class="col-md-offset-2">4444</h4>
+		    	<label for="zip2">Zip:</label>
+		    	<h4 class="col-md-offset-2">{{$data['zip2']}}</h4>
 		  	</div>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-3 col-md-offset-2">
 		    	<label for="bday">Date of Birth:</label>
-		    	<h4 class="col-md-offset-3">07/29/1998</h4>
+		    	<h4 class="col-md-offset-3">{{$data['bday']}}</h4>
 		  	</div>
 		  	<div class="form-group col-md-3">
 		    	<label for="phone">Mobile Number:</label>
-		    	<h4 class="col-md-offset-2">09121231234</h4>
+		    	<h4 class="col-md-offset-2">{{$data['phone']}}</h4>
 		  	</div>
 		  	<div class="form-group col-md-4">
 		    	<label for="email">Email Address:</label>
-		    	<h4 class="col-md-offset-2">juliab@pepsi.com</h4>
+		    	<h4 class="col-md-offset-2">{{$data['email']}}</h4>
 		  	</div>
 		</div>
 		<div class="row">
@@ -82,25 +82,25 @@
 		<div class="row">
 		  	<div class="form-group col-md-10 col-md-offset-2">
 		    	<label for="school">School/College/University:</label>
-		    	<h4 class="col-md-offset-3">University of the Philippines Visayas</h4>
+		    	<h4 class="col-md-offset-3">{{$data['school']}}</h4>
 		  	</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 				<label for="course">Undergraduate Course:</label>
-				<h4 class="col-md-offset-1">BS Computer Science</h4>
+				<h4 class="col-md-offset-1">{{$data['course']}}</h4>
 			</div>
 			<div class="form-group col-md-2">
 				<label for="level">Year Level:</label>
-				<h4 class="col-md-offset-1">Fourth Year</h4>
+				<h4 class="col-md-offset-1">{{$data['level']}}</h4>
 			</div>
 			<div class="form-group col-md-1">
 				<label for="sem">Sem:</label>
-				<h4 class="col-md-offset-1">1st</h4>
+				<h4 class="col-md-offset-1">{{$data['sem']}}</h4>
 			</div>
 			<div class="form-group col-md-2">
 				<label for="hrs">Hours Required:</label>
-				<h4 class="col-md-offset-1">200-300</h4>
+				<h4 class="col-md-offset-1">{{$data['hrs']}}</h4>
 			</div>
 		</div>
 	</div>
