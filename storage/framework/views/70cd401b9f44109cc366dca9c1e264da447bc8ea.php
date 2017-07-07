@@ -24,7 +24,9 @@
       	var philippines = {lat: 12.16822568, lng: 122.98095703};
         map = new google.maps.Map(document.getElementById('map'), { 	
 	        	center: philippines,
-	        	zoom: 6
+	        	zoom: 6,
+                disableDoubleClickZoom: true,
+                scrollwheel:  false
         });
 
         // setMarkers(map);

@@ -58,9 +58,13 @@
             height: 100%;
         }
 
-        .navbar-brand .logo{
+        /*.navbar-brand .logo{
             width: 30px;
             height: 30px;
+            padding: 0;
+        }*/
+
+        .navbar-brand {
             padding: 0;
         }
 
@@ -86,9 +90,9 @@
 
 
         @media(max-width: 1000px){
-            #pcppi{
+            /*#pcppi{
                 display: none;
-            }
+            }*/
 
             .logo-bar{
                 width: 100px;
@@ -182,6 +186,12 @@
                 padding-top: 10px;                
             }
 
+            #logo {
+                margin-top: 2px; 
+                height: 70px;
+                width: 66px;
+            }
+
         }
 
         @media (min-width: 767px) {
@@ -191,14 +201,35 @@
                 border-bottom: 5px solid rgb(0, 133, 202);
                 background-color: white;
             }
+
+
+
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: 480px) {
             .col-sm-4 > img {
                 width: 45%;
                 display: block;
                 margin: auto;
             }
+
+            #logo {
+                height: 38px;
+                width: 34px;
+            }
+
+            .navbar {
+                padding: 0;
+            }
+
+            #pcppi {
+                font-size: 10px;
+            }
+
+            .navbar {
+                height: 20px;
+            }
+
 
 
             #next, #section {
@@ -243,10 +274,10 @@
             font-size: 15px;
         }
 
-        #logo{
+        /*#logo{
             height: 77px;
             width: 73px;
-        }
+        }*/
 
         .logo-bar{
             margin-left: 0%;
@@ -443,14 +474,16 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="background-color: grey; margin-top: 5%; text-align: center;">
+                    <button id="navbar-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="background-color: grey; text-align: center;">
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>     
                     </button>
-                    <a class="navbar-brand" href="https://www.pepsiphilippines.com/index.php">
+                    <a class="navbar-brand" href="https://www.pepsiphilippines.com/index.php" style="padding:6px 10px;">
                     <div class="logo-bar">                        
-                        <img class="logo responsive" id="logo" src="/img/pcppi3.png" /> <span id="pcppi"> Pepsi-Cola Products Philippines Inc. </span>
+                        <img class="logo responsive visible-sm" id="logo" src="/img/small-logo.png" />
+                        <img class="logo responsive hidden-sm" id="logo" src="/img/pcppi3.png" />
+                        <span id="pcppi"> Pepsi-Cola Products Philippines Inc. </span>
                     </div>
                     </a>
                 </div>
@@ -500,8 +533,8 @@
                             <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
                         </div>
                         <div class="col-sm-8">
-                            <br><br><h1>Javascript Disabled</h1><br><br>
-                            <h3>You don't have javascript enabled. Please enable it and reload the page</h3>
+                            <br><br><h1><b>Javascript Disabled<b></h1><br><br><br>
+                            <h3><b>You don't have javascript enabled. Please enable it and reload the page<b></h3>
                         </div>
                     </div>
                 </div>
