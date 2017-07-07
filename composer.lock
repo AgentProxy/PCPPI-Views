@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4bee30222c1fe06d0cb656678111649e",
+    "content-hash": "b4c62133f1fcfcd59581596ed1166688",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -195,7 +195,7 @@
         },
         {
             "name": "greggilbert/recaptcha",
-            "version": "dev-master",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/greggilbert/recaptcha.git",
@@ -3767,7 +3767,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "greggilbert/recaptcha": 20,
         "phpmailer/phpmailer": 20
     },
     "prefer-stable": false,
