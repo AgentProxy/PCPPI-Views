@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
-    <title><?php echo e(config('app.name', 'Laravel')); ?></title>
+    <title>PCPPI Careers</title>
 
     <!-- Styles -->
     <?php echo $__env->yieldContent('head'); ?>
@@ -17,9 +17,6 @@
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-
 
         <style type="text/css">
 
