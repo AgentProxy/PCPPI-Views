@@ -34,13 +34,13 @@
         // setMarkers(map);
 
         var regions = [
-        	['Cagayan Valley Operations',16.9753758,121.8107079,0],
-        	['North Luzon Operations',16.5662318,121.2626366,1],
-        	['Central Luzon',15.4827722,120.7120023,2],
-        	['Modern Trade Operations',14.6090537,121.0222565,3],
-        	['Metro Operations, Head Office, Metro Sales',14.6090537,121.0222565,4],
+        	['Cagayan Valley Operations',16.9679036,121.77049050000005,0],
+        	['North Luzon Operations',16.2151433,120.50037500000008,1],
+        	['Central Luzon',15.070145,120.649044,2],
+        	['Modern Trade Operations',14.5881219,121.0439725,3],
+        	['Metro Operations, Head Office, Metro Sales',14.4042525,121.04696360000003,4],
         	['Southern Tagalog Region Operations',14.1007803,121.0793705,5],
-        	['Bicol Region',13.4209885,123.4136736,6],
+        	['Bicol Region',13.6204321,123.21981519999997,6],
         	['Iloilo Plant',11.0049836,122.5372741,7],
         	['Tanuan Plant',11.1110256,125.0155856,8],
         	['Cebu Plant',10.607936,123.8857747,9],
