@@ -28,7 +28,6 @@
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
 				<h4><u>PERSONAL INFORMATION</u></h4>
-				<br><br><br>
 			</div>
 		</div>
 		<div class="row">

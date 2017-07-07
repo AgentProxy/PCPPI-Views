@@ -23,26 +23,9 @@
 			<a href="careers-search" class="btn btn-success btn-lg col-xs-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
 		</div>
 	</div>
-	<div class="row">
-		<h1 id="title">POSITION</h1>
-		<h4 id="title">Location</h4>
-	</div>
-	<div class="row col-md-offset-1">
-		<h3>Main Responsibility</h3>
-		<ul>
-  			<li>Responsibility 1</li>
-  			<li>Responsibility 2</li>
-  			<li>Responsibility 3</li>
-		</ul>
-	</div>
-	<div class="row col-md-offset-1">
-		<h3>Qualifications</h3>
-		<ul>
-  			<li>Qualification 1</li>
-  			<li>Qualification 2</li>
-  			<li>Qualification 3</li>
-		</ul>
-	</div>
+
+	<?php echo $__env->make('jobs.trade-marketing-manager ', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
 	<div class="row">
 		<div>
 			<h2 id="title">Hiring Process</h2>
@@ -312,7 +295,8 @@
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 			</div>
 		</div> 
-		<div class="g-recaptcha col-md-offset-2" data-sitekey="6LdzbCcUAAAAACh-aC1TOyC1t1M_fL-qDYU5ZJCk"></div>
+		<div class="g-recaptcha col-md-offset-2" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
+		<!-- <?php echo Recaptcha::render(); ?> -->
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
 </div>
