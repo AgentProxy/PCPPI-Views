@@ -1,7 +1,17 @@
+<<<<<<< HEAD
+ 
+
+<script type="text/javascript">
+	$(window).on('beforeunload', function() {
+    return 'Your own message goes here...';
+});
+</script>
+=======
 <!-- if
 	naka set ang complete nga session
 	redirect to link
  -->
+>>>>>>> a4335729852f61f76fe5e397eec88854682b06a8
 
 <?php $__env->startSection('content'); ?>
 <script>
@@ -51,6 +61,154 @@
 		<br><br><br>
 		</div>
 	</div>
+<<<<<<< HEAD
+	<form id='i-recaptcha' method="POST" action="/form_validation/2" data-toggle="validator">
+	<?php echo e(csrf_field()); ?>
+
+	<div class="row">
+  		<div class="form-group col-md-4 col-md-offset-2">
+    		<label for="fname">First Name *</label>
+    		<input type="text" class="form-control" id="fname" data-error="Please input your first name" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-4">
+    		<label for="lname">Last Name *</label>
+    		<input type="text" class="form-control" id="lname" data-error="Please input your last name" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+	</div>	
+	<div class="row">
+  		<div class="form-group col-md-6 col-md-offset-2">
+    		<label for="present"> Present Address *</label>
+    		<input type="text" class="form-control" id="present" data-error="Please input your present address" required>
+    		<div class="help-block with-errors"></div>
+  		</div>		
+  		<div class="form-group col-md-2">
+    		<label for="zip">Zip</label>
+    		<input type="text" class="form-control" id="zip">
+  		</div>
+	</div>	
+	<div class="row">
+  		<div class="form-group col-md-6 col-md-offset-2">
+    		<label for="prov"> Provincial Address *</label>
+    		<input type="text" class="form-control" id="prov" data-error="Please input your provincial address" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-2">
+    		<label for="zip1">Zip</label>
+    		<input type="text" class="form-control" id="zip1">
+  		</div>
+	</div>	
+	<div class="row">
+		<div class="form-group col-md-2 col-md-offset-2">
+    		<label for="bday">Date of Birth *</label>
+    		<input type="date" class="form-control" id="bday" data-error="Please input your birthdate" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-3">
+    		<label for="phone">Mobile Number *</label>
+    		<input type="text" class="form-control" id="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-error="Please input your mobile number" required>
+    		<div class="help-block with-errors"></div>
+    		<div class="help-block">Should have 11 digits</div>
+  		</div>
+  		<div class="form-group col-md-3">
+    		<label for="email">Email Address *</label>
+    		<input type="email" class="form-control" id="email" data-error="Please input a valid email address" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+	</div>
+	<div class="row">
+  		<div class="form-group col-md-4 col-md-offset-2">
+    		<label for="course">Bachelor's Degree *</label>
+    		<input type="text" class="form-control" id="course" data-error="Please input your bachelor's degree" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-2">
+    		<label for="from1"><small> From (School Year) * </small></label>
+    		<select class="form-control year" id="from1" required">
+    			<option selected disabled value="">--</option>
+    		</select>
+    		<div class="help-block with-errors"></div>
+  		</div>
+  		<div class="form-group col-md-2">
+    		<label for="to1"><small> To (School Year) * </small></label>
+    		<select class="form-control year" id="from1" required>
+    			<option selected disabled value="">--</option>
+    		</select>
+    		<div class="help-block with-errors"></div>
+  		</div>		
+	</div>
+	<div class="row">
+  		<div class="form-group col-md-8 col-md-offset-2">
+    		<label for="school1">School/College/University *</label>
+    		<input type="text" class="form-control" id="school1" data-error="Please input this field" required>
+    		<div class="help-block with-errors"></div>
+  		</div>
+	</div>
+	<div class="row">
+  		<div class="form-group col-md-4 col-md-offset-2">
+    		<label for="gradcourse">Graduate Course</label>
+    		<input type="text" class="form-control" id="gradcourse">
+  		</div>
+  		<div class="form-group col-md-2">
+    		<label for="from2"><small> From (School Year) </small></label>
+    		<select class="form-control year" id="from1">
+    			<option selected disabled>--</option>
+    		</select>
+  		</div>
+  		<div class="form-group col-md-2">
+    		<label for="to2"><small> To (School Year) </small></label>
+    		<select class="form-control year" id="from1">
+    			<option selected disabled>--</option>
+    		</select>
+  		</div>	
+	</div>	
+	<div class="row">
+  		<div class="form-group col-md-8 col-md-offset-2">
+    		<label for="school2">School/College/University</label>
+    		<input type="text" class="form-control" id="school2">
+  		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<label for="skills">&nbsp;&nbsp;&nbsp; Skills</label>
+			<div id="skill-0" class="checkbox skills" style="display: none">
+		    	<button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+		    	<label id="skill-label" style="padding-left: 0%;">Programming</label>
+		    </div>
+		    <div class="col-md-offset-1">
+				<div id="skill-1" class="checkbox skills">
+	  				<label><input type="checkbox" value="">Advanced Excel</label>
+			    </div>
+			    <div id="skill-2" class="checkbox skills">
+			      <label><input type="checkbox" value="">Photoshop</label>
+			    </div>
+			    <div id="skill-3" class="checkbox skills">
+			      <label><input type="checkbox" value="">Programming</label>
+			    </div>
+			    <div class="container">
+			    <div class="row"">
+				    <input type="text" id="skill" placeholder="Other Skills">
+				    <button type="button" id="add-skill" class="btn btn-success add-skill">
+		      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
+		    		</button>
+	    		</div>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-3 col-md-offset-2">
+			<label for="dept"><br>Preferred Department *</label>
+			<select class="form-control" id="dept" required>
+				<option selected disabled value="">--</option>
+		        <option>Department 1</option>
+		        <option>Department 2</option>
+		        <option>Department 3</option>
+		        <option>Department 4</option>
+		        <option>Department 5</option>
+		    </select>
+=======
 
 	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/1" data-toggle="validator" enctype="multipart/form-data">	
 		<?php echo e(csrf_field()); ?>
@@ -66,6 +224,7 @@
 	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
+>>>>>>> a4335729852f61f76fe5e397eec88854682b06a8
 		</div>
 		<div class="row"> 
 	  		<div class="form-group col-md-6 col-md-offset-2">
@@ -229,11 +388,26 @@
 	    		<input type="text" class="form-control" name="num3" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
+<<<<<<< HEAD
+	  		<div class="container">
+	  		<div class="row">
+	  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
+	  		</div>
+	  		</div>
+	  	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-2">
+			<button type="button" class="btn btn-success add-work">
+      			<span class="glyphicon glyphicon-plus"></span> Add
+    		</button>
+=======
 	  		<div class="form-group col-md-3">
 	    		<label for="rel3" id="relation">Relationship *</label>
 	    		<input type="text" class="form-control" name="rel3" id="rel3" placeholder="e.g. College Teacher" data-error="Please input your last name" required maxlength="75">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
+>>>>>>> a4335729852f61f76fe5e397eec88854682b06a8
 		</div>
 		<div class="row">
 			<br><br><h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4><br><br><br>

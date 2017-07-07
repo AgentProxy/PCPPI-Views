@@ -23,27 +23,13 @@
 
         <style type="text/css">
 
+
         #submit-btn{
                 padding-bottom: 10px;
             }
 
         #relation{
             visibility: hidden;
-        }
-
-        .jumbotron{
-            /*background-image: url("img/HOMEbg-1.jpg");*/      
-            padding-top: 200px;
-            padding-bottom: 200px; 
-            background-repeat: no-repeat; 
-            background-image: url('img/HOMEbg-1.jpg') ;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            height:100%;
         }
 
         body{
@@ -65,7 +51,7 @@
         }*/
 
         .navbar-brand {
-            padding: 0;
+            padding: 7px 8px;
         }
 
         #map {
@@ -77,14 +63,31 @@
 
         .navbar{
             margin-bottom: 0;
-            /*height: 7em;*/
-            border-bottom: 5px solid rgb(0, 133, 202);
+/*            height: 96px;
+*/            border-bottom: 5px solid #008DBB;
             background-color: white;
-            padding: 0;
+            padding-top: 2px;
+            padding-bottom: 0;
+        }
+
+        #logo {
+            height: 78px;
+            width: 70px;
         }
 
         #pcppi {
             font-weight: bold;
+            font-size: 20px;
+        }
+
+        ul#items {
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        #items > li {
+            padding: 2px 5px;
+            font-size: 16px;
         }
 
 
@@ -102,26 +105,30 @@
             padding: 40px 30px;
         }
 
-        @media(max-width:768px){  
+        @media(max-width:767px){  
 
             #addskill{
                 position: relative;
                 left: 20px;
             }
 
+            .navbar-collapse {
+                background-color: #DFE9FF;
+                padding-left: auto;
+                padding-right: auto;
+             }
+
             #search{
                 padding-bottom: 10px;
             }
 
-            .navbar {
+          /*  .navbar {
                 min-height:7em;
-                padding-bottom: 10px;
-            }
+            }*/
 
             .navbar-brand .logo{
                 width: 10px;
                 height: 10px;
-                margin-top: -20px;
             }
 
             #logo{/*
@@ -138,18 +145,20 @@
                 visibility: visible;
             }
 
-            .jumbotron{
-                padding-bottom: 0px;
-                padding-top: 40px;
-                background-size: cover;
-            }
 
-            #items>li{ display: block; text-align: center; }
+            #items>li { 
+                display: block;
+                text-align: center;
+            }
             #items{
                 /*border: solid black 2px;*/
                 width: 100%;
                 margin-right: auto;
                 margin-left: auto;
+            }
+
+            ul#items {
+                margin-top: 0;
             }
 
             #sk{
@@ -170,7 +179,6 @@
                 bottom: 6px;
             }
 
-            
 
             body, h1, h2, h3, h4, li, p, label{
             font-size: 90%;
@@ -187,26 +195,120 @@
             }
 
             #logo {
-                margin-top: 2px; 
                 height: 70px;
                 width: 66px;
             }
+        }
+
+        /* Desktop */ 
+
+        @media (min-width: 1056px) {
+            .navbar {
+                height: 96px;
+            }
+
+            #items.nav {
+                margin-top: 17px;
+            }
+        }
+
+        /* Medium screens */
+
+        @media (min-width: 1024px) and (max-width: 1055px) {
+            #logo {
+                height: 75px;
+                width: 68px;
+                margin: 0;
+            }
+            #pcppi {
+                font-size: 16px;
+            }
+
+            #items>li>a {
+                padding: 7px;
+                font-size: 14px;
+            }
+
+            .navbar {
+                height: 94px;
+            }
+
+            .navbar-brand {
+                padding: 8px 7px;
+            }
+
+            #items.nav {
+                margin-top: 25px;
+            }
+
+            #dropdown-menu>li>a {
+                font-size: 11px;
+            }
 
         }
 
-        @media (min-width: 767px) {
-            .navbar{
-                margin-bottom: 0;
-                min-height:7em;
-                border-bottom: 5px solid rgb(0, 133, 202);
-                background-color: white;
+
+        /* Tablets and iPad - vertical */
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            #pcppi {
+                font-size: 12px;
+                font-weight: bold;
+            }
+
+            #logo {
+                height: 52px;
+                width: 47px;
+                margin-right: 0;
+            }
+
+            #items>li>a {
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .navbar {
+                height: 5em;
+                padding-bottom: 2px;
+            }
+
+            .logo-bar {
+                padding-top: 5px;
+            }
+
+            #dropdown-menu>li>a {
+                font-size: 10px;
             }
 
 
-
         }
 
-        @media (max-width: 480px) {
+        /* Mobile - horizontal */
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            #pcppi {
+                font-size: 11px;
+                font-weight: bold;
+            }
+
+            #logo {
+                height: 38px;
+                width: 34px;
+            }
+/*
+            .navbar {
+                height: 60px;
+            }*/
+
+            .col-sm-4 > img {
+                width: 45%;
+                display: block;
+            }
+        }
+
+        /* Mobile - Vertical */
+
+        @media (min-width: 320px) and (max-width: 479px) {
             .col-sm-4 > img {
                 width: 45%;
                 display: block;
@@ -216,20 +318,29 @@
             #logo {
                 height: 38px;
                 width: 34px;
-            }
-
-            .navbar {
-                padding: 0;
+                margin: 0;
             }
 
             #pcppi {
                 font-size: 10px;
+                font-weight: bold;
             }
 
             .navbar {
-                height: 20px;
+                padding-top: 4px;
             }
 
+            .navbar-brand {
+                padding: 4px 8px;
+            }
+
+            .navbar-nav li a {
+            line-height: 50px;
+            height: 50px;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            }
 
 
             #next, #section {
@@ -250,6 +361,23 @@
             }
         }
 
+        /* Smaller than mobile ? */
+
+        @media (max-width: 319px) {
+            #pcppi {
+                display: none;
+            }
+
+            #logo {
+                height: 38px;
+                width: 34px;
+            }
+
+/*            .navbar {
+                height: auto;
+            }*/
+        }
+
         .navbar-nav{
             /*height: 100%;*/
             margin-top: 2%;
@@ -257,18 +385,7 @@
             float: right;
         }
 
-        #navbar{
-            padding-bottom: 10px;
-        }
 
-        /*.navbar-brand,*/
-        .navbar-nav li a {
-            line-height: 50px;
-            height: 50px;
-            padding-top: 0;
-            padding-bottom: 0;
-            margin-bottom: 10px;
-        }
 
         .navbar-nav > li{
             font-size: 15px;
@@ -280,7 +397,7 @@
         }*/
 
         .logo-bar{
-            margin-left: 0%;
+            margin-left: 0;
             width: 100%;
 
         }
@@ -361,8 +478,12 @@
         #links,a > img:hover{ position: relative; 
              top: -5px;} 
 
-        #items>li>a:hover{ position: relative; 
-             top: -5px;} 
+        #items>li>a:hover { 
+            position: relative; 
+            top: -5px;
+            background-color: white;
+            font-weight: bold;
+        } 
 
         #links{
             position: relative;
@@ -379,7 +500,6 @@
             padding: auto;
             display: block;
         }
-
 
 
         .bg-grey {
@@ -474,15 +594,15 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button id="navbar-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="background-color: grey; text-align: center;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="background-color: grey; text-align: center;">
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>     
                     </button>
-                    <a class="navbar-brand" href="https://www.pepsiphilippines.com/index.php" style="padding:6px 10px;">
+                    <a class="navbar-brand" href="https://www.pepsiphilippines.com/index.php">
                     <div class="logo-bar">                        
-                        <img class="logo responsive visible-sm" id="logo" src="/img/small-logo.png" />
-                        <img class="logo responsive hidden-sm" id="logo" src="/img/pcppi3.png" />
+                        <img class="logo responsive" id="logo" src="/img/small-logo.png" />
+                        <!-- <img class="logo responsive hidden-lg" id="logo" src="/img/small-logo.png" /> -->
                         <span id="pcppi"> Pepsi-Cola Products Philippines Inc. </span>
                     </div>
                     </a>
@@ -521,16 +641,16 @@
                     }
 
                     #jsimg{
-                        width: 90%;
-                        padding-bottom: 110px;
-                        padding-top: 110px;
+                        width: 85%;
+                        padding-bottom: 75px;
+                        padding-top: 75px;
                     }
 
                 </style>
                 <div id="nojs">
                     <div class="row">
                         <div class="col-sm-4 sidep slide">
-                            <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
+                            <img id="jsimg" class="center-block" src="img/pep.png" alt="pic">
                         </div>
                         <div class="col-sm-8">
                             <br><br><h1><b>Javascript Disabled<b></h1><br><br><br>
@@ -560,6 +680,18 @@
         </div> 
     </footer>
 
+    <script type="text/javascript">
+         // Add slideDown animation to Bootstrap dropdown when expanding.
+        $('.dropdown').on('show.bs.dropdown', function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+      });
+
+          // Add slideUp animation to Bootstrap dropdown when collapsing.
+        $('.dropdown').on('hide.bs.dropdown', function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+      });
+    </script>
 
 </body>
 </html>
+

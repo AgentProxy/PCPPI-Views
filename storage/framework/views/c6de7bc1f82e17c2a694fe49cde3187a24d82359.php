@@ -4,19 +4,14 @@
  -->
 
 <?php $__env->startSection('content'); ?>
-<script>
-	var submitted = false;
-	$('#i-recaptcha').submit(function() {
-   		$(window).off('beforeunload');
-   		submitted = true;
-	});
+<?php if(count($errors)>0): ?>
+<ul>
+	<?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+	<li class = "alert alert-danger"><?php echo e($error); ?></li>
+	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+</ul>
+<?php endif; ?>
 
-	$(window).on('beforeunload', function() {
-		if(!submitted){
-    		return 'Your own message goes here...';
-    	}
-	});	
-</script>
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
@@ -52,9 +47,10 @@
 		</div>
 	</div>
 
-	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/1" data-toggle="validator" enctype="multipart/form-data">	
+	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/2" data-toggle="validator" enctype="multipart/form-data">	
 		<?php echo e(csrf_field()); ?>
 
+		<input type="text" value="2" name="form_type" style="display: none;">
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
@@ -92,7 +88,7 @@
 		<div class="row">
 			<div class="form-group col-md-2 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
-	    		<input type="date" class="form-control" id="bday" name="bday" data-error="Please input your birthdate" required>
+	    		<input type="date" class="datepicker" id="bday" name="bday" data-error="Please input your birthdate" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
@@ -357,6 +353,23 @@
 	for (i = new Date().getFullYear(); i > 1900; i--){
 		$('.year').append($('<option />').val(i).html(i));
 	}  
+</script>
+
+<script>
+	var submitted = false;
+	//RETURN LATER IF AFTER DEBUGGING
+	// $(window).on('load',function(){
+	// 	document.getElementById('i-recaptcha').reset();
+	// });
+	$('#i-recaptcha').submit(function() {
+   		$(window).off('beforeunload');
+   		submitted = true;
+	});
+	$(window).on('beforeunload', function() {
+		if(!submitted){
+    		return 'Changes you made may not be saved.';
+    	}
+	});	
 </script>
 
 <?php $__env->stopSection(); ?>

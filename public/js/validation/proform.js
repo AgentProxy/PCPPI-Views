@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    $(document).on("change", "#resume", check_upload);
-    $(document).on("submit", "#i-recaptcha", check);
-    $(document).on("click",".add-work", add_work);
-    $(document).on("click",".delete-work", delete_work);
-    $(document).on("click",".delete-skill", delete_skill);
-    $(document).on("click",".add-skill", add_skill);
+  $(document).on("change", "#resume", check_upload);
+  $(document).on("submit", "#i-recaptcha", check);
+  $(document).on("click",".add-work", add_work);
+  $(document).on("click",".delete-work", delete_work);
+  $(document).on("click",".delete-skill", delete_skill);
+  $(document).on("click",".add-skill", add_skill);
 })
   
 function check(e){
@@ -12,6 +12,7 @@ function check(e){
   if(grecaptcha.getResponse().length === 0){
     e.preventDefault();
     alert("Please verify that you're human.");
+    return false;
   }
   else{
     if(check_upload()==false){
@@ -20,7 +21,6 @@ function check(e){
     } 
     return true;
   }
-  return false;
 }
     
 function check_upload(){
@@ -72,6 +72,7 @@ function add_skill(){
     i = document.getElementsByClassName('skills');
     $('#skill-0').clone().attr('id','skill-'+(i.length)).insertAfter('#skill-' + (i.length-1));
     $("#skill-"+(i.length-1)).css("display", "block");
+    (skill.value).replace(/</g, "&lt;").replace(/>/g, "&gt;");
     document.getElementById('skill-'+(i.length-1)).firstChild.nextSibling.value = skill.value;
     document.getElementById('skill-'+(i.length-1)).lastChild.previousSibling.innerHTML = skill.value;
     skill.value ="";

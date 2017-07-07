@@ -1,4 +1,4 @@
-@extends('layouts.master')
+ @extends('layouts.master')
 
 <!-- if
 	naka set ang complete nga session
@@ -6,19 +6,14 @@
  -->
 
 @section('content')
-<script>
-	var submitted = false;
-	$('#i-recaptcha').submit(function() {
-   		$(window).off('beforeunload');
-   		submitted = true;
-	});
+@if(count($errors)>0)
+<ul>
+	@foreach($errors->all() as $error)
+	<li class = "alert alert-danger">{{$error}}</li>
+	@endforeach
+</ul>
+@endif
 
-	$(window).on('beforeunload', function() {
-		if(!submitted){
-    		return 'Your own message goes here...';
-    	}
-	});	
-</script>
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
@@ -53,65 +48,65 @@
 		<br><br><br>
 		</div>
 	</div>
-
-	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/1" data-toggle="validator" enctype="multipart/form-data">	
+	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/2" data-toggle="validator" enctype="multipart/form-data">	
 		{{ csrf_field() }}
+		<input type="text" value="2" name="form_type" style="display: none;">
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" name="fname" id="fname" data-error="Please input your first name" required maxlength="75">
+	    		<input type="text" class="form-control" name="fname" id="fname" data-error="Please input your first name" required maxlength="75" value="{!! old('fname') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75">
+	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="{!! old('lname') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row"> 
 	  		<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
-	    		<input type="text" class="form-control" name="present" id="present" data-error="Please input your present address" required maxlength="150">
+	    		<input type="text" class="form-control" name="present" id="present" data-error="Please input your present address" required maxlength="150" value="{!! old('present') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 	  		<div class="form-group col-md-2">
-	    		<label for="zip">Zip</label>
-	    		<input type="text" class="form-control" name="zip1" id="zip1" maxlength="6">
+	    		<label for="zip1">Zip</label>
+	    		<input type="text" class="form-control" name="zip1" id="zip1" maxlength="6" value="{!! old('zip1') !!}">
 	  		</div>
  		</div>
  		<div class="row">
 	  		<div class="form-group col-md-6 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
-	    		<input type="text" class="form-control" name="prov" id="prov" data-error="Please input your provincial address" required maxlength="150">
+	    		<input type="text" class="form-control" name="prov" id="prov" data-error="Please input your provincial address" required maxlength="150" value="{!! old('prov') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
-	    		<label for="zip1">Zip</label>
-	    		<input type="text" class="form-control" name="zip2" id="zip2" maxlength="6">
+	    		<label for="zip2">Zip</label>
+	    		<input type="text" class="form-control" name="zip2" id="zip2" maxlength="6" value="{!! old('zip2') !!}">
 	  		</div> 
 		</div>
 		<div class="row">
 			<div class="form-group col-md-2 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
-	    		<input type="date" class="form-control" id="bday" name="bday" data-error="Please input your birthdate" required>
+	    		<input type="date" class="datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="{!! old('bday') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="phone">Mobile Number *</label>
-	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required>
+	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required value="{!! old('phone') !!}">
 	    		<div class="help-block with-errors"></div>
 	    		<div class="help-block">Should have 11 digits</div>
 	  		</div> 
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" name="email" id="email" data-error="Please input a valid email address" required maxlength="75" enctype="multipart/form-data">
+	    		<input type="email" class="form-control" name="email" id="email" data-error="Please input a valid email address" required maxlength="75" enctype="multipart/form-data" value="{!! old('email') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row"> 
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="course">Bachelor's Degree *</label>
-	    		<input type="text" class="form-control" name="course" id="course" data-error="Please input your bachelor's degree" required maxlength="75">
+	    		<input type="text" class="form-control" name="course" id="course" data-error="Please input your bachelor's degree" required maxlength="75" value="{!! old('course') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -132,14 +127,14 @@
 		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school1">School/College/University *</label>
-	    		<input type="text" class="form-control" name="school1" id="school1" data-error="Please input this field" required maxlength="75">
+	    		<input type="text" class="form-control" name="school1" id="school1" data-error="Please input this field" required maxlength="75" value="{!! old('school1') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div> 
 		</div>
 		<div class="row"> 
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="gradcourse">Graduate Course</label>
-	    		<input type="text" class="form-control" name="gradcourse" id="gradcourse" maxlength="75">
+	    		<input type="text" class="form-control" name="gradcourse" id="gradcourse" maxlength="75" value="{!! old('gradcourse') !!}">
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="from2"><small> From (School Year) </small></label> 
@@ -157,7 +152,7 @@
   		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school2">School/College/University</label>
-	    		<input type="text" class="form-control" name="school2" id="school2" maxlength="75">
+	    		<input type="text" class="form-control" name="school2" id="school2" maxlength="75" value="{!! old('school2') !!}">
 	  		</div> 
 		</div>
 		<div class="row">
@@ -188,51 +183,51 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name1">Name *</label>
-	    		<input type="text" class="form-control" name="name1" id="name1" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75">
+	    		<input type="text" class="form-control" name="name1" id="name1" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75" value="{!! old('name1') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="num1">Contact Number *</label>
-	    		<input type="text" class="form-control" name="num1" id="num1" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75">
+	    		<input type="text" class="form-control" name="num1" id="num1" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num1') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="rel1">Relationship *</label>
-	    		<input type="text" class="form-control" name="rel1" id="rel1" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75">
+	    		<input type="text" class="form-control" name="rel1" id="rel1" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75" value="{!! old('rel1') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name2" id="relation">Name *</label>
-	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75">
+	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75" value="{!! old('name2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="num2" id="relation">Contact Number *</label>
-	    		<input type="text" class="form-control" id="num2" name="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75">
+	    		<input type="text" class="form-control" id="num2" name="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="rel2" id="relation">Relationship *</label>
-	    		<input type="text" class="form-control" name="rel2" id="rel2" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75">
+	    		<input type="text" class="form-control" name="rel2" id="rel2" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75" value="{!! old('rel2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name3" id="relation">Name *</label>
-	    		<input type="text" class="form-control" name="name3" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75">
+	    		<input type="text" class="form-control" name="name3" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75" value="{!! old('name3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="num3" id="relation">Contact Number *</label>
-	    		<input type="text" class="form-control" name="num3" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75">
+	    		<input type="text" class="form-control" name="num3" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="rel3" id="relation">Relationship *</label>
-	    		<input type="text" class="form-control" name="rel3" id="rel3" placeholder="e.g. College Teacher" data-error="Please input your last name" required maxlength="75">
+	    		<input type="text" class="form-control" name="rel3" id="rel3" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75" value="{!! old('rel3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
@@ -311,7 +306,7 @@
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
 				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
-						<input type="file" id="resume" name="resume" style="display: none" required/>	
+						<input type="file" id="resume" name="resume" style="display: none" required value="{!! old('resume') !!}"/>	
 				</label>
 				<p> Uploaded File: <span id="uploaded-file"> </span></p>
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
@@ -358,6 +353,23 @@
 	for (i = new Date().getFullYear(); i > 1900; i--){
 		$('.year').append($('<option />').val(i).html(i));
 	}  
+</script>
+
+<script>
+	var submitted = false;
+	//RETURN LATER IF AFTER DEBUGGING
+	// $(window).on('load',function(){
+	// 	document.getElementById('i-recaptcha').reset();
+	// });
+	$('#i-recaptcha').submit(function() {
+   		$(window).off('beforeunload');
+   		submitted = true;
+	});
+	$(window).on('beforeunload', function() {
+		if(!submitted){
+    		return 'Changes you made may not be saved.';
+    	}
+	});	
 </script>
 
 @endsection
