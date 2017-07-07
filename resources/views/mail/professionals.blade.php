@@ -81,11 +81,11 @@
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="from1">From:</label>
-		    	<h4 class="col-md-offset-2">2010</h4>
+		    	<h4 class="col-md-offset-2">{{$data['from1']}}</h4>
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="to1">To:</label>
-		    	<h4 class="col-md-offset-2">2014</h4>
+		    	<h4 class="col-md-offset-2">{{$data['to1']}}</h4>
 		  	</div>
 		</div>
 		<div class="row">
@@ -94,6 +94,7 @@
 		    	<h4 class="col-md-offset-3">{{$data['school1']}}</h4>
 		  	</div>
 		</div>
+		@if($data['gradcourse']&&$data['school2']!=null)
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 		    	<label for="gradcourse">Graduate Degree:</label>
@@ -101,11 +102,11 @@
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="from2">From:</label>
-		    	<h4 class="col-md-offset-2">2014</h4>
+		    	<h4 class="col-md-offset-2">{{$data['from2']}}</h4>
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="to2">To:</label>
-		    	<h4 class="col-md-offset-2">2018</h4>
+		    	<h4 class="col-md-offset-2">{{$data['to2']}}</h4>
 		  	</div>
 		</div>
 		<div class="row">
@@ -114,11 +115,15 @@
 		    	<h4 class="col-md-offset-3">{{$data['school2']}}</h4>
 		  	</div>
 		</div>
+		@endif
 		<div class="row">
 		  	<div class="form-group col-md-10 col-md-offset-2">
 		    	<label for="skills">Skills:</label>
-		    	<h4 class="col-md-offset-1">Photoshop</h4>
-		    	<h4 class="col-md-offset-1">Programming</h4>
+		    	@forelse($data['skills'] as $i => $skill)
+		    	<h4 class="col-md-offset-1">{{$data['skills'][$i]}}</h4>
+		    	 @empty
+                <h4 class="col-md-offset-1">None</h4>
+		    	@endforelse
 		  	</div>
 		</div>
 		<div class="row">
@@ -152,22 +157,31 @@
 			</div>
 		</div>
 		<div class="row">
+			@foreach($data['company'] as $i => $skill)
 			<div class="form-group col-md-2 col-md-offset-2">
 				<label for="company">Company Name:</label>
-				<h4 class="col-md-offset-1">Alaska</h4>
+				<h4 class="col-md-offset-1">{{$data['company'][$i]}}</h4>
 			</div>
+			@endforeach
+			@foreach($data['position'] as $i => $position)
 			<div class="form-group col-md-2">
 				<label for="position">Position:</label>
-				<h4 class="col-md-offset-1">Project Manager</h4>
+				<h4 class="col-md-offset-1">{{$data['position'][$i]}}</h4>
 			</div>
+			@endforeach
+			@foreach($data['frdate'] as $i => $frdate)
 			<div class="form-group col-md-2">
 				<label for="frdate">From:</label>
-				<h4 class="col-md-offset-1">07/15/2015</h4>
+				<h4 class="col-md-offset-1">{{$data['frdate'][$i]}}</h4>
 			</div>
+			@endforeach
+			@foreach($data['todate'] as $i => $todate)
 			<div class="form-group col-md-2">
 				<label for="todate">To:</label>
-				<h4 class="col-md-offset-1">07/15/2017</h4>
+				<h4 class="col-md-offset-1">{{$data['todate'][$i]}}</h4>
 			</div>
+			@endforeach
+			
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">

@@ -81,11 +81,11 @@
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="from1">From:</label>
-		    	<h4 class="col-md-offset-2">2010</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['from1']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="to1">To:</label>
-		    	<h4 class="col-md-offset-2">2014</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['to1']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
@@ -94,6 +94,7 @@
 		    	<h4 class="col-md-offset-3"><?php echo e($data['school1']); ?></h4>
 		  	</div>
 		</div>
+		<?php if($data['gradcourse']&&$data['school2']!=null): ?>
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 		    	<label for="gradcourse">Graduate Degree:</label>
@@ -101,11 +102,11 @@
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="from2">From:</label>
-		    	<h4 class="col-md-offset-2">2014</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['from2']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="to2">To:</label>
-		    	<h4 class="col-md-offset-2">2018</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['to2']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
@@ -114,11 +115,15 @@
 		    	<h4 class="col-md-offset-3"><?php echo e($data['school2']); ?></h4>
 		  	</div>
 		</div>
+		<?php endif; ?>
 		<div class="row">
 		  	<div class="form-group col-md-10 col-md-offset-2">
 		    	<label for="skills">Skills:</label>
-		    	<h4 class="col-md-offset-1">Photoshop</h4>
-		    	<h4 class="col-md-offset-1">Programming</h4>
+		    	<?php $__empty_1 = true; $__currentLoopData = $data['skills']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $skill): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['skills'][$i]); ?></h4>
+		    	 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                <h4 class="col-md-offset-1">None</h4>
+		    	<?php endif; ?>
 		  	</div>
 		</div>
 		<div class="row">
@@ -152,30 +157,39 @@
 			</div>
 		</div>
 		<div class="row">
+			<?php $__currentLoopData = $data['company']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $skill): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2 col-md-offset-2">
 				<label for="company">Company Name:</label>
-				<h4 class="col-md-offset-1">Alaska</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['company'][$i]); ?></h4>
 			</div>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php $__currentLoopData = $data['position']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $position): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2">
 				<label for="position">Position:</label>
-				<h4 class="col-md-offset-1">Project Manager</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['position'][$i]); ?></h4>
 			</div>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php $__currentLoopData = $data['frdate']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $frdate): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2">
 				<label for="frdate">From:</label>
-				<h4 class="col-md-offset-1">07/15/2015</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['frdate'][$i]); ?></h4>
 			</div>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php $__currentLoopData = $data['todate']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $todate): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2">
 				<label for="todate">To:</label>
-				<h4 class="col-md-offset-1">07/15/2017</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['todate'][$i]); ?></h4>
 			</div>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
-				<label for="dept">Preferred Department:</label>
+				<label for="dept">Position:</label>
 				<h4 class="col-md-offset-1">Department 4</h4>
 			</div>
 			<div class="form-group col-md-3">
-				<label for="loc">Preferred Location:</label>
+				<label for="loc">Location:</label>
 				<h4 class="col-md-offset-1">Region 1</h4>
 			</div>
 			<div class="form-group col-md-2">
