@@ -121,24 +121,28 @@ class FormController extends Controller
         if($form_type=='1'){
             //return redirect('careers-success');
             //return $data_cleaned;
-             return view('mail.professionals',compact('data'));
-            // Mail::send('mail.professionals', $data, function($message) use ($data){
-            //     $message->from($data['email']);
-            //     $message->to('ericjoseph.flores1@gmail.com');
-            //     $message->subject("PCPPI Applicant");
-            //        $message->attach($data['resume']);
-            // });
+              Mail::send('mail.professionals', compact('data'), function($message) use ($data, $input){
+                $message->from($data['email']);
+                $message->to('ericjoseph.flores1@gmail.com');
+                $message->subject("PCPPI Applicant (".$data['lname'].")");
+                $message->attach($input['resume']->getRealPath(),[
+                        'as'=> $input['resume']->getClientOriginalName()]);
+            });
+            return redirect('careers-success');
         }
        
         else if ($form_type=='2'){
             //return redirect('careers-success');
             //return $data;
-            return view('mail.bank',compact('data'));
-            // Mail::send('mail.bank', $data, function($message) use ($data){
-            //     $message->from($data['email']);
-            //     $message->to('ericjoseph.flores1@gmail.com');
-            //     $message->subject("PCPPI Applicant");
-            // });
+            //return view('mail.bank',compact('data'));
+             Mail::send('mail.bank', compact('data'), function($message) use ($data, $input){
+                $message->from($data['email']);
+                $message->to('ericjoseph.flores1@gmail.com');
+                $message->subject("PCPPI Applicant (".$data['lname'].")");
+                $message->attach($input['resume']->getRealPath(),[
+                        'as'=> $input['resume']->getClientOriginalName()]);
+            });
+            return redirect('careers-success');
         }
         else if ($form_type=='3'){
             
@@ -147,7 +151,7 @@ class FormController extends Controller
             Mail::send('mail.interns', compact('data'), function($message) use ($data, $input){
                 $message->from($data['email']);
                 $message->to('ericjoseph.flores1@gmail.com');
-                $message->subject("PCPPI Applicant");
+                $message->subject("PCPPI Applicant Intern (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
                         'as'=> $input['resume']->getClientOriginalName()]);
             });
