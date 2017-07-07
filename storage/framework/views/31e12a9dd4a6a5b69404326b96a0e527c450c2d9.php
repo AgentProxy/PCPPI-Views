@@ -162,14 +162,20 @@
 				<label for="company">Company Name:</label>
 				<h4 class="col-md-offset-1"><?php echo e($data['company'][$i]); ?></h4>
 			</div>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php $__currentLoopData = $data['position']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $position): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2">
 				<label for="position">Position:</label>
 				<h4 class="col-md-offset-1"><?php echo e($data['position'][$i]); ?></h4>
 			</div>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php $__currentLoopData = $data['frdate']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $frdate): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2">
 				<label for="frdate">From:</label>
 				<h4 class="col-md-offset-1"><?php echo e($data['frdate'][$i]); ?></h4>
 			</div>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php $__currentLoopData = $data['todate']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $todate): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2">
 				<label for="todate">To:</label>
 				<h4 class="col-md-offset-1"><?php echo e($data['todate'][$i]); ?></h4>

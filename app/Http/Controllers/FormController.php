@@ -30,9 +30,6 @@ class FormController extends Controller
                 'school1'=>'required|max:75',
                 'gradcourse'=>'max:75',
                 'school2'=>'max:75',
-                //from and to grad course
-
-                //skills 
                 'skills.*'=>'max: 75',
                 'name1'=>'required|max:75',
                 'num1'=>'required|max:11|regex:/^0\d{10}$/',
@@ -43,34 +40,10 @@ class FormController extends Controller
                 'name3'=>'required|max:75',
                 'num3'=>'required|max:11|regex:/^0\d{10}$/',
                 'rel3'=>'required|max:75',
-            //     //companies
                 'company.*' => 'max:75',
                 'position.*' => 'max:75',
-
                 'reloc'=>'required',
                 'resume'=>'required|file|mimes:doc,pdf,docx|max:2048'
-            //     /*
-            //     //for interns 
-            //     'school' => 'required|max:75',
-            //     'course'=> 'required|max:75',
-            //     'level' => 'required',
-            //     'sem' => 'required',
-            //     'hrs' => 'required',
-            
-            //     //for bank forms
-            //     'dept' => 'required',
-            //     'loc' => 'required',
-            //     'reloc' => 'required',
-
-            //     //for skills
-            //     foreach($this->request->get('items') as $key => $val)
-            //       {
-            //         $rules['items.'.$key] = 'required|max:10';
-            //       }
-            //     //
-            
-
-            //     */
             ]);
         }
         else if($form_type=='2'){
@@ -91,9 +64,6 @@ class FormController extends Controller
                 'school1'=>'required|max:75',
                 'gradcourse'=>'max:75',
                 'school2'=>'max:75',
-                //from and to grad course
-
-                //skills 
                 'skills.*'=>'max: 75',
                 'name1'=>'required|max:75',
                 'num1'=>'required|max:11|regex:/^0\d{10}$/',
@@ -104,15 +74,12 @@ class FormController extends Controller
                 'name3'=>'required|max:75',
                 'num3'=>'required|max:11|regex:/^0\d{10}$/',
                 'rel3'=>'required|max:75',
-            //     //companies
                 'company.*' => 'nullable|max:75',
                 'position.*' => 'nullable|max:75',
                 'frdate.*' => 'nullable|date',
                 'todate.*' => 'nullable|date',
-
                 'dept' => 'required',
                 'loc' => 'required',
-
                 'reloc'=>'required',
                 'resume'=>'required|file|mimes:doc,pdf,docx|max:2048'
             ]);
@@ -138,7 +105,6 @@ class FormController extends Controller
             ]);
         }
 
-        
         $data = $request->all();
         foreach($data as $key => $data_item){
             if(is_array($data_item)){
@@ -151,6 +117,7 @@ class FormController extends Controller
             }
        }
         
+        $input = Input::all();
         if($form_type=='1'){
             //return redirect('careers-success');
             //return $data_cleaned;
@@ -159,6 +126,7 @@ class FormController extends Controller
             //     $message->from($data['email']);
             //     $message->to('ericjoseph.flores1@gmail.com');
             //     $message->subject("PCPPI Applicant");
+            //        $message->attach($data['resume']);
             // });
         }
        
@@ -173,13 +141,17 @@ class FormController extends Controller
             // });
         }
         else if ($form_type=='3'){
-            //return redirect('careers-success');
+            
             //return $data_cleaned;
-            return view('mail.interns',compact('data'));
-        //     Mail::send('mail.interns', $data, function($message) use ($data){
-        //         $message->from($data['email']);
-        //         $message->to('ericjoseph.flores1@gmail.com');
-        //         $message->subject("PCPPI Applicant");
+            //return view('mail.interns',compact('data'));
+            Mail::send('mail.interns', compact('data'), function($message) use ($data, $input){
+                $message->from($data['email']);
+                $message->to('ericjoseph.flores1@gmail.com');
+                $message->subject("PCPPI Applicant");
+                $message->attach($input['resume']->getRealPath(),[
+                        'as'=> $input['resume']->getClientOriginalName()]);
+            });
+            return redirect('careers-success');
         }
         else{
             return false;
