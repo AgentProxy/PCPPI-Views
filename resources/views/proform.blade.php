@@ -22,7 +22,6 @@
 			<a href="careers-search" class="btn btn-success btn-lg col-xs-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
 		</div>
 	</div>
-<<<<<<< HEAD
 	<div class="row">
 		<h1 id="title">POSITION</h1>
 		<h4 id="title">Location</h4>
@@ -43,11 +42,6 @@
   			<li>Qualification 3</li>
 		</ul>
 	</div>
-=======
-
-	@include('jobs.trade-marketing-manager ')
-
->>>>>>> a4335729852f61f76fe5e397eec88854682b06a8
 	<div class="row">
 		<div>
 			<h2 id="title">Hiring Process</h2>
