@@ -51,3 +51,7 @@ Route::get('/master', function () {
     return view('layouts.master');
 
 });
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

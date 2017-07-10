@@ -675,7 +675,7 @@
                 <a style="text-decoration: none;" href="https://www.facebook.com/PepsiPhilippines">
                     <img id="linkedin-link" class="footer-links" src="/img/fb.png" />
                 </a> 
-                <a href="#" style="margin-left: 2%;">
+                <a href="http://bit.ly/CareersatPCPPI" style="margin-left: 2%;">
                     <img id="fb-link" class="footer-links" src="/img/linkedin.png"  />
                 </a> 
                 </span>  

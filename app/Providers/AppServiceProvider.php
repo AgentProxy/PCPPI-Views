@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Validator;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,8 @@ class AppServiceProvider extends ServiceProvider
           'recaptcha',
           'App\\Validators\\Recaptcha@validate'
         );
+
+        Schema::defaultStringLength(191);
     }
 
     /**

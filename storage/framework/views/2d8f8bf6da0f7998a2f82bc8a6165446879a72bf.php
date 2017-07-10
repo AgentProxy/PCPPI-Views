@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
     <title>PCPPI Careers</title>
+    <link rel="icon" type="image/ico" href="/img/pcppi3.ico" />
 
     <!-- Styles -->
     <?php echo $__env->yieldContent('head'); ?>
@@ -674,7 +675,7 @@
                 <a style="text-decoration: none;" href="https://www.facebook.com/PepsiPhilippines">
                     <img id="linkedin-link" class="footer-links" src="/img/fb.png" />
                 </a> 
-                <a href="#" style="margin-left: 2%;">
+                <a href="http://bit.ly/CareersatPCPPI" style="margin-left: 2%;">
                     <img id="fb-link" class="footer-links" src="/img/linkedin.png"  />
                 </a> 
                 </span>  
