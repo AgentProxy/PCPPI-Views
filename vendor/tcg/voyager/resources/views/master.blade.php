@@ -2,7 +2,7 @@
 <html>
 <head>
     {{-- <title>{{Voyager::setting('admin_title')}} - {{Voyager::setting('admin_description')}}</title> --}}
-    <title>@yield('page_title',Voyager::setting('admin_title') . " - " . Voyager::setting('admin_description'))</title>
+    <title>@yield('page_title',Voyager::setting('admin_title') . " PCPPI-Careers Admin" . Voyager::setting('admin_description'))</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <!-- Fonts -->
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,300italic">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ voyager_asset('images/logo-icon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/pcppi3.ico" type="image/x-icon">
 
     <!-- CSS Fonts -->
     <link rel="stylesheet" href="{{ voyager_asset('fonts/voyager/styles.css') }}">
