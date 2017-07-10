@@ -11,7 +11,7 @@
                             <img src="{{ Voyager::image($admin_logo_img) }}" alt="Logo Icon">
                         @endif
                     </div>
-                    <div class="title">{{Voyager::setting('admin_title', 'PCPPI-Careers')}}</div>
+                    <div class="title">{{Voyager::setting('admin_title', 'PCPPI')}}</div>
                 </a>
             </div><!-- .navbar-header -->
 
@@ -19,7 +19,7 @@
                  style="background-image:url({{ Voyager::image( Voyager::setting('admin_bg_image'), config('voyager.assets_path') . '/images/bg.jpg' ) }});">
                 <div class="dimmer"></div>
                 <div class="panel-content">
-                    <img src="{{ $user_avatar }}" class="avatar" alt="{{ Auth::user()->name }} avatar">
+                    <img src="/img/circle-logo-small.png" class="avatar" alt="{{ Auth::user()->name }} avatar">
                     <h4>{{ ucwords(Auth::user()->name) }}</h4>
                     <p>{{ Auth::user()->email }}</p>
 
