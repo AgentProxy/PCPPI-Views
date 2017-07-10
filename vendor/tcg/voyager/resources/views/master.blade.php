@@ -2,7 +2,9 @@
 <html>
 <head>
     {{-- <title>{{Voyager::setting('admin_title')}} - {{Voyager::setting('admin_description')}}</title> --}}
+
     <title>@yield('page_title',Voyager::setting('admin_title') . "PCPPI-Careers Admin" . Voyager::setting('admin_description'))</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <!-- Fonts -->

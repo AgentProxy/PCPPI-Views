@@ -30,8 +30,19 @@
     </div>
     <div id="search-results" class="full-height" style="width: 100%; height: 1024px;">
         <div class="panel panel-default"> 
+            <div class="panel-heading">
+                <h1> Sales Manager </h1>
+            </div>
             <div class="panel-body">
-            <h1> Job </h1>
+                <div class="row">
+                    <div class="col-md-10">
+                        <h3>Mindanao</h3>
+                        <h3>Manages sales</h3>
+                    </div>
+                    <div class="col-md-2" style="padding-top: 15px;">
+                        <a href="careers-proform" class="btn btn-warning btn-lg col-xs-offset-1" role="button">View Details</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
