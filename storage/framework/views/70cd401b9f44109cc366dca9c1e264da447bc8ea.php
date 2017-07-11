@@ -49,20 +49,20 @@
         ];
 
         var contents = [
-        	'<h3> Cagayan Valley Operations </h3><a href=#>0 Vacancies</a>',
-        	'<h3> North Luzon Operations </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Central Luzon </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Modern Trade Operations </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Metro Operations, Head Office, Metro Sales </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Southern Tagalog Region Operations </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Bicol Region </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Iloilo Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Tanuan Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Cebu Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Bacolod Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Cagayan De Oro Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Zamboanga Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Davao Plant </h3><a href=#>0 Vacancies</a>'
+        	'<h4> Cagayan Valley Operations </h4><a href=#>0 Vacancies</a>',
+        	'<h4> North Luzon Operations </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Central Luzon </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Modern Trade Operations </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Metro Operations, Head Office, Metro Sales </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Southern Tagalog Region Operations </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Bicol Region </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Iloilo Plant </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Tanuan Plant </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Cebu Plant </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Bacolod Plant </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Cagayan De Oro Plant </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Zamboanga Plant </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Davao Plant </h4><a href=#>0 Vacancies</a>'
         ];
 
         // var infowindow = new google.maps.InfoWindow({
