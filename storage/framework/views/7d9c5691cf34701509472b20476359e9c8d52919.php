@@ -17,7 +17,7 @@
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-search" class="btn btn-success btn-lg col-xs-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers</a>
+			<a href="careers-search" class="btn btn-success btn-lg col-xs-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
 		</div>
 	</div>
 	<div class="row">
@@ -179,7 +179,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-offset-2">
-				<label for="skills">&nbsp&nbsp&nbsp Skills</label> 
+				<label for="skills">&nbsp;&nbsp;&nbsp; Skills</label> 
 			    <div class="col-md-offset-1">
 					<div id="skill-1" class="checkbox skills">
 		  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
@@ -356,9 +356,9 @@
 <script>
 	var submitted = false;
 	//RETURN LATER IF AFTER DEBUGGING
-	// $(window).on('load',function(){
-	// 	document.getElementById('i-recaptcha').reset();
-	// });
+	$(window).on('load',function(){
+		document.getElementById('i-recaptcha').reset();
+	});
 	$('#i-recaptcha').submit(function() {
    		$(window).off('beforeunload');
    		submitted = true;

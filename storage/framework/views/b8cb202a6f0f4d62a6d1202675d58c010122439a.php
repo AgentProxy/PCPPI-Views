@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     
-    <title><?php echo $__env->yieldContent('page_title',Voyager::setting('admin_title') . " - " . Voyager::setting('admin_description')); ?></title>
+
+    <title><?php echo $__env->yieldContent('page_title',Voyager::setting('admin_title') . "PCPPI-Careers Admin" . Voyager::setting('admin_description')); ?></title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>"/>
     <!-- Fonts -->
@@ -29,7 +31,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,300italic">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo e(voyager_asset('images/logo-icon.png')); ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/pcppi3.ico" type="image/x-icon">
 
     <!-- CSS Fonts -->
     <link rel="stylesheet" href="<?php echo e(voyager_asset('fonts/voyager/styles.css')); ?>">
@@ -65,7 +67,7 @@
 <div id="voyager-loader">
     <?php $admin_loader_img = Voyager::setting('admin_loader', ''); ?>
     <?php if($admin_loader_img == ''): ?>
-        <img src="<?php echo e(voyager_asset('images/logo-icon.png')); ?>" alt="Voyager Loader">
+        <img src="/img/Pepsi-logo.png" alt="Voyager Loader">
     <?php else: ?>
         <img src="<?php echo e(Voyager::image($admin_loader_img)); ?>" alt="Voyager Loader">
     <?php endif; ?>

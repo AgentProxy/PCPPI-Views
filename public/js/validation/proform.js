@@ -19,6 +19,7 @@ function check(e){
       e.preventDefault();
       return false;
     } 
+    $("#Submit").prop('disabled','true');
     return true;
   }
 }

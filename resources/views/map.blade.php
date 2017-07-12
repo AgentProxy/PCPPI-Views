@@ -40,31 +40,31 @@
         	['Modern Trade Operations',14.5881219,121.0439725,3],
         	['Metro Operations, Head Office, Metro Sales',14.4042525,121.04696360000003,4],
         	['Southern Tagalog Region Operations',14.1007803,121.0793705,5],
-        	['Bicol Region',13.4209885,123.4136736,6],
-        	['Iloilo Plant',10.75844,122.50033740000003,7],
-        	['Tanuan Plant',11.1022234,125.02005699999995,8],
-        	['Cebu Plant',10.239339,123.79384800000003,9],
-        	['Bacolod Plant',10.7050794,122.96313710000004,10],
-        	['Cagayan De Oro Plant',8.494784,124.74618099999998,11],
-        	['Zamboanga Plant',6.965789999999999,122.14028099999996,12],
-        	['Davao Plant',7.030481361402168,125.51293283700943,13]
+        	['Bicol Region Operations',13.4209885,123.4136736,6],
+        	['Iloilo',10.75844,122.50033740000003,7],
+        	['Tanuan',11.1022234,125.02005699999995,8],
+        	['Cebu',10.239339,123.79384800000003,9],
+        	['Bacolod',10.7050794,122.96313710000004,10],
+        	['Cagayan De Oro',8.494784,124.74618099999998,11],
+        	['Zamboanga',6.965789999999999,122.14028099999996,12],
+        	['Davao',7.030481361402168,125.51293283700943,13]
         ];
 
         var contents = [
-        	'<h3> Cagayan Valley Operations </h3><a href=#>0 Vacancies</a>',
-        	'<h3> North Luzon Operations </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Central Luzon </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Modern Trade Operations </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Metro Operations, Head Office, Metro Sales </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Southern Tagalog Region Operations </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Bicol Region </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Iloilo Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Tanuan Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Cebu Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Bacolod Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Cagayan De Oro Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Zamboanga Plant </h3><a href=#>0 Vacancies</a>',
-        	'<h3> Davao Plant </h3><a href=#>0 Vacancies</a>'
+        	'<h4> Cagayan Valley Operations </h4><a href=#>0 Vacancies</a>',
+        	'<h4> North Luzon Operations </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Central Luzon </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Modern Trade Operations </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Metro Operations, Head Office, Metro Sales </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Southern Tagalog Region Operations </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Bicol Region Operations</h4><a href=#>0 Vacancies</a>',
+        	'<h4> Iloilo </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Tanuan </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Cebu </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Bacolod </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Cagayan De Oro </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Zamboanga </h4><a href=#>0 Vacancies</a>',
+        	'<h4> Davao </h4><a href=#>0 Vacancies</a>'
         ];
 
         // var infowindow = new google.maps.InfoWindow({

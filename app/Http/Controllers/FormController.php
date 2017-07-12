@@ -123,6 +123,7 @@ class FormController extends Controller
             //return $data_cleaned;
               Mail::send('mail.professionals', compact('data'), function($message) use ($data, $input){
                 $message->from($data['email']);
+                $message->replyTo($data['email']);
                 $message->to('ericjoseph.flores1@gmail.com');
                 $message->subject("PCPPI Applicant (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
@@ -137,6 +138,7 @@ class FormController extends Controller
             //return view('mail.bank',compact('data'));
              Mail::send('mail.bank', compact('data'), function($message) use ($data, $input){
                 $message->from($data['email']);
+                $message->replyTo($data['email']);
                 $message->to('ericjoseph.flores1@gmail.com');
                 $message->subject("PCPPI Applicant (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
@@ -150,6 +152,7 @@ class FormController extends Controller
             //return view('mail.interns',compact('data'));
             Mail::send('mail.interns', compact('data'), function($message) use ($data, $input){
                 $message->from($data['email']);
+                $message->replyTo($data['email']);
                 $message->to('ericjoseph.flores1@gmail.com');
                 $message->subject("PCPPI Applicant Intern (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
