@@ -125,12 +125,14 @@
 			    </select>
 			    <div class="help-block with-errors"></div>
 	  		</div>
-	  		<div class="form-group col-md-1">
+	  		<div class="form-group col-md-1" style="width:200px;">
   				<label for="sem">Sem *</label>
   				<select class="form-control" id="sem" name="sem" required>
   					<option value="" selected disabled>--</option>
 			        <option>1st</option>
 			        <option>2nd</option>
+			        <option>3rd</option>
+			        <option>Midyear</option>
 			     </select>
 			     <div class="help-block with-errors"></div>
 	  		</div>
