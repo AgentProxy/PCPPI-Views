@@ -322,7 +322,7 @@
 
 <!-- HTML Templates -->
 	<!-- Start of Work History Template-->
-			<div class="work-history" id="work-history-0" style="display: none;">
+			<div id="work-history-0" style="display: none;">
 		  		<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company Name</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
@@ -343,9 +343,9 @@
 	  		</div>  
 	  	<!-- End of Work History Template-->
 	  	<!-- Start of Skills Template -->
-	  		<div id="skill-0" class="checkbox skills" style="display: none">
+	  		<div id="skill-0" style="display: none">
 				<input type="text" name="skills[]" value="" style="display: none">
-			    <button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+			    <span id="delete" style="font-size: 15px; color: red;" class="delete-skill glyphicon glyphicon-minus-sign"></span> 
 			    <span id="skill-label" style="padding-left: 0%;">Programming</span>
 			</div>
 		<!-- End of Skills Template -->

@@ -28,7 +28,7 @@
 
         #delete {
             height: 20px;
-            width: 15px;
+            width: 20px;
         }
 
         #relation{
@@ -192,11 +192,11 @@
             font-size: 90%;
             }
 
-            .btn, .btn-danger {
+           /* .btn, .btn-danger {
                 padding: 5px 10px;
                 font-size: 10px;
                 border-radius: 10px;
-            }
+            }*/
 
             #btnpad{
                 padding-top: 10px;                
