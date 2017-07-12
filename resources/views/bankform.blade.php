@@ -16,9 +16,7 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<div>
-			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
-		</div>
+		<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
 		<div>
@@ -86,12 +84,12 @@
 	  		</div> 
 		</div>
 		<div class="row">
-			<div class="form-group col-md-2 col-md-offset-2">
+			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
-	    		<input type="date" class="datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="{!! old('bday') !!}">
+	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="{!! old('bday') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-	  		<div class="form-group col-md-3">
+	  		<div class="form-group col-md-2">
 	    		<label for="phone">Mobile Number *</label>
 	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required value="{!! old('phone') !!}">
 	    		<div class="help-block with-errors"></div>
@@ -231,16 +229,19 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
+		<div class="col-md-6 col-md-offset-2">
+			<h5>Please input all three character references.</h5><br><br>
+		</div>
 		<div class="row">
 			<br><br><h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4><br><br><br>
 		</div>
 		<div class="row">
-	  		 <div class="work-history" id="work-history-1" style="display:block;">
-	  			<div class="form-group col-md-2 col-md-offset-2">
+	  		<div class="work-history" id="work-history-1" style="display:block;">
+	  			<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company Name</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
 	  			</div>
-		  		<div class="form-group col-md-2">
+		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
 		  		</div>
@@ -254,7 +255,7 @@
 		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>  	
-		</div> 		
+		</div>  		
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
 				<button type="button" class="btn btn-success add-work">
@@ -320,30 +321,30 @@
 
 <!-- HTML Templates -->
 	<!-- Start of Work History Template-->
-			<div class="work-history" id="work-history-0" style="display: none;">
-		  		<div class="form-group col-md-2 col-md-offset-2">
+	  		<div class="work-history" id="work-history-0" style="display:none;">
+	  			<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company Name</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
-		  		</div>
-		  		<div class="form-group col-md-2">
+	  			</div>
+		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="frdate">From</label>
-		    		<input type="date" class="form-control"  name="frdate[]" id="frdate">
+		    		<input type="date" class="form-control" name="frdate[]" id="frdate">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
+		  			<button id="addwork" class="btn btn-danger"><h2 style="color: white; text-align: center;"> - </h2></button>
 		  		</div>
-	  		</div>  
+	  		</div>  	
 	  	<!-- End of Work History Template-->
 	  	<!-- Start of Skills Template -->
 	  		<div id="skill-0" name="skills" class="checkbox skills" style="display: none">
 				<input type="text" name="skills[]" value="" style="display: none">
-			    <button class="btn btn-danger btn-circle-xs delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
+			    <button id="delete" class="btn btn-danger delete-skill" ><span class="glyphicon glyphicon-minus"></span></button> 
 			    <label id="skill-label" style="padding-left: 0%;">Programming</label>
 			</div>
 		<!-- End of Skills Template -->

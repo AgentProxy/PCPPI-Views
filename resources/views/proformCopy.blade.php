@@ -10,7 +10,8 @@
 	</div>
 	<div class="row">
 		<h1 id="title">POSITION</h1>
-		<h4 id="title">Location</h4>
+		<h3 id="title">Location</h3>
+		<h4 id="title">Description</h4>
 	</div>
 	<div class="row col-md-offset-1">
 		<h3>Main Responsibility</h3>

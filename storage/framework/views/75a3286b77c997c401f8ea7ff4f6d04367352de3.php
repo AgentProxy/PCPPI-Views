@@ -36,7 +36,6 @@
             background-color: #7fd6ff;
            /*/ background-image: url(img/bubbles.gif);*/
             background-size: cover;
-            font-size: 20px;
         }
 
         body,html{
@@ -94,6 +93,10 @@
             font-size: 16px;
         }
 
+        #forms-section {
+            margin-top: 50px;
+        }
+
 
 
         @media(max-width: 1000px){
@@ -105,7 +108,8 @@
                 width: 100px;
             }
         }
-                #next, #section {
+
+        #next, #section {
             padding: 40px 30px;
         }
 
