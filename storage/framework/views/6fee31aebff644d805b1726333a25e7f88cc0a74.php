@@ -4,9 +4,9 @@
             <button class="hamburger btn-link">
                 <span class="hamburger-inner"></span>
             </button>
+
             <a id="sidebar-anchor" class="voyager-dot-3 btn-link navbar-link hidden-xs" 
-                title="" 
-                data-unstick="Unstick the sidebar" 
+                title="" data-unstick="Unstick the sidebar" 
             data-toggle="tooltip" data-placement="bottom"></a>
 
             <ol class="breadcrumb hidden-xs">
