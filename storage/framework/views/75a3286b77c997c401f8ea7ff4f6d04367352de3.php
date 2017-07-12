@@ -34,7 +34,7 @@
             font-family: 'Quicksand', sans-serif;
             padding-top: 0px;
             background-color: #7fd6ff;
-            background-image: url(img/bubbles.gif);
+           /*/ background-image: url(img/bubbles.gif);*/
             background-size: cover;
             font-size: 20px;
         }
@@ -206,7 +206,7 @@
 
         /* Desktop */ 
 
-        @media (min-width: 1056px) {
+        @media (min-width: 1129px) {
             .navbar {
                 height: 96px;
             }
@@ -218,7 +218,7 @@
 
         /* Medium screens */
 
-        @media (min-width: 1024px) and (max-width: 1055px) {
+        @media (min-width: 1024px) and (max-width: 1128px) {
             #logo {
                 height: 75px;
                 width: 68px;
@@ -326,7 +326,7 @@
             }
 
             #pcppi {
-                font-size: 10px;
+                font-size: 9px;
                 font-weight: bold;
             }
 
@@ -360,8 +360,8 @@
                 padding: 1px 2px;
             }
 
-            body {
-                font-size: 55%;
+            #section {
+                font-size: 70%;
             }
         }
 
@@ -603,24 +603,28 @@
                         <span class="icon-bar" style="background-color: white"></span>
                         <span class="icon-bar" style="background-color: white"></span>     
                     </button>
-                    <a class="navbar-brand" href="https://www.pepsiphilippines.com/index.php">
+                    <a class="navbar-brand" href="careers-home">
                     <div class="logo-bar">                        
                         <img class="logo responsive" id="logo" src="/img/small-logo.png" />
                         <!-- <img class="logo responsive hidden-lg" id="logo" src="/img/small-logo.png" /> -->
-                        <span id="pcppi"> Pepsi-Cola Products Philippines Inc. </span>
+                        <span id="pcppi"> Pepsi-Cola Products Philippines, Inc. - Careers </span>
                     </div>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul id="items" class="nav navbar-nav">
                         <li class="active"><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Home</a></li>
-                        <li><a href="https://www.pepsiphilippines.com/company.php" target="_blank">Our Company</a></li>
-                        <li><a href="https://www.pepsiphilippines.com/products.php" target="_blank">Products</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
+                            <ul id="dropdown-menu" class="dropdown-menu">
+                                <li><a href="https://www.pepsiphilippines.com/company.php">Our Company</a></li>
+                                <li><a href="https://www.pepsiphilippines.com/products.php">Products</a></li>
+                            </ul>
+                        </li>
                         <li><a href="">Engagements</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Careers <span class="caret"></span></a>
                             <ul id="dropdown-menu" class="dropdown-menu">
-                                <li><a href="careers-home">Careers Home</a></li>
                                 <li><a href="careers-internform">Internships</a></li>
                                 <li><a href="careers-map">Professionals</a></li>
                             </ul>

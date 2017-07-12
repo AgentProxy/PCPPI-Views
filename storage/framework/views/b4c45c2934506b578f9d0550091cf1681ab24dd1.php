@@ -11,9 +11,11 @@
 <div id="next" class="container-fluid bg-grey">
     <div class="row">
         <div class="col-sm-8">
-            <h1>Why Join Pepsi?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1 style="font-weight: bold">Why Join Pepsi?</h1><br />
+            <p>We believe that our people drive the success of the company, and at the heart of our business stratey is the continuous effort to provide a nurturing work environment and a culture of continuous development for our people.</p>
+            <p>
+            We are high-spirited, engaged individuals who are committed to the values of passion, excellence, professionalism, service, and integrity and are deeply involved in building and helping our company and our communities grow. We are Team PCPPI.
+            </p>
         </div>
         <div class="col-sm-4 slideanim slide">
             <img class="img-responsive slideanim" src="/img/1.png" alt="pic">
@@ -27,13 +29,13 @@
             <img class="img-responsive slideanim" src="/img/1.png" alt="pic">
         </div>
         <div class="col-sm-8">
-            <h1>Our Company</h1>
+            <h1 style="font-weight: bold;">Our Company</h1><br />
             <p>Pepsi-Cola Products Philippines Inc. is the exclusive bottler of PepsiCo beverages in the Philippines, with a relationship spanning 66 years. Lotte Chilsung, one of the biggest beverage companies in South Korea, is the lead shareholder of PCPPI as an independently-listed company and co-manages it with PepsiCo. PCPPI manufactures and sells well-known brands such as Pepsi-Cola, Mountain Dew, 7-Up, Mirinda, Mug, Gatorade, Tropicana, Lipton, Sting, and Premier. It has established manufacturing facilities across the country, serving at least 500,000 outlets and providing employment through its extensive distribution network.</p>
         </div>
     </div>
 </div>
 <div id="section" class="container-fluid text-center bg-grey">
-    <h1>Careers</h1>
+    <h1 style="font-weight: bold">Careers</h1>
     <br />
     <div class="row text-center sideanim">
         <div class="col-sm-4 col-sm-offset-2 col-xs-6 slideanim">
