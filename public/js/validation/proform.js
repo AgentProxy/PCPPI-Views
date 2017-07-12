@@ -55,15 +55,17 @@ function check_upload(){
 
 function add_work(){
   i = document.getElementsByClassName('work-history');
-  $('#work-history-0').clone().attr('id','work-history-'+(i.length)).insertAfter('#work-history-' + (i.length- 1));
-  $("#work-history-"+(i.length-1)).css("display", "block");
+  $('#work-history-0').clone().attr('id','work-history-'+(i.length+1)).insertAfter('#work-history-' + (i.length));
+  $("#work-history-"+(i.length+1)).attr('class', 'work-history');
+  $("#work-history-"+(i.length)).css("display", "block");
+  
 }
 
 function delete_work(){
   $(this).parent().parent().remove();
   i = document.getElementsByClassName('work-history');
-  for(x=1;x<i.length;x++){
-    i[x].id = "work-history-" + x;
+  for(x=0;x<i.length;x++){
+    i[x].id = "work-history-" + (x+1);
   }
 }
 
@@ -71,11 +73,13 @@ function add_skill(){
   skill = document.getElementById('skill');
   if(skill.value != ""){
     i = document.getElementsByClassName('skills');
-    $('#skill-0').clone().attr('id','skill-'+(i.length)).insertAfter('#skill-' + (i.length-1));
-    $("#skill-"+(i.length-1)).css("display", "block");
+    $('#skill-0').clone().attr('id','skill-'+(i.length+1)).insertAfter('#skill-' + (i.length));
+    $("#skill-"+(i.length+1)).attr('class', 'checkbox skills');
+    //document.getElementById("work-history-"+(i.length))
+    $("#skill-"+(i.length)).css("display", "block");
     (skill.value).replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    document.getElementById('skill-'+(i.length-1)).firstChild.nextSibling.value = skill.value;
-    document.getElementById('skill-'+(i.length-1)).lastChild.previousSibling.innerHTML = skill.value;
+    document.getElementById('skill-'+(i.length)).firstChild.nextSibling.value = skill.value;
+    document.getElementById('skill-'+(i.length)).lastChild.previousSibling.innerHTML = skill.value;
     skill.value ="";
   }
 
@@ -86,6 +90,6 @@ function delete_skill(){
   i = document.getElementsByClassName('skills');
   console.log(i);
   for(x=0;x<i.length;x++){
-    i[x].id = "skill-" + x;
+    i[x].id = "skill-" + (x+1);
   }
 }
