@@ -18,14 +18,12 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<div>
-			<a href="careers-search" class="btn btn-success btn-lg col-xs-offset-1" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
-		</div>
+		<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
 		<h1 id="title">POSITION</h1>
 		<h3 id="title">Location</h3>
-		<h4 id="title">Description</h4>
+		<h3 id="title">Description</h3>
 	</div>
 	<div class="row">
 		<h3>Main Responsibility</h3>
@@ -64,11 +62,10 @@
 		<br>
 		<h2 id="titlepad">APPLICATION</h2>
 	</div>
-	<div class="row">
+	<div id="forms-section" class="row">
 		<div class="col-md-4 col-md-offset-2">
-		<h4 >PERSONAL INFORMATION</h4>
-		<small class="text-danger"><strong>Fields with * are required</strong></small>
-		<br><br><br>
+			<small class="text-danger"><strong>Fields with * are required</strong></small>
+			<h3>PERSONAL INFORMATION</h3>
 		</div>
 	</div>
 
@@ -94,9 +91,9 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip1">Zip</label>
+	    		<label for="zip1">Zip Code</label>
 	    		<input type="text" class="form-control" name="zip1" id="zip1" maxlength="6" value="{!! old('zip1') !!}">
-	  		</div> -->
+	  		</div>  -->
  		</div>
  		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
@@ -105,17 +102,21 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip2">Zip</label>
+	    		<label for="zip2">Zip Code</label>
 	    		<input type="text" class="form-control" name="zip2" id="zip1" maxlength="6" value="{!! old('zip2') !!}">
-	  		</div>  -->
+	  		</div> --> 
 		</div>
 		<div class="row">
-			<div class="form-group col-md-3 col-md-offset-2">
+
+			<div class="form-group col-md-2 col-md-offset-2">
+
 	    		<label for="bday">Date of Birth *</label>
 	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="{!! old('bday') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-	  		<div class="form-group col-md-2">
+
+	  		<div class="form-group col-md-3">
+
 	    		<label for="phone">Mobile Number *</label>
 	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required value="{!! old('phone') !!}">
 	    		<div class="help-block with-errors"></div>
@@ -201,9 +202,11 @@
 		    	</div>
 		    </div>
 		</div>
-		<div class="row">
-			<br><br><h4 class="col-md-4 col-md-offset-2">CHARACTER REFERENCES</h4><br><br><br>
+		<div id="forms-section" class="row">
+			<h3 class="col-md-6 col-md-offset-2">CHARACTER REFERENCES</h3>
+			<p class="col-md-6 col-md-offset-2">(Please input all three character references)</p>
 		</div>
+		
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name1">Name *</label>
@@ -255,11 +258,9 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
-		<div class="col-md-6 col-md-offset-2">
-			<h5>Please input all three character references.</h5><br><br>
-		</div>
-		<div class="row">
-			<br><br><h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4><br><br><br>
+	
+		<div id="forms-section" class="row">
+			<h3 class="col-md-4 col-md-offset-2">WORK HISTORY</h3>
 		</div>
 		<div class="row">
 	  		<div class="work-history" id="work-history-1" style="display:block;">
@@ -278,7 +279,6 @@
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>
 	  		<div class="work-history" id="work-history-2" style="display:block;">
@@ -297,12 +297,11 @@
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>
 	  		<div class="work-history" id="work-history-3" style="display:block;">
 	  			<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="company">Company 3</label>
+		    		<label for="company">Company 2</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
@@ -316,26 +315,22 @@
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
-	  		</div>  	
+	  		</div>
 		</div> 		
 		<div class="row">
 			<div class="form-group col-md-2 col-md-offset-2">
 				<br/>
-				<label for="reloc">Willing to relocate? *</label>
-				<select class="form-control" name="reloc" id="reloc" required>
-					<option selected value="" disabled>--</option>
-			        <option>Yes</option>
-			        <option>No</option>
-			    </select>
+				<label for="reloc">Willing to relocate? *</label><br />
+			    <form class="form-control" name="reloc" id="reloc" required>
+			    	<input type="radio" name="relocate" value="Yes" /> Yes <br />
+			    	<input type="radio" name="relocate" value="No" /> No <br />
+			    </form>
 			    <div class="help-block with-errors"></div>
 			</div>
 		</div>
 		<div class="row">
-			<div>
-				<br><br><br><h4 class="col-md-4 col-md-offset-2">Attach Resume *</h4>
-			</div>
+			<h3 class="col-md-4 col-md-offset-2">Attach Resume (.doc, .docx, .pdf) *</h3>
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
@@ -354,12 +349,14 @@
 
 <!-- HTML Templates -->
 	<!-- Start of Work History Template-->
+
 			<div id="work-history-0" style="display: none;">
 		  		<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company Name</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
 		  		</div>
-		  		<div class="form-group col-md-4 col-md-offset-2">
+		  		<div class="form-group col-md-2">
+
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
 		  		</div>

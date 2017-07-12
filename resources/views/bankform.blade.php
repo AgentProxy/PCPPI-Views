@@ -16,9 +16,7 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<div>
-			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
-		</div>
+		<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
 		<div>
@@ -254,7 +252,6 @@
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>
 	  		<div class="work-history" id="work-history-2" style="display:block;">
@@ -273,7 +270,6 @@
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>
 	  		<div class="work-history" id="work-history-3" style="display:block;">
@@ -292,7 +288,6 @@
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>  	
 		</div>   		

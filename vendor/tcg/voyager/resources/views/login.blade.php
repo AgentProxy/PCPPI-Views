@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="admin login">
     <title>PCPPI-Careers Admin {{ Voyager::setting("title") }}</title>
+    <link rel="shortcut icon" href="/img/pcppi3.ico" type="image/x-icon">
     <link rel="stylesheet" href="{{ voyager_asset('lib/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ voyager_asset('css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ voyager_asset('css/login.css') }}">
@@ -55,7 +56,7 @@
 
             <div class="login-container animated fadeInRightBig">
 
-                <h2>Sign In Below:</h2>
+                <h2>Sign In:</h2>
 
                 <form action="{{ route('voyager.login') }}" method="POST">
                 {{ csrf_field() }}
