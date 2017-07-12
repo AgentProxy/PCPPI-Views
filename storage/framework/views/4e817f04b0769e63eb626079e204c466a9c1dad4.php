@@ -262,14 +262,12 @@
 			<h3 class="col-md-4 col-md-offset-2">WORK HISTORY</h3>
 		</div>
 		<div class="row">
-
-	  		 <div class="work-history" id="work-history-1" style="display:block;">
-	  			<div class="form-group col-md-2 col-md-offset-2">
+	  		<div class="work-history" id="work-history-1" style="display:block;">
+	  			<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company Name</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
 	  			</div>
-		  		<div class="form-group col-md-2">
-
+		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
 		  		</div>
@@ -322,19 +320,13 @@
 
 <!-- HTML Templates -->
 	<!-- Start of Work History Template-->
-<<<<<<< HEAD
-			<div class="work-history" id="work-history-0" style="display: none;">
 
-		  		<div class="form-group col-md-2 col-md-offset-2">
-=======
 			<div id="work-history-0" style="display: none;">
 		  		<div class="form-group col-md-8 col-md-offset-2">
->>>>>>> 2da23609a471b5c84ec13eeb2152c485bb03f8fd
 		    		<label for="company">Company Name</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
 		  		</div>
-		  		<div class="form-group col-md-2">
-
+		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
 		  		</div>

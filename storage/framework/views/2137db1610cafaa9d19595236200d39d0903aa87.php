@@ -16,9 +16,7 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<div>
-			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
-		</div>
+		<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
 		<div>
@@ -41,11 +39,10 @@
 		<br>
 		<h2 id="titlepad">APPLICATION</h2>
 	</div>
-	<div class="row">
+	<div id="forms-section" class="row">
 		<div class="col-md-4 col-md-offset-2">
-		<h4 >PERSONAL INFORMATION</h4>
 		<small class="text-danger"><strong>Fields with * are required</strong></small>
-		<br><br><br>
+		<h4 >PERSONAL INFORMATION</h4>
 		</div>
 	</div>
 	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/2" data-toggle="validator" enctype="multipart/form-data">	
@@ -178,8 +175,8 @@
 		    	</div>
 		    </div>
 		</div>
-		<div class="row">
-			<br><br><h4 class="col-md-4 col-md-offset-2">CHARACTER REFERENCES</h4><br><br><br>
+		<div id="forms-section" class="row">
+			<h4 class="col-md-4 col-md-offset-2">CHARACTER REFERENCES</h4>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
@@ -232,11 +229,13 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
-		<div class="col-md-6 col-md-offset-2">
-			<h5>Please input all three character references.</h5><br><br>
-		</div>
 		<div class="row">
-			<br><br><h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4><br><br><br>
+			<div class="col-md-6 col-md-offset-2">
+				<h5>Please input all three character references.</h5>
+			</div>
+		</div>
+		<div id="forms-section" class="row">
+			<h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4>
 		</div>
 		<div class="row">
 	  		<div class="work-history" id="work-history-1" style="display:block;">
@@ -304,7 +303,7 @@
 		</div>
 		<div class="row">
 			<div>
-				<br><br><br><h4 class="col-md-4 col-md-offset-2">Attach Resume *</h4>
+				<h4 class="col-md-4 col-md-offset-2">Attach Resume *</h4>
 			</div>
 		</div>
 		<div class="row">
@@ -324,7 +323,7 @@
 
 <!-- HTML Templates -->
 	<!-- Start of Work History Template-->
-	  		<div class="work-history" id="work-history-0" style="display: none;">
+	  		<div id="work-history-0" style="display: none;">
 		  		<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company Name</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
@@ -352,6 +351,10 @@
 			</div>
 		<!-- End of Skills Template -->
 <!--  -->
+
+<div class="fa-circle">
+	
+</div>
 
 <script type="text/javascript">
 	for (i = new Date().getFullYear(); i > 1900; i--){

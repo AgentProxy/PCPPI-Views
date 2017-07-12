@@ -34,11 +34,10 @@
 		<br>
 		<h2  id="titlepad">APPLICATION</h2>
 	</div>
-	<div class="row">
+	<div id="forms-section" class="row">
 		<div class="col-md-4 col-md-offset-2">
+		<small class="text-danger"><strong>Fields with * are required</strong></small>		
 		<h4 >PERSONAL INFORMATION</h4>
-		<small class="text-danger"><strong>Fields with * are required</strong></small>
-		<br><br><br>
 		</div>
 	</div>
 	<form id='i-recaptcha' method="POST" action="/form_validation/3" data-toggle="validator" enctype="multipart/form-data">
@@ -64,7 +63,7 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 	  		<div class="form-group col-md-2">
-	    		<label for="zip1">Zip</label>
+	    		<label for="zip1">Zip Code</label>
 	    		<input type="text" class="form-control" id="zip1" name="zip1" maxlength="6" value="<?php echo old('zip1'); ?>">
 	  		</div>
 		</div>	
@@ -75,7 +74,7 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
-	    		<label for="zip2">Zip</label>
+	    		<label for="zip2">Zip Code</label>
 	    		<input type="text" class="form-control" id="zip2" name="zip2" maxlength="6" value="<?php echo old('zip2'); ?>">
 	  		</div>
 		</div>
@@ -97,8 +96,8 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>	
-		<div class="row">
-			<br><br><br><h4 class="col-md-4 col-md-offset-2">INTERNSHIP DETAILS</h4><br><br><br>
+		<div id="forms-section" class="row">
+			<h4 class="col-md-4 col-md-offset-2">INTERNSHIP DETAILS</h4>
 		</div>
 		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
@@ -146,10 +145,8 @@
 			     <div class="help-block with-errors"></div>
 	  		</div>	
 		</div>
-		<div class="row">
-			<div>
-				<br><br><br><h4 class="col-md-4 col-md-offset-2">Attach Resume *</h4>
-			</div>
+		<div id="forms-section" class="row">
+			<h4 class="col-md-4 col-md-offset-2">Attach Resume *</h4>
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
