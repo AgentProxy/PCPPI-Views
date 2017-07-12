@@ -45,9 +45,6 @@
 		<br><br><br>
 		</div>
 	</div>
-	<div class="row">
-		<h4 class="col-md-4 col-md-offset-2">PERSONAL INFORMATION</h4><br><br><br>
-	</div>
 	<form id='i-recaptcha' method="POST" action="/form_validation/3" data-toggle="validator" enctype="multipart/form-data">
 		{{ csrf_field() }}
 		<input type="text" value="3" name="form_type" style="display: none;">
@@ -86,12 +83,12 @@
 	  		</div>
 		</div>
 		<div class="row">
-			<div class="form-group col-md-2 col-md-offset-2">
+			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
 	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="{!! old('bday') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-	  		<div class="form-group col-md-3">
+	  		<div class="form-group col-md-2">
 	    		<label for="phone">Mobile Number *</label>
 	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required value="{!! old('phone') !!}">
 	    		<div class="help-block with-errors"></div>

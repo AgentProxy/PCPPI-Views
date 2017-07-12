@@ -12,6 +12,7 @@
             </div>
             <div class="form-group col-md-4">
                 <select class="form-control" id="loc">
+                    <option>All Regions</option>
                     <option>Region 1</option>
                     <option>Region 2</option>
                     <option>Region 3</option>

@@ -9,6 +9,7 @@
             </div>
             <div class="form-group col-md-4">
                 <select class="form-control" id="loc">
+                    <option>All Regions</option>
                     <option>Region 1</option>
                     <option>Region 2</option>
                     <option>Region 3</option>
@@ -26,9 +27,8 @@
       	var philippines = {lat: 12.16822568, lng: 122.98095703};
         map = new google.maps.Map(document.getElementById('map'), { 	
 	        	center: philippines,
-	        	zoom: 6,
-                disableDoubleClickZoom: true,
-                scrollwheel:  false
+	        	zoom: 6
+                // disableDoubleClickZoom: true
         });
 
         // setMarkers(map);
@@ -51,20 +51,20 @@
         ];
 
         var contents = [
-        	'<h4> Cagayan Valley Operations </h4><a href=#>0 Vacancies</a>',
-        	'<h4> North Luzon Operations </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Central Luzon </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Modern Trade Operations </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Metro Operations, Head Office, Metro Sales </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Southern Tagalog Region Operations </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Bicol Region Operations</h4><a href=#>0 Vacancies</a>',
-        	'<h4> Iloilo </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Tanuan </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Cebu </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Bacolod </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Cagayan De Oro </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Zamboanga </h4><a href=#>0 Vacancies</a>',
-        	'<h4> Davao </h4><a href=#>0 Vacancies</a>'
+        	'<h4> Cagayan Valley Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> North Luzon Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Central Luzon </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Modern Trade Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Metro Operations, Head Office, Metro Sales </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Southern Tagalog Region Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Bicol Region Operations</h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Iloilo </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Tanuan </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Cebu </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Bacolod </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Cagayan De Oro </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Zamboanga </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Davao </h4><a href=#><h5>0 Vacancies</h5></a>'
         ];
 
         // var infowindow = new google.maps.InfoWindow({

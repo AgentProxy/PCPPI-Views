@@ -6,7 +6,7 @@
     <meta name="robots" content="none" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="admin login">
-    <title>Admin - <?php echo e(Voyager::setting("title")); ?></title>
+    <title>PCPPI-Careers Admin <?php echo e(Voyager::setting("title")); ?></title>
     <link rel="stylesheet" href="<?php echo e(voyager_asset('lib/css/bootstrap.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(voyager_asset('css/animate.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(voyager_asset('css/login.css')); ?>">
@@ -28,7 +28,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<!-- Designed with ♥ by Frondor -->
+
 <div class="container-fluid">
     <div class="row">
         <div class="faded-bg animated"></div>
@@ -38,13 +38,13 @@
                     <div class="logo-title-container">
                         <?php $admin_logo_img = Voyager::setting('admin_icon_image', ''); ?>
                         <?php if($admin_logo_img == ''): ?>
-                        <img class="img-responsive pull-left logo hidden-xs animated fadeIn" src="<?php echo e(voyager_asset('images/logo-icon-light.png')); ?>" alt="Logo Icon">
+                        <img class="img-responsive pull-left logo hidden-xs animated fadeIn" src="/img/1.png" alt="Logo Icon">
                         <?php else: ?>
-                        <img class="img-responsive pull-left logo hidden-xs animated fadeIn" src="<?php echo e(Voyager::image($admin_logo_img)); ?>" alt="Logo Icon">
+                        <img class="img-responsive pull-left logo hidden-xs animated fadeIn" src="/img/1.png" alt="Logo Icon">
                         <?php endif; ?>
                         <div class="copy animated fadeIn">
-                            <h1><?php echo e(Voyager::setting('admin_title', 'Voyager')); ?></h1>
-                            <p><?php echo e(Voyager::setting('admin_description', 'Welcome to Voyager. The Missing Admin for Laravel')); ?></p>
+                            <h1><?php echo e(Voyager::setting('admin_title', 'PCPPI-Careers Admin')); ?></h1>
+                            <p><?php echo e(Voyager::setting('admin_description', 'Welcome. Please login to administrate your website.')); ?></p>
                         </div>
                     </div> <!-- .logo-title-container -->
                 </div>

@@ -26,6 +26,11 @@
                 padding-bottom: 10px;
             }
 
+        #delete {
+            height: 20px;
+            width: 15px;
+        }
+
         #relation{
             visibility: hidden;
         }
@@ -36,7 +41,6 @@
             background-color: #7fd6ff;
            /*/ background-image: url(img/bubbles.gif);*/
             background-size: cover;
-            font-size: 20px;
         }
 
         body,html{
