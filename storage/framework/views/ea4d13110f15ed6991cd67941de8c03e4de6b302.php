@@ -60,7 +60,7 @@
     <?php endif; ?>
 <?php else: ?>
     <?php $selected_value = (isset($dataTypeContent->{$row->field}) && !is_null(old($row->field, $dataTypeContent->{$row->field}))) ? old($row->field, $dataTypeContent->{$row->field}) : old($row->field); ?>
-    <select class="form-control select2" name="<?php echo e($row->field); ?>">
+    <select class="form-control select2" id="select2" name="<?php echo e($row->field); ?>">
         <?php $default = (isset($options->default) && !isset($dataTypeContent->{$row->field})) ? $options->default : NULL; ?>
         <?php if(isset($options->options)): ?>
             <?php $__currentLoopData = $options->options; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

@@ -47,41 +47,55 @@
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" id="fname" name="fname" data-error="Please input your first name" required maxlength="75" value="<?php echo old('fname'); ?>">
+	    		<input type="text" class="form-control" id="fname" name="fname" data-error="Please input your first name" required maxlength="75" value="<?php echo old('fname'); ?>" placeholder="e.g. Julia Grace">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" id="lname" name="lname" data-error="Please input your last name" required maxlength="75">
+	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="<?php echo old('lname'); ?>" placeholder="e.g. Baretto">
 	    		<div class="help-block with-errors" value="<?php echo old('lname'); ?>"></div>
 	  		</div>
 		</div>	
 		<div class="row">
-		  	<div class="form-group col-md-6 col-md-offset-2">
+		  	<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
 	    		<input type="text" class="form-control" id="present" name="present" data-error="Please input your present address" required maxlength="150" value="<?php echo old('present'); ?>">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
+<<<<<<< HEAD
 	  		<div class="form-group col-md-2">
 	    		<label for="zip1">Zip Code</label>
 	    		<input type="text" class="form-control" id="zip1" name="zip1" maxlength="6" value="<?php echo old('zip1'); ?>">
 	  		</div>
+=======
+	  		<!-- <div class="form-group col-md-2">
+	    		<label for="zip1">Zip</label>
+	    		<input type="text" class="form-control" id="zip1" name="zip1" maxlength="6" value="<?php echo old('zip1'); ?>" placeholder="e.g. 5000">
+	  		</div> -->
+>>>>>>> 94c0c06c0458094c931347535d7e352a5750097b
 		</div>	
 		<div class="row">
-		  	<div class="form-group col-md-6 col-md-offset-2">
+		  	<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
 	    		<input type="text" class="form-control" id="prov" name="prov" data-error="Please input your provincial address" required maxlength="150" value="<?php echo old('prov'); ?>">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
+<<<<<<< HEAD
 	  		<div class="form-group col-md-2">
 	    		<label for="zip2">Zip Code</label>
 	    		<input type="text" class="form-control" id="zip2" name="zip2" maxlength="6" value="<?php echo old('zip2'); ?>">
 	  		</div>
+=======
+	  		<!-- <div class="form-group col-md-2">
+	    		<label for="zip2">Zip</label>
+	    		<input type="text" class="form-control" id="zip2" name="zip2" maxlength="6" value="<?php echo old('zip2'); ?>" placeholder="e.g. 5000">
+	  		</div> -->
+>>>>>>> 94c0c06c0458094c931347535d7e352a5750097b
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
-	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="<?php echo old('bday'); ?>">
+	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="<?php echo old('bday'); ?>" placeholder="e.g. July 29, 1998">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -92,7 +106,7 @@
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" id="email" name="email" data-error="Please input a valid email address" required maxlength="75" value="<?php echo old('email'); ?>">
+	    		<input type="email" class="form-control" id="email" name="email" data-error="Please input a valid email address" required maxlength="75" value="<?php echo old('email'); ?>" placeholder="juliab@gmail.com">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>	
@@ -102,14 +116,14 @@
 		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school">School/College/University *</label>
-	    		<input type="text" class="form-control" id="school" name="school" data-error="Please input this field" required maxlength="75" value="<?php echo old('school'); ?>">
+	    		<input type="text" class="form-control" id="school" name="school" data-error="Please input this field" required maxlength="75" value="<?php echo old('school'); ?>" placeholder="e.g. De La Salle University">
     			<div class="help-block with-errors"></div>
 	  		</div>
 		</div>	
 		<div class="row">
 	  		<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="course">Undergraduate Course *</label>
-	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="<?php echo old('course'); ?>">
+	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="<?php echo old('course'); ?>" placeholder="e.g. BS Communication and Media Studies">
     			<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
