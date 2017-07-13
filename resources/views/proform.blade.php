@@ -77,19 +77,19 @@
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" name="fname" id="fname" data-error="Please input your first name" required maxlength="75" !! value="{!! old('fname') !!}" placeholder="e.g. Julia Grace">
+	    		<input type="text" class="form-control" name="fname" id="fname" data-error="Please input your first name" required maxlength="75" !! value="{!! old('fname') !!}" placeholder="e.g. John">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="{!! old('lname') !!}" placeholder="e.g. Baretto">
+	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="{!! old('lname') !!}" placeholder="e.g. Doe">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row"> 
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
-	    		<input type="text" class="form-control" name="present" id="present" data-error="Please input your present address" required maxlength="150" value="{!! old('present') !!}" placeholder="">
+	    		<input type="text" class="form-control" name="present" id="present" data-error="Please input your present address" required maxlength="150" value="{!! old('present') !!}" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 	  		<!-- <div class="form-group col-md-2">
@@ -100,7 +100,7 @@
  		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
-	    		<input type="text" class="form-control" name="prov" id="prov" data-error="Please input your provincial address" required maxlength="150" value="{!! old('prov') !!}" placeholder="">
+	    		<input type="text" class="form-control" name="prov" id="prov" data-error="Please input your provincial address" required maxlength="150" value="{!! old('prov') !!}" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<!-- <div class="form-group col-md-2">
@@ -110,15 +110,12 @@
 		</div>
 		<div class="row">
 
-			<div class="form-group col-md-2 col-md-offset-2">
-
+			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
 	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="{!! old('bday') !!}" placeholder="e.g. July 29, 1998">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-
-	  		<div class="form-group col-md-3">
-
+	  		<div class="form-group col-md-2">
 	    		<label for="phone">Mobile Number *</label>
 	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required value="{!! old('phone') !!}">
 	    		<div class="help-block with-errors"></div>
@@ -126,7 +123,7 @@
 	  		</div> 
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" name="email" id="email" data-error="Please input a valid email address" required maxlength="75" enctype="multipart/form-data" value="{!! old('email') !!}" placeholder="e.g. juliab@gmail.com">
+	    		<input type="email" class="form-control" name="email" id="email" data-error="Please input a valid email address" required maxlength="75" enctype="multipart/form-data" value="{!! old('email') !!}" placeholder="e.g. johndoe@gmail.com">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
@@ -212,7 +209,7 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name1">Name *</label>
-	    		<input type="text" class="form-control" name="name1" id="name1" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75" value="{!! old('name1') !!}">
+	    		<input type="text" class="form-control" name="name1" id="name1" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="{!! old('name1') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -229,7 +226,7 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name2" id="relation">Name *</label>
-	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75" value="{!! old('name2') !!}">
+	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="{!! old('name2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -246,7 +243,7 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name3" id="relation">Name *</label>
-	    		<input type="text" class="form-control" name="name3" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75" value="{!! old('name3') !!}">
+	    		<input type="text" class="form-control" name="name3" id="name3" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="{!! old('name3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -267,7 +264,6 @@
 		<div class="row">
 	  		<div class="work-history" id="work-history-1" style="display:block;">
 	  			<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="company">Company 1</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
@@ -307,6 +303,7 @@
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
+
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75" placeholder="Ad Operations Specialist">
 		  		</div>
@@ -357,8 +354,7 @@
 		    		<label for="company">Company Name</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
 		  		</div>
-		  		<div class="form-group col-md-2">
-
+		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
 		  		</div>

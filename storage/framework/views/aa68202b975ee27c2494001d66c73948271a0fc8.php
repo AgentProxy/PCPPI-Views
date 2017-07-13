@@ -33,17 +33,17 @@
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 		    	<label for="fname">First Name:</label>
-		    	<h4 class="col-md-offset-3">{{$data['fname']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['fname']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-6">
 		    	<label for="lname">Last Name:</label>
-		    	<h4 class="col-md-offset-2">{{$data['lname']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['lname']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-6 col-md-offset-2">
 		    	<label for="present">Present Address:</label>
-		    	<h4 class="col-md-offset-3">{{$data['present']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['present']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
@@ -54,67 +54,67 @@
 		<div class="row">
 		  	<div class="form-group col-md-3 col-md-offset-2">
 		    	<label for="bday">Date of Birth:</label>
-		    	<h4 class="col-md-offset-3">{{$data['bday']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['bday']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-3">
 		    	<label for="phone">Mobile Number:</label>
-		    	<h4 class="col-md-offset-2">{{$data['phone']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['phone']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-4">
 		    	<label for="email">Email Address:</label>
-		    	<h4 class="col-md-offset-2">{{$data['email']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['email']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 		    	<label for="course">Bachelor's Degree:</label>
-		    	<h4 class="col-md-offset-3">{{$data['course']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['course']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="from1">From:</label>
-		    	<h4 class="col-md-offset-2">{{$data['from1']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['from1']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="to1">To:</label>
-		    	<h4 class="col-md-offset-2">{{$data['to1']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['to1']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-10 col-md-offset-2">
 		    	<label for="school1">School/College/University:</label>
-		    	<h4 class="col-md-offset-3">{{$data['school1']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['school1']); ?></h4>
 		  	</div>
 		</div>
-		@if($data['gradcourse']&&$data['school2']!=null)
+		<?php if($data['gradcourse']&&$data['school2']!=null): ?>
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 		    	<label for="gradcourse">Graduate Degree:</label>
-		    	<h4 class="col-md-offset-3">{{$data['gradcourse']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['gradcourse']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="from2">From:</label>
-		    	<h4 class="col-md-offset-2">{{$data['from2']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['from2']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="to2">To:</label>
-		    	<h4 class="col-md-offset-2">{{$data['to2']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['to2']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-10 col-md-offset-2">
 		    	<label for="school2">School/College/University:</label>
-		    	<h4 class="col-md-offset-3">{{$data['school2']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['school2']); ?></h4>
 		  	</div>
 		</div>
-		@endif
+		<?php endif; ?>
 		<div class="row">
 		  	<div class="form-group col-md-10 col-md-offset-2">
 		    	<label for="skills">Skills:</label>
-		    	@forelse($data['skills'] as $i => $skill)
-		    	<h4 class="col-md-offset-1">{{$data['skills'][$i]}}</h4>
-		    	 @empty
+		    	<?php $__empty_1 = true; $__currentLoopData = $data['skills']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $skill): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['skills'][$i]); ?></h4>
+		    	 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                 <h4 class="col-md-offset-1">None</h4>
-		    	@endforelse
+		    	<?php endif; ?>
 		  	</div>
 		</div>
 		<div class="row">
@@ -125,21 +125,21 @@
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 		    	<label for="name1">Name:</label>
-		    	<h4 class="col-md-offset-1">{{$data['name1']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['name2']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['name3']}}</h4>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['name1']); ?></h4>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['name2']); ?></h4>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['name3']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-2">
 		    	<label for="num1">Contact Number:</label>
-		    	<h4 class="col-md-offset-1">{{$data['num1']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['num2']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['num3']}}</h4>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['num1']); ?></h4>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['num2']); ?></h4>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['num3']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-4">
 		    	<label for="rel1">Relationship:</label>
-		    	<h4 class="col-md-offset-1">{{$data['rel1']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['rel2']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['rel3']}}</h4>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['rel1']); ?></h4>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['rel2']); ?></h4>
+		    	<h4 class="col-md-offset-1"><?php echo e($data['rel3']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
@@ -148,60 +148,60 @@
 			</div>
 		</div>
 		<div class="row">
-			@foreach($data['company'] as $i => $skill)
+			<?php $__currentLoopData = $data['company']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $skill): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2 col-md-offset-2">
 				<label for="company">Company Name:</label>
-				@if($data['company'][$i]!="")
-				<h4 class="col-md-offset-1">{{$data['company'][$i]}}</h4>
-				@else
+				<?php if($data['company'][$i]!=""): ?>
+				<h4 class="col-md-offset-1"><?php echo e($data['company'][$i]); ?></h4>
+				<?php else: ?>
 				<h4 class="col-md-offset-1">None</h4>
-				@endif
+				<?php endif; ?>
 			</div>
-			@endforeach
-			@foreach($data['position'] as $i => $position)
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php $__currentLoopData = $data['position']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $position): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2">
 				<label for="position">Position:</label>
-				@if($data['position'][$i]!="")
-				<h4 class="col-md-offset-1">{{$data['position'][$i]}}</h4>
-				@else
+				<?php if($data['position'][$i]!=""): ?>
+				<h4 class="col-md-offset-1"><?php echo e($data['position'][$i]); ?></h4>
+				<?php else: ?>
 				<h4 class="col-md-offset-1">None</h4>
-				@endif
+				<?php endif; ?>
 			</div>
-			@endforeach
-			@foreach($data['frdate'] as $i => $frdate)
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php $__currentLoopData = $data['frdate']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $frdate): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2">
 				<label for="frdate">From:</label>
-				@if($data['frdate'][$i]!="")
-				<h4 class="col-md-offset-1">{{$data['frdate'][$i]}}</h4>
-				@else
+				<?php if($data['frdate'][$i]!=""): ?>
+				<h4 class="col-md-offset-1"><?php echo e($data['frdate'][$i]); ?></h4>
+				<?php else: ?>
 				<h4 class="col-md-offset-1">None</h4>
-				@endif
+				<?php endif; ?>
 			</div>
-			@endforeach
-			@foreach($data['todate'] as $i => $todate)
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php $__currentLoopData = $data['todate']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $i => $todate): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="form-group col-md-2">
 				<label for="todate">To:</label>
-				@if($data['todate'][$i]!="")
-				<h4 class="col-md-offset-1">{{$data['todate'][$i]}}</h4>
-				@else
+				<?php if($data['todate'][$i]!=""): ?>
+				<h4 class="col-md-offset-1"><?php echo e($data['todate'][$i]); ?></h4>
+				<?php else: ?>
 				<h4 class="col-md-offset-1">None</h4>
-				@endif
+				<?php endif; ?>
 			</div>
-			@endforeach
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 				<label for="dept">Preferred Department:</label>
-				<h4 class="col-md-offset-1">{{$data['dept']}}</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['dept']); ?></h4>
 			</div>
 			<div class="form-group col-md-3">
 				<label for="loc">Preferred Location:</label>
-				<h4 class="col-md-offset-1">{{$data['loc']}}</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['loc']); ?></h4>
 			</div>
 			<div class="form-group col-md-2">
 				<label for="reloc">Willing to relocate?</label>
-				<h4 class="col-md-offset-1">{{$data['reloc']}}</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['reloc']); ?></h4>
 			</div>
 		</div>
 	</div>
