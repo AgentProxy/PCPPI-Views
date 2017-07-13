@@ -33,37 +33,37 @@
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 		    	<label for="fname">First Name:</label>
-		    	<h4 class="col-md-offset-3">{{$data['fname']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['fname']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-6">
 		    	<label for="lname">Last Name:</label>
-		    	<h4 class="col-md-offset-2">{{$data['lname']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['lname']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-6 col-md-offset-2">
 		    	<label for="present">Present Address:</label>
-		    	<h4 class="col-md-offset-3">{{$data['present']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['present']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-6 col-md-offset-2">
 		    	<label for="prov">Provincial Address:</label>
-		    	<h4 class="col-md-offset-3">{{$data['prov']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['prov']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-3 col-md-offset-2">
 		    	<label for="bday">Date of Birth:</label>
-		    	<h4 class="col-md-offset-3">{{$data['bday']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['bday']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-3">
 		    	<label for="phone">Mobile Number:</label>
-		    	<h4 class="col-md-offset-2">{{$data['phone']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['phone']); ?></h4>
 		  	</div>
 		  	<div class="form-group col-md-4">
 		    	<label for="email">Email Address:</label>
-		    	<h4 class="col-md-offset-2">{{$data['email']}}</h4>
+		    	<h4 class="col-md-offset-2"><?php echo e($data['email']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
@@ -74,25 +74,25 @@
 		<div class="row">
 		  	<div class="form-group col-md-10 col-md-offset-2">
 		    	<label for="school">School/College/University:</label>
-		    	<h4 class="col-md-offset-3">{{$data['school']}}</h4>
+		    	<h4 class="col-md-offset-3"><?php echo e($data['school']); ?></h4>
 		  	</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 				<label for="course">Undergraduate Course:</label>
-				<h4 class="col-md-offset-1">{{$data['course']}}</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['course']); ?></h4>
 			</div>
 			<div class="form-group col-md-2">
 				<label for="level">Year Level:</label>
-				<h4 class="col-md-offset-1">{{$data['level']}}</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['level']); ?></h4>
 			</div>
 			<div class="form-group col-md-1">
 				<label for="sem">Sem:</label>
-				<h4 class="col-md-offset-1">{{$data['sem']}}</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['sem']); ?></h4>
 			</div>
 			<div class="form-group col-md-2">
 				<label for="hrs">Hours Required:</label>
-				<h4 class="col-md-offset-1">{{$data['hrs']}}</h4>
+				<h4 class="col-md-offset-1"><?php echo e($data['hrs']); ?></h4>
 			</div>
 		</div>
 	</div>

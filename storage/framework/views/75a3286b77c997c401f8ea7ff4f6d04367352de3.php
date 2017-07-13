@@ -21,7 +21,6 @@
 
         <style type="text/css">
 
-
         #submit-btn{
                 padding-bottom: 10px;
             }
@@ -97,7 +96,12 @@
             margin-top: 50px;
         }
 
+        @media(max-width: 991px){
 
+            #viewjob{
+                text-align: center;
+            }
+        }
 
         @media(max-width: 1000px){
             /*#pcppi{

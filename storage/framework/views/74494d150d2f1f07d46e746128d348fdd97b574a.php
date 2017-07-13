@@ -33,13 +33,13 @@
                 <h1> Sales Manager </h1>
             </div>
             <div class="panel-body">
-                <div class="row">
+                <div id="viewjob" class="row">
                     <div class="col-md-10">
                         <h3>Mindanao</h3>
                         <h3>Manages sales</h3>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">
-                        <a href="careers-proform" class="btn btn-warning btn-lg col-xs-offset-1" role="button">View Details</a>
+                        <a href="careers-proform" class="btn btn-primary btn-lg" role="button">View Details</a>
                     </div>
                 </div>
             </div>
