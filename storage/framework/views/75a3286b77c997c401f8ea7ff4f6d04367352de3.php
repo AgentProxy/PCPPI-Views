@@ -93,9 +93,14 @@
             font-size: 16px;
         }
 
+        li.open > ul#dropdown-menu {
+            width: 15px;
+        }
+
         #forms-section {
             margin-top: 50px;
         }
+
 
 
 
@@ -218,6 +223,10 @@
             #items.nav {
                 margin-top: 17px;
             }
+
+            #next, #section {
+                font-size: 20px;
+            }
         }
 
         /* Medium screens */
@@ -251,6 +260,10 @@
 
             #dropdown-menu>li>a {
                 font-size: 11px;
+            }
+
+            #next, #section {
+                font-size: 16px;
             }
 
         }
@@ -364,7 +377,7 @@
                 padding: 1px 2px;
             }
 
-            #section {
+            #next, #section {
                 font-size: 70%;
             }
         }
@@ -596,6 +609,8 @@
     <script src="js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
+
+
 </head>
 <body id="page-top">
     <div id="app" >
@@ -618,7 +633,7 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul id="items" class="nav navbar-nav">
                         <li class="active"><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Home</a></li>
-                        <li class="dropdown">
+                        <li class="dropdown clearfix">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
                             <ul id="dropdown-menu" class="dropdown-menu">
                                 <li><a href="https://www.pepsiphilippines.com/company.php">Our Company</a></li>
@@ -626,7 +641,7 @@
                             </ul>
                         </li>
                         <li><a href="">Engagements</a></li>
-                        <li class="dropdown">
+                        <li class="dropdown clearfix">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Careers <span class="caret"></span></a>
                             <ul id="dropdown-menu" class="dropdown-menu">
                                 <li><a href="careers-internform">Internships</a></li>
@@ -694,12 +709,12 @@
 
     <script type="text/javascript">
          // Add slideDown animation to Bootstrap dropdown when expanding.
-        $('.dropdown').on('show.bs.dropdown', function() {
+        $('.dropdown').on('show.bs.dropdown', function(e) {
         $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
       });
 
           // Add slideUp animation to Bootstrap dropdown when collapsing.
-        $('.dropdown').on('hide.bs.dropdown', function() {
+        $('.dropdown').on('hide.bs.dropdown', function(e) {
         $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
       });
     </script>
