@@ -26,14 +26,6 @@
                 padding-bottom: 10px;
             }
 
-<<<<<<< HEAD
-=======
-        #delete {
-            height: 20px;
-            width: 20px;
-        }
-
->>>>>>> 2da23609a471b5c84ec13eeb2152c485bb03f8fd
         #relation{
             visibility: hidden;
         }

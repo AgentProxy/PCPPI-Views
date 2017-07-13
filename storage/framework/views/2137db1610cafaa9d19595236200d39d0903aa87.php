@@ -16,9 +16,7 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<div>
-			<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
-		</div>
+		<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
 		<div>
@@ -55,12 +53,12 @@
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" name="fname" id="fname" data-error="Please input your first name" required maxlength="75" value="<?php echo old('fname'); ?>">
+	    		<input type="text" class="form-control" name="fname" id="fname" data-error="Please input your first name" required maxlength="75" value="<?php echo old('fname'); ?>" placeholder="e.g. Julia Grace">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="<?php echo old('lname'); ?>">
+	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="<?php echo old('lname'); ?>" placeholder="e.g. Baretto">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
@@ -89,7 +87,7 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
-	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="<?php echo old('bday'); ?>">
+	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="<?php echo old('bday'); ?>" placeholder="e.g. July 29, 1998">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -100,14 +98,14 @@
 	  		</div> 
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" name="email" id="email" data-error="Please input a valid email address" required maxlength="75" enctype="multipart/form-data" value="<?php echo old('email'); ?>">
+	    		<input type="email" class="form-control" name="email" id="email" data-error="Please input a valid email address" required maxlength="75" enctype="multipart/form-data" value="<?php echo old('email'); ?>" placeholder="e.g. juliab@gmail.com">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row"> 
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="course">Bachelor's Degree *</label>
-	    		<input type="text" class="form-control" name="course" id="course" data-error="Please input your bachelor's degree" required maxlength="75" value="<?php echo old('course'); ?>">
+	    		<input type="text" class="form-control" name="course" id="course" data-error="Please input your bachelor's degree" required maxlength="75" value="<?php echo old('course'); ?>" placeholder="e.g. BS Communication and Media Studies">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -128,14 +126,14 @@
 		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school1">School/College/University *</label>
-	    		<input type="text" class="form-control" name="school1" id="school1" data-error="Please input this field" required maxlength="75" value="<?php echo old('school1'); ?>">
+	    		<input type="text" class="form-control" name="school1" id="school1" data-error="Please input this field" required maxlength="75" value="<?php echo old('school1'); ?>" placeholder="e.g. De La Salle University">
 	    		<div class="help-block with-errors"></div>
 	  		</div> 
 		</div>
 		<div class="row"> 
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="gradcourse">Graduate Course</label>
-	    		<input type="text" class="form-control" name="gradcourse" id="gradcourse" maxlength="75" value="<?php echo old('gradcourse'); ?>">
+	    		<input type="text" class="form-control" name="gradcourse" id="gradcourse" maxlength="75" value="<?php echo old('gradcourse'); ?>" placeholder="e.g. Graduate Diploma in Teaching">
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="from2"><small> From (School Year) </small></label> 
@@ -153,7 +151,7 @@
   		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school2">School/College/University</label>
-	    		<input type="text" class="form-control" name="school2" id="school2" maxlength="75" value="<?php echo old('school2'); ?>">
+	    		<input type="text" class="form-control" name="school2" id="school2" maxlength="75" value="<?php echo old('school2'); ?>" placeholder="e.g. De La Salle University">
 	  		</div> 
 		</div>
 		<div class="row">
@@ -242,11 +240,11 @@
 	  		<div class="work-history" id="work-history-1" style="display:block;">
 	  			<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company 1</label>
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
+		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
+		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75" placeholder="e.g. Ad Operations Specialist">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="frdate">From</label>
@@ -255,17 +253,16 @@
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>
 	  		<div class="work-history" id="work-history-2" style="display:block;">
 	  			<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company 2</label>
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
+		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
+		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75" placeholder="e.g. Ad Operations Specialist">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="frdate">From</label>
@@ -274,17 +271,16 @@
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>
 	  		<div class="work-history" id="work-history-3" style="display:block;">
 	  			<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company 3</label>
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
+		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
+		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75" placeholder="e.g. Ad Operations Specialist">
 		  		</div>
 		  		<div class="form-group col-md-2">
 		    		<label for="frdate">From</label>
@@ -293,7 +289,6 @@
 		  		<div class="form-group col-md-2">
 		    		<label for="todate">To</label>
 		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		  			<button id="addwork" class="btn btn-danger" style="visibility: hidden;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>  	
 		</div>   		
