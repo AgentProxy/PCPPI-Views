@@ -62,17 +62,6 @@
 	    		<input type="text" class="form-control" id="present" name="present" data-error="Please input your present address" required maxlength="150" value="<?php echo old('present'); ?>">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
-<<<<<<< HEAD
-	  		<div class="form-group col-md-2">
-	    		<label for="zip1">Zip Code</label>
-	    		<input type="text" class="form-control" id="zip1" name="zip1" maxlength="6" value="<?php echo old('zip1'); ?>">
-	  		</div>
-=======
-	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip1">Zip</label>
-	    		<input type="text" class="form-control" id="zip1" name="zip1" maxlength="6" value="<?php echo old('zip1'); ?>" placeholder="e.g. 5000">
-	  		</div> -->
->>>>>>> 94c0c06c0458094c931347535d7e352a5750097b
 		</div>	
 		<div class="row">
 		  	<div class="form-group col-md-8 col-md-offset-2">
@@ -80,17 +69,6 @@
 	    		<input type="text" class="form-control" id="prov" name="prov" data-error="Please input your provincial address" required maxlength="150" value="<?php echo old('prov'); ?>">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-<<<<<<< HEAD
-	  		<div class="form-group col-md-2">
-	    		<label for="zip2">Zip Code</label>
-	    		<input type="text" class="form-control" id="zip2" name="zip2" maxlength="6" value="<?php echo old('zip2'); ?>">
-	  		</div>
-=======
-	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip2">Zip</label>
-	    		<input type="text" class="form-control" id="zip2" name="zip2" maxlength="6" value="<?php echo old('zip2'); ?>" placeholder="e.g. 5000">
-	  		</div> -->
->>>>>>> 94c0c06c0458094c931347535d7e352a5750097b
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">

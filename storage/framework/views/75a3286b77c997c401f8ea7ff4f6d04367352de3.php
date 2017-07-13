@@ -227,6 +227,11 @@
             #next, #section {
                 font-size: 20px;
             }
+
+            .glyphicon.glyphicon-circle-arrow-down {
+                padding: 1px;
+                font-size: 2em;
+            }
         }
 
         /* Medium screens */

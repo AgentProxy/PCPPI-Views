@@ -3,8 +3,8 @@
 <header class="w3-display-container w3-content w3-center" style="max-width: 1500px; margin-bottom: 5px;">
   <img class="w3-image" src="/img/HOMEbg-1.jpg" alt="header-img" width="1500" height="400">
   <a class="page-scroll" href="#next">
-  <div class="w3-circle w3-light-grey w3-display-bottommiddle w3-hide-small w3-hide-medium" style="bottom: 40px; ">
-    <span class="glyphicon glyphicon-chevron-down" style="padding: 12px 12px;font-size: 26px; text-align: center; color: #0A62EA;"></span></a>
+  <div class="w3-display-bottommiddle w3-hide-small w3-hide-medium" style="background-color: #ffffff; border-radius: 50%;">
+    <span class="glyphicon glyphicon-circle-arrow-down" style="padding:4px; font-size: 56px; text-align: center; color: #0A62EA;"></span></a>
   </div>
 </header>
 
