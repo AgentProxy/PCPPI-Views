@@ -23,9 +23,11 @@ Route::get('/careers-internform', function () {
     return view('internform');
 });
 
-Route::get('/careers-proform', function () {
-    return view('proform');
-});
+// Route::get('/careers-proform', function () {
+//     return view('proform');
+// });
+
+Route::get('/careers-proform/{id}','DisplayController@vacancy');
 
 Route::post('/form_validation/{form_type}', 'FormController@sendApplication');
 
@@ -35,6 +37,8 @@ Route::get('/careers-search', function () {
     return view('careersearch');
 });
 
+Route::get('/careers-search','DisplayController@search');
+
 Route::get('/careers-success', function () {
     return view('success');
 });
@@ -43,9 +47,11 @@ Route::get('/careers-bankform', function () {
     return view('bankform');
 });
 
-Route::get('/careers-map', function () {
-    return view('map');
-});
+// Route::get('/careers-map', function () {
+//     return view('map');
+// });
+
+Route::get('/careers-map','DisplayController@mapRetrieve');
 
 Route::get('/master', function () {
     return view('layouts.master');
