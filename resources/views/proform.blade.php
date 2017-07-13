@@ -262,7 +262,6 @@
 		<div class="row">
 	  		<div class="work-history" id="work-history-1" style="display:block;">
 	  			<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="company">Company 1</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
@@ -302,6 +301,7 @@
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
+
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75" placeholder="Ad Operations Specialist">
 		  		</div>
@@ -352,8 +352,7 @@
 		    		<label for="company">Company Name</label>
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
 		  		</div>
-		  		<div class="form-group col-md-2">
-
+		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
 		  		</div>
