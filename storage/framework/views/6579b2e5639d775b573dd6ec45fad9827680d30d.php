@@ -1,6 +1,4 @@
-@extends('layouts.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 		<h1 class="text-center"> Find Your Career </h1>
 		<div id="map" class="container center"></div>
         <form method="GET" action="/careers-search">
@@ -11,9 +9,9 @@
                 <div class="form-group col-md-4">
                     <select class="form-control" name="region" id="region">
                         <option value="0">All Regions</option>
-                        @foreach($regions as $region)
-                        <option value="{{$region->id}}">{{$region->name}}</option>
-                        @endforeach
+                        <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($region->id); ?>"><?php echo e($region->name); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                 </div>
                 <div class="col-md-4" id="search">
@@ -100,4 +98,5 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7G6W1Bacdwk-cXeQMnwVy31foc802U2w&callback=initMap"
     async defer></script>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
