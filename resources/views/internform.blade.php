@@ -51,12 +51,12 @@
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" id="fname" name="fname" data-error="Please input your first name" required maxlength="75" value="{!! old('fname') !!}" placeholder="e.g. Julia Grace">
+	    		<input type="text" class="form-control" id="fname" name="fname" data-error="Please input your first name" required maxlength="75" value="{!! old('fname') !!}" placeholder="e.g. John">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="{!! old('lname') !!}" placeholder="e.g. Dela Cruz">
+	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="{!! old('lname') !!}" placeholder="e.g. Doe">
 	    		<div class="help-block with-errors" value="{!! old('lname') !!}"></div>
 	  		</div>
 		</div>	
