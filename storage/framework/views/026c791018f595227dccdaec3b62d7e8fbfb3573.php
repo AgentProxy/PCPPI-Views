@@ -30,7 +30,7 @@
 	</div>
 	<div class="row">
 		<h1 id="title"><?php echo e($vacancy->position); ?></h1>
-		<h3 id="title"><?php echo e($region->name); ?></h3>
+		<h3 id="title"><?php echo e($vacancy->regions->name); ?></h3>
 		<h3 id="title"><?php echo e($vacancy->description); ?></h3>
 	</div>
 	<div class="row">
@@ -186,10 +186,16 @@
 				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
 				    </div>
 				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Advanced Computer Skills">Advanced Computer Skills</label>
+				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
 				    </div>
 				    <div id="skill-4" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Driving">Driving</label>
+				      <label><input type="checkbox" name="skills[]" value="Programming">Advanced Computer Skills</label>
+				    </div>
+				    <div id="skill-5" class="checkbox skills">
+				      <label><input type="checkbox" name="skills[]" value="Programming">Driving</label>
+				    </div>
+				    <div id="skill-6" class="checkbox skills">
+				      <label><input type="checkbox" name="skills[]" value="Programming">Communication Skills</label>
 				    </div>
 				    <div class="row" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">

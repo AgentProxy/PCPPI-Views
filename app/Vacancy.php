@@ -14,6 +14,6 @@ class Vacancy extends Model
     }
 
     public function regions(){
-    	return $this->belongsTo('App\Region');
+    	return $this->belongsTo('App\Region','region_id');
     }
 }

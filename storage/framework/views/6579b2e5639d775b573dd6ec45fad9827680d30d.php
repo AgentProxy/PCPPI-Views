@@ -30,7 +30,6 @@
         });
 
         // setMarkers(map);
-
          var regions = [
             ['Cagayan Valley Operations',16.9679036,121.77049050000005,0],
             ['North Luzon Operations',16.2151433,120.50037500000008,1],
@@ -47,7 +46,8 @@
             ['Bacolod',10.7050794,122.96313710000004,12],
             ['Cagayan De Oro',8.494784,124.74618099999998,13],
             ['Zamboanga',6.965789999999999,122.14028099999996,14],
-            ['Davao',7.030481361402168,125.51293283700943,15]
+            ['Davao',7.030481361402168,125.51293283700943,15],
+            ['Cabuyao',14.23326,121.10077100000001,16]
         ];
 
         var contents = [
@@ -64,7 +64,8 @@
             '<h4> Bacolod </h4><a href=#><h5>0 Vacancies</h5></a>',
             '<h4> Cagayan De Oro </h4><a href=#><h5>0 Vacancies</h5></a>',
             '<h4> Zamboanga </h4><a href=#><h5>0 Vacancies</h5></a>',
-            '<h4> Davao </h4><a href=#><h5>0 Vacancies</h5></a>'
+            '<h4> Davao </h4><a href=#><h5>0 Vacancies</h5></a>',
+            '<h4> Cabuyao </h4><a href=#><h5>0 Vacancies</h5></a>'
         ];
 
         // var regions = [

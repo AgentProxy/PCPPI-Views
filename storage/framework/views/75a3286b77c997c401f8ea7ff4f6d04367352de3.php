@@ -752,6 +752,7 @@
                 </a> 
                 </span>  
             </div>
+            <p> Contact us at: careers@pcppi.com.ph </p>
             <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
         </div> 
     </footer>

@@ -51,12 +51,12 @@
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" name="fname" id="fname" data-error="Please input your first name" required maxlength="75" value="{!! old('fname') !!}" placeholder="e.g. Julia Grace">
+	    		<input type="text" class="form-control" name="fname" id="fname" data-error="Please input your first name" required maxlength="75" value="{!! old('fname') !!}" placeholder="e.g. John">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="{!! old('lname') !!}" placeholder="e.g. Baretto">
+	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="{!! old('lname') !!}" placeholder="e.g. Doe">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
@@ -96,7 +96,7 @@
 	  		</div> 
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" name="email" id="email" data-error="Please input a valid email address" required maxlength="75" enctype="multipart/form-data" value="{!! old('email') !!}" placeholder="e.g. juliab@gmail.com">
+	    		<input type="email" class="form-control" name="email" id="email" data-error="Please input a valid email address" required maxlength="75" enctype="multipart/form-data" value="{!! old('email') !!}" placeholder="e.g. johndoe@gmail.com">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
@@ -163,7 +163,10 @@
 				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
 				    </div>
 				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
+				      <label><input type="checkbox" name="skills[]" value="Advanced Computer Skills">Advanced Computer Skills</label>
+				    </div>
+				    <div id="skill-4" class="checkbox skills">
+				      <label><input type="checkbox" name="skills[]" value="Driving">Driving</label>
 				    </div>
 				    <div id="skill-4" class="checkbox skills">
 				      <label><input type="checkbox" name="skills[]" value="Programming">Advanced Computer Skills</label>
@@ -189,7 +192,7 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name1">Name *</label>
-	    		<input type="text" class="form-control" name="name1" id="name1" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75" value="{!! old('name1') !!}">
+	    		<input type="text" class="form-control" name="name1" id="name1" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="{!! old('name1') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -206,7 +209,7 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name2" id="relation">Name *</label>
-	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75" value="{!! old('name2') !!}">
+	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="{!! old('name2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -223,7 +226,7 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name3" id="relation">Name *</label>
-	    		<input type="text" class="form-control" name="name3" id="name3" placeholder="e.g. Julia Baretto" data-error="Please input this field" required maxlength="75" value="{!! old('name3') !!}">
+	    		<input type="text" class="form-control" name="name3" id="name3" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="{!! old('name3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -302,7 +305,7 @@
 	  		</div>  	
 		</div>   		
 		<div class="row">
-			<div class="form-group col-md-3 col-md-offset-2">
+			<div class="form-group col-md-4 col-md-offset-2">
 				<label for="dept"><br>Preferred Department *</label>
 				<select class="form-control" id="dept" name="dept" required>
 					<option selected disabled value="">--</option>
@@ -314,7 +317,7 @@
 			    </select>
 			    <div class="help-block with-errors"></div>
 			</div>
-			<div class="form-group col-md-3">
+			<div class="form-group col-md-4">
 				<label for="loc"><br>Preferred Region *</label>
 				<select class="form-control" id="loc" name="loc" required>
 				<option selected disabled value="">--</option>
@@ -324,14 +327,18 @@
 			    </select>
 			    <div class="help-block with-errors"></div>
 			</div>
-			<div class="form-group col-md-2">
+		</div>
+		<div class="row">
+			<div class="form-group col-md-2 col-md-offset-2">
 				<br/>
-				<label for="reloc">Willing to relocate? *</label>
-				<select class="form-control" id="reloc" name="reloc" required>
-				<option selected disabled value="">--</option>
-			        <option>Yes</option>
-			        <option>No</option>
-			    </select>
+				<label for="reloc">Willing to relocate? *</label><br />
+			    	<label for="yes"> 
+				    	<input id="yes" type="radio" name="reloc" value="Yes" required/> 
+				    	Yes
+			    	</label>
+			    	<label for="no">
+			    		<input id="no" type="radio" name="reloc" value="No" required/> No <br />
+			    	</label>
 			    <div class="help-block with-errors"></div>
 			</div>
 		</div>
