@@ -33,7 +33,7 @@
         body{
             font-family: 'Quicksand', sans-serif;
             padding-top: 0px;
-            background-color: #7fd6ff;
+            background-color: #005CB4;
            /*/ background-image: url(img/bubbles.gif);*/
             background-size: cover;
         }
@@ -101,7 +101,44 @@
             margin-top: 50px;
         }
 
+        .white-text {
+            color: #fff;
+        }
 
+        .w3-display-bottommiddle {
+            background-color: #fff;
+            border-radius: 50%;
+            transition: .5s ease-in-out;
+            color: #005CB4;
+            z-index: (1);
+        }
+
+        .w3-display-bottommiddle:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: .5s ease-in-out;
+            z-index: -1;
+        }
+
+        .w3-display-bottommiddle:hover:before {
+            transform: scale(.2);
+        }
+
+        .w3-display-bottommiddle:hover {
+            color: #fff;
+            background-color: #005CB4;
+        }
+
+         a#page-scroll:hover:before {
+            transform: scale(.2W);
+         }
+
+        a#page-scroll:hover {
+            color: #fff;
+        }
 
 
         @media(max-width: 1000px){
@@ -229,8 +266,8 @@
             }
 
             .glyphicon.glyphicon-circle-arrow-down {
-                padding: 1px;
-                font-size: 2em;
+                padding:4px;
+                font-size: 56px;
             }
         }
 
@@ -269,6 +306,11 @@
 
             #next, #section {
                 font-size: 16px;
+            }
+
+            .glyphicon.glyphicon-circle-arrow-down {
+                padding:1px;
+                font-size: 24px;
             }
 
         }
