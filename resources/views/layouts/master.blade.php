@@ -101,6 +101,9 @@
         }
 
         @media(max-width: 991px){
+            #relation{
+                visibility: visible;
+            }
 
             #viewjob{
                 text-align: center;
@@ -157,11 +160,6 @@
                 left: -180px;
                 top: 20px;
             }
-
-            #relation{
-                visibility: visible;
-            }
-
 
             #items>li { 
                 display: block;

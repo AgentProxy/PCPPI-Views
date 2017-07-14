@@ -7,7 +7,7 @@
 @section('content')
     <div class="page-content">
         @include('voyager::alerts')
-        @include('voyager::dimmers1')
+        @include('voyager::dimmers')
         <div style="padding:15px;">
             <?php $google_analytics_client_id = Voyager::setting("google_analytics_client_id"); ?>
             @if (isset($google_analytics_client_id) && !empty($google_analytics_client_id))

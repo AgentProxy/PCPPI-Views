@@ -1,5 +1,5 @@
 @php
-$dimmers = \Arrilot\Widgets\Facade::group('voyager1::dimmers1');
+$dimmers = \Arrilot\Widgets\Facade::group('voyager::dimmers1');
 $count = $dimmers->count();
 
 $classes = [

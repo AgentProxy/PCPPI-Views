@@ -1,24 +1,24 @@
 <?php $__env->startSection('content'); ?>
 		<h1 class="text-center"> Find Your Career </h1>
 		<div id="map" class="container center"></div>
-		<div id="search-bar" class="container">
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="job" placeholder="Job">
+        <form method="GET" action="/careers-search">
+    		<div id="search-bar" class="container">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="job" id="job" placeholder="Job">
+                </div>
+                <div class="form-group col-md-4">
+                    <select class="form-control" name="region" id="region">
+                        <option value="0">All Regions</option>
+                        <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($region->id); ?>"><?php echo e($region->name); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </select>
+                </div>
+                <div class="col-md-4" id="search">
+                    <input type="submit" value="Search" class="btn btn-primary col-md-12" />
+                </div>
             </div>
-            <div class="form-group col-md-4">
-                <select class="form-control" id="loc">
-                    <option>All Regions</option>
-                    <option>Region 1</option>
-                    <option>Region 2</option>
-                    <option>Region 3</option>
-                    <option>Region 4</option>
-                    <option>Region 5</option>
-                </select>
-            </div>
-            <div class="col-md-4" id="search">
-                <a href="careers-search" class="btn btn-primary col-md-12" role="button">Search</a>
-            </div>
-        </div>
+        </form>
     <script>
       var map;
       function initMap() {
