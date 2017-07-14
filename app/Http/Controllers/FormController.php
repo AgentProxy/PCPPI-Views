@@ -11,7 +11,7 @@ use Illuminate\Routing\Controller as BaseController;
 
 class FormController extends Controller
 {
-    function sendApplication(Request $request, $form_type){
+    function sendApplication(Request $request, $form_type, $job_id=null){
         if($form_type=='1'){
             $this->validate($request, [
                 'g-recaptcha-response' => 'required',
@@ -129,6 +129,10 @@ class FormController extends Controller
                 $message->attach($input['resume']->getRealPath(),[
                         'as'=> $input['resume']->getClientOriginalName()]);
             });
+            if (Mail::failures()) {
+                // return response showing failed emails
+            }
+            DB::table('vacancies')->where('id',$job_id)->increment('applicant');
             return redirect('careers-success');
         }
        
@@ -144,6 +148,9 @@ class FormController extends Controller
                 $message->attach($input['resume']->getRealPath(),[
                         'as'=> $input['resume']->getClientOriginalName()]);
             });
+             if (Mail::failures()) {
+                // return response showing failed emails
+            }
             return redirect('careers-success');
         }
         else if ($form_type=='3'){
@@ -158,6 +165,9 @@ class FormController extends Controller
                 $message->attach($input['resume']->getRealPath(),[
                         'as'=> $input['resume']->getClientOriginalName()]);
             });
+            if (Mail::failures()) {
+                // return response showing failed emails
+            }
             return redirect('careers-success');
         }
         else{

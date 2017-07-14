@@ -29,7 +29,7 @@ Route::get('/careers-internform', function () {
 
 Route::get('/careers-proform/{id}','DisplayController@vacancy');
 
-Route::post('/form_validation/{form_type}', 'FormController@sendApplication');
+Route::post('/form_validation/{form_type}/{job_id?}', 'FormController@sendApplication');
 
 // Route::post('/form_validation', ['as' => 'validate',  'uses' => 'FormController@sendApplication']);
 
@@ -43,9 +43,7 @@ Route::get('/careers-success', function () {
     return view('success');
 });
 
-Route::get('/careers-bankform', function () {
-    return view('bankform');
-});
+Route::get('/careers-bankform', 'DisplayController@bankform');
 
 // Route::get('/careers-map', function () {
 //     return view('map');
