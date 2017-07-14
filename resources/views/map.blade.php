@@ -2,9 +2,8 @@
 
 @section('content')
 		<h1 class="text-center"> Find Your Career </h1>
-		<div id="map" class="container center"></div>
         <form method="GET" action="/careers-search">
-    		<div id="search-bar" class="container">
+            <div id="search-bar" class="container">
                 <div class="form-group col-md-4">
                     <input type="text" class="form-control" name="job" id="job" placeholder="Job">
                 </div>
@@ -21,6 +20,7 @@
                 </div>
             </div>
         </form>
+		<div id="map" class="container center"></div>
     <script>
       var map;
       function initMap() {
@@ -38,7 +38,9 @@
         	['North Luzon Operations',16.2151433,120.50037500000008,1],
         	['Central Luzon',15.070145,120.649044,2],
         	['Modern Trade Operations',14.5881219,121.0439725,3],
-        	['Metro Operations, Head Office, Metro Sales',14.4042525,121.04696360000003,4],
+        	['Metro Operations',14.4042525,121.04696360000003,4],
+            ['Head Office',14.4042525,121.04696360000003,4],
+            ['Metro Sales',14.4042525,121.04696360000003,4],
         	['Southern Tagalog Region Operations',14.1007803,121.0793705,5],
         	['Bicol Region Operations',13.4209885,123.4136736,6],
         	['Iloilo',10.75844,122.50033740000003,7],
@@ -55,7 +57,9 @@
         	'<h4> North Luzon Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
         	'<h4> Central Luzon </h4><a href=#><h5>0 Vacancies</h5></a>',
         	'<h4> Modern Trade Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
-        	'<h4> Metro Operations, Head Office, Metro Sales </h4><a href=#><h5>0 Vacancies</h5></a>',
+        	'<h4> Metro Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
+            '<h4> Head Office </h4><a href=#><h5>0 Vacancies</h5></a>',
+            '<h4> Metro Sales </h4><a href=#><h5>0 Vacancies</h5></a>',
         	'<h4> Southern Tagalog Region Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
         	'<h4> Bicol Region Operations</h4><a href=#><h5>0 Vacancies</h5></a>',
         	'<h4> Iloilo </h4><a href=#><h5>0 Vacancies</h5></a>',
