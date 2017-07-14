@@ -1,3 +1,4 @@
+
 <?php $__env->startSection('database-table-editor-template'); ?>
 
 <div class="panel panel-bordered">

@@ -34,7 +34,7 @@
                 <h1> <?php echo e($vacancy->position); ?> </h1>
             </div>
             <div class="panel-body">
-                <div class="row">
+                <div id="viewjob" class="row">
                     <div class="col-md-10">
                         <h3><?php echo e($vacancy->region_id); ?></h3>
                         <h3><?php echo e($vacancy->description); ?></h3>

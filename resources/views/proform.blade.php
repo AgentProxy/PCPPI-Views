@@ -21,13 +21,11 @@
 		<a href="{{ URL::previous() }}" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
-		<h1 id="title">{{$vacancy->position}}</h1>
-		<h3 id="title">Location</h3>
-		<h3 id="title">{{$vacancy->description}}</h3>
+		
 	</div>
 	<div class="row">
 		<h3>Main Responsibility</h3>
-		{{$vacancy->responsibilities}}
+
 		<!-- <ul>
   			<li>Responsibility 1</li>
   			<li>Responsibility 2</li>
@@ -36,7 +34,7 @@
 	</div>
 	<div class="row">
 		<h3>Qualifications</h3>
-		{{$vacancy->qualifications}}
+
 		<!-- <ul>
   			<li>Qualification 1</li>
   			<li>Qualification 2</li>
@@ -71,8 +69,10 @@
 		</div>
 	</div>
 
-	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/1" data-toggle="validator" enctype="multipart/form-data">	
+	<form name="proform" id='i-recaptcha' method="POST"  data-toggle="validator" enctype="multipart/form-data">	
 		{{ csrf_field() }}
+		
+
 		<input type="text" value="1" name="form_type" style="display: none;">
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
@@ -350,28 +350,6 @@
 </div>
 
 <!-- HTML Templates -->
-	<!-- Start of Work History Template-->
-
-			<div id="work-history-0" style="display: none;">
-		  		<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="company">Company Name</label>
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
-		  		</div>
-		  		<div class="form-group col-md-4 col-md-offset-2">
-		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
-		  		</div>
-		  		<div class="form-group col-md-2">
-		    		<label for="frdate">From</label>
-		    		<input type="date" class="form-control" name="frdate[]" id="frdate">
-		  		</div>
-		  		<div class="form-group col-md-2">
-		    		<label for="todate">To</label>
-		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
-		  		</div>
-	  		</div>  
-	  	<!-- End of Work History Template-->
 	  	<!-- Start of Skills Template -->
 	  		<div id="skill-0" style="display: none">
 				<input type="text" name="skills[]" value="" style="display: none">

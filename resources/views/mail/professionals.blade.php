@@ -41,6 +41,16 @@
 		  	</div>
 		</div>
 		<div class="row">
+			<div class="form-group col-md-4 col-md-offset-2">
+		    	<label for="fname">Position Applied:</label>
+		    	<h4 class="col-md-offset-3">{{$data['position_applied']}}</h4>
+		  	</div>
+		  	<div class="form-group col-md-6">
+		    	<label for="lname">Desired Region:</label>
+		    	<h4 class="col-md-offset-2">{{$data['desired_region']}}</h4>
+		  	</div>
+		</div>
+		<div class="row">
 		  	<div class="form-group col-md-6 col-md-offset-2">
 		    	<label for="present">Present Address:</label>
 		    	<h4 class="col-md-offset-3">{{$data['present']}}</h4>

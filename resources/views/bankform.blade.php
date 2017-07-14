@@ -306,14 +306,12 @@
 			    <div class="help-block with-errors"></div>
 			</div>
 			<div class="form-group col-md-3">
-				<label for="loc"><br>Preferred Location *</label>
+				<label for="loc"><br>Preferred Region *</label>
 				<select class="form-control" id="loc" name="loc" required>
 				<option selected disabled value="">--</option>
-			        <option>Region 1</option>
-			        <option>Region 2</option>
-			        <option>Region 3</option>
-			        <option>Region 4</option>
-			        <option>Region 5</option>
+					@foreach($regions as $region)
+			        <option value="{{$region->name}}">{{$region->name}}</option>
+			        @endforeach
 			    </select>
 			    <div class="help-block with-errors"></div>
 			</div>

@@ -13,7 +13,13 @@ class DisplayController extends Controller
 
     function vacancy($id){
 	    $vacancy = Vacancy::where('id',$id)->first();
-	    return view('proform',compact("vacancy"));
+	    $region = Region::where('id',$vacancy->region_id)->first();
+	    return view('proform',compact("vacancy","region"));
+	}
+
+	function bankform(){
+		$regions = Region::all();
+		return view('bankform',compact("regions"));
 	}
 
 	function mapRetrieve(){
