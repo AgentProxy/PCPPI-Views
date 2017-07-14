@@ -8,6 +8,7 @@ $(document).ready(function(){
 })
   
 function check(e){
+  console.log("Submitted Clicked")
   $(window).off('beforeunload');
   if(grecaptcha.getResponse().length === 0){
     e.preventDefault();
@@ -15,6 +16,7 @@ function check(e){
     return false;
   }
   else{
+
     if(check_upload()==false){
       e.preventDefault();
       return false;
