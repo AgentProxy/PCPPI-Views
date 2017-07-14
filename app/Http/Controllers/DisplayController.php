@@ -18,7 +18,7 @@ class DisplayController extends Controller
 	    }
 	    $region = Region::where('id',$vacancy->region_id)->first();
 	   
-	    return view('proform',compact("vacancy","region"));
+	    return view('proform',compact("vacancy"));
 	}
 
 	function bankform(){
