@@ -13,7 +13,11 @@ class DisplayController extends Controller
 
     function vacancy($id){
 	    $vacancy = Vacancy::where('id',$id)->first();
+	    if($vacancy == null){
+	    	abort(404, 'The vacancy you are looking is not available');
+	    }
 	    $region = Region::where('id',$vacancy->region_id)->first();
+	   
 	    return view('proform',compact("vacancy","region"));
 	}
 

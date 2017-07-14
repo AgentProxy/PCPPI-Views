@@ -1,3 +1,12 @@
+<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
 <?php $__env->startSection('content'); ?>
 <?php if(count($errors)>0): ?>
 <ul>
@@ -14,8 +23,17 @@
 		</div>
 	</div>
 	<div class="row">
+		<h4> The PCPPI Internship program readies the youth for the future </h4>
+	</div>
+	<div class="row">
+		<!-- This is for FB's Share -->
+		<!-- 
+		<div class="fb-share-button" data-href="careers-internform" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> 
+		-->
+		<iframe class="center-block" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=large&mobile_iframe=true&width=106&height=28&appId" width="106" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	</div> 
+	<div class="row">
 		<div>
-			<a href="https://www.facebook.com/sharer/sharer.php?u=YourPageLink.com&display=popup"> share this </a>
 			<h2 id="title">Hiring Process</h2>
 		</div>
 		<div class="col-md-4">
@@ -31,6 +49,7 @@
 	    	<p  id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
 		</div>
 	</div>
+	
 	<div class="row">
 		<br>
 		<h2  id="titlepad">APPLICATION</h2>
@@ -100,11 +119,23 @@
 	  		</div>
 		</div>	
 		<div class="row">
-	  		<div class="form-group col-md-8 col-md-offset-2">
+	  		<div class="form-group col-md-5 col-md-offset-2">
 	    		<label for="course">Undergraduate Course *</label>
 	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="<?php echo old('course'); ?>" placeholder="e.g. BS Communication and Media Studies">
     			<div class="help-block with-errors"></div>
 	  		</div>
+	  		<div class="form-group col-md-3">
+				<label for="loc">Preferred Location *</label>
+				<select class="form-control" id="loc" name="loc" required>
+				<option selected disabled value="">--</option>
+			        <option>Region 1</option>
+			        <option>Region 2</option>
+			        <option>Region 3</option>
+			        <option>Region 4</option>
+			        <option>Region 5</option>
+			    </select>
+			    <div class="help-block with-errors"></div>
+			</div>
 	  	</div>
 	  	<div class="row">
 	  		<div class="form-group col-md-3 col-md-offset-2">

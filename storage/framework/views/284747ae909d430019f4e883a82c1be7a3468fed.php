@@ -32,7 +32,7 @@
         body{
             font-family: 'Quicksand', sans-serif;
             padding-top: 0px;
-            background-color: #005CB4;
+            background-color: #7FD6FF;
            /*/ background-image: url(img/bubbles.gif);*/
             background-size: cover;
         }
@@ -60,6 +60,7 @@
             height: 100vh;
             width: 70%;
             margin-top: 20px;
+            margin-bottom: 20px;
             border: solid white 5px;
         }
 
@@ -103,10 +104,6 @@
         @media(max-width: 991px){
             #relation{
                 visibility: visible;
-            }
-
-            .white-text {
-                color: #fff;
             }
 
             .w3-display-bottommiddle {
@@ -696,8 +693,8 @@
                         <li class="dropdown clearfix">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Careers <span class="caret"></span></a>
                             <ul id="dropdown-menu" class="dropdown-menu">
-                                <li><a href="careers-internform">Internships</a></li>
-                                <li><a href="careers-map">Professionals</a></li>
+                                <li><a href="/careers-internform">Internships</a></li>
+                                <li><a href="/careers-map">Professionals</a></li>
                             </ul>
                         </li>
                     </ul>
