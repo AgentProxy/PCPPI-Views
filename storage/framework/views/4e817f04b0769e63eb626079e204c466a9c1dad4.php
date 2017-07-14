@@ -16,28 +16,32 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
+		<a href="<?php echo e(URL::previous()); ?>" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
-		<h1 id="title">POSITION</h1>
+		<h1 id="title"><?php echo e($vacancy->position); ?></h1>
 		<h3 id="title">Location</h3>
-		<h3 id="title">Description</h3>
+		<h3 id="title"><?php echo e($vacancy->description); ?></h3>
 	</div>
 	<div class="row">
 		<h3>Main Responsibility</h3>
-		<ul>
+		<?php echo e($vacancy->responsibilities); ?>
+
+		<!-- <ul>
   			<li>Responsibility 1</li>
   			<li>Responsibility 2</li>
   			<li>Responsibility 3</li>
-		</ul>
+		</ul> -->
 	</div>
 	<div class="row">
 		<h3>Qualifications</h3>
-		<ul>
+		<?php echo e($vacancy->qualifications); ?>
+
+		<!-- <ul>
   			<li>Qualification 1</li>
   			<li>Qualification 2</li>
   			<li>Qualification 3</li>
-		</ul>
+		</ul> -->
 	</div>
 	<div class="row">
 		<div>
@@ -181,13 +185,16 @@
 				<label for="skills">&nbsp;&nbsp;&nbsp; Skills</label> 
 			    <div class="col-md-offset-1">
 					<div id="skill-1" class="checkbox skills">
-		  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
+		  				<label><input type="checkbox" name="skills[]" value="Microsoft Office">Advanced Excel</label>
 				    </div>
 				    <div id="skill-2" class="checkbox skills">
 				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
 				    </div>
 				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
+				      <label><input type="checkbox" name="skills[]" value="Driving">Programming</label>
+				    </div>
+				    <div id="skill-4" class="checkbox skills">
+				      <label><input type="checkbox" name="skills[]" value="Communication">Programming</label>
 				    </div>
 				    <div class="row" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
@@ -261,13 +268,7 @@
 		<div class="row">
 	  		<div class="work-history" id="work-history-1" style="display:block;">
 	  			<div class="form-group col-md-8 col-md-offset-2">
-
-		    		<label for="company">Company 1</label>
-<<<<<<< HEAD
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company name">
-=======
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
->>>>>>> 94c0c06c0458094c931347535d7e352a5750097b
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
@@ -285,11 +286,7 @@
 	  		<div class="work-history" id="work-history-2" style="display:block;">
 	  			<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company 2</label>
-<<<<<<< HEAD
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company name" />
-=======
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
->>>>>>> 94c0c06c0458094c931347535d7e352a5750097b
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
 		    		<label for="position">Position/Title</label>
@@ -307,16 +304,10 @@
 	  		<div class="work-history" id="work-history-3" style="display:block;">
 	  			<div class="form-group col-md-8 col-md-offset-2">
 		    		<label for="company">Company 3</label>
-<<<<<<< HEAD
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company name" />
-	  			</div>
-		  		<div class="form-group col-md-4 col-md-offset-2">
-
-=======
 		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75" placeholder="Company Name">
 	  			</div>
 		  		<div class="form-group col-md-4 col-md-offset-2">
->>>>>>> 94c0c06c0458094c931347535d7e352a5750097b
+
 		    		<label for="position">Position/Title</label>
 		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75" placeholder="Ad Operations Specialist">
 		  		</div>

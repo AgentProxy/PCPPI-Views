@@ -1,4 +1,3 @@
-
 @extends('voyager::master')
 
 @section('css')
