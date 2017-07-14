@@ -99,11 +99,23 @@
 	  		</div>
 		</div>	
 		<div class="row">
-	  		<div class="form-group col-md-8 col-md-offset-2">
+	  		<div class="form-group col-md-5 col-md-offset-2">
 	    		<label for="course">Undergraduate Course *</label>
 	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="<?php echo old('course'); ?>" placeholder="e.g. BS Communication and Media Studies">
     			<div class="help-block with-errors"></div>
 	  		</div>
+	  		<div class="form-group col-md-3">
+				<label for="loc">Preferred Location *</label>
+				<select class="form-control" id="loc" name="loc" required>
+				<option selected disabled value="">--</option>
+			        <option>Region 1</option>
+			        <option>Region 2</option>
+			        <option>Region 3</option>
+			        <option>Region 4</option>
+			        <option>Region 5</option>
+			    </select>
+			    <div class="help-block with-errors"></div>
+			</div>
 	  	</div>
 	  	<div class="row">
 	  		<div class="form-group col-md-3 col-md-offset-2">

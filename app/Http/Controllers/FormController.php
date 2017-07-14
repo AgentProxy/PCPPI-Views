@@ -99,6 +99,7 @@ class FormController extends Controller
                 'email'=> 'required|email|max:75',
                 'school'=>'required|max:75',
                 'course'=>'required|max:75',
+                'loc' => 'required',
                 'level'=>'required',
                 'sem'=>'required',
                 'hrs'=>'required',
