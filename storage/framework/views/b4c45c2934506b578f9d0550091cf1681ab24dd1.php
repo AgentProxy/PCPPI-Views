@@ -22,18 +22,6 @@
         </div>
     </div>
 </div>
-
-<div id="section" class="container-fluid white-text">
-    <div class="row">
-        <div class="col-sm-4">
-            <img class="img-responsive slideanim" src="/img/1.png" alt="pic">
-        </div>
-        <div class="col-sm-8">
-            <h1 style="font-weight: bold;">Our Company</h1><br />
-            <p>Pepsi-Cola Products Philippines Inc. is the exclusive bottler of PepsiCo beverages in the Philippines, with a relationship spanning 66 years. Lotte Chilsung, one of the biggest beverage companies in South Korea, is the lead shareholder of PCPPI as an independently-listed company and co-manages it with PepsiCo. PCPPI manufactures and sells well-known brands such as Pepsi-Cola, Mountain Dew, 7-Up, Mirinda, Mug, Gatorade, Tropicana, Lipton, Sting, and Premier. It has established manufacturing facilities across the country, serving at least 500,000 outlets and providing employment through its extensive distribution network.</p>
-        </div>
-    </div>
-</div>
 <div id="section" class="container-fluid text-center bg-grey">
     <h1 style="font-weight: bold">Careers</h1>
     <br />

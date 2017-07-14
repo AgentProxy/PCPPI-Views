@@ -185,13 +185,16 @@
 				<label for="skills">&nbsp;&nbsp;&nbsp; Skills</label> 
 			    <div class="col-md-offset-1">
 					<div id="skill-1" class="checkbox skills">
-		  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
+		  				<label><input type="checkbox" name="skills[]" value="Microsoft Office">Advanced Excel</label>
 				    </div>
 				    <div id="skill-2" class="checkbox skills">
 				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
 				    </div>
 				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
+				      <label><input type="checkbox" name="skills[]" value="Driving">Programming</label>
+				    </div>
+				    <div id="skill-4" class="checkbox skills">
+				      <label><input type="checkbox" name="skills[]" value="Communication">Programming</label>
 				    </div>
 				    <div class="row" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
