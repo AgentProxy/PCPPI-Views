@@ -21,7 +21,6 @@
 
         <style type="text/css">
 
-
         #submit-btn{
                 padding-bottom: 10px;
             }
@@ -101,6 +100,7 @@
             margin-top: 50px;
         }
 
+<<<<<<< HEAD
         .white-text {
             color: #fff;
         }
@@ -138,6 +138,13 @@
 
         a#page-scroll:hover {
             color: #fff;
+=======
+        @media(max-width: 991px){
+
+            #viewjob{
+                text-align: center;
+            }
+>>>>>>> 713fda1e475207159b8445351932f22c496a5d47
         }
 
 

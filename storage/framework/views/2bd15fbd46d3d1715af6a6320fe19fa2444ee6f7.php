@@ -52,21 +52,21 @@
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="<?php echo old('lname'); ?>" placeholder="e.g. Baretto">
+	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="<?php echo old('lname'); ?>" placeholder="e.g. Dela Cruz">
 	    		<div class="help-block with-errors" value="<?php echo old('lname'); ?>"></div>
 	  		</div>
 		</div>	
 		<div class="row">
 		  	<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
-	    		<input type="text" class="form-control" id="present" name="present" data-error="Please input your present address" required maxlength="150" value="<?php echo old('present'); ?>">
+	    		<input type="text" class="form-control" id="present" name="present" data-error="Please input your present address" required maxlength="150" value="<?php echo old('present'); ?>" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 		</div>	
 		<div class="row">
 		  	<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
-	    		<input type="text" class="form-control" id="prov" name="prov" data-error="Please input your provincial address" required maxlength="150" value="<?php echo old('prov'); ?>">
+	    		<input type="text" class="form-control" id="prov" name="prov" data-error="Please input your provincial address" required maxlength="150" value="<?php echo old('prov'); ?>" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
@@ -99,12 +99,14 @@
 	  		</div>
 		</div>	
 		<div class="row">
-	  		<div class="form-group col-md-3 col-md-offset-2">
+	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="course">Undergraduate Course *</label>
 	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="<?php echo old('course'); ?>" placeholder="e.g. BS Communication and Media Studies">
     			<div class="help-block with-errors"></div>
 	  		</div>
-	  		<div class="form-group col-md-2">
+	  	</div>
+	  	<div class="row">
+	  		<div class="form-group col-md-3 col-md-offset-2">
   				<label for="level">Year Level *</label>
   				<select class="form-control" id="level" name="level" required>
   					<option value="" selected disabled>--</option>
@@ -116,13 +118,13 @@
 			    </select>
 			    <div class="help-block with-errors"></div>
 	  		</div>
-	  		<div class="form-group col-md-1" style="width:200px;">
+	  		<div class="form-group col-md-3">
   				<label for="sem">Sem *</label>
   				<select class="form-control" id="sem" name="sem" required>
   					<option value="" selected disabled>--</option>
-			        <option>1st</option>
-			        <option>2nd</option>
-			        <option>3rd</option>
+			        <option>First</option>
+			        <option>Second</option>
+			        <option>Third</option>
 			        <option>Midyear</option>
 			     </select>
 			     <div class="help-block with-errors"></div>
