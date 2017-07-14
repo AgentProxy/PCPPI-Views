@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-		<h1 class="text-center"> Find Your Career </h1>
+    <div class="container" style="padding-top: 2em;">
+        <h1 class="text-center"> Find Your Career </h1>
+    </div>	
         <form method="GET" action="/careers-search">
             <div id="search-bar" class="container">
                 <div class="form-group col-md-4">

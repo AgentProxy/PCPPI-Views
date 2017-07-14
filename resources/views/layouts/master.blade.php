@@ -685,7 +685,7 @@
                         <li class="dropdown clearfix">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
                             <ul id="dropdown-menu" class="dropdown-menu">
-                                 <li class="active"><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Main Website Home</a></li>
+                                 <li><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Main Website Home</a></li>
                                 <li><a href="https://www.pepsiphilippines.com/company.php" target="_blank">Our Company</a></li>
                                 <li><a href="https://www.pepsiphilippines.com/products.php" target="_blank">Products</a></li>
                             </ul>
@@ -738,6 +738,9 @@
     </noscript>
 
     <footer class="text-center" >
+        <div class="container">
+            <h1>CONTACT US</h1>
+        </div>
         <div class="container" >
             <div style="margin-left: 11%; padding-bottom: 10px;">
                 <a style="text-decoration: none;" href="https://www.pepsiphilippines.com/index.php">
@@ -756,17 +759,6 @@
         </div> 
     </footer>
 
-    <script type="text/javascript">
-         // Add slideDown animation to Bootstrap dropdown when expanding.
-        $('.dropdown').on('show.bs.dropdown', function(e) {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-      });
-
-          // Add slideUp animation to Bootstrap dropdown when collapsing.
-        $('.dropdown').on('hide.bs.dropdown', function(e) {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-      });
-    </script>
 
 </body>
 </html>
