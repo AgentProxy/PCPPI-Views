@@ -2,9 +2,9 @@
 
 <header class="w3-display-container w3-content w3-center" style="max-width: 1500px; margin-bottom: 5px;">
   <img class="w3-image" src="/img/HOMEbg-1.jpg" alt="header-img" width="1500" height="400">
-  <a class="page-scroll" href="#next">
-  <div class="w3-circle w3-light-grey w3-display-bottommiddle w3-hide-small w3-hide-medium" style="bottom: 40px; ">
-    <span class="glyphicon glyphicon-chevron-down" style="padding: 12px 12px;font-size: 26px; text-align: center; color: #0A62EA;"></span></a>
+  <a id="page-scroll" class="page-scroll" href="#next">
+    <div class="w3-display-bottommiddle w3-hide-small w3-hide-medium">
+    <span class="glyphicon glyphicon-circle-arrow-down" style="text-align: center;"></span></a>
   </div>
 </header>
 
@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div id="section" class="container-fluid">
+<div id="section" class="container-fluid white-text">
     <div class="row">
         <div class="col-sm-4">
             <img class="img-responsive slideanim" src="/img/1.png" alt="pic">
