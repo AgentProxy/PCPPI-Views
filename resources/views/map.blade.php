@@ -79,6 +79,8 @@
         var infowindow = new google.maps.InfoWindow();
         var marker,i;
 
+        console.log(regions.length)
+
         for(i=0; i<regions.length;i++){
 	        // infowindow[i] = new google.maps.InfoWindow({
 	        // 	content: contents[i]

@@ -374,12 +374,11 @@
 		    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
 		  		</div>
 	  		</div>  	
-	  	<!-- End of Work History Template-->
 	  	<!-- Start of Skills Template -->
-	  		<div id="skill-0" name="skills" class="checkbox skills" style="display: none">
+	  		<div id="skill-0" name="skills" style="display: none">
 				<input type="text" name="skills[]" value="" style="display: none">
 			    <span id="delete" style="font-size: 15px; color: red;" class="delete-skill glyphicon glyphicon-minus-sign"></span> 
-			    <label id="skill-label" style="padding-left: 0%;">Programming</label>
+			    <span id="skill-label" style="padding-left: 0%;">Programming</span>
 			</div>
 		<!-- End of Skills Template -->
 <!--  -->

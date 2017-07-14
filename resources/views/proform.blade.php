@@ -1,10 +1,13 @@
 @extends('layouts.master')
 
-<!-- if
-	naka set ang complete nga session
-	redirect to link
- -->
-
+<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
 
 
 @section('content')
@@ -19,6 +22,13 @@
 <div class="container" id="form">
 	<div class="row" id="btnpad">
 		<a href="{{ URL::previous() }}" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
+	</div>
+	<div class="row">
+		<!-- This is for FB's Share -->
+		<!-- 
+		<div class="fb-share-button" data-href="careers-internform" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> 
+		-->
+		<iframe class="center-block" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=large&mobile_iframe=true&width=106&height=28&appId" width="106" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 	</div>
 	<div class="row">
 		<h1 id="title">{{$vacancy->position}}</h1>
