@@ -23,7 +23,7 @@
             </form>
         </div>
         <div class="row" id="padbot">
-            <h4>Can't find any vacant position in desired region and position? Leave your resume <a id="bank" href="careers-bankform"> here</a>.  </h4>
+            <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="careers-bankform"> here</a>.  </h4>
             <!-- <button type="button" class="btn btn-primary">Upload</button> -->
         </div>
     </div>
@@ -36,11 +36,11 @@
             <div class="panel-body">
                 <div id="viewjob" class="row">
                     <div class="col-md-10">
-                        <h3><?php echo e($vacancy->region_id); ?></h3>
+                        <h3>Location: <?php echo e($vacancy->regions->name); ?></h3>
                         <h3><?php echo e($vacancy->description); ?></h3>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">
-                        <a href="careers-proform/<?php echo e($vacancy->id); ?>" class="btn btn-warning btn-lg col-xs-offset-1" role="button">View Details</a>
+                        <a href="careers-proform/<?php echo e($vacancy->id); ?>" class="btn btn-primary btn-lg col-xs-offset-1" role="button">View Details</a>
                     </div>
                 </div>
             </div>
