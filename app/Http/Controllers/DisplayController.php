@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Vacancy;
 use App\Region;
 use DB;
+
 
 class DisplayController extends Controller
 {
@@ -28,27 +30,28 @@ class DisplayController extends Controller
 
 	function mapRetrieve(){
 		$regions = Region::all();
+		$vacancies = Vacancy::where('closed',0)->get();
 		//return ($regions);
-		return view('map',compact("regions"));
+		return view('map',compact("regions","vacancies"));
 	}
 
-	function search(Request $request){
+	function search(Request $request,$reg_id=null){
 		//return $request->job;
-		$job = $request->job;
-		$region = $request->region;
+		$vacancies = Vacancy::where('closed',0)->get();
 		$regions = Region::all();
-		if($region!=0){
-			$vacancies = Vacancy::where('region_id', $region)->where('closed',0)->get();
-		}
-		else{
-			$vacancies = Vacancy::all()->where('closed',0);	
-		}
-
-		if($job!=""){
-			//$vacancies = $vacancies->where('position', 'like', '%' . $job . '%');
-			return $vacancies->where('position','LIKE','%'.$job.'%')->where('closed',0)->all();
+		if($request!=null){
+			$job = $request->job;
+			$region_id = $request->region;
+			$vacancies = Vacancy::where('closed',0)->where('position','like','%'.$job.'%')->get();
+		}	
+		if($reg_id!=null){
+			$region_id = $reg_id;
 		}
 
-		return view('careersearch',compact("vacancies","regions"));
+		if($region_id!=0){
+			$vacancies = $vacancies->where('region_id', $region_id)->all();
+		}
+		Input::flash();
+		return view('careersearch',compact("vacancies","regions","region_id"));
 	}
 }

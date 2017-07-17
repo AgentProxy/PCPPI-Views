@@ -9,13 +9,13 @@
         <div class="row">
             <form method="GET" action="/careers-search">
                 <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="job" id="job" placeholder="Job">
+                    <input type="text" class="form-control" name="job" id="job" placeholder="Job" value="{!! old('job') !!}">
                 </div>
                 <div class="form-group col-md-4">
                     <select class="form-control" id="region" name="region">
-                        <option value="0">All Regions</option>
+                        <option value="0" >All Regions</option>
                         @foreach($regions as $region)
-                        <option value="{{$region->id}}">{{$region->name}}</option>
+                        <option value="{{$region->id}}" @if($region_id==$region->id) selected="selected" @endif>{{$region->name}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -26,7 +26,6 @@
         </div>
         <div class="row" id="padbot">
             <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="careers-bankform"> here</a>.  </h4>
-            <!-- <button type="button" class="btn btn-primary">Upload</button> -->
         </div>
     </div>
     <div id="search-results" class="full-height" style="width: 100%; height: 1024px; background-color: white;">
