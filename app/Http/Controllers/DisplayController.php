@@ -28,6 +28,7 @@ class DisplayController extends Controller
 
 	function mapRetrieve(){
 		$regions = Region::all();
+		//return ($regions);
 		return view('map',compact("regions"));
 	}
 
@@ -37,15 +38,15 @@ class DisplayController extends Controller
 		$region = $request->region;
 		$regions = Region::all();
 		if($region!=0){
-			$vacancies = Vacancy::where('region_id', $region)->get();
+			$vacancies = Vacancy::where('region_id', $region)->where('closed',0)->get();
 		}
 		else{
-			$vacancies = Vacancy::all();	
+			$vacancies = Vacancy::all()->where('closed',0);	
 		}
 
 		if($job!=""){
 			//$vacancies = $vacancies->where('position', 'like', '%' . $job . '%');
-			return $vacancies->where('position','LIKE','%'.$job.'%')->all();
+			return $vacancies->where('position','LIKE','%'.$job.'%')->where('closed',0)->all();
 		}
 
 		return view('careersearch',compact("vacancies","regions"));

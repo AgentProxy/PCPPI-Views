@@ -8,7 +8,7 @@ class ListAreaHandler extends AbstractHandler
 
     public function createContent($row, $dataType, $dataTypeContent, $options)
     {
-        return view('voyager::formfields.list', [
+        return view('voyager::formfields.list_area', [
             'row'             => $row,
             'options'         => $options,
             'dataType'        => $dataType,

@@ -241,6 +241,7 @@ class VoyagerServiceProvider extends ServiceProvider
             'date',
             'file',
             'image',
+            'list_area',
             'multiple_images',
             'number',
             'password',
