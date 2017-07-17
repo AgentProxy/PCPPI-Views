@@ -77,7 +77,7 @@
 		
 		<input type="text" value="1" name="form_type" style="display: none;"/>
 		<input type="text" value="<?php echo e($vacancy->position); ?>" name="position_applied" hidden/>
-		<input type="text" value="<?php echo e($region->name); ?>" name="desired_region" hidden/>	
+		<input type="text" value="<?php echo e($vacancy->regions->name); ?>" name="desired_region" hidden/>	
 
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">

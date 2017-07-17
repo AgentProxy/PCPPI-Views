@@ -227,6 +227,7 @@ class VoyagerBreadController extends Controller
     public function store(Request $request)
     {
         $slug = $this->getSlug($request);
+        
 
         $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
 
