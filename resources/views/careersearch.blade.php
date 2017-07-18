@@ -25,7 +25,7 @@
             </form>
         </div>
         <div class="row" id="padbot">
-            <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="careers-bankform"> here</a>.  </h4>
+            <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
         </div>
     </div>
     <div id="search-results" class="full-height" style="width: 100%; height: 1024px; background-color: white;">
@@ -40,8 +40,8 @@
                         <h3>Location: {{$vacancy->regions->name}}</h3>
                         <h3>{{$vacancy->description}}</h3>
                     </div>
-                    <div class="col-md-2" style="padding-top: 15px;">
-                        <a href="careers-proform/{{$vacancy->id}}" class="btn btn-primary btn-lg col-xs-offset-1" role="button">View Details</a>
+                    <div class="col-md-2" style="padding-top: 15px;p">
+                        <a href="/careers-proform/{{$vacancy->id}}" class="btn btn-primary btn-lg col-xs-offset-1" role="button">View Details</a>
                     </div>
                 </div>
             </div>

@@ -20,7 +20,7 @@ class VacancyDimmer extends AbstractWidget
      */
     public function run()
     {
-        $count = Voyager::model('Vacancy')->count();
+        $count = Voyager::model('User')->count();
         $string = $count == 1 ? 'vacancy' : 'vacancies';
 
         return view('voyager::dimmer', array_merge($this->config, [
