@@ -39,6 +39,8 @@ Route::post('/form_validation/{form_type}/{job_id?}', 'FormController@sendApplic
 
 Route::get('/careers-search','DisplayController@search');
 
+Route::get('/careers-retrieve','DisplayController@search');
+
 Route::get('/careers-retrieve/{reg_id}','DisplayController@search');
 
 Route::get('/careers-success', function () {

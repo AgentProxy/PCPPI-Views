@@ -37,19 +37,19 @@ class DisplayController extends Controller
 
 	function search(Request $request,$reg_id=null){
 		//return $request->job;
-		$vacancies = Vacancy::where('closed',0)->get();
+		$vacancies = Vacancy::where('closed',0)->paginate(10);
 		$regions = Region::all();
 		if($request!=null){
 			$job = $request->job;
 			$region_id = $request->region;
-			$vacancies = Vacancy::where('closed',0)->where('position','like','%'.$job.'%')->get();
+			$vacancies = Vacancy::where('closed',0)->where('position','like','%'.$job.'%')->paginate(10);;
 		}	
 		if($reg_id!=null){
 			$region_id = $reg_id;
 		}
 
 		if($region_id!=0){
-			$vacancies = $vacancies->where('region_id', $region_id)->all();
+			$vacancies = $vacancies->where('region_id', $region_id)->paginate(10);;
 		}
 		Input::flash();
 		return view('careersearch',compact("vacancies","regions","region_id"));

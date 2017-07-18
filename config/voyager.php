@@ -143,11 +143,11 @@ return [
             'image' => '/images/widget-backgrounds/02.png',
         ],
         [
-            'name'  => 'Post',
-            'icon'  => 'voyager-news',
+            'name'  => 'Vacancy',
+            'icon'  => 'voyager-group',
             'model' => TCG\Voyager\Models\Post::class,
-            'url'   => 'admin/posts',
-            'image' => '/images/widget-backgrounds/03.png',
+            'url'   => 'admin/vacancies',
+            'image' => '/images/widget-backgrounds/02.png',
         ],
     ],
 
@@ -185,7 +185,7 @@ return [
 
         'widgets' => [
             'TCG\\Voyager\\Widgets\\UserDimmer',
-            'TCG\\Voyager\\Widgets\\PostDimmer',
+            'TCG\\Voyager\\Widgets\\VacancyDimmer',
         ],
 
     ],

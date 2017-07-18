@@ -25,7 +25,7 @@
             </form>
         </div>
         <div class="row" id="padbot">
-            <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="careers-bankform"> here</a>.  </h4>
+            <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
         </div>
     </div>
     <div id="search-results" class="full-height" style="width: 100%; height: 1024px; background-color: white;">
@@ -49,6 +49,9 @@
         @empty
         <h1> No Vacancies Found </h1>
         @endforelse
+    </div>
+    <div style="text-align: center;">
+        <div class="pagination" style="margin: auto;"> {{ $vacancies->links() }} </div>
     </div>
 </div>
 @endsection

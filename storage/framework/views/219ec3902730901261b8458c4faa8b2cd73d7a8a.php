@@ -23,7 +23,7 @@
             </form>
         </div>
         <div class="row" id="padbot">
-            <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="careers-bankform"> here</a>.  </h4>
+            <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
         </div>
     </div>
     <div id="search-results" class="full-height" style="width: 100%; height: 1024px; background-color: white;">
@@ -47,6 +47,9 @@
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
         <h1> No Vacancies Found </h1>
         <?php endif; ?>
+    </div>
+    <div style="text-align: center;">
+        <div class="pagination" style="margin: auto;"> <?php echo e($vacancies->links()); ?> </div>
     </div>
 </div>
 <?php $__env->stopSection(); ?>
