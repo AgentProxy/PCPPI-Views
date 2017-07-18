@@ -18,7 +18,7 @@ class DisplayController extends Controller
 	    if($vacancy == null){
 	    	abort(404, 'The vacancy you are looking is not available');
 	    }
-	    $region = Region::where('id',$vacancy->region_id)->first();
+	    //$region = Region::where('id',$vacancy->region_id)->first();
 	   
 	    return view('proform',compact("vacancy"));
 	}

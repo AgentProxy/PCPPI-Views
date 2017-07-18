@@ -45,20 +45,14 @@
 		    	<label for="present">Present Address:</label>
 		    	<h4 class="col-md-offset-3">{{$data['present']}}</h4>
 		  	</div>
-<<<<<<< HEAD
-		  	
-=======
->>>>>>> 713fda1e475207159b8445351932f22c496a5d47
+
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-6 col-md-offset-2">
 		    	<label for="prov">Provincial Address:</label>
 		    	<h4 class="col-md-offset-3">{{$data['prov']}}</h4>
 		  	</div>
-<<<<<<< HEAD
-		  	
-=======
->>>>>>> 713fda1e475207159b8445351932f22c496a5d47
+
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-3 col-md-offset-2">
