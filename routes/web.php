@@ -33,11 +33,15 @@ Route::post('/form_validation/{form_type}/{job_id?}', 'FormController@sendApplic
 
 // Route::post('/form_validation', ['as' => 'validate',  'uses' => 'FormController@sendApplication']);
 
-Route::get('/careers-search', function () {
-    return view('careersearch');
-});
+// Route::get('/careers-search', function () {
+//     return view('careersearch');
+// });
 
 Route::get('/careers-search','DisplayController@search');
+
+Route::get('/careers-retrieve','DisplayController@search');
+
+Route::get('/careers-retrieve/{reg_id}','DisplayController@search');
 
 Route::get('/careers-success', function () {
     return view('success');

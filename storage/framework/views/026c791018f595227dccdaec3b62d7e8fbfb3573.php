@@ -1,8 +1,11 @@
-<!-- if
-	naka set ang complete nga session
-	redirect to link
- -->
-
+<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
 
 
 <?php $__env->startSection('content'); ?>
@@ -19,8 +22,15 @@
 		<a href="<?php echo e(URL::previous()); ?>" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
+		<!-- This is for FB's Share -->
+		<!-- 
+		<div class="fb-share-button" data-href="careers-internform" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> 
+		-->
+		<iframe class="center-block" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=large&mobile_iframe=true&width=106&height=28&appId" width="106" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	</div>
+	<div class="row">
 		<h1 id="title"><?php echo e($vacancy->position); ?></h1>
-		<h3 id="title"><?php echo e($region->name); ?></h3>
+		<h3 id="title"><?php echo e($vacancy->regions->name); ?></h3>
 		<h3 id="title"><?php echo e($vacancy->description); ?></h3>
 	</div>
 	<div class="row">
@@ -67,7 +77,7 @@
 		
 		<input type="text" value="1" name="form_type" style="display: none;"/>
 		<input type="text" value="<?php echo e($vacancy->position); ?>" name="position_applied" hidden/>
-		<input type="text" value="<?php echo e($region->name); ?>" name="desired_region" hidden/>	
+		<input type="text" value="<?php echo e($vacancy->regions->name); ?>" name="desired_region" hidden/>	
 
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
@@ -170,16 +180,22 @@
 				<label for="skills">&nbsp;&nbsp;&nbsp; Skills</label> 
 			    <div class="col-md-offset-1">
 					<div id="skill-1" class="checkbox skills">
-		  				<label><input type="checkbox" name="skills[]" value="Microsoft Office">Advanced Excel</label>
+		  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
 				    </div>
 				    <div id="skill-2" class="checkbox skills">
 				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
 				    </div>
 				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Driving">Programming</label>
+				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
 				    </div>
 				    <div id="skill-4" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Communication">Programming</label>
+				      <label><input type="checkbox" name="skills[]" value="Programming">Advanced Computer Skills</label>
+				    </div>
+				    <div id="skill-5" class="checkbox skills">
+				      <label><input type="checkbox" name="skills[]" value="Programming">Driving</label>
+				    </div>
+				    <div id="skill-6" class="checkbox skills">
+				      <label><input type="checkbox" name="skills[]" value="Programming">Communication Skills</label>
 				    </div>
 				    <div class="row" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">

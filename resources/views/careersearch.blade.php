@@ -9,13 +9,13 @@
         <div class="row">
             <form method="GET" action="/careers-search">
                 <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="job" id="job" placeholder="Job">
+                    <input type="text" class="form-control" name="job" id="job" placeholder="Job" value="{!! old('job') !!}">
                 </div>
                 <div class="form-group col-md-4">
                     <select class="form-control" id="region" name="region">
-                        <option value="0">All Regions</option>
+                        <option value="0" >All Regions</option>
                         @foreach($regions as $region)
-                        <option value="{{$region->id}}">{{$region->name}}</option>
+                        <option value="{{$region->id}}" @if($region_id==$region->id) selected="selected" @endif>{{$region->name}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -25,8 +25,7 @@
             </form>
         </div>
         <div class="row" id="padbot">
-            <h4>Can't find any vacant position in desired region and position? Leave your resume <a id="bank" href="careers-bankform"> here</a>.  </h4>
-            <!-- <button type="button" class="btn btn-primary">Upload</button> -->
+            <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
         </div>
     </div>
     <div id="search-results" class="full-height" style="width: 100%; height: 1024px; background-color: white;">
@@ -38,11 +37,11 @@
             <div class="panel-body">
                 <div id="viewjob" class="row">
                     <div class="col-md-10">
-                        <h3>{{$vacancy->region_id}}</h3>
+                        <h3>Location: {{$vacancy->regions->name}}</h3>
                         <h3>{{$vacancy->description}}</h3>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">
-                        <a href="careers-proform/{{$vacancy->id}}" class="btn btn-cherry btn-lg col-xs-offset-1" role="button">View Details</a>
+                        <a href="careers-proform/{{$vacancy->id}}" class="btn btn-view btn-cherry btn-lg col-xs-offset-1" role="button">View Details</a>
                     </div>
                 </div>
             </div>
@@ -50,6 +49,9 @@
         @empty
         <h1> No Vacancies Found </h1>
         @endforelse
+    </div>
+    <div style="text-align: center;">
+        <div class="pagination" style="margin: auto;"> {{ $vacancies->links() }} </div>
     </div>
 </div>
 @endsection

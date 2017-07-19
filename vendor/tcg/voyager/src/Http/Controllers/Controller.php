@@ -13,6 +13,7 @@ use Intervention\Image\Constraint;
 use Intervention\Image\Facades\Image;
 use TCG\Voyager\Traits\AlertsMessages;
 use Validator;
+use Auth;
 
 abstract class Controller extends BaseController
 {
@@ -76,8 +77,27 @@ abstract class Controller extends BaseController
             } else {
                 $data->{$row->field} = $content;
             }
+
+            /*
+            Customized Methods
+            */
+            if($slug=="vacancies"){
+                if($row->field == 'creator_id'){
+                    $data->{$row->field} = Auth::user()->id;
+                }
+               // return Auth::user()->id;
+            }
+
+
+            /*
+
+
+            */
+
+
         }
 
+        
         $data->save();
 
         // Save translations
