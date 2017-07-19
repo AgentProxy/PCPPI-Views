@@ -28,6 +28,11 @@ class DisplayController extends Controller
 		return view('bankform',compact("regions"));
 	}
 
+	function internform(){
+		$regions = Region::all();
+		return view('internform',compact("regions"));
+	}
+
 	function mapRetrieve(){
 		$regions = Region::all();
 		$vacancies = Vacancy::where('closed',0)->get();

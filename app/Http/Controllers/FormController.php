@@ -45,6 +45,7 @@ class FormController extends Controller
                 'position.*' => 'max:75',
                 'reloc'=>'required',
                 'resume'=>'required|file|mimes:doc,pdf,docx|max:2048'
+
             ]);
         }
         else if($form_type=='2'){

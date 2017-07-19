@@ -19,9 +19,7 @@ Route::get('/careers-home', function () {
     return view('home');
 });
 
-Route::get('/careers-internform', function () {
-    return view('internform');
-});
+Route::get('/careers-internform', 'DisplayController@internform');
 
 // Route::get('/careers-proform', function () {
 //     return view('proform');
