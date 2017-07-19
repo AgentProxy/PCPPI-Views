@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 		<h1 class="text-center"> Find Your Career </h1>
-        <form method="GET" action="/careers-search">
+        <form method="GET" action="/careers-retrieve">
             <div id="search-bar" class="container">
                 <div class="form-group col-md-4">
                     <input type="text" class="form-control" name="job" id="job" placeholder="Job">
@@ -52,25 +52,25 @@
         ];
 
         var contents = [
-        	'<h4> Cagayan Valley Operations </h4><a href="/careers-search/1"><h5><?php echo e(count($vacancies->where("region_id",1))); ?> Vacancies</h5></a>',
-        	'<h4> North Luzon Operations </h4><a href="/careers-search/2"><h5><?php echo e(count($vacancies->where("region_id",2))); ?> Vacancies</h5></a>',
-        	'<h4> Central Luzon </h4><a href="/careers-search/3"><h5><?php echo e(count($vacancies->where("region_id",3))); ?> Vacancies</h5></a>',
-        	'<h4> Modern Trade Operations </h4><a href="/careers-search/4"><h5><?php echo e(count($vacancies->where("region_id",4))); ?> Vacancies</h5></a>',
+        	'<h4> Cagayan Valley Operations </h4><a href="/careers-retrieve/1"><h5><?php echo e(count($vacancies->where("region_id",1))); ?> Vacancies</h5></a>',
+        	'<h4> North Luzon Operations </h4><a href="/careers-retrieve/2"><h5><?php echo e(count($vacancies->where("region_id",2))); ?> Vacancies</h5></a>',
+        	'<h4> Central Luzon </h4><a href="/careers-retrieve/3"><h5><?php echo e(count($vacancies->where("region_id",3))); ?> Vacancies</h5></a>',
+        	'<h4> Modern Trade Operations </h4><a href="/careers-retrieve/4"><h5><?php echo e(count($vacancies->where("region_id",4))); ?> Vacancies</h5></a>',
 
-        	'<h4> Metro Operations </h4><a href="/careers-search/5"><h5><?php echo e(count($vacancies->where("region_id",5))); ?> Vacancies</h5></a> <hr/> <h4> Head Office </h4><a href="/careers-search/16"><h5><?php echo e(count($vacancies->where("region_id",16))); ?> Vacancies</h5></a> <hr /> <h4> Metro Sales </h4><a href="/careers-search/17"><h5><?php echo e(count($vacancies->where("region_id",17))); ?> Vacancies</h5></a>',
+        	'<h4> Metro Operations </h4><a href="/careers-retrieve/5"><h5><?php echo e(count($vacancies->where("region_id",5))); ?> Vacancies</h5></a> <hr/> <h4> Head Office </h4><a href="/careers-retrieve/16"><h5><?php echo e(count($vacancies->where("region_id",16))); ?> Vacancies</h5></a> <hr /> <h4> Metro Sales </h4><a href="/careers-retrieve/17"><h5><?php echo e(count($vacancies->where("region_id",17))); ?> Vacancies</h5></a>',
 
-            // '<h4> Head Office </h4><a href="/careers-search/6"><h5><?php echo e(count($vacancies->where("region_id",8))); ?> Vacancies</h5></a>',
-            // '<h4> Metro Sales </h4><a href="/careers-search/7"><h5><?php echo e(count($vacancies->where("region_id",9))); ?> Vacancies</h5></a>',
-        	'<h4> Southern Tagalog Region Operations </h4><a href="/careers-search/6"><h5><?php echo e(count($vacancies->where("region_id",6))); ?> Vacancies</h5></a>',
-        	'<h4> Bicol Region Operations</h4><a href="/careers-search/7"><h5><?php echo e(count($vacancies->where("region_id",7))); ?> Vacancies</h5></a>',
-        	'<h4> Iloilo </h4><a href="/careers-search/8"><h5><?php echo e(count($vacancies->where("region_id",8))); ?> Vacancies</h5></a>',
-        	'<h4> Tanuan </h4><a href="/careers-search/9"><h5><?php echo e(count($vacancies->where("region_id",9))); ?> Vacancies</h5></a>',
-        	'<h4> Cebu </h4><a href="/careers-search/10"><h5><?php echo e(count($vacancies->where("region_id",10))); ?> Vacancies</h5></a>',
-        	'<h4> Bacolod </h4><a href="/careers-search/11"><h5><?php echo e(count($vacancies->where("region_id",11))); ?> Vacancies</h5></a>',
-        	'<h4> Cagayan De Oro </h4><a href="/careers-search/12"><h5><?php echo e(count($vacancies->where("region_id",12))); ?> Vacancies</h5></a>',
-        	'<h4> Zamboanga </h4><a href="/careers-search/13"><h5><?php echo e(count($vacancies->where("region_id",13))); ?> Vacancies</h5></a>',
-        	'<h4> Davao </h4><a href="/careers-search/14"><h5><?php echo e(count($vacancies->where("region_id",14))); ?> Vacancies</h5></a>',
-            '<h4> Cabuyao </h4><a href="/careers-search/15"><h5><?php echo e(count($vacancies->where("region_id",15))); ?> Vacancies</h5></a>'
+            // '<h4> Head Office </h4><a href="/careers-retrieve/6"><h5><?php echo e(count($vacancies->where("region_id",8))); ?> Vacancies</h5></a>',
+            // '<h4> Metro Sales </h4><a href="/careers-retrieve/7"><h5><?php echo e(count($vacancies->where("region_id",9))); ?> Vacancies</h5></a>',
+        	'<h4> Southern Tagalog Region Operations </h4><a href="/careers-retrieve/6"><h5><?php echo e(count($vacancies->where("region_id",6))); ?> Vacancies</h5></a>',
+        	'<h4> Bicol Region Operations</h4><a href="/careers-retrieve/7"><h5><?php echo e(count($vacancies->where("region_id",7))); ?> Vacancies</h5></a>',
+        	'<h4> Iloilo </h4><a href="/careers-retrieve/8"><h5><?php echo e(count($vacancies->where("region_id",8))); ?> Vacancies</h5></a>',
+        	'<h4> Tanuan </h4><a href="/careers-retrieve/9"><h5><?php echo e(count($vacancies->where("region_id",9))); ?> Vacancies</h5></a>',
+        	'<h4> Cebu </h4><a href="/careers-retrieve/10"><h5><?php echo e(count($vacancies->where("region_id",10))); ?> Vacancies</h5></a>',
+        	'<h4> Bacolod </h4><a href="/careers-retrieve/11"><h5><?php echo e(count($vacancies->where("region_id",11))); ?> Vacancies</h5></a>',
+        	'<h4> Cagayan De Oro </h4><a href="/careers-retrieve/12"><h5><?php echo e(count($vacancies->where("region_id",12))); ?> Vacancies</h5></a>',
+        	'<h4> Zamboanga </h4><a href="/careers-retrieve/13"><h5><?php echo e(count($vacancies->where("region_id",13))); ?> Vacancies</h5></a>',
+        	'<h4> Davao </h4><a href="/careers-retrieve/14"><h5><?php echo e(count($vacancies->where("region_id",14))); ?> Vacancies</h5></a>',
+            '<h4> Cabuyao </h4><a href="/careers-retrieve/15"><h5><?php echo e(count($vacancies->where("region_id",15))); ?> Vacancies</h5></a>'
         ];
 
         // var regions = [

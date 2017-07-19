@@ -12,6 +12,7 @@
                 
                 <div id="embed-api-auth-container"></div>
             <?php else: ?>
+            
             <?php endif; ?>
 
             <div class="Dashboard Dashboard--full" id="analytics-dashboard">

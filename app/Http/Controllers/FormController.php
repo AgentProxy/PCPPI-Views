@@ -127,7 +127,7 @@ class FormController extends Controller
                 $message->from($data['email']);
                 $message->replyTo($data['email']);
                 $message->to('ericjoseph.flores1@gmail.com');
-                $message->subject("PCPPI Applicant (".$data['lname'].")");
+                $message->subject("PCPPI Professional Applicant (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
                         'as'=> $input['resume']->getClientOriginalName()]);
             });
@@ -146,7 +146,7 @@ class FormController extends Controller
                 $message->from($data['email']);
                 $message->replyTo($data['email']);
                 $message->to('ericjoseph.flores1@gmail.com');
-                $message->subject("PCPPI Applicant (".$data['lname'].")");
+                $message->subject("PCPPI Talent Bank Applicant (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
                         'as'=> $input['resume']->getClientOriginalName()]);
             });

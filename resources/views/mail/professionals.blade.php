@@ -201,14 +201,6 @@
 			
 		</div>
 		<div class="row">
-			<div class="form-group col-md-3 col-md-offset-2">
-				<label for="dept">Position Applied for:</label>
-				<h4 class="col-md-offset-1">Sales Manager</h4>
-			</div>
-			<div class="form-group col-md-3">
-				<label for="loc">Location:</label>
-				<h4 class="col-md-offset-1">Region 1</h4>
-			</div>
 			<div class="form-group col-md-2">
 				<label for="reloc">Willing to relocate?</label>
 				<h4 class="col-md-offset-1">No</h4>
