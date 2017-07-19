@@ -6,6 +6,7 @@ use Mail;
 use App\User;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Routing\Controller as BaseController;
 
@@ -133,7 +134,7 @@ class FormController extends Controller
             if (Mail::failures()) {
                 // return response showing failed emails
             }
-            DB::table('vacancies')->where('id',$job_id)->increment('applicant');
+            DB::table('vacancies')->where('id',$job_id)->increment('applicants');
             return redirect('careers-success');
         }
        

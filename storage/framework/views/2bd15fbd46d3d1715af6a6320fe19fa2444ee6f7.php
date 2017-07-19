@@ -10,11 +10,12 @@
 <div class="container">
 	<div class="row" id="btnpad">
 		<div>
-			<a href="careers-home" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers Home</a>
+			<a href="careers-home" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers Home</a>
 		</div>
 	</div>
 	<div class="row">
 		<div>
+			<a href="https://www.facebook.com/sharer/sharer.php?u=YourPageLink.com&display=popup"> share this </a>
 			<h2 id="title">Hiring Process</h2>
 		</div>
 		<div class="col-md-4">
@@ -47,44 +48,44 @@
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
-	    		<input type="text" class="form-control" id="fname" name="fname" data-error="Please input your first name" required maxlength="75" value="<?php echo old('fname'); ?>" placeholder="e.g. Julia Grace">
+	    		<input type="text" class="form-control" id="fname" name="fname" data-error="Please input your first name" required maxlength="75" value="<?php echo old('fname'); ?>" placeholder="">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-4">
 	    		<label for="lname">Last Name *</label>
-	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="<?php echo old('lname'); ?>" placeholder="e.g. Dela Cruz">
+	    		<input type="text" class="form-control" name="lname" id="lname" data-error="Please input your last name" required maxlength="75" value="<?php echo old('lname'); ?>" placeholder="">
 	    		<div class="help-block with-errors" value="<?php echo old('lname'); ?>"></div>
 	  		</div>
 		</div>	
 		<div class="row">
 		  	<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="present"> Present Address *</label>
-	    		<input type="text" class="form-control" id="present" name="present" data-error="Please input your present address" required maxlength="150" value="<?php echo old('present'); ?>" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
+	    		<input type="text" class="form-control" id="present" name="present" data-error="Please input your present address" required maxlength="150" value="<?php echo old('present'); ?>" placeholder="">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
 		</div>	
 		<div class="row">
 		  	<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="prov"> Provincial Address *</label>
-	    		<input type="text" class="form-control" id="prov" name="prov" data-error="Please input your provincial address" required maxlength="150" value="<?php echo old('prov'); ?>" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
+	    		<input type="text" class="form-control" id="prov" name="prov" data-error="Please input your provincial address" required maxlength="150" value="<?php echo old('prov'); ?>" placeholder="">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
-	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="<?php echo old('bday'); ?>" placeholder="e.g. July 29, 1998">
+	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="<?php echo old('bday'); ?>" placeholder="">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="phone">Mobile Number *</label>
-	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="0xxxxxxxxxx" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required value="<?php echo old('phone'); ?>">
+	    		<input type="text" class="form-control" id="phone" name="phone" pattern="0\d{10}" placeholder="" data-match-error="Please input a valid phone number" data-error="Please input your mobile number" required value="<?php echo old('phone'); ?>">
 	    		<div class="help-block with-errors"></div>
-	    		<div class="help-block">Should have 11 digits</div>
+	    		<div class="help-block"><small>Should have 11 digits</small></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="email">Email Address *</label>
-	    		<input type="email" class="form-control" id="email" name="email" data-error="Please input a valid email address" required maxlength="75" value="<?php echo old('email'); ?>" placeholder="juliab@gmail.com">
+	    		<input type="email" class="form-control" id="email" name="email" data-error="Please input a valid email address" required maxlength="75" value="<?php echo old('email'); ?>" placeholder="">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>	
@@ -94,14 +95,14 @@
 		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
 	    		<label for="school">School/College/University *</label>
-	    		<input type="text" class="form-control" id="school" name="school" data-error="Please input this field" required maxlength="75" value="<?php echo old('school'); ?>" placeholder="e.g. De La Salle University">
+	    		<input type="text" class="form-control" id="school" name="school" data-error="Please input this field" required maxlength="75" value="<?php echo old('school'); ?>" placeholder="">
     			<div class="help-block with-errors"></div>
 	  		</div>
 		</div>	
 		<div class="row">
 	  		<div class="form-group col-md-5 col-md-offset-2">
 	    		<label for="course">Undergraduate Course *</label>
-	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="<?php echo old('course'); ?>" placeholder="e.g. BS Communication and Media Studies">
+	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="<?php echo old('course'); ?>" placeholder="">
     			<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">

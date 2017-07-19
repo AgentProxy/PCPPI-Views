@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container">
+<div id="section" class="container">
     <div id="search-header" >
         <div class="row">
             <h3>FIND YOUR CAREER</h3>
@@ -42,7 +42,7 @@
                         <h3>{{$vacancy->description}}</h3>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">
-                        <a href="careers-proform/{{$vacancy->id}}" class="btn btn-warning btn-lg col-xs-offset-1" role="button">View Details</a>
+                        <a href="careers-proform/{{$vacancy->id}}" class="btn btn-cherry btn-lg col-xs-offset-1" role="button">View Details</a>
                     </div>
                 </div>
             </div>

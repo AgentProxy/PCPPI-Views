@@ -1,10 +1,10 @@
 <?php $__env->startSection('content'); ?>
 
-<header class="w3-display-container w3-content w3-center" style="max-width: 1500px; margin-bottom: 5px;">
+<header class="w3-display-container w3-content w3-center" style="max-width: 1500px;">
   <img class="w3-image" src="/img/HOMEbg-1.jpg" alt="header-img" width="1500" height="400">
-  <a id="page-scroll" class="page-scroll" href="#next">
-    <div class="w3-display-bottommiddle w3-hide-small w3-hide-medium">
-    <span class="glyphicon glyphicon-circle-arrow-down" style="text-align: center;"></span></a>
+  <div class="w3-display-bottommiddle w3-hide-small w3-hide-medium">
+    <a id="page-scroll" class="page-scroll" href="#next">
+    <span id="arrow"></span></a>
   </div>
 </header>
 
@@ -44,7 +44,7 @@
             </div>
             </a>
         </div>
-    </div>
+      </div>
 </div>
 
 <script>

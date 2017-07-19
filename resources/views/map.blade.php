@@ -2,10 +2,11 @@
 
 @section('content')
     <div class="container" style="padding-top: 2em;">
-        <h1 class="text-center"> Find Your Career </h1>
+        <h1 class="text-center" style="font-weight: bold"> Find Your Career </h1>
     </div>	
         <form method="GET" action="/careers-search">
             <div id="search-bar" class="container">
+                <div class="row">
                 <div class="form-group col-md-4">
                     <input type="text" class="form-control" name="job" id="job" placeholder="Job">
                 </div>
@@ -18,8 +19,9 @@
                     </select>
                 </div>
                 <div class="col-md-4" id="search">
-                    <input type="submit" value="Search" class="btn btn-primary col-md-12" />
+                    <input type="submit" value="Search" class="btn btn-primary" style="width: 100%;" />
                 </div>
+            </div>
             </div>
         </form>
 		<div id="map" class="container center"></div>
@@ -41,17 +43,17 @@
         	['Central Luzon',15.070145,120.649044,2],
         	['Modern Trade Operations',14.5881219,121.0439725,3],
         	['Metro Operations',14.4042525,121.04696360000003,4],
-            ['Head Office',14.4042525,121.04696360000003,4],
-            ['Metro Sales',14.4042525,121.04696360000003,4],
-        	['Southern Tagalog Region Operations',14.1007803,121.0793705,5],
-        	['Bicol Region Operations',13.4209885,123.4136736,6],
-        	['Iloilo',10.75844,122.50033740000003,7],
-        	['Tanuan',11.1022234,125.02005699999995,8],
-        	['Cebu',10.239339,123.79384800000003,9],
-        	['Bacolod',10.7050794,122.96313710000004,10],
-        	['Cagayan De Oro',8.494784,124.74618099999998,11],
-        	['Zamboanga',6.965789999999999,122.14028099999996,12],
-        	['Davao',7.030481361402168,125.51293283700943,13]
+            ['Head Office',14.4042525,121.04696360000003,5],
+            ['Metro Sales',14.4042525,121.04696360000003,6],
+        	['Southern Tagalog Region Operations',14.1007803,121.0793705,7],
+        	['Bicol Region Operations',13.4209885,123.4136736,8],
+        	['Iloilo',10.75844,122.50033740000003,9],
+        	['Tanuan',11.1022234,125.02005699999995,10],
+        	['Cebu',10.239339,123.79384800000003,11],
+        	['Bacolod',10.7050794,122.96313710000004,12],
+        	['Cagayan De Oro',8.494784,124.74618099999998,13],
+        	['Zamboanga',6.965789999999999,122.14028099999996,14],
+        	['Davao',7.030481361402168,125.51293283700943,15]
         ];
 
         var contents = [

@@ -307,14 +307,12 @@
 			    <div class="help-block with-errors"></div>
 			</div>
 			<div class="form-group col-md-3">
-				<label for="loc"><br>Preferred Location *</label>
+				<label for="loc"><br>Preferred Region *</label>
 				<select class="form-control" id="loc" name="loc" required>
 				<option selected disabled value="">--</option>
-			        <option>Region 1</option>
-			        <option>Region 2</option>
-			        <option>Region 3</option>
-			        <option>Region 4</option>
-			        <option>Region 5</option>
+					<?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+			        <option value="<?php echo e($region->name); ?>"><?php echo e($region->name); ?></option>
+			        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			    </select>
 			    <div class="help-block with-errors"></div>
 			</div>

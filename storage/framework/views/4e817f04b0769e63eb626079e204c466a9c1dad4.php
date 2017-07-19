@@ -16,32 +16,22 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<a href="<?php echo e(URL::previous()); ?>" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
+		<a href="<?php echo e(URL::previous()); ?>" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
 	</div>
 	<div class="row">
 		<h1 id="title"><?php echo e($vacancy->position); ?></h1>
-		<h3 id="title">Location</h3>
+		<h3 id="title"><?php echo e($region->name); ?></h3>
 		<h3 id="title"><?php echo e($vacancy->description); ?></h3>
 	</div>
 	<div class="row">
 		<h3>Main Responsibility</h3>
 		<?php echo e($vacancy->responsibilities); ?>
 
-		<!-- <ul>
-  			<li>Responsibility 1</li>
-  			<li>Responsibility 2</li>
-  			<li>Responsibility 3</li>
-		</ul> -->
 	</div>
 	<div class="row">
 		<h3>Qualifications</h3>
 		<?php echo e($vacancy->qualifications); ?>
 
-		<!-- <ul>
-  			<li>Qualification 1</li>
-  			<li>Qualification 2</li>
-  			<li>Qualification 3</li>
-		</ul> -->
 	</div>
 	<div class="row">
 		<div>
@@ -71,10 +61,14 @@
 		</div>
 	</div>
 
-	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/1" data-toggle="validator" enctype="multipart/form-data">	
+	<form name="proform" id='i-recaptcha' action="/form_validation/1/<?php echo e($vacancy->id); ?>" method="POST" data-toggle="validator" enctype="multipart/form-data">	
 		<?php echo e(csrf_field()); ?>
 
-		<input type="text" value="1" name="form_type" style="display: none;">
+		
+		<input type="text" value="1" name="form_type" style="display: none;"/>
+		<input type="text" value="<?php echo e($vacancy->position); ?>" name="position_applied" hidden/>
+		<input type="text" value="<?php echo e($region->name); ?>" name="desired_region" hidden/>	
+
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
@@ -93,10 +87,6 @@
 	    		<input type="text" class="form-control" name="present" id="present" data-error="Please input your present address" required maxlength="150" value="<?php echo old('present'); ?>" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
-	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip1">Zip Code</label>
-	    		<input type="text" class="form-control" name="zip1" id="zip1" maxlength="6" value="<?php echo old('zip1'); ?>">
-	  		</div>  -->
  		</div>
  		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
@@ -104,13 +94,8 @@
 	    		<input type="text" class="form-control" name="prov" id="prov" data-error="Please input your provincial address" required maxlength="150" value="<?php echo old('prov'); ?>" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip2">Zip Code</label>
-	    		<input type="text" class="form-control" name="zip2" id="zip1" maxlength="6" value="<?php echo old('zip2'); ?>">
-	  		</div> --> 
 		</div>
 		<div class="row">
-
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="bday">Date of Birth *</label>
 	    		<input type="date" class="form-control datepicker" id="bday" name="bday" data-error="Please input your birthdate" required value="<?php echo old('bday'); ?>" placeholder="e.g. July 29, 1998">
@@ -261,7 +246,6 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
-	
 		<div id="forms-section" class="row">
 			<h3 class="col-md-4 col-md-offset-2">WORK HISTORY</h3>
 		</div>
@@ -325,10 +309,13 @@
 			<div class="form-group col-md-2 col-md-offset-2">
 				<br/>
 				<label for="reloc">Willing to relocate? *</label><br />
-			    <form class="form-control" name="reloc" id="reloc" required>
-			    	<input type="radio" name="relocate" value="Yes" /> Yes <br />
-			    	<input type="radio" name="relocate" value="No" /> No <br />
-			    </form>
+			    	<label for="yes"> 
+				    	<input id="yes" type="radio" name="reloc" value="Yes" required/> 
+				    	Yes
+			    	</label>
+			    	<label for="no">
+			    		<input id="no" type="radio" name="reloc" value="No" required/> No <br />
+			    	</label>
 			    <div class="help-block with-errors"></div>
 			</div>
 		</div>
@@ -351,28 +338,6 @@
 </div>
 
 <!-- HTML Templates -->
-	<!-- Start of Work History Template-->
-
-			<div id="work-history-0" style="display: none;">
-		  		<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="company">Company Name</label>
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
-		  		</div>
-		  		<div class="form-group col-md-4 col-md-offset-2">
-		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
-		  		</div>
-		  		<div class="form-group col-md-2">
-		    		<label for="frdate">From</label>
-		    		<input type="date" class="form-control" name="frdate[]" id="frdate">
-		  		</div>
-		  		<div class="form-group col-md-2">
-		    		<label for="todate">To</label>
-		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
-		  		</div>
-	  		</div>  
-	  	<!-- End of Work History Template-->
 	  	<!-- Start of Skills Template -->
 	  		<div id="skill-0" style="display: none">
 				<input type="text" name="skills[]" value="" style="display: none">
