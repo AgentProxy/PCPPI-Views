@@ -209,11 +209,12 @@
 		</div>
 		<div id="forms-section" class="row">
 			<h3 class="col-md-6 col-md-offset-2">CHARACTER REFERENCES</h3>
-			<p class="col-md-6 col-md-offset-2">(Please input all three character references)</p>
+			<p class="col-md-6 col-md-offset-2">(Please input <b>three</b> character references)</p>
 		</div>
 		
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
+				<label>(1)</label>
 	    		<label for="name1">Name *</label>
 	    		<input type="text" class="form-control" name="name1" id="name1" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('name1') !!}">
 	    		<div class="help-block with-errors"></div>
@@ -229,36 +230,40 @@
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
+		<hr class="visible-sm visible-xs" />
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
-	    		<label for="name2" id="relation">Name *</label>
+				<label>(2)</label>
+	    		<label for="name2">Name *</label>
 	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('name2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
-	    		<label for="num2" id="relation">Contact Number *</label>
+	    		<label for="num2">Contact Number *</label>
 	    		<input type="text" class="form-control" id="num2" name="num2" placeholder="" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
-	    		<label for="rel2" id="relation">Relationship *</label>
+	    		<label for="rel2">Relationship *</label>
 	    		<input type="text" class="form-control" name="rel2" id="rel2" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('rel2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
+		<hr class="visible-sm visible-xs" />
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
-	    		<label for="name3" id="relation">Name *</label>
+				<label>(3)</label>
+	    		<label for="name3">Name *</label>
 	    		<input type="text" class="form-control" name="name3" id="name3" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('name3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
-	    		<label for="num3" id="relation">Contact Number *</label>
+	    		<label for="num3">Contact Number *</label>
 	    		<input type="text" class="form-control" name="num3" id="num3" placeholder="" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
-	    		<label for="rel3" id="relation">Relationship *</label>
+	    		<label for="rel3">Relationship *</label>
 	    		<input type="text" class="form-control" name="rel3" id="rel3" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('rel3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
@@ -338,13 +343,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<h5 class="col-md-4 col-md-offset-2">Attach Resume (.doc, .docx, .pdf) *</h5>
+			<h5 class="col-md-4 col-md-offset-2">Attach Resume * <small>(.doc, .docx, .pdf)</small></h5>
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
-				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
+				<button class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
 						<input type="file" id="resume" name="resume" style="display: none" required value="{!! old('resume') !!}"/>	
-				</label>
+				</button>
 				<p> Uploaded File: <span id="uploaded-file"> </span></p>
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 			</div>
