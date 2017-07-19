@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Http\Controllers\Traits\BreadRelationshipParser;
-
+use Carbon\Carbon;
 class VoyagerBreadController extends Controller
 {
     use BreadRelationshipParser;
@@ -160,7 +160,6 @@ class VoyagerBreadController extends Controller
         $slug = $this->getSlug($request);
 
         $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
-
         // Check permission
         Voyager::canOrFail('edit_'.$dataType->name);
 
@@ -175,6 +174,7 @@ class VoyagerBreadController extends Controller
             $data = call_user_func([$dataType->model_name, 'findOrFail'], $id);
 
             $this->insertUpdateData($request, $slug, $dataType->editRows, $data);
+            
 
             return redirect()
             ->route("voyager.{$dataType->slug}.edit", ['id' => $id])

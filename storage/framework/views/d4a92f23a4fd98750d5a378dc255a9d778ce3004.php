@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 		<h1 class="text-center"> Find Your Career </h1>
-        <form method="GET" action="/careers-search">
+        <form method="GET" action="/careers-retrieve">
             <div id="search-bar" class="container">
                 <div class="form-group col-md-4">
                     <input type="text" class="form-control" name="job" id="job" placeholder="Job">
@@ -26,10 +26,7 @@
         map = new google.maps.Map(document.getElementById('map'), { 	
 	        	center: philippines,
 	        	zoom: 6
-                // disableDoubleClickZoom: true
         });
-
-        // setMarkers(map);
 
         var regions = [
         	['Cagayan Valley Operations',16.9679036,121.77049050000005,0],
@@ -39,24 +36,23 @@
         	['Metro Operations',14.4042525,121.04696360000003,4],
             // ['Head Office',14.4042525,121.04696360000003,5],
             // ['Metro Sales',14.4042525,121.04696360000003,6],
-        	['Southern Tagalog Region Operations',14.1007803,121.0793705,7],
-        	['Bicol Region Operations',13.4209885,123.4136736,8],
-        	['Iloilo',10.75844,122.50033740000003,9],
-        	['Tanuan',11.1022234,125.02005699999995,10],
-        	['Cebu',10.239339,123.79384800000003,11],
-        	['Bacolod',10.7050794,122.96313710000004,12],
-        	['Cagayan De Oro',8.494784,124.74618099999998,13],
-        	['Zamboanga',6.965789999999999,122.14028099999996,14],
-        	['Davao',7.030481361402168,125.51293283700943,15],
-            ['Cabuyao', 14.23326,121.10077100000001,16]
+        	['Southern Tagalog Region Operations',14.1007803,121.0793705,5],
+        	['Bicol Region Operations',13.4209885,123.4136736,6],
+        	['Iloilo',10.75844,122.50033740000003,7],
+        	['Tanuan',11.1022234,125.02005699999995,8],
+        	['Cebu',10.239339,123.79384800000003,9],
+        	['Bacolod',10.7050794,122.96313710000004,10],
+        	['Cagayan De Oro',8.494784,124.74618099999998,11],
+        	['Zamboanga',6.965789999999999,122.14028099999996,12],
+        	['Davao',7.030481361402168,125.51293283700943,13],
+            ['Cabuyao', 14.23326,121.10077100000001,14]
         ];
 
         var contents = [
-        	'<h4> Cagayan Valley Operations </h4><a href="/careers-search/1"><h5><?php echo e(count($vacancies->where("region_id",1))); ?> Vacancies</h5></a>',
-        	'<h4> North Luzon Operations </h4><a href="/careers-search/2"><h5><?php echo e(count($vacancies->where("region_id",2))); ?> Vacancies</h5></a>',
-        	'<h4> Central Luzon </h4><a href="/careers-search/3"><h5><?php echo e(count($vacancies->where("region_id",3))); ?> Vacancies</h5></a>',
-        	'<h4> Modern Trade Operations </h4><a href="/careers-search/4"><h5><?php echo e(count($vacancies->where("region_id",4))); ?> Vacancies</h5></a>',
-
+        	'<h4> Cagayan Valley Operations </h4><a href="/careers-retrieve/1"><h5><?php echo e(count($vacancies->where("region_id",1))); ?> Vacancies</h5></a>',
+        	'<h4> North Luzon Operations </h4><a href="/careers-retrieve/2"><h5><?php echo e(count($vacancies->where("region_id",2))); ?> Vacancies</h5></a>',
+        	'<h4> Central Luzon </h4><a href="/careers-retrieve/3"><h5><?php echo e(count($vacancies->where("region_id",3))); ?> Vacancies</h5></a>',
+        	'<h4> Modern Trade Operations </h4><a href="/careers-retrieve/4"><h5><?php echo e(count($vacancies->where("region_id",4))); ?> Vacancies</h5></a>',
         	'<h4> Metro Operations </h4><a href="/careers-search/5"><h5><?php echo e(count($vacancies->where("region_id",5))); ?> Vacancies</h5></a> <hr/> <h4> Head Office </h4><a href="/careers-search/6"><h5><?php echo e(count($vacancies->where("region_id",6))); ?> Vacancies</h5></a> <hr /> <h4> Metro Sales </h4><a href="/careers-search/7"><h5><?php echo e(count($vacancies->where("region_id",7))); ?> Vacancies</h5></a>',
 
             // '<h4> Head Office </h4><a href="/careers-search/6"><h5><?php echo e(count($vacancies->where("region_id",8))); ?> Vacancies</h5></a>',
@@ -72,45 +68,6 @@
         	'<h4> Davao </h4><a href="/careers-search/16"><h5><?php echo e(count($vacancies->where("region_id",16))); ?> Vacancies</h5></a>',
             '<h4> Cabuyao </h4><a href="/careers-search/17"><h5><?php echo e(count($vacancies->where("region_id",17))); ?> Vacancies</h5></a>'
         ];
-
-        // var regions = [
-        //     ['Cagayan Valley Operations',16.9679036,121.77049050000005,0],
-        //     ['North Luzon Operations',16.2151433,120.50037500000008,1],
-        //     ['Central Luzon',15.070145,120.649044,2],
-        //     ['Modern Trade Operations',14.5881219,121.0439725,3],
-        //     ['Metro Operations,Head Office,Metro Sales',14.4042525,121.04696360000003,4],
-        //     // ['Head Office',14.4042525,121.04696360000003,5],
-        //     // ['Metro Sales',14.4042525,121.04696360000003,6],
-        //     ['Southern Tagalog Region Operations',14.1007803,121.0793705,7],
-        //     ['Bicol Region Operations',13.4209885,123.4136736,8],
-        //     ['Iloilo',10.75844,122.50033740000003,9],
-        //     ['Tanuan',11.1022234,125.02005699999995,10],
-        //     ['Cebu',10.239339,123.79384800000003,11],
-        //     ['Bacolod',10.7050794,122.96313710000004,12],
-        //     ['Cagayan De Oro',8.494784,124.74618099999998,13],
-        //     ['Zamboanga',6.965789999999999,122.14028099999996,14],
-        //     ['Davao',7.030481361402168,125.51293283700943,15]
-        // ];
-
-        // var contents = [
-        //     '<h4> Cagayan Valley Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> North Luzon Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Central Luzon </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Modern Trade Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Metro Operations </h4><a href=#><h5>0 Vacancies</h5></a><hr/><h4> Head Office </h4><a href=#><h5>0 Vacancies</h5></a><hr/><h4> Metro Sales </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Southern Tagalog Region Operations </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Bicol Region Operations</h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Iloilo </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Tanuan </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Cebu </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Bacolod </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Cagayan De Oro </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Zamboanga </h4><a href=#><h5>0 Vacancies</h5></a>',
-        //     '<h4> Davao </h4><a href=#><h5>0 Vacancies</h5></a>'
-        // ];
-        // var infowindow = new google.maps.InfoWindow({
-        // 	content: "0 Vacancies"
-        // });
 
         var infowindow = new google.maps.InfoWindow();
         var marker,i;

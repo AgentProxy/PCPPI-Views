@@ -1,8 +1,8 @@
 $(document).ready(function(){
   $(document).on("change", "#resume", check_upload);
   $(document).on("submit", "#i-recaptcha", check);
-  $(document).on("click",".add-work", add_work);
-  $(document).on("click",".delete-work", delete_work);
+  // $(document).on("click",".add-work", add_work);
+  // $(document).on("click",".delete-work", delete_work);
   $(document).on("click",".delete-skill", delete_skill);
   $(document).on("click",".add-skill", add_skill);
 })
@@ -55,29 +55,12 @@ function check_upload(){
   return false;
 }
 
-function add_work(){
-  i = document.getElementsByClassName('work-history');
-  $('#work-history-0').clone().attr('id','work-history-'+(i.length+1)).insertAfter('#work-history-' + (i.length));
-  $("#work-history-"+(i.length+1)).attr('class', 'work-history');
-  $("#work-history-"+(i.length)).css("display", "block");
-  
-}
-
-function delete_work(){
-  $(this).parent().parent().remove();
-  i = document.getElementsByClassName('work-history');
-  for(x=0;x<i.length;x++){
-    i[x].id = "work-history-" + (x+1);
-  }
-}
-
 function add_skill(){
   skill = document.getElementById('skill');
   if(skill.value != ""){
     i = document.getElementsByClassName('skills');
     $('#skill-0').clone().attr('id','skill-'+(i.length+1)).insertAfter('#skill-' + (i.length));
     $("#skill-"+(i.length+1)).attr('class', 'checkbox skills');
-    //document.getElementById("work-history-"+(i.length))
     $("#skill-"+(i.length)).css("display", "block");
     (skill.value).replace(/</g, "&lt;").replace(/>/g, "&gt;");
     document.getElementById('skill-'+(i.length)).firstChild.nextSibling.value = skill.value;
