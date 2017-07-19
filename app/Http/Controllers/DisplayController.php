@@ -18,8 +18,6 @@ class DisplayController extends Controller
 	    if($vacancy == null){
 	    	abort(404, 'The vacancy you are looking is not available');
 	    }
-	    //$region = Region::where('id',$vacancy->region_id)->first();
-	   
 	    return view('proform',compact("vacancy"));
 	}
 
@@ -36,12 +34,10 @@ class DisplayController extends Controller
 	function mapRetrieve(){
 		$regions = Region::all();
 		$vacancies = Vacancy::where('closed',0)->get();
-		//return ($regions);
 		return view('map',compact("regions","vacancies"));
 	}
 
 	function search(Request $request,$reg_id=null){
-		//return $request->job;
 		$vacancies = Vacancy::where('closed',0)->paginate(10);
 		$regions = Region::all();
 		if($request!=null){

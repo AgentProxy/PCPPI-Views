@@ -21,19 +21,9 @@ Route::get('/careers-home', function () {
 
 Route::get('/careers-internform', 'DisplayController@internform');
 
-// Route::get('/careers-proform', function () {
-//     return view('proform');
-// });
-
 Route::get('/careers-proform/{id}','DisplayController@vacancy');
 
 Route::post('/form_validation/{form_type}/{job_id?}', 'FormController@sendApplication');
-
-// Route::post('/form_validation', ['as' => 'validate',  'uses' => 'FormController@sendApplication']);
-
-// Route::get('/careers-search', function () {
-//     return view('careersearch');
-// });
 
 Route::get('/careers-search','DisplayController@search');
 
@@ -46,10 +36,6 @@ Route::get('/careers-success', function () {
 });
 
 Route::get('/careers-bankform', 'DisplayController@bankform');
-
-// Route::get('/careers-map', function () {
-//     return view('map');
-// });
 
 Route::get('/careers-map','DisplayController@mapRetrieve');
 

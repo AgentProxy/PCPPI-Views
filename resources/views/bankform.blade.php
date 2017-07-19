@@ -359,7 +359,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h2 style="text-align: center"> Data Privacy Policy </h2>
-				<textarea class="center-block" readonly="true" rows="10" cols="100">
+				<textarea class="center-block col-md-6 col-md-offset-4" readonly="true" rows="10" >
 				By clicking “Submit” I agree that:
 				I have read and accepted the User Agreement and Privacy Policy.
 				I may receive communications from eBay and can change my notification preferences in My eBay.
@@ -367,14 +367,15 @@
 				</textarea>
 			</div>
 		</div>
-		<!-- <div class="row">
+		<div class="row">
 			<div class="col-md-4 col-md-offset-2" style="margin-left: 210px;">
-				<p style="font-weight: bold;"> 
-					<input id="agree" type="checkbox" required>
+					<label for="agree">
+					<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
 					I have read and agreed 
-				</p>
+					</label>
+					<div class="help-block with-errors"></div>
 			</div>
-		</div> -->
+		</div>
 		<br/>
 		<br/> 
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>

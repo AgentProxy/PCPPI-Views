@@ -19,9 +19,7 @@ class FormController extends Controller
                 'fname' => 'required|max:75',
                 'lname' => 'required|max:75',
                 'present' => 'required|max:150',
-                // 'zip1' => 'max:6',
                 'prov' => 'required|max:150',
-                // 'zip2' => 'max:6',
                 'bday'=> 'required|date',
                 'phone'=> 'required|max:11|regex:/^0\d{10}$/',
                 'email'=> 'required|email|max:75',
@@ -44,7 +42,8 @@ class FormController extends Controller
                 'company.*' => 'max:75',
                 'position.*' => 'max:75',
                 'reloc'=>'required',
-                'resume'=>'required|file|mimes:doc,pdf,docx|max:2048'
+                'resume'=>'required|file|mimes:doc,pdf,docx|max:2048',
+                'agree'=>'required'
 
             ]);
         }
@@ -54,9 +53,7 @@ class FormController extends Controller
                 'fname' => 'required|max:75',
                 'lname' => 'required|max:75',
                 'present' => 'required|max:150',
-                // 'zip1' => 'max:6',
                 'prov' => 'required|max:150',
-                // 'zip2' => 'max:6',
                 'bday'=> 'required|date',
                 'phone'=> 'required|max:11|regex:/^0\d{10}$/',
                 'email'=> 'required|email|max:75',
@@ -83,7 +80,8 @@ class FormController extends Controller
                 'dept' => 'required',
                 'loc' => 'required',
                 'reloc'=>'required',
-                'resume'=>'required|file|mimes:doc,pdf,docx|max:2048'
+                'resume'=>'required|file|mimes:doc,pdf,docx|max:2048',
+                'agree'=>'required'
             ]);
         }
         else if($form_type=='3'){
@@ -92,9 +90,7 @@ class FormController extends Controller
                 'fname' => 'required|max:75',
                 'lname' => 'required|max:75',
                 'present' => 'required|max:150',
-                // 'zip1' => 'max:6',
                 'prov' => 'required|max:150',
-                // 'zip2' => 'max:6',
                 'bday'=> 'required|date',
                 'phone'=> 'required|max:11|regex:/^0\d{10}$/',
                 'email'=> 'required|email|max:75',
@@ -104,7 +100,8 @@ class FormController extends Controller
                 'level'=>'required',
                 'sem'=>'required',
                 'hrs'=>'required',
-                'resume'=>'required|mimes:doc,pdf,docx|max:2048'
+                'resume'=>'required|mimes:doc,pdf,docx|max:2048',
+                'agree'=>'required'
             ]);
         }
 

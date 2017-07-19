@@ -231,7 +231,7 @@
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name2" id="relation">Name *</label>
-	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="<?php echo old('name2'); ?>">
+	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="e.g. Jane Doe" data-error="Please input this field" maxlength="75" value="<?php echo old('name2'); ?>" required>
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
@@ -350,7 +350,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h2 style="text-align: center"> Data Privacy Policy </h2>
-				<textarea class="center-block" readonly="true" rows="10" cols="100">
+				<textarea class="center-block col-md-6 col-md-offset-4" readonly="true" rows="10" >
 				By clicking “Submit” I agree that:
 				I have read and accepted the User Agreement and Privacy Policy.
 				I may receive communications from eBay and can change my notification preferences in My eBay.
@@ -360,10 +360,11 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2" style="margin-left: 210px;">
-				<p style="font-weight: bold;"> 
-					<input id="agree" type="checkbox" required>
+					<label for="agree">
+					<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
 					I have read and agreed 
-				</p>
+					</label>
+					<div class="help-block with-errors"></div>
 			</div>
 		</div>
 		<br/>
