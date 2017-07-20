@@ -13,10 +13,10 @@
 
     <!-- Styles -->
     <?php echo $__env->yieldContent('head'); ?>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
-    <link href="/css/scrolling-nav.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
         <style type="text/css">
@@ -630,6 +630,14 @@
 
         
     </style>
+=======
+    <link rel="stylesheet" type="text/css" href="/css/social.css">
+    <link rel="stylesheet" type="text/css" href="/css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="/css/w3schools.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/css/scrolling-nav.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+>>>>>>> 3db04fbe34b8461db2fbb7f851baf9fe56a66210
 
     <!-- Scripts -->
     <!-- <script src="<?php echo e(asset('js/app.js')); ?>"></script> -->
@@ -661,7 +669,7 @@
 
 
 </head>
-<body id="page-top">
+<body id="page-top" class="bg-grey">
     <div id="app" >
         <nav class="navbar">
             <div class="container-fluid">
@@ -685,7 +693,7 @@
                         <li class="dropdown clearfix">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
                             <ul id="dropdown-menu" class="dropdown-menu">
-                                 <li class="active"><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Main Website Home</a></li>
+                                 <li><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Main Website Home</a></li>
                                 <li><a href="https://www.pepsiphilippines.com/company.php" target="_blank">Our Company</a></li>
                                 <li><a href="https://www.pepsiphilippines.com/products.php" target="_blank">Products</a></li>
                             </ul>
@@ -737,38 +745,24 @@
         </div>
     </noscript>
 
-    <footer class="text-center" >
-        <div class="container" >
-            <div style="margin-left: 11%; padding-bottom: 10px;">
-                <a style="text-decoration: none;" href="https://www.pepsiphilippines.com/index.php">
-                    <img class="logo-footer responsive" id="logo-footer" src="/img/1.png" />
-                </a>
-                <span class="" style="position: relative; left: 10%;">
-                <a style="text-decoration: none;" href="https://www.facebook.com/PepsiPhilippines">
-                    <img id="linkedin-link" class="footer-links" src="/img/fb.png" />
-                </a> 
-                <a href="http://bit.ly/CareersatPCPPI" style="margin-left: 2%;">
-                    <img id="fb-link" class="footer-links" src="/img/linkedin.png"  />
-                </a> 
-                </span>  
+    <footer class="container text-center" style="margin: 0; width: 100%;">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3"> 
+            <p>      
+                <span style="text-decoration: none; margin-bottom: 4em;" href="https://www.pepsiphilippines.com/index.php">
+                    <img class="logo-footer" id="logo-footer" src="/img/Pepsi-logo.png" />
+                </span>
+            </p>
+            
+            <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </p>
             </div>
-            <p> Contact us at: careers@pcppi.com.ph </p>
-            <p> Copyright © 2017. Pepsi-Cola Products Philippines, Inc. All Rights Reserved. </p>
+            <div class="col-xs-3" id="social" style="">
+                    <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
+                    <a href="http://bit.ly/CareersatPCPPI" class="fa fa-linkedin" style="margin-left: 2%;">
+                    </a> 
+            </div> 
         </div> 
     </footer>
-
-    <script type="text/javascript">
-         // Add slideDown animation to Bootstrap dropdown when expanding.
-        $('.dropdown').on('show.bs.dropdown', function(e) {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-      });
-
-          // Add slideUp animation to Bootstrap dropdown when collapsing.
-        $('.dropdown').on('hide.bs.dropdown', function(e) {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-      });
-    </script>
-
 </body>
 </html>
 

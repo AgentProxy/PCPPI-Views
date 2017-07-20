@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<div class="container">
+<div id="section" class="container">
     <div id="search-header" >
         <div class="row">
             <h3>FIND YOUR CAREER</h3>
@@ -39,7 +39,7 @@
                         <h3><?php echo e($vacancy->description); ?></h3>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">
-                        <a href="/careers-proform/<?php echo e($vacancy->id); ?>" class="btn btn-primary btn-lg col-xs-offset-1" role="button">View Details</a>
+                        <a href="careers-proform/<?php echo e($vacancy->id); ?>" class="btn btn-view btn-cherry btn-lg col-xs-offset-1" role="button">View Details</a>
                     </div>
                 </div>
             </div>

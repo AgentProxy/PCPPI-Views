@@ -36,7 +36,6 @@ abstract class Controller extends BaseController
     public function insertUpdateData($request, $slug, $rows, $data)
     {
         $multi_select = [];
-
         /*
          * Prepare Translations and Transform data
          */
@@ -78,26 +77,8 @@ abstract class Controller extends BaseController
                 $data->{$row->field} = $content;
             }
 
-            /*
-            Customized Methods
-            */
-            if($slug=="vacancies"){
-                if($row->field == 'creator_id'){
-                    $data->{$row->field} = Auth::user()->id;
-                }
-               // return Auth::user()->id;
-            }
-
-
-            /*
-
-
-            */
-
-
         }
 
-        
         $data->save();
 
         // Save translations
