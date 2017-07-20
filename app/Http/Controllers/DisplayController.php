@@ -14,7 +14,7 @@ class DisplayController extends Controller
     //
 
     function vacancy($id){
-	    $vacancy = Vacancy::where('id',$id)->first();
+	    $vacancy = Vacancy::where('id',$id)->('closed',0)->first();
 	    if($vacancy == null){
 	    	abort(404, 'The vacancy you are looking is not available');
 	    }
