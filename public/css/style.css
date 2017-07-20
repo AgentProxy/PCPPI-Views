@@ -12,6 +12,13 @@ body,html{
     height: 100%;
 }
 
+pre{
+    background-color: transparent;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
 #bank{
     text-decoration: underline;
     color: #c9002b; 

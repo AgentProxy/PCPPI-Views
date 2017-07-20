@@ -47,7 +47,10 @@
 	</div>
 	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/2" data-toggle="validator" enctype="multipart/form-data">	
 		{{ csrf_field() }}
-		<input type="text" value="2" name="form_type" style="display: none;">
+
+		<input type="text" value="2" name="form_type" style="display: none;"/>
+		<input type="text" value="Talent Bank" name="applicant_type" style="display: none;"/>
+
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
@@ -66,10 +69,6 @@
 	    		<input type="text" class="form-control" name="present" id="present" data-error="Please input your present address" required maxlength="150" value="{!! old('present') !!}" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
-	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip1">Zip</label>
-	    		<input type="text" class="form-control" name="zip1" id="zip1" maxlength="6" value="{!! old('zip1') !!}">
-	  		</div> -->
  		</div>
  		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
@@ -77,10 +76,6 @@
 	    		<input type="text" class="form-control" name="prov" id="prov" data-error="Please input your provincial address" required maxlength="150" value="{!! old('prov') !!}" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip2">Zip</label>
-	    		<input type="text" class="form-control" name="zip2" id="zip2" maxlength="6" value="{!! old('zip2') !!}">
-	  		</div> --> 
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
@@ -304,14 +299,12 @@
 		</div>   		
 		<div class="row">
 			<div class="form-group col-md-4 col-md-offset-2">
-				<label for="dept"><br>Preferred Department *</label>
-				<select class="form-control" id="dept" name="dept" required>
+				<label for="funct"><br>Preferred Function *</label>
+				<select class="form-control" id="funct" name="funct" required>
 					<option selected disabled value="">--</option>
-			        <option>Department 1</option>
-			        <option>Department 2</option>
-			        <option>Department 3</option>
-			        <option>Department 4</option>
-			        <option>Department 5</option>
+					@foreach($functions as $function)
+			        <option value="{{$function->name}}">{{$function->name}}</option>
+			        @endforeach
 			    </select>
 			    <div class="help-block with-errors"></div>
 			</div>
@@ -377,7 +370,6 @@
 		<br/>
 		<br/> 
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
-		<!-- {!! Recaptcha::render() !!} -->
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
 </div>

@@ -1,15 +1,15 @@
 <?php $__env->startSection('content'); ?>
-<div class="container">
+<div id="section" class="container">
     <div id="search-header" >
         <div class="row">
             <h3>FIND YOUR CAREER</h3>
         </div>
         <div class="row">
             <form method="GET" action="/careers-search">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <input type="text" class="form-control" name="job" id="job" placeholder="Job" value="<?php echo old('job'); ?>">
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <select class="form-control" id="region" name="region">
                         <option value="0" >All Regions</option>
                         <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -17,7 +17,15 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                 </div>
-                <div class="col-md-4">
+                <div class="form-group col-md-3">
+                    <select class="form-control" id="function" name="function">
+                        <option value="0" >All Functions</option>
+                        <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($region->id); ?>" <?php if($region_id==$region->id): ?> selected="selected" <?php endif; ?>><?php echo e($region->name); ?></option>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </select>
+                </div>
+                <div class="col-md-3">
                     <input type="submit" class="btn btn-primary col-md-12" value="Search" />
                 </div>
             </form>
@@ -39,7 +47,7 @@
                         <h3><?php echo e($vacancy->description); ?></h3>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">
-                        <a href="/careers-proform/<?php echo e($vacancy->id); ?>" class="btn btn-primary btn-lg col-xs-offset-1" role="button">View Details</a>
+                        <a href="careers-proform/<?php echo e($vacancy->id); ?>" class="btn btn-view btn-cherry btn-lg col-xs-offset-1" role="button">View Details</a>
                     </div>
                 </div>
             </div>

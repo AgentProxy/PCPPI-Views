@@ -23,27 +23,13 @@
     <link rel="stylesheet" type="text/css" href="/css/scrolling-nav.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-    <!-- Scripts -->
-    <!-- <script src="{{ asset('js/app.js') }}"></script> -->
-    <!-- <script type="text/javascript" src="/js/js.js"></script>
-    <script type="text/javascript" src="/js/script.js"></script> -->
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-     <!-- jQuery -->
-    <!-- <script src="js/jquery.js"></script> -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
-
-    <!-- Scrolling Nav JavaScript -->
-    
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    
     <script src="/js/scrolling-nav.js"></script>
     <script src="/js/jquery.easing.min.js"></script>
     <script src="/js/validation/validator.js"></script>
@@ -66,7 +52,6 @@
                     <a class="navbar-brand" href="careers-home">
                     <div class="logo-bar">                        
                         <img class="logo responsive" id="logo" src="/img/small-logo.png" />
-                        <!-- <img class="logo responsive hidden-lg" id="logo" src="/img/small-logo.png" /> -->
                         <span id="pcppi"> Pepsi-Cola Products Philippines, Inc. - Careers </span>
                     </div>
                     </a>
@@ -113,7 +98,6 @@
                         padding-bottom: 75px;
                         padding-top: 75px;
                     }
-
                 </style>
                 <div id="nojs">
                     <div class="row">
@@ -137,7 +121,6 @@
                     <img class="logo-footer" id="logo-footer" src="/img/Pepsi-logo.png" />
                 </span>
             </p>
-            
             <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </p>
             </div>
             <div class="col-xs-3" id="social" style="">

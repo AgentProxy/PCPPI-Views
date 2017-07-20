@@ -33,15 +33,17 @@
 	<div class="row">
 		<h1 id="title">{{$vacancy->position}}</h1>
 		<h3 id="title">{{$vacancy->regions->name}}</h3>
-		<h3 id="title">{{$vacancy->description}}</h3>
+		<h3 id="title">{{$vacancy->functions->name}}</h3>
+		<h4 id="title">{{$vacancy->description}}</h4>
 	</div>
 	<div class="row">
 		<h3>Main Responsibility</h3>
-		{{$vacancy->responsibilities}}
+		
+		<pre>{{$vacancy->responsibilities}}</pre>
 	</div>
 	<div class="row">
 		<h3>Qualifications</h3>
-		{{$vacancy->qualifications}}
+		<pre>{{$vacancy->qualifications}}</pre>
 	</div>
 	<div class="row">
 		<div>
@@ -75,8 +77,11 @@
 		{{ csrf_field() }}
 		
 		<input type="text" value="1" name="form_type" style="display: none;"/>
+		<input type="text" value="Professional" name="applicant_type" style="display: none;"/>
 		<input type="text" value="{{$vacancy->position}}" name="position_applied" hidden/>
-		<input type="text" value="{{$vacancy->regions->name}}" name="desired_region" hidden/>	
+		<input type="text" value="{{$vacancy->regions->name}}" name="desired_region" hidden/>
+		<input type="text" value="{{$vacancy->description}}" name="job_description" hidden/>
+		<input type="text" value="{{$vacancy->functions->name}}" name="desired_function" hidden/>	
 
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">

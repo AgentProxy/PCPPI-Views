@@ -64,6 +64,10 @@
 	</div>
 	<form id='i-recaptcha' method="POST" action="/form_validation/3" data-toggle="validator" enctype="multipart/form-data">
 		{{ csrf_field() }}
+
+		<input type="text" value="3" name="form_type" style="display: none;"/>
+		<input type="text" value="Internship" name="applicant_type" style="display: none;"/>
+
 		<input type="text" value="3" name="form_type" style="display: none;">
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">

@@ -32,6 +32,12 @@
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
+		    	<label for="applicant_type">Applicant Type:</label>
+		    	<h4 class="col-md-offset-3">{{$data['applicant_type']}}</h4>
+		  	</div>
+		</div>
+		<div class="row">
+		  	<div class="form-group col-md-4 col-md-offset-2">
 		    	<label for="fname">First Name:</label>
 		    	<h4 class="col-md-offset-3">{{$data['fname']}}</h4>
 		  	</div>
@@ -42,12 +48,24 @@
 		</div>
 		<div class="row">
 			<div class="form-group col-md-4 col-md-offset-2">
-		    	<label for="fname">Position Applied:</label>
+		    	<label for="position_applied">Position Applied:</label>
 		    	<h4 class="col-md-offset-3">{{$data['position_applied']}}</h4>
 		  	</div>
 		  	<div class="form-group col-md-6">
-		    	<label for="lname">Desired Region:</label>
+		    	<label for="desired_region">Desired Region:</label>
 		    	<h4 class="col-md-offset-2">{{$data['desired_region']}}</h4>
+		  	</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-4 col-md-offset-2">
+		    	<label for="job_description">Job Description:</label>
+		    	<h4 class="col-md-offset-3">{{$data['job_description']}}</h4>
+		  	</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-4 col-md-offset-2">
+		    	<label for="desired_function">Desired Function:</label>
+		    	<h4 class="col-md-offset-3">{{$data['desired_function']}}</h4>
 		  	</div>
 		</div>
 		<div class="row">

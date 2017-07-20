@@ -408,6 +408,7 @@ class ComposerStaticInit64157ee5f103a703b6f65f6b802913e7
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'CategoriesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoriesTableSeeder.php',
         'CreateDataTypesTable' => __DIR__ . '/../..' . '/database/migrations/2016_01_01_000000_create_data_types_table.php',
+        'CreateFunctionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_20_023301_create_functions_table.php',
         'CreateLocationsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_19_063208_create_locations_table.php',
         'CreateMenuTable' => __DIR__ . '/../..' . '/database/migrations/2016_05_19_173453_create_menu_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

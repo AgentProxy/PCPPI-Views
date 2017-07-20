@@ -13,7 +13,15 @@ class Vacancy extends Model
     	return $this->belongsTo(Region::class);
     }
 
+    public function departmentId(){
+    	return $this->belongsTo(Department::class);
+    }
+
     public function regions(){
     	return $this->belongsTo('App\Region','region_id');
+    }
+
+    public function functions(){
+        return $this->belongsTo('App\Department','department_id');
     }
 }

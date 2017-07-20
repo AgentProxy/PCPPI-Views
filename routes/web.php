@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/careers-home', function () {
@@ -24,8 +24,6 @@ Route::get('/careers-internform', 'DisplayController@internform');
 Route::get('/careers-proform/{id}','DisplayController@vacancy');
 
 Route::post('/form_validation/{form_type}/{job_id?}', 'FormController@sendApplication');
-
-Route::get('/careers-search','DisplayController@search');
 
 Route::get('/careers-retrieve','DisplayController@search');
 
