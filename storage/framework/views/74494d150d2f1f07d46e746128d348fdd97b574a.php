@@ -48,6 +48,9 @@
         <h1> No Vacancies Found </h1>
         <?php endif; ?>
     </div>
+    <div style="text-align: center;">
+        <div class="pagination" style="margin: auto;"> <?php echo e($vacancies->links()); ?> </div>
+    </div>
 </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -232,7 +232,7 @@
 
 
             body, h1, h2, h3, h4, li, p, label{
-            font-size: 90%;
+            font-size: 85%;
             }
 
            /* .btn, .btn-danger {
