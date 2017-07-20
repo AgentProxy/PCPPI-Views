@@ -1,9 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
+method="GET" action="/careers-search">
 		<h1 class="text-center"> Find Your Career </h1>
         <form method="GET" action="/careers-retrieve">
             <div id="search-bar" class="container">
+                <div class="row">
                 <div class="form-group col-md-4">
                     <input type="text" class="form-control" name="job" id="job" placeholder="Job">
                 </div>
@@ -16,8 +18,9 @@
                     </select>
                 </div>
                 <div class="col-md-4" id="search">
-                    <input type="submit" value="Search" class="btn btn-primary col-md-12" />
+                    <input type="submit" value="Search" class="btn btn-primary" style="width: 100%;" />
                 </div>
+            </div>
             </div>
         </form>
 		<div id="map" class="container center"></div>

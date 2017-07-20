@@ -16,7 +16,7 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<a href="careers-search" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
+		<a href="careers-search" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
 		<div>
@@ -153,9 +153,10 @@
 	  		</div> 
 		</div>
 		<div class="row">
-			<div class="col-md-offset-2">
+			<div class="col-md-10 col-md-offset-2">
 				<label for="skills">&nbsp;&nbsp;&nbsp; Skills</label> 
-			    <div class="col-md-offset-1">
+				<div class="row">
+			    <div class="col-md-8 col-md-offset-1">
 					<div id="skill-1" class="checkbox skills">
 		  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
 				    </div>
@@ -163,10 +164,7 @@
 				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
 				    </div>
 				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Advanced Computer Skills">Advanced Computer Skills</label>
-				    </div>
-				    <div id="skill-4" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Driving">Driving</label>
+				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
 				    </div>
 				    <div id="skill-4" class="checkbox skills">
 				      <label><input type="checkbox" name="skills[]" value="Programming">Advanced Computer Skills</label>
@@ -177,73 +175,73 @@
 				    <div id="skill-6" class="checkbox skills">
 				      <label><input type="checkbox" name="skills[]" value="Programming">Communication Skills</label>
 				    </div>
-				    <div class="row" id="addskill">
+				    <div class="" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
-					    <button type="button" id="add-skill" class="btn btn-success add-skill">
+					    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
 			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 			    		</button>
 		    		</div>
 		    	</div>
+		    	</div>
 		    </div>
 		</div>
 		<div id="forms-section" class="row">
-			<h4 class="col-md-4 col-md-offset-2">CHARACTER REFERENCES</h4>
+			<h3 class="col-md-6 col-md-offset-2">CHARACTER REFERENCES</h3>
+			<p class="col-md-6 col-md-offset-2">(Please input <b>three</b> character references)</p>
 		</div>
+		
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
 	    		<label for="name1">Name *</label>
-	    		<input type="text" class="form-control" name="name1" id="name1" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="{!! old('name1') !!}">
+	    		<input type="text" class="form-control" name="name1" id="name1" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('name1') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
 	    		<label for="num1">Contact Number *</label>
-	    		<input type="text" class="form-control" name="num1" id="num1" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num1') !!}">
+	    		<input type="text" class="form-control" name="num1" id="num1" placeholder="" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num1') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
 	    		<label for="rel1">Relationship *</label>
-	    		<input type="text" class="form-control" name="rel1" id="rel1" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75" value="{!! old('rel1') !!}">
+	    		<input type="text" class="form-control" name="rel1" id="rel1" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('rel1') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
+		<hr class="visible-sm visible-xs" />
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
-	    		<label for="name2" id="relation">Name *</label>
-	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="{!! old('name2') !!}">
+	    		<label for="name2" class="hidden-lg">Name *</label>
+	    		<input type="text" class="form-control" name="name2" id="name2" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('name2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
-	    		<label for="num2" id="relation">Contact Number *</label>
-	    		<input type="text" class="form-control" id="num2" name="num2" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num2') !!}">
+	    		<label for="num2" class="hidden-lg">Contact Number *</label>
+	    		<input type="text" class="form-control" id="num2" name="num2" placeholder="" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
-	    		<label for="rel2" id="relation">Relationship *</label>
-	    		<input type="text" class="form-control" name="rel2" id="rel2" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75" value="{!! old('rel2') !!}">
+	    		<label for="rel2" class="hidden-lg">Relationship *</label>
+	    		<input type="text" class="form-control" name="rel2" id="rel2" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('rel2') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 		</div>
+		<hr class="visible-sm visible-xs" />
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
-	    		<label for="name3" id="relation">Name *</label>
-	    		<input type="text" class="form-control" name="name3" id="name3" placeholder="e.g. Jane Doe" data-error="Please input this field" required maxlength="75" value="{!! old('name3') !!}">
+	    		<label for="name3" class="hidden-lg">Name *</label>
+	    		<input type="text" class="form-control" name="name3" id="name3" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('name3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-2">
-	    		<label for="num3" id="relation">Contact Number *</label>
-	    		<input type="text" class="form-control" name="num3" id="num3" placeholder="e.g. 09123456789" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num3') !!}">
+	    		<label for="num3" class="hidden-lg">Contact Number *</label>
+	    		<input type="text" class="form-control" name="num3" id="num3" placeholder="" pattern="0\d{10}" data-error="Please input a valid mobile number" required maxlength="75" value="{!! old('num3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
 	  		<div class="form-group col-md-3">
-	    		<label for="rel3" id="relation">Relationship *</label>
-	    		<input type="text" class="form-control" name="rel3" id="rel3" placeholder="e.g. College Teacher" data-error="Please input this field" required maxlength="75" value="{!! old('rel3') !!}">
+	    		<label for="rel3" class="hidden-lg">Relationship *</label>
+	    		<input type="text" class="form-control" name="rel3" id="rel3" placeholder="" data-error="Please input this field" required maxlength="75" value="{!! old('rel3') !!}">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6 col-md-offset-2">
-				<h5>Please input all three character references.</h5>
-			</div>
 		</div>
 		<div id="forms-section" class="row">
 			<h4 class="col-md-4 col-md-offset-2">WORK HISTORY</h4>
@@ -344,7 +342,7 @@
 		</div>
 		<div class="row">
 			<div>
-				<h4 class="col-md-4 col-md-offset-2">Attach Resume *</h4>
+				<h5 class="col-md-4 col-md-offset-2">Attach Resume * <small>(.doc, .docx, .pdf)</small></h5>
 			</div>
 		</div>
 		<div class="row">
