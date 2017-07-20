@@ -16,7 +16,7 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<a href="careers-search" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
+		<a href="{{ URL::previous() }}" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
 		<div>
