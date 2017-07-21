@@ -360,28 +360,27 @@
 		</div> 
 		<div class="row">
 			<div class="col-md-12">
-				<h2 style="text-align: center"> Data Privacy Policy </h2>
-				<textarea class="center-block col-md-6 col-md-offset-4" readonly="true" rows="10" >
-				By clicking “Submit” I agree that:
-				I have read and accepted the User Agreement and Privacy Policy.
-				I may receive communications from eBay and can change my notification preferences in My eBay.
-				I am at least 18 years old.
-				</textarea>
+				<h2 style="text-align: center; text-decoration:underline; "> Data Privacy Policy </h2>
+			</div>
+			<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
+			By clicking “Submit” I agree that:
+			I have read and accepted the User Agreement and Privacy Policy.
+			I may receive communications from eBay and can change my notification preferences in My eBay.
+			I am at least 18 years old.
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col-md-offset-2" style="margin-left: 210px;">
-					<label for="agree">
-					<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
-					I have read and agreed 
-					</label>
-					<div class="help-block with-errors"></div>
+			<div class="col-md-4 col-md-offset-3">
+				<label for="agree">
+				<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
+				I have read and agreed 
+				</label>
+				<div class="help-block with-errors"></div>
 			</div>
 		</div>
 		<br/>
 		<br/>
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
-		<!-- <?php echo Recaptcha::render(); ?> -->
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
 </div>

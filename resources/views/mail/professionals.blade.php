@@ -176,7 +176,7 @@
 			</div>
 		</div>
 		<div class="row">
-			@foreach($data['company'] as $i => $skill)
+			@foreach($data['company'] as $i => $company)
 			<div class="form-group col-md-2 col-md-offset-2">
 				<label for="company">Company Name:</label>
 				@if($data['company'][$i]!="")
@@ -221,7 +221,7 @@
 		<div class="row">
 			<div class="form-group col-md-2">
 				<label for="reloc">Willing to relocate?</label>
-				<h4 class="col-md-offset-1">No</h4>
+				<h4 class="col-md-offset-1">{{$data['reloc']}}</h4>
 			</div>
 		</div>
 	</div>
