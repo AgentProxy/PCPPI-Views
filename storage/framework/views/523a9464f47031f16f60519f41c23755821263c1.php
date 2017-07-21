@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="/css/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="/css/scrolling-nav.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
@@ -131,7 +130,8 @@
                     <img class="logo-footer" id="logo-footer" src="/img/Pepsi-logo.png" />
                 </span>
             </p>
-            <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </p>
+            <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
+            Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
