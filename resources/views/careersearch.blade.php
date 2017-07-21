@@ -36,7 +36,7 @@
             <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
         </div>
     </div>
-    <div id="search-results" class="full-height" style="width: 100%; background-color: white;">
+    <div id="search-results" class="full-height" style="width: 100%; min-height: 200px; background-color: white;">
         @forelse($vacancies as $vacancy)
         <div class="panel panel-default"> 
             <div class="panel-heading">
@@ -56,7 +56,7 @@
             </div>
         </div>
         @empty
-        <h1 style="text-align: center;"> No Vacancies Found </h1>
+        <h1 style="text-align: center; padding-top: 8%"> No Vacancies Found </h1>
         @endforelse
     </div>
     <div style="text-align: center;">
