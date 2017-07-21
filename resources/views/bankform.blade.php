@@ -151,32 +151,32 @@
 			<div class="col-md-10 col-md-offset-2">
 				<label for="skills">&nbsp;&nbsp;&nbsp; Skills</label> 
 				<div class="row">
-			    <div class="col-md-8 col-md-offset-1">
-					<div id="skill-1" class="checkbox skills">
-		  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
-				    </div>
-				    <div id="skill-2" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
-				    </div>
-				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
-				    </div>
-				    <div id="skill-4" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Advanced Computer Skills</label>
-				    </div>
-				    <div id="skill-5" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Driving</label>
-				    </div>
-				    <div id="skill-6" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Communication Skills</label>
-				    </div>
-				    <div class="" id="addskill">
-					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
-					    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
-			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
-			    		</button>
-		    		</div>
-		    	</div>
+				    <div class="col-md-8 col-md-offset-1">
+						<div id="skill-1" class="checkbox skills">
+			  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
+					    </div>
+					    <div id="skill-2" class="checkbox skills">
+					      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
+					    </div>
+					    <div id="skill-3" class="checkbox skills">
+					      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
+					    </div>
+					    <div id="skill-4" class="checkbox skills">
+					      <label><input type="checkbox" name="skills[]" value="Programming">Advanced Computer Skills</label>
+					    </div>
+					    <div id="skill-5" class="checkbox skills">
+					      <label><input type="checkbox" name="skills[]" value="Programming">Driving</label>
+					    </div>
+					    <div id="skill-6" class="checkbox skills">
+					      <label><input type="checkbox" name="skills[]" value="Programming">Communication Skills</label>
+					    </div>
+					    <div class="" id="addskill">
+						    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
+						    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
+				      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
+				    		</button>
+			    		</div>
+			    	</div>
 		    	</div>
 		    </div>
 		</div>
@@ -349,22 +349,22 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h2 style="text-align: center"> Data Privacy Policy </h2>
-				<textarea class="center-block col-md-6 col-md-offset-4" readonly="true" rows="10" >
-				By clicking “Submit” I agree that:
-				I have read and accepted the User Agreement and Privacy Policy.
-				I may receive communications from eBay and can change my notification preferences in My eBay.
-				I am at least 18 years old.
-				</textarea>
+				<h2 style="text-align: center; text-decoration:underline; "> Data Privacy Policy </h2>
+			</div>
+			<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
+			By clicking “Submit” I agree that:
+			I have read and accepted the User Agreement and Privacy Policy.
+			I may receive communications from eBay and can change my notification preferences in My eBay.
+			I am at least 18 years old.
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col-md-offset-2" style="margin-left: 210px;">
-					<label for="agree">
-					<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
-					I have read and agreed 
-					</label>
-					<div class="help-block with-errors"></div>
+			<div class="col-md-4 col-md-offset-3">
+				<label for="agree">
+				<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
+				I have read and agreed 
+				</label>
+				<div class="help-block with-errors"></div>
 			</div>
 		</div>
 		<br/>
@@ -374,27 +374,7 @@
 	</form>
 </div>
 
-<!-- HTML Templates -->
-	<!-- Start of Work History Template-->
-	  		<div id="work-history-0" style="display: none;">
-		  		<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="company">Company Name</label>
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
-		  		</div>
-		  		<div class="form-group col-md-4 col-md-offset-2">
-		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
-		  		</div>
-		  		<div class="form-group col-md-2">
-		    		<label for="frdate">From</label>
-		    		<input type="date" class="form-control" name="frdate[]" id="frdate">
-		  		</div>
-		  		<div class="form-group col-md-2">
-		    		<label for="todate">To</label>
-		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
-		  		</div>
-	  		</div>  	
+<!-- HTML Templates --> 	
 	  	<!-- Start of Skills Template -->
 	  		<div id="skill-0" name="skills" style="display: none">
 				<input type="text" name="skills[]" value="" style="display: none">
