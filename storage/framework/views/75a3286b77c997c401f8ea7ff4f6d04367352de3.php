@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="<?php echo e(config('app.locale')); ?>">
+<!--
+    This website was created by interns as part of their Internship in PCPPI. The authors
+    are Eric Joseph P. Flores, Alonzo Francisco Locsin and, RJ Panaguiton. All are 3rd Year
+    Computer Science Students in University of The Philippines Visayas. 
+
+    This project was created using the Laravel Framework(https://laravel.com/).
+    This project contains only basic functionalities for a Careers website. The authors allow 
+    other developers to update,edit, and add other functions to this project.
+
+    All CSS files and JS are stored in the public folder. 
+
+-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="This Careers Website is for PCPPI Vacancies only">
+    <meta name="keywords" content="Pepsi Philippines, PCPPI Careers, Careers, Pepsi-Cola Philippines Inc.">
+    <meta name="author" content="Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-
     <title>PCPPI Careers</title>
     <link rel="icon" type="image/ico" href="/img/pcppi3.ico" />
 
@@ -34,9 +47,6 @@
     <script src="/js/validation/validator.js"></script>
     <script src="/js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-
-
-
 </head>
 <body id="page-top" class="bg-grey">
     <div id="app" >
