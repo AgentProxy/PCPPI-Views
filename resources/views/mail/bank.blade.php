@@ -32,6 +32,12 @@
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
+		    	<label for="applicant_type">Applicant Type:</label>
+		    	<h4 class="col-md-offset-3">{{$data['applicant_type']}}</h4>
+		  	</div>
+		</div>
+		<div class="row">
+		  	<div class="form-group col-md-4 col-md-offset-2">
 		    	<label for="fname">First Name:</label>
 		    	<h4 class="col-md-offset-3">{{$data['fname']}}</h4>
 		  	</div>
@@ -49,11 +55,11 @@
 		<div class="row">
 		  	<div class="form-group col-md-6 col-md-offset-2">
 		    	<label for="prov">Provincial Address:</label>
-		    	<h4 class="co
+		    	<h4 class="col-md-offset-3">{{$data['prov']}}</h4>
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-3 col-md-offset-2">
-		    	<label for="bday">Date of Birth:</label>
+		    	<label for="bday">Date of Birth (yyyy-mm-dd):</label>
 		    	<h4 class="col-md-offset-3">{{$data['bday']}}</h4>
 		  	</div>
 		  	<div class="form-group col-md-3">
@@ -150,7 +156,7 @@
 		<div class="row">
 			@foreach($data['company'] as $i => $skill)
 			<div class="form-group col-md-2 col-md-offset-2">
-				<label for="company">Company Name:</label>
+				<label for="company">Company Name {{$i+1}}:</label>
 				@if($data['company'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['company'][$i]}}</h4>
 				@else
@@ -160,7 +166,7 @@
 			@endforeach
 			@foreach($data['position'] as $i => $position)
 			<div class="form-group col-md-2">
-				<label for="position">Position:</label>
+				<label for="position">Position {{$i+1}}:</label>
 				@if($data['position'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['position'][$i]}}</h4>
 				@else
@@ -170,7 +176,7 @@
 			@endforeach
 			@foreach($data['frdate'] as $i => $frdate)
 			<div class="form-group col-md-2">
-				<label for="frdate">From:</label>
+				<label for="frdate">From {{$i+1}} (yyyy-mm-dd):</label>
 				@if($data['frdate'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['frdate'][$i]}}</h4>
 				@else
@@ -180,23 +186,22 @@
 			@endforeach
 			@foreach($data['todate'] as $i => $todate)
 			<div class="form-group col-md-2">
-				<label for="todate">To:</label>
+				<label for="todate">To {{$i+1}} (yyyy-mm-dd):</label>
 				@if($data['todate'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['todate'][$i]}}</h4>
 				@else
 				<h4 class="col-md-offset-1">None</h4>
 				@endif
 			</div>
-			@endforeach
-			
+			@endforeach		
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
-				<label for="dept">Preferred Department:</label>
-				<h4 class="col-md-offset-1">{{$data['dept']}}</h4>
+				<label for="dept">Preferred Function:</label>
+				<h4 class="col-md-offset-1">{{$data['funct']}}</h4>
 			</div>
 			<div class="form-group col-md-3">
-				<label for="loc">Preferred Location:</label>
+				<label for="loc">Preferred Region:</label>
 				<h4 class="col-md-offset-1">{{$data['loc']}}</h4>
 			</div>
 			<div class="form-group col-md-2">

@@ -33,15 +33,17 @@
 	<div class="row">
 		<h1 id="title">{{$vacancy->position}}</h1>
 		<h3 id="title">{{$vacancy->regions->name}}</h3>
-		<h3 id="title">{{$vacancy->description}}</h3>
+		<h3 id="title">{{$vacancy->functions->name}}</h3>
+		<h4 id="title">{{$vacancy->description}}</h4>
 	</div>
 	<div class="row">
 		<h3>Main Responsibility</h3>
-		{{$vacancy->responsibilities}}
+		
+		<pre>{{$vacancy->responsibilities}}</pre>
 	</div>
 	<div class="row">
 		<h3>Qualifications</h3>
-		{{$vacancy->qualifications}}
+		<pre>{{$vacancy->qualifications}}</pre>
 	</div>
 	<div class="row">
 		<div>
@@ -49,15 +51,15 @@
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
 		</div>
 	</div>
 	<div class="row">
@@ -75,8 +77,11 @@
 		{{ csrf_field() }}
 		
 		<input type="text" value="1" name="form_type" style="display: none;"/>
+		<input type="text" value="Professional" name="applicant_type" style="display: none;"/>
 		<input type="text" value="{{$vacancy->position}}" name="position_applied" hidden/>
-		<input type="text" value="{{$vacancy->regions->name}}" name="desired_region" hidden/>	
+		<input type="text" value="{{$vacancy->regions->name}}" name="desired_region" hidden/>
+		<input type="text" value="{{$vacancy->description}}" name="job_description" hidden/>
+		<input type="text" value="{{$vacancy->functions->name}}" name="desired_function" hidden/>	
 
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
@@ -180,22 +185,13 @@
 				<div class="row">
 			    <div class="col-md-8 col-md-offset-1">
 					<div id="skill-1" class="checkbox skills">
-		  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
+		  				<label><input type="checkbox" name="skills[]" value="Communication Skills">Communication Skills</label>
 				    </div>
 				    <div id="skill-2" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
+				      <label><input type="checkbox" name="skills[]" value="Advanced Computer Skills">Advanced Computer Skills</label>
 				    </div>
 				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
-				    </div>
-				    <div id="skill-4" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Advanced Computer Skills</label>
-				    </div>
-				    <div id="skill-5" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Driving</label>
-				    </div>
-				    <div id="skill-6" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Communication Skills</label>
+				      <label><input type="checkbox" name="skills[]" value="Driving">Driving</label>
 				    </div>
 				    <div class="" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
@@ -203,6 +199,7 @@
 			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 			    		</button>
 		    		</div>
+		    		<label> Add other skills you have related to position applied </label>
 		    	</div>
 		    	</div>
 		    </div>
@@ -347,37 +344,37 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
-				<button class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
+				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
 						<input type="file" id="resume" name="resume" style="display: none" required value="{!! old('resume') !!}"/>	
-				</button>
+				</label>
 				<p> Uploaded File: <span id="uploaded-file"> </span></p>
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 			</div>
 		</div> 
 		<div class="row">
 			<div class="col-md-12">
-				<h2 style="text-align: center"> Data Privacy Policy </h2>
-				<textarea class="center-block col-md-6 col-md-offset-4" readonly="true" rows="10" >
-				By clicking “Submit” I agree that:
-				I have read and accepted the User Agreement and Privacy Policy.
-				I may receive communications from eBay and can change my notification preferences in My eBay.
-				I am at least 18 years old.
-				</textarea>
+				<h2 style="text-align: center; text-decoration:underline; "> Data Privacy Policy </h2>
+			</div>
+			<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
+			By clicking “Submit” I agree that:
+			I have read and accepted the User Agreement and Privacy Policy.
+			I may receive communications from PCPPI.
+			I agree to send my data to PCPPI and 
+			all the inputted data is true.
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col-md-offset-2" style="margin-left: 210px;">
-					<label for="agree">
-					<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
-					I have read and agreed 
-					</label>
-					<div class="help-block with-errors"></div>
+			<div class="col-md-4 col-md-offset-3">
+				<label for="agree">
+				<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
+				I have read and agreed 
+				</label>
+				<div class="help-block with-errors"></div>
 			</div>
 		</div>
 		<br/>
 		<br/>
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
-		<!-- {!! Recaptcha::render() !!} -->
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
 </div>

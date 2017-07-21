@@ -12,6 +12,13 @@ body,html{
     height: 100%;
 }
 
+pre{
+    background-color: transparent;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
 #bank{
     text-decoration: underline;
     color: #c9002b; 
@@ -512,6 +519,10 @@ li.open > ul#dropdown-menu {
         font-size: 10px;
     }
 
+    .footerp{
+        font-size: 12px;
+    }
+
     #logo-footer{
         width: 3em;
         height: 3em;
@@ -582,6 +593,10 @@ li.open > ul#dropdown-menu {
 
     .bg-grey {
         background-color: #f6f6f6;
+    }
+
+    div.thumbnail > p {
+        font-size: 17px;
     }
 
     .thumbnail {

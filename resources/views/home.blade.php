@@ -32,7 +32,7 @@
             <div class="thumbnail">
                 <img class="img-responsive" src="/img/professionals.jpg" alt="professionals" width="400" height="300">
                 <h2>Professionals</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>We seek talented professionals with passion, excellence, professionalism, service, and integrity who will help us achieve our vision and convey our aspirations that transcends mulitple disciplines.</p>
             </div>
             </a>
         </div>
@@ -41,7 +41,7 @@
             <div class="thumbnail">
                 <img class="img-responsive" src="/img/professionals.jpg" alt="professionals" width="400" height="300">
                 <h2>Internship</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Searching for on-the-job training that offers you the opportunity to gain actual work experience from one of the world’s most competitive and successful food and beverage companies, then join the PCPPI Internship Program!</p>
             </div>
             </a>
         </div>

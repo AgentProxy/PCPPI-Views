@@ -16,7 +16,7 @@
 
 <div class="container" id="form">
 	<div class="row" id="btnpad">
-		<a href="careers-search" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
+		<a href="{{ URL::previous() }}" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 	</div>
 	<div class="row">
 		<div>
@@ -24,15 +24,15 @@
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
 		</div>
 	</div>
 	<div class="row">
@@ -47,7 +47,10 @@
 	</div>
 	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/2" data-toggle="validator" enctype="multipart/form-data">	
 		{{ csrf_field() }}
-		<input type="text" value="2" name="form_type" style="display: none;">
+
+		<input type="text" value="2" name="form_type" style="display: none;"/>
+		<input type="text" value="Talent Bank" name="applicant_type" style="display: none;"/>
+
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="fname">First Name *</label>
@@ -66,10 +69,6 @@
 	    		<input type="text" class="form-control" name="present" id="present" data-error="Please input your present address" required maxlength="150" value="{!! old('present') !!}" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>		
-	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip1">Zip</label>
-	    		<input type="text" class="form-control" name="zip1" id="zip1" maxlength="6" value="{!! old('zip1') !!}">
-	  		</div> -->
  		</div>
  		<div class="row">
 	  		<div class="form-group col-md-8 col-md-offset-2">
@@ -77,10 +76,6 @@
 	    		<input type="text" class="form-control" name="prov" id="prov" data-error="Please input your provincial address" required maxlength="150" value="{!! old('prov') !!}" placeholder="Apartment, Floor, (if applicable) Street Address, City/Town, Province">
 	    		<div class="help-block with-errors"></div>
 	  		</div>
-	  		<!-- <div class="form-group col-md-2">
-	    		<label for="zip2">Zip</label>
-	    		<input type="text" class="form-control" name="zip2" id="zip2" maxlength="6" value="{!! old('zip2') !!}">
-	  		</div> --> 
 		</div>
 		<div class="row">
 			<div class="form-group col-md-3 col-md-offset-2">
@@ -156,32 +151,24 @@
 			<div class="col-md-10 col-md-offset-2">
 				<label for="skills">&nbsp;&nbsp;&nbsp; Skills</label> 
 				<div class="row">
-			    <div class="col-md-8 col-md-offset-1">
-					<div id="skill-1" class="checkbox skills">
-		  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
-				    </div>
-				    <div id="skill-2" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
-				    </div>
-				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
-				    </div>
-				    <div id="skill-4" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Advanced Computer Skills</label>
-				    </div>
-				    <div id="skill-5" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Driving</label>
-				    </div>
-				    <div id="skill-6" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Communication Skills</label>
-				    </div>
-				    <div class="" id="addskill">
-					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
-					    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
-			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
-			    		</button>
-		    		</div>
-		    	</div>
+				    <div class="col-md-8 col-md-offset-1">
+						<div id="skill-1" class="checkbox skills">
+			  				<label><input type="checkbox" name="skills[]" value="Communication Skills">Communication Skills</label>
+					    </div>
+					    <div id="skill-2" class="checkbox skills">
+					      <label><input type="checkbox" name="skills[]" value="Advanced Computer Skills">Advanced Computer Skills</label>
+					    </div>
+					    <div id="skill-3" class="checkbox skills">
+					      <label><input type="checkbox" name="skills[]" value="Driving">Driving</label>
+					    </div>
+					    <div class="" id="addskill">
+						    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
+						    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
+				      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
+				    		</button>
+				    		<label> Add other skills you have related to position applied </label>
+			    		</div>
+			    	</div>
 		    	</div>
 		    </div>
 		</div>
@@ -304,14 +291,12 @@
 		</div>   		
 		<div class="row">
 			<div class="form-group col-md-4 col-md-offset-2">
-				<label for="dept"><br>Preferred Department *</label>
-				<select class="form-control" id="dept" name="dept" required>
+				<label for="funct"><br>Preferred Function *</label>
+				<select class="form-control" id="funct" name="funct" required>
 					<option selected disabled value="">--</option>
-			        <option>Department 1</option>
-			        <option>Department 2</option>
-			        <option>Department 3</option>
-			        <option>Department 4</option>
-			        <option>Department 5</option>
+					@foreach($functions as $function)
+			        <option value="{{$function->name}}">{{$function->name}}</option>
+			        @endforeach
 			    </select>
 			    <div class="help-block with-errors"></div>
 			</div>
@@ -356,53 +341,33 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h2 style="text-align: center"> Data Privacy Policy </h2>
-				<textarea class="center-block col-md-6 col-md-offset-4" readonly="true" rows="10" >
-				By clicking “Submit” I agree that:
-				I have read and accepted the User Agreement and Privacy Policy.
-				I may receive communications from eBay and can change my notification preferences in My eBay.
-				I am at least 18 years old.
-				</textarea>
+				<h2 style="text-align: center; text-decoration:underline; "> Data Privacy Policy </h2>
+			</div>
+			<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
+			By clicking “Submit” I agree that:
+			I have read and accepted the User Agreement and Privacy Policy.
+			I may receive communications from PCPPI.
+			I agree to send my data to PCPPI and 
+			all the inputted data is true.
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col-md-offset-2" style="margin-left: 210px;">
-					<label for="agree">
-					<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
-					I have read and agreed 
-					</label>
-					<div class="help-block with-errors"></div>
+			<div class="col-md-4 col-md-offset-3">
+				<label for="agree">
+				<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
+				I have read and agreed 
+				</label>
+				<div class="help-block with-errors"></div>
 			</div>
 		</div>
 		<br/>
 		<br/> 
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
-		<!-- {!! Recaptcha::render() !!} -->
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
 </div>
 
-<!-- HTML Templates -->
-	<!-- Start of Work History Template-->
-	  		<div id="work-history-0" style="display: none;">
-		  		<div class="form-group col-md-8 col-md-offset-2">
-		    		<label for="company">Company Name</label>
-		    		<input type="text" class="form-control" name="company[]" id="company" maxlength="75">
-		  		</div>
-		  		<div class="form-group col-md-4 col-md-offset-2">
-		    		<label for="position">Position/Title</label>
-		    		<input type="text" class="form-control" name="position[]" id="position" maxlength="75">
-		  		</div>
-		  		<div class="form-group col-md-2">
-		    		<label for="frdate">From</label>
-		    		<input type="date" class="form-control" name="frdate[]" id="frdate">
-		  		</div>
-		  		<div class="form-group col-md-2">
-		    		<label for="todate">To</label>
-		    		<input type="date" class="form-control" name="todate[]" id="todate">
-		    		<button id="addwork" class="btn btn-danger delete-work" style="position: relative; left: 180px; bottom: 35px;"><span class="glyphicon glyphicon-minus-sign"></span></button>
-		  		</div>
-	  		</div>  	
+<!-- HTML Templates --> 	
 	  	<!-- Start of Skills Template -->
 	  		<div id="skill-0" name="skills" style="display: none">
 				<input type="text" name="skills[]" value="" style="display: none">

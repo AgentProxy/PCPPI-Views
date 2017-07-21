@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
+<!--
+    This website was created by interns as part of their Internship in PCPPI. The authors
+    are Eric Joseph P. Flores, Alonzo Francisco Locsin and, RJ Panaguiton. All are 3rd Year
+    Computer Science Students in University of The Philippines Visayas. 
+
+    This project was created using the Laravel Framework(https://laravel.com/).
+    This project contains only basic functionalities for a Careers website. The authors allow 
+    other developers to update,edit, and add other functions to this project.
+
+    All CSS files and JS are stored in the public folder. 
+
+-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="This Careers Website is for PCPPI Vacancies only">
+    <meta name="keywords" content="Pepsi Philippines, PCPPI Careers, Careers, Pepsi-Cola Philippines Inc.">
+    <meta name="author" content="Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>PCPPI Careers</title>
     <link rel="icon" type="image/ico" href="/img/pcppi3.ico" />
 
@@ -23,36 +36,18 @@
     <link rel="stylesheet" type="text/css" href="/css/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="/css/scrolling-nav.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-
-    <!-- Scripts -->
-    <!-- <script src="{{ asset('js/app.js') }}"></script> -->
-    <!-- <script type="text/javascript" src="/js/js.js"></script>
-    <script type="text/javascript" src="/js/script.js"></script> -->
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-     <!-- jQuery -->
-    <!-- <script src="js/jquery.js"></script> -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
-
-    <!-- Scrolling Nav JavaScript -->
-    
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    
     <script src="/js/scrolling-nav.js"></script>
     <script src="/js/jquery.easing.min.js"></script>
     <script src="/js/validation/validator.js"></script>
     <script src="/js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-
-
-
 </head>
 <body id="page-top">
     <div id="app" >
@@ -67,7 +62,6 @@
                     <a class="navbar-brand" href="/careers-home">
                     <div class="logo-bar">                        
                         <img class="logo responsive" id="logo" src="/img/small-logo.png" />
-                        <!-- <img class="logo responsive hidden-lg" id="logo" src="/img/small-logo.png" /> -->
                         <span id="pcppi"> Pepsi-Cola Products Philippines, Inc. - Careers </span>
                     </div>
                     </a>
@@ -114,7 +108,6 @@
                         padding-bottom: 75px;
                         padding-top: 75px;
                     }
-
                 </style>
                 <div id="nojs">
                     <div class="row">
@@ -138,8 +131,8 @@
                     <img class="logo-footer" id="logo-footer" src="/img/Pepsi-logo.png" />
                 </span>
             </p>
-            
-            <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </p>
+            <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
+            Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 

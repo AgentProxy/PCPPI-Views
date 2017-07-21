@@ -14,12 +14,13 @@ class CreateVacanciesTable extends Migration
     public function up()
     {
         Schema::create('vacancies', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();;
             $table->mediumText('description');
             $table->string('position',80);
-            $table->integer('applicants');
+            $table->integer('applicants')->unsigned();;
             $table->tinyInteger('closed');
-            $table->integer('region_id');
+            $table->integer('region_id')->unsigned();;
+            $table->integer('function_id')->unsigned();;
             $table->mediumText('responsibilities');
             $table->mediumText('qualifications');
             $table->timestamps();

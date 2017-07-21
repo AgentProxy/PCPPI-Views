@@ -39,16 +39,16 @@
 			<h2 id="title">Hiring Process</h2>
 		</div>
 		<div class="col-md-4">
-	    	<h2  id="title">Step 1</h2><br>
-	    	<p  id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<h2 id="title">Step 1</h2><br>
+	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
 		</div>
 		<div class="col-md-4">
-	    	<h2  id="title">Step 2</h2><br>
-	    	<p  id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<h2 id="title">Step 2</h2><br>
+	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
 		</div>
 		<div class="col-md-4">
-	    	<h2  id="title">Step 3</h2><br>
-	    	<p  id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<h2 id="title">Step 3</h2><br>
+	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
 		</div>
 	</div>
 	
@@ -64,6 +64,10 @@
 	</div>
 	<form id='i-recaptcha' method="POST" action="/form_validation/3" data-toggle="validator" enctype="multipart/form-data">
 		{{ csrf_field() }}
+
+		<input type="text" value="3" name="form_type" style="display: none;"/>
+		<input type="text" value="Internship" name="applicant_type" style="display: none;"/>
+
 		<input type="text" value="3" name="form_type" style="display: none;">
 		<div class="row">
 		  	<div class="form-group col-md-4 col-md-offset-2">
@@ -122,13 +126,13 @@
 	  		</div>
 		</div>	
 		<div class="row">
-	  		<div class="form-group col-md-5 col-md-offset-2">
+	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="course">Undergraduate Course *</label>
 	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="{!! old('course') !!}" placeholder="">
     			<div class="help-block with-errors"></div>
 	  		</div>
-	  		<div class="form-group col-md-3">
-				<label for="loc"><br>Preferred Region *</label>
+	  		<div class="form-group col-md-4">
+				<label for="loc" >Preferred Region *</label>
 				<select class="form-control" id="loc" name="loc" required>
 				<option selected disabled value="">--</option>
 					@foreach($regions as $region)
@@ -188,22 +192,23 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<h2 style="text-align: center"> Data Privacy Policy </h2>
-				<textarea class="center-block col-md-6 col-md-offset-4" readonly="true" rows="10" >
-				By clicking “Submit” I agree that:
-				I have read and accepted the User Agreement and Privacy Policy.
-				I may receive communications from eBay and can change my notification preferences in My eBay.
-				I am at least 18 years old.
-				</textarea>
+				<h2 style="text-align: center; text-decoration:underline; "> Data Privacy Policy </h2>
+			</div>
+			<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
+			By clicking “Submit” I agree that:
+			I have read and accepted the User Agreement and Privacy Policy.
+			I may receive communications from PCPPI.
+			I agree to send my data to PCPPI and 
+			all the inputted data is true.
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col-md-offset-2" style="margin-left: 210px;">
-					<label for="agree">
-					<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
-					I have read and agreed 
-					</label>
-					<div class="help-block with-errors"></div>
+			<div class="col-md-4 col-md-offset-3">
+				<label for="agree">
+				<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
+				I have read and agreed 
+				</label>
+				<div class="help-block with-errors"></div>
 			</div>
 		</div>
 		<br/>
