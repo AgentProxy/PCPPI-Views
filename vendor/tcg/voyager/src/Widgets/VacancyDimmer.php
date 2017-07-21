@@ -25,8 +25,10 @@ class VacancyDimmer extends AbstractWidget
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-group',
-            'title'  => "{$count} {$string}",
-            'text'   => "You have {$count} {$string} in your database. Click on button below to view all vacancies.",
+            // 'title'  => "{$count} {$string}",
+            'title' => "Vacancies",
+            // 'text'   => "You have {$count} {$string} in your database. Click on button below to view all vacancies.",
+            'text' => "Click on button below to view all vacancies.",
             'button' => [
                 'text' => 'View all vacancies',
                 'link' => route('voyager.vacancies.index'),

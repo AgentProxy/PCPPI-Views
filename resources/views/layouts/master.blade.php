@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="/css/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="/css/scrolling-nav.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
