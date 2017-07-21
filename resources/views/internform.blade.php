@@ -197,8 +197,9 @@
 			<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
 			By clicking “Submit” I agree that:
 			I have read and accepted the User Agreement and Privacy Policy.
-			I may receive communications from eBay and can change my notification preferences in My eBay.
-			I am at least 18 years old.
+			I may receive communications from PCPPI.
+			I agree to send my data to PCPPI and 
+			all the inputted data is true.
 			</div>
 		</div>
 		<div class="row">
