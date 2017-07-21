@@ -1,4 +1,5 @@
 <?php $__env->startSection('content'); ?>
+<<<<<<< HEAD
 		<h1 class="text-center"> Find Your Career </h1>
         <form method="GET" action="/careers-retrieve">
             <div id="search-bar" class="container">
@@ -7,6 +8,20 @@
                     <input type="text" class="form-control" name="job" id="job" placeholder="Job">
                 </div>
                 <div class="form-group col-md-3">
+=======
+
+        <div class="container">
+		<h1 class="text-center bold" id="findcareer"> Find Your Career </h1>
+        </div>
+        <form method="GET" action="/careers-retrieve">
+            <div id="search-bar" class="container">
+                <div class="row">
+                <div class="form-group col-sm-4">
+                    <input type="text" class="form-control" name="job" id="job" placeholder="Job">
+                </div>
+                <div class="form-group col-sm-4">
+
+>>>>>>> 5228e9c69957a6ba1d1112c0a90927e45998e3b3
                     <select class="form-control" name="region" id="region">
                         <option value="0">All Regions</option>
                         <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -14,6 +29,7 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
                 </div>
+<<<<<<< HEAD
                 <div class="form-group col-md-3">
                     <select class="form-control" name="function" id="function">
                         <option value="0">All Functions</option>
@@ -23,6 +39,11 @@
                     </select>
                 </div>
                 <div class="col-md-3" id="search">
+=======
+
+                <div class="col-sm-4" id="search">
+
+>>>>>>> 5228e9c69957a6ba1d1112c0a90927e45998e3b3
                     <input type="submit" value="Search" class="btn btn-primary" style="width: 100%;" />
                 </div>
             </div>
@@ -83,9 +104,6 @@
         var marker,i;
 
         for(i=0; i<regions.length;i++){
-	        // infowindow[i] = new google.maps.InfoWindow({
-	        // 	content: contents[i]
-	        // });
 	        region=regions[i];
 	        marker = new google.maps.Marker({
 	          position: {lat: region[1], lng: region[2]},

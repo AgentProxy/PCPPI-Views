@@ -1,14 +1,18 @@
 @extends('layouts.master')
 
 @section('content')
-		<h1 class="text-center"> Find Your Career </h1>
+
+        <div class="container">
+		<h1 class="text-center bold" id="findcareer"> Find Your Career </h1>
+        </div>
         <form method="GET" action="/careers-retrieve">
             <div id="search-bar" class="container">
                 <div class="row">
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-4">
                     <input type="text" class="form-control" name="job" id="job" placeholder="Job">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-sm-4">
+
                     <select class="form-control" name="region" id="region">
                         <option value="0">All Regions</option>
                         @foreach($regions as $region)
@@ -16,15 +20,9 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group col-md-3">
-                    <select class="form-control" name="function" id="function">
-                        <option value="0">All Functions</option>
-                        @foreach($functions as $function)
-                        <option value="{{$function->id}}">{{$function->name}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="col-md-3" id="search">
+
+                <div class="col-sm-4" id="search">
+
                     <input type="submit" value="Search" class="btn btn-primary" style="width: 100%;" />
                 </div>
             </div>
@@ -85,9 +83,6 @@
         var marker,i;
 
         for(i=0; i<regions.length;i++){
-	        // infowindow[i] = new google.maps.InfoWindow({
-	        // 	content: contents[i]
-	        // });
 	        region=regions[i];
 	        marker = new google.maps.Marker({
 	          position: {lat: region[1], lng: region[2]},
