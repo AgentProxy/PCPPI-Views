@@ -4,7 +4,7 @@
 <div id="section" class="container">
     <div id="search-header" >
         <div class="row">
-            <h3>FIND YOUR CAREER</h3>
+            <h3 class="bold">FIND YOUR CAREER</h3>
         </div>
         <div class="row">
             <form method="GET" action="/careers-search">
