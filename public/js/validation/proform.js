@@ -1,15 +1,19 @@
 $(document).ready(function(){
   $(document).on("change", "#resume", check_upload);
   $(document).on("submit", "#i-recaptcha", check);
-  // $(document).on("click",".add-work", add_work);
-  // $(document).on("click",".delete-work", delete_work);
   $(document).on("click",".delete-skill", delete_skill);
   $(document).on("click",".add-skill", add_skill);
 })
   
 function check(e){
-  console.log("Submitted Clicked")
-  $(window).off('beforeunload');
+  /*
+    This function is for checking if captcha has been completed 
+    and also checks if uploading in the check_upload() function passed.
+    Disables Submit button after clicking if all is true to prevent multiple clicks on 
+    the Submit button.
+  */
+  console.log("helo");
+  $(window).off('beforeunload');        //stops the leave page popup box from appearing
   if(grecaptcha.getResponse().length === 0){
     e.preventDefault();
     alert("Please verify that you're human.");
@@ -21,13 +25,21 @@ function check(e){
       e.preventDefault();
       return false;
     } 
-    $("#Submit").prop('disabled','true');
-    return true;
+  }
+  $submit = true;
+  if($submit==true){
+      $("#Submit").prop('disabled','true');
+      return true;
   }
 }
-    
+
+/*
+  This function checks file upload if file size is in range to 2MB and 
+  checks file extension (front-end validation)
+  Also checks if uploaded file is blank.
+*/
 function check_upload(){
-  console.log("helo");
+  
   resume = document.getElementById('resume');
   if($("#resume").val()!=""){
     upload = $("#resume").val();
@@ -54,7 +66,10 @@ function check_upload(){
   }
   return false;
 }
-
+/*
+  This is for the dynamic adding of skills input box in professionals form and talent bank forms.
+  Will not add skill if input box is blank to prevent addition of blank skills.
+*/
 function add_skill(){
   skill = document.getElementById('skill');
   if(skill.value != ""){
@@ -69,7 +84,9 @@ function add_skill(){
   }
 
 }
-
+/*
+  For deleting inputted skills in professionals form and talent bank forms
+*/
 function delete_skill(){
   $(this).parent().remove();
   i = document.getElementsByClassName('skills');

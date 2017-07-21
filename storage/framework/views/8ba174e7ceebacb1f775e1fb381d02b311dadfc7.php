@@ -49,15 +49,15 @@
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
 		</div>
 	</div>
 	<div class="row">
@@ -184,22 +184,13 @@
 				<div class="row">
 			    <div class="col-md-8 col-md-offset-1">
 					<div id="skill-1" class="checkbox skills">
-		  				<label><input type="checkbox" name="skills[]" value="Advanced Excel">Advanced Excel</label>
+		  				<label><input type="checkbox" name="skills[]" value="Communication Skills">Communication Skills</label>
 				    </div>
 				    <div id="skill-2" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Photoshop">Photoshop</label>
+				      <label><input type="checkbox" name="skills[]" value="Advanced Computer Skills">Advanced Computer Skills</label>
 				    </div>
 				    <div id="skill-3" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Programming</label>
-				    </div>
-				    <div id="skill-4" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Advanced Computer Skills</label>
-				    </div>
-				    <div id="skill-5" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Driving</label>
-				    </div>
-				    <div id="skill-6" class="checkbox skills">
-				      <label><input type="checkbox" name="skills[]" value="Programming">Communication Skills</label>
+				      <label><input type="checkbox" name="skills[]" value="Driving">Driving</label>
 				    </div>
 				    <div class="" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
@@ -207,6 +198,7 @@
 			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 			    		</button>
 		    		</div>
+		    		<label> Add other skills you have related to position applied </label>
 		    	</div>
 		    	</div>
 		    </div>
@@ -351,9 +343,9 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
-				<button class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
+				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
 						<input type="file" id="resume" name="resume" style="display: none" required value="<?php echo old('resume'); ?>"/>	
-				</button>
+				</label>
 				<p> Uploaded File: <span id="uploaded-file"> </span></p>
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 			</div>
@@ -365,8 +357,9 @@
 			<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
 			By clicking “Submit” I agree that:
 			I have read and accepted the User Agreement and Privacy Policy.
-			I may receive communications from eBay and can change my notification preferences in My eBay.
-			I am at least 18 years old.
+			I may receive communications from PCPPI.
+			I agree to send my data to PCPPI and 
+			all the inputted data is true.
 			</div>
 		</div>
 		<div class="row">

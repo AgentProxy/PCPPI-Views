@@ -448,6 +448,10 @@ li.open > ul#dropdown-menu {
         font-size: 10px;
     }
 
+    .footerp{
+        font-size: 12px;
+    }
+
     #logo-footer{
         width: 3em;
         height: 3em;
