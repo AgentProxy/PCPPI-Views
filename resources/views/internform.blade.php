@@ -126,13 +126,13 @@
 	  		</div>
 		</div>	
 		<div class="row">
-	  		<div class="form-group col-md-5 col-md-offset-2">
+	  		<div class="form-group col-md-4 col-md-offset-2">
 	    		<label for="course">Undergraduate Course *</label>
 	    		<input type="text" class="form-control" id="course" name="course" data-error="Please input this field" required maxlength="75" value="{!! old('course') !!}" placeholder="">
     			<div class="help-block with-errors"></div>
 	  		</div>
-	  		<div class="form-group col-md-3">
-				<label for="loc"><br>Preferred Region *</label>
+	  		<div class="form-group col-md-4">
+				<label for="loc" >Preferred Region *</label>
 				<select class="form-control" id="loc" name="loc" required>
 				<option selected disabled value="">--</option>
 					@foreach($regions as $region)

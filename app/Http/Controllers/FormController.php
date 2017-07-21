@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Mail;
 use App\User;
+use App\Vacancy;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
@@ -80,7 +81,7 @@ class FormController extends Controller
                 'position.*' => 'nullable|max:75',
                 'frdate.*' => 'nullable|date',
                 'todate.*' => 'nullable|date',
-                'dept' => 'required',
+                'funct' => 'required',
                 'loc' => 'required',
                 'reloc'=>'required',
                 'resume'=>'required|file|mimes:doc,pdf,docx|max:2048',
@@ -135,7 +136,6 @@ class FormController extends Controller
         if($form_type=='1'){
             if($job_id!=null){
                 $vacancies = Vacancy::where('id',$job_id)->where('closed',0)->first();
-                return $vacancies;
                 if($vacancies==null){
                     abort(404, 'The vacancy you are looking is not available');
                     return false;

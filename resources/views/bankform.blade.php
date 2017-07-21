@@ -166,6 +166,7 @@
 						    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
 				      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 				    		</button>
+				    		<label> Add other skills you have related to position applied </label>
 			    		</div>
 			    	</div>
 		    	</div>

@@ -59,7 +59,7 @@
 		</div>
 		<div class="row">
 		  	<div class="form-group col-md-3 col-md-offset-2">
-		    	<label for="bday">Date of Birth:</label>
+		    	<label for="bday">Date of Birth (yyyy-mm-dd):</label>
 		    	<h4 class="col-md-offset-3">{{$data['bday']}}</h4>
 		  	</div>
 		  	<div class="form-group col-md-3">
@@ -156,7 +156,7 @@
 		<div class="row">
 			@foreach($data['company'] as $i => $skill)
 			<div class="form-group col-md-2 col-md-offset-2">
-				<label for="company">Company Name:</label>
+				<label for="company">Company Name {{$i+1}}:</label>
 				@if($data['company'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['company'][$i]}}</h4>
 				@else
@@ -166,7 +166,7 @@
 			@endforeach
 			@foreach($data['position'] as $i => $position)
 			<div class="form-group col-md-2">
-				<label for="position">Position:</label>
+				<label for="position">Position {{$i+1}}:</label>
 				@if($data['position'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['position'][$i]}}</h4>
 				@else
@@ -176,7 +176,7 @@
 			@endforeach
 			@foreach($data['frdate'] as $i => $frdate)
 			<div class="form-group col-md-2">
-				<label for="frdate">From:</label>
+				<label for="frdate">From {{$i+1}} (yyyy-mm-dd):</label>
 				@if($data['frdate'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['frdate'][$i]}}</h4>
 				@else
@@ -186,7 +186,7 @@
 			@endforeach
 			@foreach($data['todate'] as $i => $todate)
 			<div class="form-group col-md-2">
-				<label for="todate">To:</label>
+				<label for="todate">To {{$i+1}} (yyyy-mm-dd):</label>
 				@if($data['todate'][$i]!="")
 				<h4 class="col-md-offset-1">{{$data['todate'][$i]}}</h4>
 				@else
