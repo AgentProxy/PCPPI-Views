@@ -31,17 +31,17 @@
 	<div class="row">
 		<h1 id="title"><?php echo e($vacancy->position); ?></h1>
 		<h3 id="title"><?php echo e($vacancy->regions->name); ?></h3>
-		<h3 id="title"><?php echo e($vacancy->description); ?></h3>
+		<h3 id="title"><?php echo e($vacancy->functions->name); ?></h3>
+		<h4 id="title"><?php echo e($vacancy->description); ?></h4>
 	</div>
 	<div class="row">
 		<h3>Main Responsibility</h3>
-		<?php echo e($vacancy->responsibilities); ?>
-
+		
+		<pre><?php echo e($vacancy->responsibilities); ?></pre>
 	</div>
 	<div class="row">
 		<h3>Qualifications</h3>
-		<?php echo e($vacancy->qualifications); ?>
-
+		<pre><?php echo e($vacancy->qualifications); ?></pre>
 	</div>
 	<div class="row">
 		<div>
@@ -49,15 +49,15 @@
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
 		</div>
 		<div class="col-md-4">
 	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out pending your qualifications are a match for the role.</p>
+	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
 		</div>
 	</div>
 	<div class="row">
@@ -76,8 +76,11 @@
 
 		
 		<input type="text" value="1" name="form_type" style="display: none;"/>
+		<input type="text" value="Professional" name="applicant_type" style="display: none;"/>
 		<input type="text" value="<?php echo e($vacancy->position); ?>" name="position_applied" hidden/>
-		<input type="text" value="<?php echo e($vacancy->regions->name); ?>" name="desired_region" hidden/>	
+		<input type="text" value="<?php echo e($vacancy->regions->name); ?>" name="desired_region" hidden/>
+		<input type="text" value="<?php echo e($vacancy->description); ?>" name="job_description" hidden/>
+		<input type="text" value="<?php echo e($vacancy->functions->name); ?>" name="desired_function" hidden/>	
 
 		<div class="row">
 	  		<div class="form-group col-md-4 col-md-offset-2">
@@ -346,6 +349,28 @@
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 			</div>
 		</div> 
+		<div class="row">
+			<div class="col-md-12">
+				<h2 style="text-align: center"> Data Privacy Policy </h2>
+				<textarea class="center-block col-md-6 col-md-offset-4" readonly="true" rows="10" >
+				By clicking “Submit” I agree that:
+				I have read and accepted the User Agreement and Privacy Policy.
+				I may receive communications from eBay and can change my notification preferences in My eBay.
+				I am at least 18 years old.
+				</textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-md-offset-2" style="margin-left: 210px;">
+					<label for="agree">
+					<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
+					I have read and agreed 
+					</label>
+					<div class="help-block with-errors"></div>
+			</div>
+		</div>
+		<br/>
+		<br/>
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
 		<!-- <?php echo Recaptcha::render(); ?> -->
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
@@ -370,7 +395,7 @@
 
 <script>
 	var submitted = false;
-	//RETURN LATER IF AFTER DEBUGGING
+
 	$(window).on('load',function(){
 		document.getElementById('i-recaptcha').reset();
 	});
