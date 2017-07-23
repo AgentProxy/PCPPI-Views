@@ -6,6 +6,7 @@ body{
     font-family: 'Quicksand', sans-serif;
     padding-top: 0px;
     background-size: cover;
+    height: 100%;
 }
 
 body,html{
@@ -517,6 +518,8 @@ li.open > ul#dropdown-menu {
         background: #004b93;
         color: #fff;
         font-size: 10px;
+        position: relative;
+        bottom: 0;
     }
 
     .footerp{
