@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="<?php echo e(config('app.locale')); ?>">
+<!--
+    This website was created by interns as part of their Internship in PCPPI. The authors
+    are Eric Joseph P. Flores, Alonzo Francisco Locsin and, RJ Panaguiton. All are 3rd Year
+    Computer Science Students in University of The Philippines Visayas. 
+
+    This project was created using the Laravel Framework(https://laravel.com/).
+    This project contains only basic functionalities for a Careers website. The authors allow 
+    other developers to update,edit, and add other functions to this project.
+
+    All CSS files and JS are stored in the public folder. 
+
+-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="This Careers Website is for PCPPI Vacancies only">
+    <meta name="keywords" content="Pepsi Philippines, PCPPI Careers, Careers, Pepsi-Cola Philippines Inc.">
+    <meta name="author" content="Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-
     <title>PCPPI Careers</title>
     <link rel="icon" type="image/ico" href="/img/pcppi3.ico" />
 
@@ -15,6 +28,7 @@
     <?php echo $__env->yieldContent('head'); ?>
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/social.css">
     <link rel="stylesheet" type="text/css" href="/css/scroll.css">
@@ -34,21 +48,18 @@
     <script src="/js/validation/validator.js"></script>
     <script src="/js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-
-
-
 </head>
-<body id="page-top" class="bg-grey">
+<body id="page-top">
     <div id="app" >
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="background-color: grey; text-align: center;">
-                        <span class="icon-bar" style="background-color: white"></span>
-                        <span class="icon-bar" style="background-color: white"></span>
-                        <span class="icon-bar" style="background-color: white"></span>     
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="text-align: center;">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>     
                     </button>
-                    <a class="navbar-brand" href="careers-home">
+                    <a class="navbar-brand" href="/careers-home">
                     <div class="logo-bar">                        
                         <img class="logo responsive" id="logo" src="/img/small-logo.png" />
                         <span id="pcppi"> Pepsi-Cola Products Philippines, Inc. - Careers </span>
@@ -57,7 +68,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul id="items" class="nav navbar-nav">
-                        <li class="active"><a href="careers-home">Home</a></li>
+                        <li class="active"><a href="/careers-home">Home</a></li>
                         <li class="dropdown clearfix">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
                             <ul id="dropdown-menu" class="dropdown-menu">
@@ -112,15 +123,16 @@
         </div>
     </noscript>
 
-    <footer class="container text-center" style="margin: 0; width: 100%;">
+    <footer class="container text-center bg-white" style="margin: 0; width: 100%;">
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3"> 
             <p>      
-                <span style="text-decoration: none; margin-bottom: 4em;" href="https://www.pepsiphilippines.com/index.php">
+                <span>
                     <img class="logo-footer" id="logo-footer" src="/img/Pepsi-logo.png" />
                 </span>
             </p>
-            <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </p>
+            <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
+            Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 

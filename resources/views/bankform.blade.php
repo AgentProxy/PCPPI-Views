@@ -70,7 +70,7 @@
 	<div id="forms-section" class="row">
 		<div class="col-md-4 col-md-offset-2">
 		<small class="text-danger"><strong>Fields with * are required</strong></small>
-		<h4 >PERSONAL INFORMATION</h4>
+		<h4>PERSONAL INFORMATION</h4>
 		</div>
 	</div>
 	<form name="proform" id='i-recaptcha' method="POST" action="/form_validation/2" data-toggle="validator" enctype="multipart/form-data">	

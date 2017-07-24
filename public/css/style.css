@@ -6,6 +6,7 @@ body{
     font-family: 'Quicksand', sans-serif;
     padding-top: 0px;
     background-size: cover;
+    height: 100%;
 }
 
 body,html{
@@ -37,7 +38,11 @@ pre{
     background: #fff;
     color: #005cb4;
     border: 2px solid #005cb4;
-    font-weight: bold;
+    font-family: 'Play', sans-serif;
+}
+
+.btn-back:hover, .btn-back:focus {
+    color: #005cb4;
 }
 
 .btn-view {
@@ -52,12 +57,23 @@ pre{
     transition: 0.4s ease-out
 }
 
+button.navbar-toggle > span.icon-bar {
+    background-color: #005CB4;
+    height: 2px;
+}
+
 .btn-view:hover {
     box-shadow: inset 400px 0 0 0 #c9002b;
     color: #fff;
 }
 
+.bold {
+    font-weight: bold;
+}
 
+#findcareer {
+    padding: 20px 0;
+}
 
 .navbar-brand {
     padding: 7px 8px;
@@ -68,7 +84,7 @@ pre{
     width: 60vw;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: solid white 5px;
+    border: 5px solid #008dbb;
 }
 
 .navbar{
@@ -92,6 +108,7 @@ pre{
 ul#items {
     margin: 0;
     margin-top: 20px;
+    font-family: 'Play', sans-serif
 }
 
 #items > li {
@@ -163,7 +180,7 @@ li.open > ul#dropdown-menu {
     }
 
     .navbar-collapse {
-        background-color: #DFE9FF;
+        background-color: #fff;
         padding-left: auto;
         padding-right: auto;
      }
@@ -224,10 +241,6 @@ li.open > ul#dropdown-menu {
         padding-top: 10px;                
     }
 
-    #logo {
-        height: 70px;
-        width: 66px;
-    }
 }
 
 /* Desktop */ 
@@ -283,9 +296,23 @@ li.open > ul#dropdown-menu {
         font-size: 16px;
     }
 
-    .glyphicon.glyphicon-circle-arrow-down {
-        padding:1px;
-        font-size: 24px;
+    #findcareer {
+        padding: 5vh 0 2vh 0;
+    }
+
+    #map {
+        height: 60vh;
+        width: 90vw;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+    }
+
+    p.footerp {
+        font-size: 9px;
+    }
+
+    footer > div.row {
+        padding-top: 3px;
     }
 }
 
@@ -302,6 +329,10 @@ li.open > ul#dropdown-menu {
         height: 52px;
         width: 47px;
         margin-right: 0;
+    }
+
+    #findcareer {
+        padding: 14px 0;
     }
 
     #items>li>a {
@@ -322,6 +353,9 @@ li.open > ul#dropdown-menu {
         font-size: 10px;
     }
 
+    #map {
+        height: 70vh;
+    }
 
 }
 
@@ -341,6 +375,22 @@ li.open > ul#dropdown-menu {
     .col-sm-4 > img {
         width: 45%;
         display: block;
+    }
+
+    #findcareer {
+        padding: 6px 0;
+        font-size: 20px;
+    }
+
+    #map {
+        height: 95vh;
+        width: 95vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    footer > div.row {
+        padding-top: 3px;
     }
 }
 
@@ -380,10 +430,6 @@ li.open > ul#dropdown-menu {
         margin-bottom: 0;
     }
 
-    div#search-bar {
-        margin-top: 20px;
-    }
-
     #next, #section {
         padding: 30px 20px;
     }
@@ -403,6 +449,32 @@ li.open > ul#dropdown-menu {
 
     #next, #section {
         font-size: 70%;
+    }
+
+    #findcareer {
+        padding: 6px 0;
+        font-size: 20px;
+    }
+
+    #map {
+        height: 95vh;
+        width: 90vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    img#logo-footer {
+        width: 14px;
+        height: 14px;
+    }
+
+    p.footerp {
+        font-size: 2px;
+    }
+
+    footer > div.row {
+        padding-top: 3px;
     }
 
 }
@@ -446,6 +518,8 @@ li.open > ul#dropdown-menu {
         background: #004b93;
         color: #fff;
         font-size: 10px;
+        position: relative;
+        bottom: 0;
     }
 
     .footerp{
@@ -491,10 +565,10 @@ li.open > ul#dropdown-menu {
         text-align: center;
     }
 
-    .footer-links{
+/*    .footer-links{
         width: 40px;
         height: 40px;
-    }
+    }*/
 
     #external-sites{
         position: relative;
@@ -514,10 +588,6 @@ li.open > ul#dropdown-menu {
         left: 40px;
     }
 
-    #search-bar{
-        margin-top: 50px;
-    }
-
     .img-responsive {
         padding: auto;
         display: block;
@@ -526,6 +596,10 @@ li.open > ul#dropdown-menu {
 
     .bg-grey {
         background-color: #f6f6f6;
+    }
+
+    div.thumbnail > p {
+        font-size: 17px;
     }
 
     .thumbnail {
