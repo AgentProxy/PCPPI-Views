@@ -26,11 +26,13 @@ function check(e){
       return false;
     } 
   }
-  $submit = true;
-  if($submit==true){
-      $("#Submit").prop('disabled','true');
-      return true;
-  }
+  
+$('#Submit').click(function(){
+    $("#Submit").prop('disabled','true');
+    $("#i-recaptcha").submit();
+    return true;
+})
+
 }
 
 /*
