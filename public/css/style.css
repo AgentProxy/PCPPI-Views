@@ -7,6 +7,7 @@ body{
     padding-top: 0px;
     background-size: cover;
     height: 100%;
+    color: black
 }
 
 body,html{
@@ -122,6 +123,25 @@ li.open > ul#dropdown-menu {
 
 #forms-section {
     margin-top: 50px;
+}
+
+div.thumbnail > p {
+    font-size: 1em;
+}
+
+.thumbnail {
+    border: 1px solid #0A62EA;
+    border-radius: 20px;
+    transition: box-shadow 0.5s;
+    padding: 10px;
+}
+
+.thumbnail > img {
+    border-radius: 20px 20px 0 0;
+}
+
+.thumbnail:hover {
+    box-shadow: 5px 0px 20px black;
 }
 
 @media(max-width: 991px){
@@ -257,6 +277,43 @@ li.open > ul#dropdown-menu {
     #next, #section {
         font-size: 20px;
     }
+
+    #items>li>a {
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    #items>li>a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: #005cb4;
+        visibility: hidden;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transition: .1s linear;
+    }
+
+    #items>li>a:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+    #items>li>a:hover,
+    #items>li>a:focus  { 
+        position: relative; 
+        font-weight: bold;
+        background: #fff;
+    }
+
+    #items>li.dropdown:hover > .dropdown-menu,
+    #items>li.dropdown:focus > .dropdown-menu  {
+        display: block;
+        width: 100%;
+    }  
 }
 
 /* Medium screens */
@@ -300,6 +357,19 @@ li.open > ul#dropdown-menu {
         padding: 5vh 0 2vh 0;
     }
 
+    /*div.thumbnail > h2 {
+        margin: 8px 0;
+        font-size: 95%;
+    }
+
+    div.thumbnail > p {
+        font-size: 70%;
+    }
+
+    div.thumbnail {
+        height: 280px;
+    }*/
+
     #map {
         height: 60vh;
         width: 90vw;
@@ -308,7 +378,7 @@ li.open > ul#dropdown-menu {
     }
 
     p.footerp {
-        font-size: 9px;
+        font-size: 3px;
     }
 
     footer > div.row {
@@ -345,6 +415,20 @@ li.open > ul#dropdown-menu {
         padding-bottom: 2px;
     }
 
+    div.thumbnail > h2 {
+        margin: 8px 0;
+        font-size: 20px;
+    }
+
+    div.thumbnail > p {
+        font-size: 8px;
+    }
+
+    div.thumbnail {
+        height: 200px;
+    }
+
+
     .logo-bar {
         padding-top: 5px;
     }
@@ -361,7 +445,7 @@ li.open > ul#dropdown-menu {
 
 /* Mobile - horizontal */
 
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 767px) {
     #pcppi {
         font-size: 11px;
         font-weight: bold;
@@ -375,6 +459,19 @@ li.open > ul#dropdown-menu {
     .col-sm-4 > img {
         width: 45%;
         display: block;
+    }
+
+    div.thumbnail > h2 {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    div.thumbnail > p {
+        font-size: 5px;
+    }
+
+    div.thumbnail {
+        height: 200px;
     }
 
     #findcareer {
@@ -396,7 +493,7 @@ li.open > ul#dropdown-menu {
 
 /* Mobile - Vertical */
 
-@media (min-width: 320px) and (max-width: 479px) {
+@media (min-width: 321px) and (max-width: 480px) {
     .col-sm-4 > img {
         width: 45%;
         display: block;
@@ -439,6 +536,15 @@ li.open > ul#dropdown-menu {
         padding: 1px
     }
 
+    div.thumbnail > h2 {
+        margin: 8px 0;
+        font-size: 80%;
+    }
+
+    div.thumbnail > p {
+        font-size: 80%;
+    }
+
     .btn {
         padding: 1px 2px;
     }
@@ -463,7 +569,6 @@ li.open > ul#dropdown-menu {
         margin-bottom: 20px;
     }
 
-
     img#logo-footer {
         width: 14px;
         height: 14px;
@@ -481,28 +586,40 @@ li.open > ul#dropdown-menu {
 
 /* Smaller than mobile ? */
 
-@media (max-width: 319px) {
+@media (max-width: 320px) {
     a.btn-back {
         width: 11%;
     }
 
     #pcppi {
-            display: none;
-        }
-
-        #logo {
-            height: 38px;
-            width: 34px;
-        }
+        font-size: 40%;
+        font-weight: bold;
     }
+
+    #logo {
+        height: 38px;
+        width: 34px;
+    }
+
+    div.thumbnail > h2 {
+        margin: 8px 0;
+        font-size: 50%;
+    }
+
+    div.thumbnail > p {
+        font-size: 37%;
+    }
+
+    div.thumbnail {
+        height: 20%;
+    }
+}
 
     .navbar-nav{
         margin-top: 2%;
         text-align: center;
         float: right;
     }
-
-
 
     .navbar-nav > li{
         font-size: 15px;
@@ -513,7 +630,7 @@ li.open > ul#dropdown-menu {
         width: 100%;
     }
 
-    footer{
+    footer {
         padding-top: 1em;
         background: #004b93;
         color: #fff;
@@ -522,8 +639,13 @@ li.open > ul#dropdown-menu {
         bottom: 0;
     }
 
+    footer.container {
+        margin: 0;
+        width: 100%;
+    }
+
     .footerp{
-        font-size: 12px;
+        font-size: 10px;
     }
 
     #logo-footer{
@@ -563,25 +685,13 @@ li.open > ul#dropdown-menu {
     #titlepad{
         padding-top: 60px;
         text-align: center;
-    }
-
-/*    .footer-links{
-        width: 40px;
-        height: 40px;
-    }*/
+    }    
 
     #external-sites{
         position: relative;
         top: 40px;
         right: 250px;
-    }
-
-    #items>li>a:hover { 
-        position: relative; 
-        top: -5px;
-        background-color: white;
-        font-weight: bold;
-    } 
+    }     
 
     #links{
          position: relative;
@@ -593,28 +703,8 @@ li.open > ul#dropdown-menu {
         display: block;
     }
 
-
     .bg-grey {
         background-color: #f6f6f6;
-    }
-
-    div.thumbnail > p {
-        font-size: 17px;
-    }
-
-    .thumbnail {
-        border: 1px solid #0A62EA;
-        border-radius: 20px;
-        transition: box-shadow 0.5s;
-        padding: 10px;
-    }
-
-    .thumbnail > img {
-         border-radius: 20px 20px 0 0;
-     }
-
-    .thumbnail:hover {
-        box-shadow: 5px 0px 20px black;
     }
 
     .slideanim { visibility: hidden; }
@@ -637,7 +727,7 @@ li.open > ul#dropdown-menu {
             transform: translateY(0%);
         }
     }
-     @-webkit-keyframes slide {
+    @-webkit-keyframes slide {
          0% {
              opacity: 0;
              -webkit-transform: translateY(70%);
@@ -645,10 +735,10 @@ li.open > ul#dropdown-menu {
             100% {
              opacity: 1;
              -webkit-transform: translateY(0%);
-         }
-      }
+        }
+    }
 
-      @media screen and (max-width:  768px) {
+    @media screen and (max-width:  768px) {
          .col-sm-4 {
              text-align: center;
              margin: 2-5px 0;

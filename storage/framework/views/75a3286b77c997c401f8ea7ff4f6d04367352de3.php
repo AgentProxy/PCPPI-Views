@@ -68,11 +68,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul id="items" class="nav navbar-nav">
-                        <li class="active"><a href="/careers-home">Home</a></li>
+                        <li class=""><a href="/careers-home">Home</a></li>
                         <li class="dropdown clearfix">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
                             <ul id="dropdown-menu" class="dropdown-menu">
-                                 <li><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Main Website Home</a></li>
+                                <li><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Main Website Home</a></li>
                                 <li><a href="https://www.pepsiphilippines.com/company.php" target="_blank">Our Company</a></li>
                                 <li><a href="https://www.pepsiphilippines.com/products.php" target="_blank">Products</a></li>
                             </ul>
@@ -123,7 +123,7 @@
         </div>
     </noscript>
 
-    <footer class="container text-center bg-white" style="margin: 0; width: 100%;">
+    <footer class="container text-center bg-white">
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3"> 
             <p>      
