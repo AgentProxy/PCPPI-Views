@@ -133,15 +133,15 @@
 		<h1 id="title">{{$vacancy->position}}</h1>
 		<h3 id="title">{{$vacancy->regions->name}}</h3>
 		<h3 id="title">{{$vacancy->functions->name}}</h3>
-		<h4 id="title">{{$vacancy->description}}</h4>
+		<h4 id="title" style="white-space:pre-wrap; line-height: 3">{{$vacancy->description}}</h4>
 	</div>
 	<div class="row">
 		<h3>Main Responsibility</h3>
-		<pre>{{$vacancy->responsibilities}}</pre>
+		<pre style="white-space:pre-wrap; line-height: 3">{{$vacancy->responsibilities}}</pre>
 	</div>
 	<div class="row">
 		<h3>Qualifications</h3>
-		<pre>{{$vacancy->qualifications}}</pre>
+		<pre "white-space:pre-wrap; line-height: 3">{{$vacancy->qualifications}}</pre>
 	</div>
 	<div class="row">
 		<div>

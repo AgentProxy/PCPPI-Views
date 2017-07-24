@@ -25,6 +25,7 @@
 		    var start = $(this).get(0).selectionStart;
 		    var end = $(this).get(0).selectionEnd;
 
+		    document.getElementById("{{ $row->field }}").value +=' ';
 		    // set textarea value to: text before caret + tab + text after caret
 		    $(this).val($(this).val().substring(0, start)
 		                + "\t"
