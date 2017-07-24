@@ -121,13 +121,19 @@
 		<a href="{{ URL::previous() }}" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
 	</div>
 	<div class="row">
-		<!-- This is for FB's Share -->
+		<!-- This is for FB's Share
+		CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
+		EX. "http://your-domain/careers-proform/......"
+
+		EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
+		 -->
 		<div class="fb-share-button" style="margin-left:47%;" 
-		    data-href="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}" 
+		    data-href="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}"  
 		    data-layout="button"
 			data-size="large"
 		>
   		</div>
+  		<!-- -->
 	</div>
 	<div class="row">
 		<h1 id="title">{{$vacancy->position}}</h1>
@@ -143,25 +149,8 @@
 		<h3>Qualifications</h3>
 		<pre "white-space:pre-wrap; line-height: 3">{{$vacancy->qualifications}}</pre>
 	</div>
+	<div class="container well">
 	<div class="row">
-		<div>
-			<h2 id="title">Hiring Process</h2>
-		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
-		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
-		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
-		</div>
-	</div>
-	<div class="row">
-		<br>
 		<h2 id="titlepad">APPLICATION</h2>
 	</div>
 	<div id="forms-section" class="row">
@@ -410,10 +399,29 @@
 			</div>
 		</div>
 		<br/>
-		<br/>
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
+	</div>
+	<div class="container well">
+		<div class="row">
+			<div>
+				<h2 id="title">Hiring Process</h2>
+			</div>
+			<div class="col-md-4">
+		    	<h2 id="title">Step 1</h2><br>
+		    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+			</div>
+			<div class="col-md-4">
+		    	<h2 id="title">Step 2</h2><br>
+		    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+			</div>
+			<div class="col-md-4">
+		    	<h2 id="title">Step 3</h2><br>
+		    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- HTML Templates -->
@@ -491,9 +499,15 @@
                 </span>
             </p>
             <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
-            Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
+            Created by: Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
+            		<div class="fb-share-button" style="margin-left:47%;" 
+					    data-href="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}"  
+					    data-layout="button"
+						data-size="large"
+					>
+			  		</div>
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
                     <a href="http://bit.ly/CareersatPCPPI" class="fa fa-linkedin" style="margin-left: 2%;">
                     </a> 

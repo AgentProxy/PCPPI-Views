@@ -29,7 +29,7 @@
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/social.css">
     <link rel="stylesheet" type="text/css" href="/css/scroll.css">
     <link rel="stylesheet" type="text/css" href="/css/w3schools.css">

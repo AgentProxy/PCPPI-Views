@@ -5,7 +5,8 @@
 body{
     font-family: 'Quicksand', sans-serif;
     padding-top: 0px;
-    background-size: cover;
+    background-image: url('/img/bg.png');
+    background-repeat: repeat;
     height: 100%;
     color: black
 }
@@ -126,7 +127,8 @@ li.open > ul#dropdown-menu {
 }
 
 div.thumbnail > p {
-    font-size: 1em;
+    padding-top: 5px; 
+    font-size: 14px;
 }
 
 .thumbnail {
@@ -536,11 +538,6 @@ div.thumbnail > p {
         padding: 1px
     }
 
-    div.thumbnail > h2 {
-        margin: 8px 0;
-        font-size: 80%;
-    }
-
     div.thumbnail > p {
         font-size: 80%;
     }
@@ -588,7 +585,9 @@ div.thumbnail > p {
 
 @media (max-width: 320px) {
     a.btn-back {
-        width: 11%;
+        padding: 2px;
+        width: 50%;
+        font-size: 90%;
     }
 
     #pcppi {
@@ -601,17 +600,19 @@ div.thumbnail > p {
         width: 34px;
     }
 
-    div.thumbnail > h2 {
-        margin: 8px 0;
-        font-size: 50%;
-    }
-
     div.thumbnail > p {
         font-size: 37%;
     }
 
     div.thumbnail {
         height: 20%;
+    }
+
+    #map {
+        height: 95vh;
+        width: 90vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -705,6 +706,8 @@ div.thumbnail > p {
 
     .bg-grey {
         background-color: #f6f6f6;
+        width: 100vw;
+        margin: 0;
     }
 
     .slideanim { visibility: hidden; }

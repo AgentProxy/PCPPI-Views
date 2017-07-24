@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-<div id="section" class="container">
-    <div id="search-header" >
+<div id="section" class="container bg-grey">
+    <div id="search-header">
         <div class="row">
             <h3 class="bold">FIND YOUR CAREER</h3>
         </div>

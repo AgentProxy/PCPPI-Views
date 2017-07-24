@@ -29,17 +29,15 @@
             <a href="careers-map" style="text-decoration: none;">
             <div class="thumbnail">
                 <img class="img-responsive" src="/img/professionals.jpg" alt="professionals" width="400" height="300">
-                <h2>Professionals</h2>
-                <p>We seek talented professionals with passion, excellence, professionalism, service, and integrity who will help us achieve our vision and convey our aspirations that transcends mulitple disciplines.</p>
+                <p>Guided by our core values of Passion, Excellence, Professionalism, and Integrity, we seek for talented individuals who will help us convey our aspirations across the Philippines. We believe in our people as our trusted partner in delivering sustainable business growth with us.</p>
             </div>
             </a>
         </div>
         <div class="col-sm-4 col-xs-6 slideanim">
             <a href="careers-internform" style="text-decoration: none;">
             <div class="thumbnail">
-                <img class="img-responsive" src="/img/professionals.jpg" alt="professionals" width="400" height="300">
-                <h2>Internship</h2>
-                <p>Searching for on-the-job training that offers you the opportunity to gain actual work experience from one of the world’s most competitive and successful food and beverage companies, then join the PCPPI Internship Program!</p>
+                <img class="img-responsive" src="/img/internship.jpg" alt="internship" width="400" height="300">
+                <p>We seek for On-the-Job-Trainees to join our Internship Program. This offers our interns the opportunity to gain actual work experience from one of the most competitive and successful fast moving consumer goods industry in the Philippines.</p>
             </div>
             </a>
         </div>
