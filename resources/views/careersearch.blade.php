@@ -45,8 +45,8 @@
             <div class="panel-body">
                 <div id="viewjob" class="row">
                     <div class="col-md-10">
-                        <h3>Location: {{$vacancy->regions->name}}</h3>
                         <h3>Function: {{$vacancy->functions->name}}</h3> 
+                        <h3>Location: {{$vacancy->regions->name}}</h3>
                         <h4>{{$vacancy->description}}</h4>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">

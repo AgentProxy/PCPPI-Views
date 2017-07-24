@@ -28,6 +28,7 @@
     <?php echo $__env->yieldContent('head'); ?>
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/social.css">
     <link rel="stylesheet" type="text/css" href="/css/scroll.css">
@@ -48,17 +49,17 @@
     <script src="/js/validation/proform.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-<body id="page-top" class="bg-grey">
+<body id="page-top">
     <div id="app" >
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="background-color: grey; text-align: center;">
-                        <span class="icon-bar" style="background-color: white"></span>
-                        <span class="icon-bar" style="background-color: white"></span>
-                        <span class="icon-bar" style="background-color: white"></span>     
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="text-align: center;">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>     
                     </button>
-                    <a class="navbar-brand" href="careers-home">
+                    <a class="navbar-brand" href="/careers-home">
                     <div class="logo-bar">                        
                         <img class="logo responsive" id="logo" src="/img/small-logo.png" />
                         <span id="pcppi"> Pepsi-Cola Products Philippines, Inc. - Careers </span>
@@ -67,7 +68,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul id="items" class="nav navbar-nav">
-                        <li class="active"><a href="careers-home">Home</a></li>
+                        <li class="active"><a href="/careers-home">Home</a></li>
                         <li class="dropdown clearfix">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
                             <ul id="dropdown-menu" class="dropdown-menu">
@@ -122,11 +123,11 @@
         </div>
     </noscript>
 
-    <footer class="container text-center" style="margin: 0; width: 100%;">
+    <footer class="container text-center bg-white" style="margin: 0; width: 100%;">
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3"> 
             <p>      
-                <span style="text-decoration: none; margin-bottom: 4em;" href="https://www.pepsiphilippines.com/index.php">
+                <span>
                     <img class="logo-footer" id="logo-footer" src="/img/Pepsi-logo.png" />
                 </span>
             </p>

@@ -147,31 +147,6 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
-				<h4><u>CHARACTER REFERENCES</u></h4>
-			</div>
-		</div>
-		<div class="row">
-		  	<div class="form-group col-md-4 col-md-offset-2">
-		    	<label for="name1">Name:</label>
-		    	<h4 class="col-md-offset-1">{{$data['name1']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['name2']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['name3']}}</h4>
-		  	</div>
-		  	<div class="form-group col-md-2">
-		    	<label for="num1">Contact Number:</label>
-		    	<h4 class="col-md-offset-1">{{$data['num1']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['num2']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['num3']}}</h4>
-		  	</div>
-		  	<div class="form-group col-md-4">
-		    	<label for="rel1">Relationship:</label>
-		    	<h4 class="col-md-offset-1">{{$data['rel1']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['rel2']}}</h4>
-		    	<h4 class="col-md-offset-1">{{$data['rel3']}}</h4>
-		  	</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4 col-md-offset-2">
 				<h4><u>WORK HISTORY</u></h4>
 			</div>
 		</div>

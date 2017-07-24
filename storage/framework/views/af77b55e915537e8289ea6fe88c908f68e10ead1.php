@@ -34,7 +34,7 @@
             <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
         </div>
     </div>
-    <div id="search-results" class="full-height" style="width: 100%; background-color: white;">
+    <div id="search-results" class="full-height" style="width: 100%; min-height: 200px; background-color: white;">
         <?php $__empty_1 = true; $__currentLoopData = $vacancies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $vacancy): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
         <div class="panel panel-default"> 
             <div class="panel-heading">
@@ -43,8 +43,8 @@
             <div class="panel-body">
                 <div id="viewjob" class="row">
                     <div class="col-md-10">
-                        <h3>Location: <?php echo e($vacancy->regions->name); ?></h3>
                         <h3>Function: <?php echo e($vacancy->functions->name); ?></h3> 
+                        <h3>Location: <?php echo e($vacancy->regions->name); ?></h3>
                         <h4><?php echo e($vacancy->description); ?></h4>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">
@@ -54,7 +54,7 @@
             </div>
         </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
-        <h1 style="text-align: center;"> No Vacancies Found </h1>
+        <h1 style="text-align: center; padding-top: 8%"> No Vacancies Found </h1>
         <?php endif; ?>
     </div>
     <div style="text-align: center;">

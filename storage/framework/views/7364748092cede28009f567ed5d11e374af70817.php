@@ -1,31 +1,35 @@
 <?php $__env->startSection('content'); ?>
-		<h1 class="text-center"> Find Your Career </h1>
+
+        <div class="container">
+		<h1 class="text-center bold" id="findcareer"> Find Your Career </h1>
+        </div>
         <form method="GET" action="/careers-retrieve">
             <div id="search-bar" class="container">
                 <div class="row">
-                <div class="form-group col-md-3">
-                    <input type="text" class="form-control" name="job" id="job" placeholder="Job">
+                    <div class="form-group col-md-3">
+                        <input type="text" class="form-control" name="job" id="job" placeholder="Job">
+                    </div>
+                    <div class="form-group col-md-3">
+
+                        <select class="form-control" name="region" id="region">
+                            <option value="0">All Regions</option>
+                            <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($region->id); ?>"><?php echo e($region->name); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <select class="form-control" name="function" id="function">
+                            <option value="0">All Functions</option>
+                            <?php $__currentLoopData = $functions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $function): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($function->id); ?>"><?php echo e($function->name); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </select>
+                    </div>
+                    <div class="col-md-3" id="search">
+                        <input type="submit" value="Search" class="btn btn-primary" style="width: 100%;" />
+                    </div>
                 </div>
-                <div class="form-group col-md-3">
-                    <select class="form-control" name="region" id="region">
-                        <option value="0">All Regions</option>
-                        <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <option value="<?php echo e($region->id); ?>"><?php echo e($region->name); ?></option>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </select>
-                </div>
-                <div class="form-group col-md-3">
-                    <select class="form-control" name="function" id="function">
-                        <option value="0">All Functions</option>
-                        <?php $__currentLoopData = $functions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $function): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <option value="<?php echo e($function->id); ?>"><?php echo e($function->name); ?></option>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </select>
-                </div>
-                <div class="col-md-3" id="search">
-                    <input type="submit" value="Search" class="btn btn-primary" style="width: 100%;" />
-                </div>
-            </div>
             </div>
         </form>
 		<div id="map" class="container center"></div>
@@ -83,9 +87,6 @@
         var marker,i;
 
         for(i=0; i<regions.length;i++){
-	        // infowindow[i] = new google.maps.InfoWindow({
-	        // 	content: contents[i]
-	        // });
 	        region=regions[i];
 	        marker = new google.maps.Marker({
 	          position: {lat: region[1], lng: region[2]},
