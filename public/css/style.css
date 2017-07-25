@@ -171,7 +171,7 @@ li.open > ul#dropdown-menu {
 }
 
 #forms-section {
-    margin-top: 50px;
+        margin-top: 50px;
 }
 
 #titlepad{
@@ -274,14 +274,14 @@ footer.container {
 
 #next, #section {
     padding: 40px 30px;
-    }
+}
 
 @media(max-width:767px){  
     .navbar-collapse {
         background-color: #fff;
         padding-left: auto;
         padding-right: auto;
-     }
+    }
 
     #search{
         padding-bottom: 10px;
@@ -302,6 +302,7 @@ footer.container {
         display: block;
         text-align: center;
     }
+
     #items{
         width: 100%;
         margin-right: auto;
@@ -330,8 +331,7 @@ footer.container {
     #titlepad{
         padding-top: 20px;
         text-align: center;
-    }    
-
+    }
 }
 
 /* Desktop */ 
@@ -461,7 +461,7 @@ footer.container {
 
 /* Tablets and iPad - vertical */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
     #pcppi {
         font-size: 12px;
         font-weight: bold;
@@ -513,7 +513,6 @@ footer.container {
     #map {
         height: 70vh;
     }
-
 }
 
 /* Mobile - horizontal */
@@ -697,7 +696,6 @@ footer.container {
     p.footerp{
         font-size: 4px;
     }
-
 }
 
 /* Smaller than mobile ? */
@@ -776,106 +774,124 @@ footer.container {
 
 .navbar-nav{
     margin-top: 2%;
+    text-align: center;
+    float: right;
+}
+
+
+.navbar-nav > li{
+    font-size: 15px;
+}
+
+.logo-bar{
+    margin-left: 0;
+    width: 100%;
+}
+
+#logo-footer{
+    width: 3em;
+    height: 3em;
+}
+
+.glyphicon.glyphicon-check {
+    color: green;
+    font-size: 100px;   
+    text-align: center;
+    display:block;
+}
+
+#title{
+    text-align: center;
+}  
+
+#padtop{
+    padding-top: 30px;
+}   
+
+#padbot{
+    padding-bottom: 30px;
+}
+
+#sxspad{
+    padding-bottom: 30px;
+}
+
+#btnpad{
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+#titlepad{
+    padding-top: 60px;
+    text-align: center;
+}    
+
+#external-sites{
+    position: relative;
+    top: 40px;
+    right: 250px;
+}     
+
+#external-sites{
+    position: relative;
+    top: 40px;
+    right: 250px;
+}     
+
+#links{
+    position: relative;
+    left: 40px;
+}
+
+.img-responsive {
+    padding: auto;
+    display: block;
+}
+>>>>>>> 95abaa152d4cbcaf22ee8f93b60d28c45bb80977
+
+.bg-grey {
+    background-color: #f6f6f6;
+    width: 100vw;
+    margin: 0;
+}
+
+.slideanim { 
+    visibility: hidden; 
+}
+
+.slide {
+    animation-name: slide;
+    -webkit-animation-name:slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width:  768px) {
+    .col-sm-4 {
         text-align: center;
-        float: right;
+        margin: 2-5px 0;
     }
-
-    .navbar-nav > li{
-        font-size: 15px;
-    }
-
-    .logo-bar{
-        margin-left: 0;
-        width: 100%;
-    }
-
-    
-
-    #logo-footer{
-        width: 3em;
-        height: 3em;
-    }
-
-
-    .glyphicon.glyphicon-check {
-        color: green;
-        font-size: 100px;
-        text-align: center;
-        display:block;
-    }
-
-    #title{
-        text-align: center;
-    }  
-
-    #padtop{
-        padding-top: 30px;
-    }   
-
-    #padbot{
-        padding-bottom: 30px;
-    }
-
-    #sxspad{
-        padding-bottom: 30px;
-    }
-
-    #external-sites{
-        position: relative;
-        top: 40px;
-        right: 250px;
-    }     
-
-    #links{
-         position: relative;
-        left: 40px;
-    }
-
-    .img-responsive {
-        padding: auto;
-        display: block;
-    }
-
-    .bg-grey {
-        background-color: #f6f6f6;
-        width: 100vw;
-        margin: 0;
-    }
-
-    .slideanim { visibility: hidden; }
-
-    .slide {
-        animation-name: slide;
-        -webkit-animation-name:slide;
-        animation-duration: 1s;
-        -webkit-animation-duration: 1s;
-        visibility: visible;
-    }
-
-    @keyframes slide {
-        0% {
-            opacity: 0;
-            transform: translateY(70%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0%);
-        }
-    }
-    @-webkit-keyframes slide {
-         0% {
-             opacity: 0;
-             -webkit-transform: translateY(70%);
-         }
-            100% {
-             opacity: 1;
-             -webkit-transform: translateY(0%);
-        }
-    }
-
-    @media screen and (max-width:  768px) {
-         .col-sm-4 {
-             text-align: center;
-             margin: 2-5px 0;
-         }
-     }
+}

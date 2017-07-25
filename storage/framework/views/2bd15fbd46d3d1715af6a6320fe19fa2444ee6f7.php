@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="<?php echo e(config('app.locale')); ?>">
 <!--
-    This website was created by interns as part of their Internship in PCPPI. The authors
-    are Eric Joseph P. Flores, Alonzo Francisco Locsin and, RJ Panaguiton. All are 3rd Year
-    Computer Science Students in University of The Philippines Visayas. 
-
-    This project was created using the Laravel Framework(https://laravel.com/).
-    This project contains only basic functionalities for a Careers website. The authors allow 
-    other developers to update,edit, and add other functions to this project.
-
-    All CSS files and JS are stored in the public folder. 
+    The head part is present here because of FB's specific meta tags. We cannot extend the head section used in all websites in this specific
+    blade/view because of that reason. 
 
 -->
 <head>
@@ -123,27 +116,26 @@
 			<a href="careers-home" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers Home</a>
 		</div>
 	</div>
-	<div class="container well">
+	<div id="job" class="container well">
 		<div class="row">
+			<h1 class="text-center bold">Internship</h1>
 			<p>Our Program is designed to give graduating students a diverse and rewarding experience throughout their on the job training.</p>
 			<p>PCPPI Internship Program provides hands-on learning opportunities in the field of Operations, Supply Chain, Human Resources, Sales, Finance, and Information Technology Departments, allowing them to grow and broaden their horizon in their chosen careers.</p>
 		</div>
 		<div class="row">
-			<div class="container">
-				<!-- This is for FB's Share
-				CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
-				EX. "http://your-domain/careers-proform/......"
+			<!-- This is for FB's Share
+			CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
+			EX. "http://your-domain/careers-proform/......"
 
-				EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
-				 -->
-				<div class="fb-share-button pull-right"
-				    data-href="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>"  
-				    data-layout="button"
-					data-size="large"
-				>
-		  		</div>
-		  		<!-- -->
-	  		</div>
+			EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
+			-->
+			<div class="fb-share-button pull-right"
+			    data-href="http://pcppijobs.tk/careers-internform"  
+			    data-layout="button"
+				data-size="large"
+			>
+		  	</div>
+		  	<!-- -->
 		</div> 	
 	</div>
 
