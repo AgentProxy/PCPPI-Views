@@ -399,8 +399,10 @@
 			</div>
 		</div>
 		<br/>
-		<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
-		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
+		<div class="row"> 
+			<div class="g-recaptcha col-md-8 col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
+		</div>
+		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block">Submit Application</button>
 	</form>
 	</div>
 	<div class="container well">
@@ -502,12 +504,6 @@
             Created by: Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
-            		<div class="fb-share-button" style="margin-left:47%;" 
-					    data-href="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}"  
-					    data-layout="button"
-						data-size="large"
-					>
-			  		</div>
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
                     <a href="http://bit.ly/CareersatPCPPI" class="fa fa-linkedin" style="margin-left: 2%;">
                     </a> 

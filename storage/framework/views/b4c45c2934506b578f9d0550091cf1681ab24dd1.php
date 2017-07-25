@@ -11,8 +11,8 @@
 <div id="next" class="container-fluid bg-grey">
     <div class="row">
         <div class="col-sm-8">
-            <h1 class="">Why Join Pepsi?</h1><br />
-            <p>We believe that our people drive the success of the company, and at the heart of our business stratey is the continuous effort to provide a nurturing work environment and a culture of continuous development for our people.</p>
+            <h1 class="">Why Join Pepsi?</h1>
+            <p>We believe that our people drive the success of the company, and at the heart of our business strategy is the continuous effort to provide a nurturing work environment and a culture of continuous development for our people.</p>
             <p>
             We are high-spirited, engaged individuals who are committed to the values of passion, excellence, professionalism, service, and integrity and are deeply involved in building and helping our company and our communities grow. We are Team PCPPI.
             </p>
@@ -23,7 +23,7 @@
     </div>
 </div>
 <div id="section" class="container-fluid text-center bg-grey">
-    <h1 style="font-weight: bold">Careers</h1>
+    <h1 class="bold">Careers</h1>
     <div class="row text-center sideanim">
         <div class="col-sm-4 col-sm-offset-2 col-xs-6 slideanim">
             <a href="careers-map" style="text-decoration: none;">
@@ -36,7 +36,7 @@
         <div class="col-sm-4 col-xs-6 slideanim">
             <a href="careers-internform" style="text-decoration: none;">
             <div class="thumbnail">
-                <img class="img-responsive" src="/img/internship.jpg" alt="internship" width="400" height="300">
+                <img class="img-responsive" src="/img/internship.jpg" alt="professionals" width="400" height="300">
                 <p>We seek for On-the-Job-Trainees to join our Internship Program. This offers our interns the opportunity to gain actual work experience from one of the most competitive and successful fast moving consumer goods industry in the Philippines.</p>
             </div>
             </a>

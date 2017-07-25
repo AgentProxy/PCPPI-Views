@@ -54,8 +54,8 @@
 	</div>
 	<div class="container well">
 	<div class="row">
-		<h4 style="text-align: center;">Our Program is designed to give graduating students a diverse and rewarding experience throughout their on the job training. <br/><br/>
-PCPPI Internship Program provides hands-on learning opportunities in the field of Operations, Supply Chain, Human Resources, Sales, Finance, and Information Technology Departments, allowing them to grow and broaden their horizon in their chosen careers.</h4>
+		<p>Our Program is designed to give graduating students a diverse and rewarding experience throughout their on the job training.</p>
+		<p>PCPPI Internship Program provides hands-on learning opportunities in the field of Operations, Supply Chain, Human Resources, Sales, Finance, and Information Technology Departments, allowing them to grow and broaden their horizon in their chosen careers.</p>
 	</div>
 	<div class="row">
 		<!-- This is for FB's Share -->
