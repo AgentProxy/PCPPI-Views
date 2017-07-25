@@ -103,7 +103,6 @@
 			      })(marker, i));
 	    }
 
-	   		console.log(infowindow.length);
     }
       
     </script>

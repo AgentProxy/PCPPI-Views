@@ -130,7 +130,7 @@
 				EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
 				 -->
 				<div class="fb-share-button pull-right"
-				    data-href="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}"  
+				    data-href="http://pcppijobs.tk/careers-internform"  
 				    data-layout="button"
 					data-size="large"
 				>

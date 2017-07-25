@@ -1,0 +1,21 @@
+RUNNING THE WEBSITE IN LOCAL DEVELOPMENT:
+
+This project uses the Laravel Framework and if tested or edited locally, it needs composer, php, and xampp to work:
+
+TO RUN:
+1. Download the latest version of Xampp
+2. Install it (it comes with PHP already)
+3. Download and Install Composer.exe for Windows (important for Laravel!)
+	-Check if Composer was installed successfully by Opening a Command Prompt window and typing "composer". If it returns
+	the composer commands then Composer was installed successfully
+4. Open Xampp and start Apache and MySQL
+5. Place all these files in a folder in htdocs located inside the xampp folder where you installed Xampp.
+6. Open the folder and hold CTRL + SHIFT then Right click. Then click on "open command window here".
+7. Type in "php artisan server" and it will return this "Laravel development server started: <http://127.0.0.1:8000>"
+8. Open a web browser (preferably Google Chrome)
+9. Type in the address bar "localhost:8000" then it will redirect to the homepage of this website. 
+
+
+//Must need internet connection when editing forms and trying to send because of Captcha
+
+

@@ -437,7 +437,7 @@
 			</div>
 		<!-- End of Skills Template -->
 <!--  -->
-
+<!-- This one is for the display of year in fields-->
 <script type="text/javascript">
 	for (i = new Date().getFullYear(); i > 1900; i--){
 		$('.year').append($('<option />').val(i).html(i));
