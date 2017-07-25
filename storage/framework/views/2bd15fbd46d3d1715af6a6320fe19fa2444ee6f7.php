@@ -305,21 +305,24 @@
 	</form>
 </div>
 <div class="container well">
-	<div class="row">
+	<div class="row text-center">
 		<div>
-			<h2 id="title">Hiring Process</h2>
+			<h2>Hiring Process</h2>
 		</div>
+		<hr />
 		<div class="col-md-4">
-	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+	    	<h2>Step 1</h2>
+	    	<p>Once your application is received, a recruiter will reach out, pending your qualifications.</p>
 		</div>
+		<hr class="visible-sm visible-xs" />
 		<div class="col-md-4">
-	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+	    	<h2>Step 2</h2>
+		    	<p>Series of interviews and qualifying exams will be given as we proceed with your application.</p>
 		</div>
+		<hr class="visible-sm visible-xs" />
 		<div class="col-md-4">
-	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+	    	<h2>Step 3</h2>
+	    	<p>Recruiter will send a notification on your application status via email.</p>
 		</div>
 	</div>
 </div>

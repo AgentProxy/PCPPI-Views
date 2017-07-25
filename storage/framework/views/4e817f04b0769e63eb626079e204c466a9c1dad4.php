@@ -381,7 +381,7 @@
 		</div> 
 		<div class="row">
 			<div class="col-md-12">
-				<h2 style="text-align: center; text-decoration:underline; "> Data Privacy Policy </h2>
+				<h2 class="text-center"> <u>Data Privacy Policy</u> </h2>
 			</div>
 			<div id="data-privacy" class="center-block">
 				<p>By clicking “Submit” I agree that:

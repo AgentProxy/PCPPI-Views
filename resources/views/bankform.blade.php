@@ -10,7 +10,7 @@
 		</ul>
 		@endif
 
-	<div class="container" id="form">
+	<div class="container last" id="form">
 		<div class="row" id="btnpad">
 			<a href="{{ URL::previous() }}" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 		</div>
@@ -264,46 +264,52 @@
 				<div class="col-md-12">
 					<h2 style="text-align: center; text-decoration:underline; "> Data Privacy Policy </h2>
 				</div>
-				<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
-				By clicking “Submit” I agree that:
-				I have read and accepted the User Agreement and Privacy Policy.
-				I may receive communications from PCPPI.
-				I agree to send my data to PCPPI and 
-				all the inputted data is true.
+				<div id="data-privacy" class="center-block">
+					<p>By clicking “Submit” I agree that:
+					I have read and accepted the User Agreement and Privacy Policy.
+					I may receive communications from PCPPI.
+					I agree to send my data to PCPPI and 
+					all the inputted data is true.
+					</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-md-offset-3">
-					<label for="agree">
+			<div class="container text-center">
+					<label  for="agree">
 					<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
 					I have read and agreed 
 					</label>
 					<div class="help-block with-errors"></div>
 				</div>
 			</div>
-			<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
+			<div class="row"> 
+				<div class="g-recaptcha col-md-3 col-md-offset-4" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
+			</div>
 			<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 2%;">Submit Application</button>
 		</form>
 		</div>
 		<div class="container well">
-			<div class="row">
-				<div>
-					<h2 id="title" class="bold">Hiring Process</h2>
-				</div>
-				<div class="col-md-4">
-			    	<h2 id="title">Step 1</h2><br>
-			    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
-				</div>
-				<div class="col-md-4">
-			    	<h2 id="title">Step 2</h2><br>
-			    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
-				</div>
-				<div class="col-md-4">
-			    	<h2 id="title">Step 3</h2><br>
-			    	<p id="title">Recruiter will send a notification on your application status via email.</p>
-				</div>
+		<div class="row text-center">
+			<div>
+				<h2>Hiring Process</h2>
+			</div>
+			<hr />
+			<div class="col-md-4">
+		    	<h2>Step 1</h2>
+		    	<p>Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+			</div>
+			<hr class="visible-sm visible-xs" />
+			<div class="col-md-4">
+		    	<h2>Step 2</h2>
+		    	<p>Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+			</div>
+			<hr class="visible-sm visible-xs" />
+			<div class="col-md-4">
+		    	<h2>Step 3</h2>
+		    	<p>Recruiter will send a notification on your application status via email.</p>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<!-- HTML Templates --> 	
