@@ -26,11 +26,11 @@
 
     <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url"           content="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="PCPPI Careers Vacancy" />
-  <meta property="og:description"   content="There is an opening for {{$vacancy->position}}! Apply now and start your Pepsified journey with us!" />
-  <!--<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />-->
+	<meta property="og:url"           content="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="PCPPI Careers Vacancy" />
+	<meta property="og:description"   content="There is an opening for {{$vacancy->position}}! Apply now and start your Pepsified journey with us!" />
+   <meta property="og:image"         content="/img/Pepsi-logo.png" />
 
     <!-- Styles -->
     @yield('head')

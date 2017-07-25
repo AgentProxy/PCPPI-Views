@@ -12,7 +12,6 @@
                         <input type="text" class="form-control" name="job" id="job" placeholder="Job">
                     </div>
                     <div class="form-group col-sm-3">
-
                         <select class="form-control" name="region" id="region">
                             <option value="0">All Regions</option>
                             @foreach($regions as $region)
