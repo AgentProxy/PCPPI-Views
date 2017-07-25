@@ -407,9 +407,8 @@
 				<div class="help-block with-errors"></div>
 			</div>
 		</div>
-		<br/>
 		<div class="row"> 
-			<div class="g-recaptcha col-md-8 col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
+			<div class="g-recaptcha col-md-12 text-center" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
 		</div>
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block">Submit Application</button>
 	</form>
@@ -439,7 +438,7 @@
 	  	<!-- Start of Skills Template -->
 	  		<div id="skill-0" style="display: none">
 				<input type="text" name="skills[]" value="" style="display: none">
-			    <span id="delete" style="font-size: 15px; color: red;" class="delete-skill glyphicon glyphicon-minus-sign"></span> 
+			    <span id="delete" style="" class="delete-skill glyphicon glyphicon-minus-sign"></span> 
 			    <span id="skill-label" style="padding-left: 0%;">Programming</span>
 			</div>
 		<!-- End of Skills Template -->
@@ -614,7 +613,7 @@
                 </span>
             </p>
             <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
-            Created by: Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton </p>
+            Created by: Eric Joseph P. Flores, Alonzo Francisco P. Locsin, RJ A. Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 

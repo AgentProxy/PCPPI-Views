@@ -9,9 +9,7 @@
         
             <form method="GET" action="/careers-retrieve">
             <div class="row">
-                <div class="form-group col-md-3">
-                    <input type="text" class="form-control" name="job" id="job" placeholder="Job" value="{!! old('job') !!}">
-                </div>
+                
                 <div class="form-group col-md-3">
                     <select class="form-control" id="region" name="region">
                         <option value="0" >All Regions</option>
@@ -27,6 +25,9 @@
                         <option value="{{$function->id}}" @if($function_id==$function->id) selected="selected" @endif>{{$function->name}}</option>
                         @endforeach
                     </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" name="job" id="job" placeholder="Job" value="{!! old('job') !!}">
                 </div>
                 <div class="col-md-3">
                     <input type="submit" class="btn btn-primary col-md-12" value="Search" />

@@ -237,7 +237,7 @@
                 </span>
             </p>
             <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
-            Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
+            Created by: Eric Joseph P. Flores, Alonzo Francisco P. Locsin, RJ A. Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 

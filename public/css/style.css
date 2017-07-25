@@ -1,7 +1,7 @@
 body{
     font-family: 'Quicksand', sans-serif;
     padding-top: 0px;
-    background: #004b93;
+    background: #00aff0;
     height: 100%;
     color: black
 }
@@ -29,15 +29,6 @@ pre{
     color: #c9002b; 
 }
 
-.btn-cherry {
-    background: #c9002b;
-    color: #fff;
-}
-
-.btn-cherry:hover, .btn-cherry:focus {
-    color: #fff;
-}
-
 div#section {
     padding-top: 60px;
     padding-bottom: 100px;
@@ -48,15 +39,20 @@ div#section > h1 {
     font-size: 60px;
 }
 
+#delete {
+    font-size: 15px;
+    color: red;
+}
+
 .btn-back {
     background: #fff;
-    color: #000;
-    border: 2px solid #000;
+    color: #004b93;
+    border: 2px solid #004b93;
     font-family: 'Play', sans-serif;
 }
 
 .btn-back:hover, .btn-back:focus {
-    color: #005cb4;
+    color: #004b93;
 }
 
 .btn-view {
@@ -109,6 +105,10 @@ button.navbar-toggle > span.icon-bar {
     padding-bottom: 0;
 }
 
+div.g-recaptcha {
+    display: block;
+    width: 50%;
+}
 
 
 #logo {
@@ -179,8 +179,8 @@ footer.container {
     font-size: 10px;
 }
 
-#submit-btn{
-    padding-bottom: 10px;
+#Submit {
+    margin-top: 20px;
 }
 
 .last {
