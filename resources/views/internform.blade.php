@@ -52,8 +52,10 @@
 			<a href="careers-home" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers Home</a>
 		</div>
 	</div>
+	<div class="container well">
 	<div class="row">
-		<h4> The PCPPI Internship program readies the youth for the future </h4>
+		<p>Our Program is designed to give graduating students a diverse and rewarding experience throughout their on the job training.</p>
+		<p>PCPPI Internship Program provides hands-on learning opportunities in the field of Operations, Supply Chain, Human Resources, Sales, Finance, and Information Technology Departments, allowing them to grow and broaden their horizon in their chosen careers.</p>
 	</div>
 	<div class="row">
 		<!-- This is for FB's Share -->
@@ -61,27 +63,11 @@
 		<div class="fb-share-button" data-href="careers-internform" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> 
 		-->
 		<iframe class="center-block" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=large&mobile_iframe=true&width=106&height=28&appId" width="106" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-	</div> 
-	<div class="row">
-		<div>
-			<h2 id="title">Hiring Process</h2>
-		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
-		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
-		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
-		</div>
+	</div> 	
 	</div>
-	
+
+<div class="container well">
 	<div class="row">
-		<br>
 		<h2  id="titlepad">APPLICATION</h2>
 	</div>
 	<div id="forms-section" class="row">
@@ -239,11 +225,30 @@
 				<div class="help-block with-errors"></div>
 			</div>
 		</div>
-		<br/>
 		<br/> 
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
+</div>
+<div class="container well">
+	<div class="row">
+		<div>
+			<h2 id="title">Hiring Process</h2>
+		</div>
+		<div class="col-md-4">
+	    	<h2 id="title">Step 1</h2><br>
+	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+		</div>
+		<div class="col-md-4">
+	    	<h2 id="title">Step 2</h2><br>
+	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+		</div>
+		<div class="col-md-4">
+	    	<h2 id="title">Step 3</h2><br>
+	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+		</div>
+	</div>
+</div>
 </div>
 <script type="text/javascript">
 	for (i = new Date().getFullYear(); i > 1900; i--){

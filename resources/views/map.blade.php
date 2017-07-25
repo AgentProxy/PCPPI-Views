@@ -2,16 +2,16 @@
 
 @section('content')
 
-        <div class="container">
+        <div class="container bg-grey">
 		<h1 class="text-center bold" id="findcareer"> Find Your Career </h1>
         </div>
-        <form method="GET" action="/careers-retrieve">
+        <form method="GET" action="/careers-retrieve" class="bg-grey">
             <div id="search-bar" class="container">
                 <div class="row">
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-sm-3">
                         <input type="text" class="form-control" name="job" id="job" placeholder="Job">
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-sm-3">
 
                         <select class="form-control" name="region" id="region">
                             <option value="0">All Regions</option>
@@ -20,7 +20,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-sm-3">
                         <select class="form-control" name="function" id="function">
                             <option value="0">All Functions</option>
                             @foreach($functions as $function)
@@ -28,13 +28,15 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="col-md-3" id="search">
+                    <div class="col-sm-3" id="search">
                         <input type="submit" value="Search" class="btn btn-primary" style="width: 100%;" />
                     </div>
                 </div>
             </div>
         </form>
+        <div class="container bg-grey last">
 		<div id="map" class="container center"></div>
+        </div>
     <script>
       var map;
       function initMap() {

@@ -1,17 +1,20 @@
-#submit-btn{
-    padding-bottom: 10px;
-}
-
 body{
     font-family: 'Quicksand', sans-serif;
     padding-top: 0px;
-    background-size: cover;
+    background: #004b93;
     height: 100%;
     color: black
 }
 
-body,html{
+body,html {
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
 }
 
 pre{
@@ -35,10 +38,20 @@ pre{
     color: #fff;
 }
 
+div#section {
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+div#section > h1 {
+    margin-bottom: 50px;
+    font-size: 60px;
+}
+
 .btn-back {
     background: #fff;
-    color: #005cb4;
-    border: 2px solid #005cb4;
+    color: #000;
+    border: 2px solid #000;
     font-family: 'Play', sans-serif;
 }
 
@@ -48,24 +61,24 @@ pre{
 
 .btn-view {
     background: #fff;
-    border: 1px solid #c9002b;
+    border: 1px solid #005cb4;
     border-radius: 40px;
     font-weight: bold;
-    color: #c9002b;
-    box-shadow: inset 0 0 0 0 #c9002b;
+    color: #005cb4;
+    box-shadow: inset 0 0 0 0 #005cb4;
     -webkit-transition: 0.4s ease-out;
     -moz-transition: 0.4s ease-out;
     transition: 0.4s ease-out
 }
 
+.btn-view:hover {
+    box-shadow: inset 400px 0 0 0 #005cb4;
+    color: #fff;
+}
+
 button.navbar-toggle > span.icon-bar {
     background-color: #005CB4;
     height: 2px;
-}
-
-.btn-view:hover {
-    box-shadow: inset 400px 0 0 0 #c9002b;
-    color: #fff;
 }
 
 .bold {
@@ -95,6 +108,8 @@ button.navbar-toggle > span.icon-bar {
     padding-top: 2px;
     padding-bottom: 0;
 }
+
+
 
 #logo {
     height: 78px;
@@ -126,7 +141,8 @@ li.open > ul#dropdown-menu {
 }
 
 div.thumbnail > p {
-    font-size: 1em;
+    padding-top: 5px; 
+    font-size: 14px;
 }
 
 .thumbnail {
@@ -142,6 +158,33 @@ div.thumbnail > p {
 
 .thumbnail:hover {
     box-shadow: 5px 0px 20px black;
+}
+
+footer {
+    padding-top: 1em;
+    background: #004b93;
+    color: #fff;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer.container {
+    margin: 0;
+    width: 100%;
+}
+
+.footerp{
+    font-size: 10px;
+}
+
+#submit-btn{
+    padding-bottom: 10px;
+}
+
+.last {
+    padding-bottom: 10%;
 }
 
 @media(max-width: 991px){
@@ -195,10 +238,6 @@ div.thumbnail > p {
     }
 
 @media(max-width:767px){  
-    #addskill{
-        
-    }
-
     .navbar-collapse {
         background-color: #fff;
         padding-left: auto;
@@ -238,27 +277,15 @@ div.thumbnail > p {
         padding-top: 10px;
     }
 
-    a > img {
-        width: 60%;
-    }
-
     .col-sm-4 > img {
-        width: 75%;
+        margin-top: 28px;
         display: block;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .w3-circle {
-        bottom: 6px;
-    }
-
-
-    body, h1, h2, h3, h4, li, p, label{
+    body, h1, h2, h3, h4, p, label {
         font-size: 90%;
-    }
-
-    #btnpad{
-        padding-top: 10px;                
     }
 
 }
@@ -357,18 +384,19 @@ div.thumbnail > p {
         padding: 5vh 0 2vh 0;
     }
 
-    /*div.thumbnail > h2 {
+    div.thumbnail > h2 {
         margin: 8px 0;
         font-size: 95%;
     }
 
     div.thumbnail > p {
+        padding-top: 10px;
         font-size: 70%;
     }
 
     div.thumbnail {
-        height: 280px;
-    }*/
+        height: 16em;
+    }
 
     #map {
         height: 60vh;
@@ -421,6 +449,7 @@ div.thumbnail > p {
     }
 
     div.thumbnail > p {
+        padding-top: 10px;
         font-size: 8px;
     }
 
@@ -445,7 +474,7 @@ div.thumbnail > p {
 
 /* Mobile - horizontal */
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
     #pcppi {
         font-size: 11px;
         font-weight: bold;
@@ -461,17 +490,23 @@ div.thumbnail > p {
         display: block;
     }
 
-    div.thumbnail > h2 {
-        margin: 8px 0;
-        font-size: 16px;
+    div#section {
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+
+    div#section > h1 {
+        margin-bottom: 26px;
+        font-size: 30px;
     }
 
     div.thumbnail > p {
-        font-size: 5px;
+        padding-top: 12px;
+        font-size: 9px;
     }
 
     div.thumbnail {
-        height: 200px;
+        height: 220px;
     }
 
     #findcareer {
@@ -493,7 +528,7 @@ div.thumbnail > p {
 
 /* Mobile - Vertical */
 
-@media (min-width: 321px) and (max-width: 480px) {
+@media (min-width: 321px) and (max-width: 479px) {
     .col-sm-4 > img {
         width: 45%;
         display: block;
@@ -528,21 +563,28 @@ div.thumbnail > p {
     }
 
     #next, #section {
-        padding: 30px 20px;
+        padding: 30px 50px;
     }
 
-    .glyphicon.glyphicon-chevron-down {
-        font-size: 7px;
-        padding: 1px
+    div#section {
+        padding-top: 30px;
+        padding-bottom: 70px;
     }
 
-    div.thumbnail > h2 {
-        margin: 8px 0;
-        font-size: 80%;
+    div#section > h1 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    div.thumbnail {
+        margin: 0;
+        padding: 5px;
+        height: 14em;
     }
 
     div.thumbnail > p {
-        font-size: 80%;
+        padding-top: 8px;
+        font-size: 58%;
     }
 
     .btn {
@@ -574,12 +616,16 @@ div.thumbnail > p {
         height: 14px;
     }
 
-    p.footerp {
-        font-size: 2px;
+    footer {
+        padding-top: 50px;
+        background: #004b93;
+        color: #fff;
+        font-size: 10px;
     }
 
-    footer > div.row {
-        padding-top: 3px;
+    p.footerp{
+        font-size: 2px;
+        line-height: 4px;
     }
 
 }
@@ -588,7 +634,9 @@ div.thumbnail > p {
 
 @media (max-width: 320px) {
     a.btn-back {
-        width: 11%;
+        padding: 2px;
+        width: 50%;
+        font-size: 90%;
     }
 
     #pcppi {
@@ -601,17 +649,43 @@ div.thumbnail > p {
         width: 34px;
     }
 
-    div.thumbnail > h2 {
-        margin: 8px 0;
-        font-size: 50%;
+    div#section {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    div#section > h1 {
+        margin-bottom: 20px;
+        font-size: 20px;
     }
 
     div.thumbnail > p {
-        font-size: 37%;
+        padding-top: 9px;
+        font-size: 41%;
     }
 
     div.thumbnail {
-        height: 20%;
+        margin: 0;
+        padding: 4px;
+        height: 9em;
+    }
+
+    #map {
+        height: 95vh;
+        width: 90vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        padding-top: 50px;
+        background: #004b93;
+        color: #fff;
+    }
+
+    p.footerp{
+        font-size: 2.2px;
+        line-height: 2.2px;
     }
 }
 
@@ -630,23 +704,7 @@ div.thumbnail > p {
         width: 100%;
     }
 
-    footer {
-        padding-top: 1em;
-        background: #004b93;
-        color: #fff;
-        font-size: 10px;
-        position: relative;
-        bottom: 0;
-    }
-
-    footer.container {
-        margin: 0;
-        width: 100%;
-    }
-
-    .footerp{
-        font-size: 10px;
-    }
+    
 
     #logo-footer{
         width: 3em;
@@ -705,6 +763,8 @@ div.thumbnail > p {
 
     .bg-grey {
         background-color: #f6f6f6;
+        width: 100vw;
+        margin: 0;
     }
 
     .slideanim { visibility: hidden; }

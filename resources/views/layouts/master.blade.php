@@ -29,7 +29,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/social.css">
     <link rel="stylesheet" type="text/css" href="/css/scroll.css">
     <link rel="stylesheet" type="text/css" href="/css/w3schools.css">
@@ -50,6 +50,7 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body id="page-top">
+    <div id="wrapper">
     <div id="app" >
         <nav class="navbar">
             <div class="container-fluid">
@@ -99,8 +100,16 @@
                     }
 
                     h1, h3{
-                        font-size: 30px;
                         text-align: center;
+                        font-family: 'Play', sans-serif;
+                    }
+
+                    h1 {
+                        margin-top: 15%;
+                        font-size: 66px;
+                    }
+                    h3 {
+                        font-size: 20px;
                     }
 
                     #jsimg{
@@ -108,22 +117,118 @@
                         padding-bottom: 75px;
                         padding-top: 75px;
                     }
+
+                    .container.well {
+                        margin-top: 6%;
+                        background: #f6f6f6;
+                        border: 2px solid rgba(0,0,0,0.5);
+                        border-radius: 20px;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 10%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 480px) and (max-width: 767px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 4%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 321px) and (max-width: 479px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 95%;
+                            padding-bottom: 30px;
+                            padding-top: 20px;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 18%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (max-width: 320px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 55%;
+                            padding-bottom: 22px;
+                            padding-top: 16px;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top:10%;
+                        }
+                    }
                 </style>
-                <div id="nojs">
+                <div class="container" id="nojs">
                     <div class="row">
-                        <div class="col-sm-4 sidep slide">
-                            <img id="jsimg" class="center-block" src="img/pep.png" alt="pic">
-                        </div>
-                        <div class="col-sm-8">
-                            <br><br><h1><b>Javascript Disabled<b></h1><br><br><br>
-                            <h3><b>You don't have javascript enabled. Please enable it and reload the page<b></h3>
+                        <div class="container well">
+                            <div class="col-md-4 sidep slide">
+                                <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
+                            </div>
+                            <div class="col-md-8">
+                                <h1><b>Javascript Disabled</b></h1>
+                                <h3><b>You don't have javascript enabled. Please enable it and reload the page</b></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
         </div>
     </noscript>
 
-    <footer class="container text-center bg-white">
+    <footer class="container text-center">
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3"> 
             <p>      
@@ -137,10 +242,11 @@
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
                     <a href="http://bit.ly/CareersatPCPPI" class="fa fa-linkedin" style="margin-left: 2%;">
-                    </a> 
+                    </a>
             </div> 
         </div> 
     </footer>
+    </div>
 </body>
 </html>
 

@@ -116,25 +116,8 @@
 		<div class="row" id="btnpad">
 			<a href="{{ URL::previous() }}" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span>Back to Careers List</a>
 		</div>
-		<div class="row">
-			<div>
-				<h2 id="title">Hiring Process</h2>
-			</div>
-			<div class="col-md-4">
-		    	<h2 id="title">Step 1</h2><br>
-		    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
-			</div>
-			<div class="col-md-4">
-		    	<h2 id="title">Step 2</h2><br>
-		    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
-			</div>
-			<div class="col-md-4">
-		    	<h2 id="title">Step 3</h2><br>
-		    	<p id="title">Recruiter will send a notification on your application status via email.</p>
-			</div>
-		</div>
-		<div class="row">
-			<br>
+		<div class="container well">
+		<div class="row" style="position: relative; top: -20px;">
 			<h2 id="titlepad">APPLICATION</h2>
 		</div>
 		<div id="forms-section" class="row">
@@ -261,7 +244,7 @@
 						    </div>
 						    <div class="" id="addskill">
 							    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
-							    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
+							    <button type="button" id="add-skill" class="btn btn-primary add-skill">
 					      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 					    		</button>
 					    		<label> Add other skills related to position applying for </label>
@@ -400,11 +383,29 @@
 					<div class="help-block with-errors"></div>
 				</div>
 			</div>
-			<br/>
-			<br/> 
 			<div class="g-recaptcha col-md-offset-2" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
-			<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
+			<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 2%;">Submit Application</button>
 		</form>
+		</div>
+		<div class="container well">
+			<div class="row">
+				<div>
+					<h2 id="title">Hiring Process</h2>
+				</div>
+				<div class="col-md-4">
+			    	<h2 id="title">Step 1</h2><br>
+			    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+				</div>
+				<div class="col-md-4">
+			    	<h2 id="title">Step 2</h2><br>
+			    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+				</div>
+				<div class="col-md-4">
+			    	<h2 id="title">Step 3</h2><br>
+			    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- HTML Templates --> 	
@@ -486,7 +487,7 @@
                 </span>
             </p>
             <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
-            Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
+            Created by: Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
