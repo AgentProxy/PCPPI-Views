@@ -92,138 +92,138 @@
             @yield('content')
         </div>
         <noscript>
-            <div class="noscriptmsg">
-                    <style>
-                        #app {
-                            display:none;
-                        }
+            <div class="noscriptmsg">       
+                <style>
+                    #app {
+                        display:none;
+                    }
 
-                        h1, h3{
-                            text-align: center;
-                            font-family: 'Play', sans-serif;
-                        }
+                    h1, h3{
+                        text-align: center;
+                        font-family: 'Play', sans-serif;
+                    }
 
+                    h1 {
+                        margin-top: 15%;
+                        font-size: 66px;
+                    }
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    #jsimg{
+                        width: 85%;
+                        padding-bottom: 75px;
+                        padding-top: 75px;
+                    }
+
+                    .container.well {
+                        margin-top: 6%;
+                        background: #f6f6f6;
+                        border: 2px solid rgba(0,0,0,0.5);
+                        border-radius: 20px;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1023px) {
                         h1 {
-                            margin-top: 15%;
-                            font-size: 66px;
+                            margin-top: 5px;
+                            font-size: 40px;
                         }
                         h3 {
-                            font-size: 20px;
+                            font-size: 12px;
                         }
 
                         #jsimg{
-                            width: 85%;
-                            padding-bottom: 75px;
-                            padding-top: 75px;
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
                         }
 
                         .container.well {
-                            margin-top: 6%;
-                            background: #f6f6f6;
-                            border: 2px solid rgba(0,0,0,0.5);
-                            border-radius: 20px;
+                            width: 95vw;
+                            margin-top: 10%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 480px) and (max-width: 767px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
                         }
 
-                        @media (min-width: 768px) and (max-width: 1023px) {
-                            h1 {
-                                margin-top: 5px;
-                                font-size: 40px;
-                            }
-                            h3 {
-                                font-size: 12px;
-                            }
-
-                            #jsimg{
-                                width: 45%;
-                                padding-top: 0;
-                                padding-bottom: 0;
-                            }
-
-                            .container.well {
-                                width: 95vw;
-                                margin-top: 10%;
-                                margin-bottom: 20%;
-                            }
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
                         }
 
-                        @media (min-width: 480px) and (max-width: 767px) {
-                            h1 {
-                                margin-top: 5px;
-                                font-size: 40px;
-                            }
-                            h3 {
-                                font-size: 12px;
-                            }
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 4%;
+                            margin-bottom: 20%;
+                        }
+                    }
 
-                            #jsimg{
-                                width: 45%;
-                                padding-top: 0;
-                                padding-bottom: 0;
-                            }
-
-                            .container.well {
-                                width: 95vw;
-                                margin-top: 4%;
-                                margin-bottom: 20%;
-                            }
+                    @media (min-width: 321px) and (max-width: 479px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
                         }
 
-                        @media (min-width: 321px) and (max-width: 479px) {
-                            h1 {
-                                margin-top: 15%;
-                                font-size: 40px;
-                            }
-                            h3 {
-                                font-size: 12px;
-                            }
-
-                            #jsimg{
-                                width: 95%;
-                                padding-bottom: 30px;
-                                padding-top: 20px;
-                            }
-
-                            .container.well {
-                                width: 95vw;
-                                margin-top: 18%;
-                                margin-bottom: 20%;
-                            }
+                        #jsimg{
+                            width: 95%;
+                            padding-bottom: 30px;
+                            padding-top: 20px;
                         }
 
-                        @media (max-width: 320px) {
-                            h1 {
-                                margin-top: 15%;
-                                font-size: 40px;
-                            }
-                            h3 {
-                                font-size: 12px;
-                            }
-
-                            #jsimg{
-                                width: 55%;
-                                padding-bottom: 22px;
-                                padding-top: 16px;
-                            }
-
-                            .container.well {
-                                width: 95vw;
-                                margin-top:10%;
-                            }
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 18%;
+                            margin-bottom: 20%;
                         }
-                    </style>
-                    <div class="container" id="nojs">
-                        <div class="row">
-                            <div class="container well">
-                                <div class="col-md-4 sidep slide">
-                                    <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
-                                </div>
-                                <div class="col-md-8">
-                                    <h1><b>Javascript Disabled</b></h1>
-                                    <h3><b>You don't have javascript enabled. Please enable it and reload the page</b></h3>
-                                </div>
+                    }
+
+                    @media (max-width: 320px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 55%;
+                            padding-bottom: 22px;
+                            padding-top: 16px;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top:10%;
+                        }
+                    }
+                </style>
+                <div class="container" id="nojs">
+                    <div class="row">
+                        <div class="container well">
+                            <div class="col-md-4 sidep slide">
+                                <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
+                            </div>
+                            <div class="col-md-8">
+                                <h1><b>Javascript Disabled</b></h1>
+                                <h3><b>You don't have javascript enabled. Please enable it and reload the page</b></h3>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </noscript>
         <footer class="container text-center">

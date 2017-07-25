@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="<?php echo e(config('app.locale')); ?>">
 <!--
-    This website was created by interns as part of their Internship in PCPPI. The authors
+    This website was created by interns as part of their Internship in PCPPI. The developers
     are Eric Joseph P. Flores, Alonzo Francisco Locsin and, RJ Panaguiton. All are 3rd Year
     Computer Science Students in University of The Philippines Visayas. 
 
     This project was created using the Laravel Framework(https://laravel.com/).
-    This project contains only basic functionalities for a Careers website. The authors allow 
+    This project contains only basic functionalities for a Careers website. The developers allow 
     other developers to update,edit, and add other functions to this project.
 
     All CSS files and JS are stored in the public folder. 
@@ -237,7 +237,7 @@
                 </span>
             </p>
             <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
-            Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
+            Created by: Eric Joseph P. Flores, Alonzo Francisco P. Locsin, RJ A. Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 

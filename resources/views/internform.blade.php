@@ -116,29 +116,28 @@
 			<a href="careers-home" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers Home</a>
 		</div>
 	</div>
-	<div class="container well">
+	<div id="job" class="container well">
 		<div class="row">
+			<h1 class="text-center bold">Internship</h1>
 			<p>Our Program is designed to give graduating students a diverse and rewarding experience throughout their on the job training.</p>
 			<p>PCPPI Internship Program provides hands-on learning opportunities in the field of Operations, Supply Chain, Human Resources, Sales, Finance, and Information Technology Departments, allowing them to grow and broaden their horizon in their chosen careers.</p>
 		</div>
 		<div class="row">
-			<div class="container">
-				<!-- This is for FB's Share
-				CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
-				EX. "http://your-domain/careers-proform/......"
+			<!-- This is for FB's Share
+			CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
+			EX. "http://your-domain/careers-proform/......"
 
-				EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
-				 -->
-				<div class="fb-share-button pull-right"
-				    data-href="http://pcppijobs.tk/careers-internform"  
-				    data-layout="button"
-					data-size="large"
-				>
-		  		</div>
-		  		<!-- -->
+			EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
+			 -->
+			<div class="fb-share-button pull-right"
+			    data-href="http://pcppijobs.tk/careers-internform"  
+			    data-layout="button"
+				data-size="large"
+			>
 	  		</div>
-		</div> 	
-	</div>
+	  		<!-- -->
+	  	</div>
+	</div> 	
 
 <div class="container well">
 	<div class="row">
@@ -305,21 +304,24 @@
 	</form>
 </div>
 <div class="container well">
-	<div class="row">
+	<div class="row text-center">
 		<div>
-			<h2 id="title">Hiring Process</h2>
+			<h2>Hiring Process</h2>
 		</div>
+		<hr />
 		<div class="col-md-4">
-	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+	    	<h2>Step 1</h2>
+	    	<p>Once your application is received, a recruiter will reach out, pending your qualifications.</p>
 		</div>
+		<hr class="visible-sm visible-xs" />
 		<div class="col-md-4">
-	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+	    	<h2>Step 2</h2>
+		    	<p>Series of interviews and qualifying exams will be given as we proceed with your application.</p>
 		</div>
+		<hr class="visible-sm visible-xs" />
 		<div class="col-md-4">
-	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+	    	<h2>Step 3</h2>
+	    	<p>Recruiter will send a notification on your application status via email.</p>
 		</div>
 	</div>
 </div>

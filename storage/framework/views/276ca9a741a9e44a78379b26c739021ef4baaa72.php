@@ -7,10 +7,6 @@
             <div id="search-bar" class="container">
                 <div class="row">
                     <div class="form-group col-sm-3">
-                        <input type="text" class="form-control" name="job" id="job" placeholder="Job">
-                    </div>
-                    <div class="form-group col-sm-3">
-
                         <select class="form-control" name="region" id="region">
                             <option value="0">All Regions</option>
                             <?php $__currentLoopData = $regions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $region): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -25,6 +21,9 @@
                             <option value="<?php echo e($function->id); ?>"><?php echo e($function->name); ?></option>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <input type="text" class="form-control" name="job" id="job" placeholder="Job">
                     </div>
                     <div class="col-sm-3" id="search">
                         <input type="submit" value="Search" class="btn btn-primary" style="width: 100%;" />

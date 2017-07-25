@@ -53,13 +53,13 @@
             </div>
         </div>
         @empty
-        <h1 style="text-align: center; padding-top: 8%;"> No Vacancies Found </h1>
+        <h1 class="text-center" style="padding-top: 8%;"> No Vacancies Found </h1>
         @endforelse
     </div>
-    <div style="text-align: center;">
+    <div class="text-center">
         <div class="pagination" style="margin: auto;"> {{ $vacancies->links() }} </div>
     </div>
-    <div class="row" id="padbot" style="text-align: center">
+    <div class="row text-center" id="padbot">
         <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
     </div>
 </div>

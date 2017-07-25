@@ -1,14 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container">
+<div class="wrapper bg-grey">
 	<div class="row" id="padtop">
 		 <img class="center-block" src="/img/pepsi.png" width="10%">
 	</div>
-	<div class="row">
-		<h1 id="title">ERROR!</h1>
-		<h4 id="title">An error has occured!</h4>
-		<h4 id="title">The page or vacancy you were looking for could not be found. It might not exist or was deleted recently.</h4><br><br>
+	<div class="row" style="width: 100%; min-height: 35vh;">
+		<h1 class="text-center">ERROR!</h1>
+		<h4 class="text-center">An error has occured!</h4>
+		<h4 class="text-center">The page or vacancy you were looking for could not be found. It might not exist or was deleted recently.</h4><br><br>
 	</div>
 	<div id="sxspad" class="row">
 		<div class="col-md-3 col-md-offset-3">

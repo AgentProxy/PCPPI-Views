@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="<?php echo e(config('app.locale')); ?>">
 <!--
-    This website was created by interns as part of their Internship in PCPPI. The authors
-    are Eric Joseph P. Flores, Alonzo Francisco Locsin and, RJ Panaguiton. All are 3rd Year
-    Computer Science Students in University of The Philippines Visayas. 
-
-    This project was created using the Laravel Framework(https://laravel.com/).
-    This project contains only basic functionalities for a Careers website. The authors allow 
-    other developers to update,edit, and add other functions to this project.
-
-    All CSS files and JS are stored in the public folder. 
+    The head part is present here because of FB's specific meta tags. We cannot extend the head section used in all websites in this specific
+    blade/view because of that reason. 
 
 -->
 <head>
@@ -26,11 +19,12 @@
 
     <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url"           content="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="PCPPI Careers Vacancy" />
-  <meta property="og:description"   content="There is an opening for <?php echo e($vacancy->position); ?>! Apply now and start your Pepsified journey with us!" />
-  <!--<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />-->
+
+	<meta property="og:url"           content="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="PCPPI Careers Vacancy" />
+	<meta property="og:description"   content="There is an opening for <?php echo e($vacancy->position); ?>! Apply now and start your Pepsified journey with us!" />
+    <meta property="og:image"         content="/img/Pepsi-logo.png" />
 
     <!-- Styles -->
     <?php echo $__env->yieldContent('head'); ?>
@@ -121,7 +115,7 @@
 	<div class="row" id="btnpad">
 		<a href="<?php echo e(URL::previous()); ?>" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
 	</div>
-	<div class="container well" >
+	<div id="job" class="container well" >
 		<div class="row">
 			<h1 id="title"><?php echo e($vacancy->position); ?></h1>
 			<h3 id="title"><?php echo e($vacancy->regions->name); ?></h3>
@@ -141,26 +135,24 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="container">
 				<!-- This is for FB's Share
 				CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
 				EX. "http://your-domain/careers-proform/......"
 
 				EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
 				 -->
-				<div class="fb-share-button pull-right"
+				<div class="fb-share-button"
 				    data-href="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>"  
 				    data-layout="button"
-					data-size="large"
+					data-size="large" style="float: right;" 
 				>
 		  		</div>
 		  		<!-- -->
-	  		</div>
 		</div>
 	</div>
 	<div class="container well">
 	<div class="row">
-		<h2 id="titlepad">APPLICATION</h2>
+		<h2 id="titlepad" class="bold">APPLICATION</h2>
 	</div>
 	<div id="forms-section" class="row">
 		<div class="col-md-4 col-md-offset-2">
@@ -380,57 +372,60 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
-				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
+				<button class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
 						<input type="file" id="resume" name="resume" style="display: none" required value="<?php echo old('resume'); ?>"/>	
-				</label>
+				</button>
 				<p> Uploaded File: <span id="uploaded-file"> </span></p>
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 			</div>
 		</div> 
 		<div class="row">
 			<div class="col-md-12">
-				<h2 style="text-align: center; text-decoration:underline; "> Data Privacy Policy </h2>
+				<h2 class="text-center"> <u>Data Privacy Policy</u> </h2>
 			</div>
-			<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
-			By clicking “Submit” I agree that:
-			I have read and accepted the User Agreement and Privacy Policy.
-			I may receive communications from PCPPI.
-			I agree to send my data to PCPPI and 
-			all the inputted data is true.
+			<div id="data-privacy" class="center-block">
+				<p>By clicking “Submit” I agree that:
+				I have read and accepted the User Agreement and Privacy Policy.
+				I may receive communications from PCPPI.
+				I agree to send my data to PCPPI and 
+				all the inputted data is true.
+				</p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col-md-offset-3">
-				<label for="agree">
+			<div class="container text-center">
+				<label  for="agree">
 				<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
 				I have read and agreed 
 				</label>
 				<div class="help-block with-errors"></div>
 			</div>
 		</div>
-		<br/>
 		<div class="row"> 
-			<div class="g-recaptcha col-md-8 col-md-offset-2" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
+			<div class="g-recaptcha col-md-3 col-md-offset-4" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
 		</div>
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block">Submit Application</button>
 	</form>
 	</div>
 	<div class="container well">
-		<div class="row">
+		<div class="row text-center">
 			<div>
-				<h2 id="title">Hiring Process</h2>
+				<h2>Hiring Process</h2>
 			</div>
+			<hr />
 			<div class="col-md-4">
-		    	<h2 id="title">Step 1</h2><br>
-		    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+		    	<h2>Step 1</h2>
+		    	<p>Once your application is received, a recruiter will reach out, pending your qualifications.</p>
 			</div>
+			<hr class="visible-sm visible-xs" />
 			<div class="col-md-4">
-		    	<h2 id="title">Step 2</h2><br>
-		    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+		    	<h2>Step 2</h2>
+		    	<p>Series of interviews and qualifying exams will be given as we proceed with your application.</p>
 			</div>
+			<hr class="visible-sm visible-xs" />
 			<div class="col-md-4">
-		    	<h2 id="title">Step 3</h2><br>
-		    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+		    	<h2>Step 3</h2>
+		    	<p>Recruiter will send a notification on your application status via email.</p>
 			</div>
 		</div>
 	</div>
@@ -440,7 +435,7 @@
 	  	<!-- Start of Skills Template -->
 	  		<div id="skill-0" style="display: none">
 				<input type="text" name="skills[]" value="" style="display: none">
-			    <span id="delete" style="font-size: 15px; color: red;" class="delete-skill glyphicon glyphicon-minus-sign"></span> 
+			    <span id="delete" style="" class="delete-skill glyphicon glyphicon-minus-sign"></span> 
 			    <span id="skill-label" style="padding-left: 0%;">Programming</span>
 			</div>
 		<!-- End of Skills Template -->
@@ -615,7 +610,7 @@
                 </span>
             </p>
             <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
-            Created by: Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton </p>
+            Created by: Eric Joseph P. Flores, Alonzo Francisco P. Locsin, RJ A. Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
