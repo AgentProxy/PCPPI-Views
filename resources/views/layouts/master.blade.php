@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <!--
-    This website was created by interns as part of their Internship in PCPPI. The authors
+    This website was created by interns as part of their Internship in PCPPI. The developers
     are Eric Joseph P. Flores, Alonzo Francisco Locsin and, RJ Panaguiton. All are 3rd Year
     Computer Science Students in University of The Philippines Visayas. 
 
     This project was created using the Laravel Framework(https://laravel.com/).
-    This project contains only basic functionalities for a Careers website. The authors allow 
+    This project contains only basic functionalities for a Careers website. The developers allow 
     other developers to update,edit, and add other functions to this project.
 
     All CSS files and JS are stored in the public folder. 

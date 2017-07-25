@@ -1,1 +1,1 @@
-a:4:{s:6:"_token";s:40:"hvt89ZCQN4oh6j6B4QK2ZCQBTXhJLjMWhRmosXqh";s:9:"_previous";a:1:{s:3:"url";s:63:"http://localhost:8000/careers-retrieve?function=0&job=&region=0";}s:6:"_flash";a:2:{s:3:"old";a:1:{i:0;s:10:"_old_input";}s:3:"new";a:0:{}}s:10:"_old_input";a:3:{s:6:"region";s:1:"0";s:8:"function";s:1:"0";s:3:"job";N;}}
+a:3:{s:6:"_token";s:40:"hvt89ZCQN4oh6j6B4QK2ZCQBTXhJLjMWhRmosXqh";s:9:"_previous";a:1:{s:3:"url";s:33:"http://localhost:8000/careers-map";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}}
