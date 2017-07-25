@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.6.6
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 13, 2017 at 10:49 AM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 7.0.15
+-- Host: localhost
+-- Generation Time: Jul 25, 2017 at 02:01 AM
+-- Server version: 10.1.20-MariaDB
+-- PHP Version: 7.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,24 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pcppi-careers`
+-- Database: `id2312159_pcppi`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `categories`
---
-
-CREATE TABLE `categories` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `parent_id` int(10) UNSIGNED DEFAULT NULL,
-  `order` int(11) NOT NULL DEFAULT '1',
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -134,16 +118,18 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (81, 9, 'updated_at', 'timestamp', 'Updated At', 0, 1, 1, 0, 0, 0, NULL, 7),
 (82, 8, 'accountability', 'rich_text_box', 'Accountability', 0, 1, 1, 1, 1, 1, NULL, 11),
 (83, 13, 'id', 'checkbox', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
-(84, 13, 'closed_at', 'timestamp', 'Closed At', 0, 1, 1, 1, 1, 1, NULL, 4),
-(85, 13, 'description', 'text_area', 'Description', 0, 1, 1, 1, 1, 1, NULL, 6),
-(87, 13, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, NULL, 2),
+(85, 13, 'description', 'text_area', 'Description', 0, 1, 1, 1, 1, 1, NULL, 7),
+(87, 13, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 0, 0, 1, NULL, 2),
 (88, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 3),
-(89, 13, 'applicants', 'checkbox', 'Applicants', 0, 1, 1, 0, 0, 0, NULL, 8),
-(90, 13, 'closed', 'checkbox', 'Closed', 0, 1, 1, 1, 1, 1, '{\"on\":\"Closed\",\"off\":\"Open\",\"checked\":\"false\"}', 9),
-(91, 13, 'region_id', 'select_dropdown', 'Region Id', 0, 1, 1, 1, 1, 1, '{\"relationship\":{\"key\":\"id\",\"label\":\"name\"}}', 7),
-(92, 13, 'responsibilities', 'list_area', 'Responsibilities', 0, 1, 1, 1, 1, 1, NULL, 10),
-(93, 13, 'qualifications', 'list_area', 'Qualifications', 0, 1, 1, 1, 1, 1, NULL, 11),
-(94, 13, 'position', 'checkbox', 'Position', 0, 1, 1, 1, 1, 1, NULL, 5);
+(89, 13, 'applicants', 'checkbox', 'Applicants', 0, 1, 1, 0, 0, 0, NULL, 11),
+(90, 13, 'closed', 'checkbox', 'Closed', 0, 1, 1, 1, 1, 1, '{\"on\":\"Closed\",\"off\":\"Open\"}', 8),
+(91, 13, 'region_id', 'select_dropdown', 'Region', 0, 1, 1, 1, 1, 1, '{\"relationship\":{\"key\":\"id\",\"label\":\"name\"}}', 5),
+(92, 13, 'responsibilities', 'list_area', 'Responsibilities', 0, 1, 1, 1, 1, 1, NULL, 9),
+(93, 13, 'qualifications', 'list_area', 'Qualifications', 0, 1, 1, 1, 1, 1, NULL, 10),
+(94, 13, 'position', 'text', 'Position', 0, 1, 1, 1, 1, 1, NULL, 4),
+(97, 18, 'id', 'checkbox', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(98, 18, 'name', 'text', 'Name', 0, 1, 1, 1, 1, 1, NULL, 2),
+(99, 13, 'department_id', 'select_dropdown', 'Functions', 0, 1, 1, 1, 1, 1, '{\"relationship\":{\"key\":\"id\",\"label\":\"name\"}}', 6);
 
 -- --------------------------------------------------------
 
@@ -180,7 +166,33 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (6, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', '', '', 1, 0, '2017-07-09 17:04:11', '2017-07-09 17:04:11'),
 (8, 'positions', 'positions', 'Position', 'Positions', NULL, 'App\\Position', NULL, NULL, 1, 0, '2017-07-09 22:16:28', '2017-07-09 22:16:28'),
 (9, 'regions', 'regions', 'Region', 'Regions', NULL, 'App\\Region', NULL, NULL, 1, 0, '2017-07-09 22:48:00', '2017-07-09 22:48:00'),
-(13, 'vacancies', 'vacancies', 'Vacancy', 'Vacancies', NULL, 'App\\Vacancy', NULL, NULL, 1, 0, '2017-07-12 22:22:31', '2017-07-12 22:22:31');
+(13, 'vacancies', 'vacancies', 'Vacancy', 'Vacancies', NULL, 'App\\Vacancy', NULL, NULL, 1, 0, '2017-07-12 22:22:31', '2017-07-12 22:22:31'),
+(18, 'departments', 'departments', 'Department', 'Departments', NULL, 'App\\Department', NULL, NULL, 1, 0, '2017-07-19 18:46:40', '2017-07-19 18:46:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `departments`
+--
+
+CREATE TABLE `departments` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `departments`
+--
+
+INSERT INTO `departments` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'National Sales  & Distribution', '2017-07-19 20:33:19', '2017-07-19 20:33:19'),
+(2, 'Human Resource', '2017-07-19 20:33:46', '2017-07-19 20:33:46'),
+(3, 'Finance', '2017-07-19 20:34:09', '2017-07-19 20:34:09'),
+(4, 'Manufacturing & Operation', '2017-07-19 20:34:44', '2017-07-19 20:34:44'),
+(5, 'National Supply Chain', '2017-07-19 20:35:19', '2017-07-19 20:35:19'),
+(6, 'Admin', '2017-07-19 20:35:46', '2017-07-19 20:35:46');
 
 -- --------------------------------------------------------
 
@@ -252,13 +264,14 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (1, 1, 'Dashboard', '/admin', '_self', 'voyager-boat', NULL, NULL, 1, '2017-07-09 17:04:14', '2017-07-09 17:04:14', NULL, NULL),
 (4, 1, 'Users', '/admin/users', '_self', 'voyager-person', NULL, NULL, 4, '2017-07-09 17:04:14', '2017-07-10 00:47:14', NULL, NULL),
 (7, 1, 'Roles', '/admin/roles', '_self', 'voyager-lock', NULL, NULL, 3, '2017-07-09 17:04:14', '2017-07-10 00:47:14', NULL, NULL),
-(8, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 9, '2017-07-09 17:04:14', '2017-07-10 00:47:14', NULL, NULL),
+(8, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 5, '2017-07-09 17:04:14', '2017-07-19 19:53:42', NULL, NULL),
 (9, 1, 'Menu Builder', '/admin/menus', '_self', 'voyager-list', NULL, 8, 1, '2017-07-09 17:04:14', '2017-07-09 19:46:22', NULL, NULL),
 (10, 1, 'Database', '/admin/database', '_self', 'voyager-data', NULL, 8, 2, '2017-07-09 17:04:14', '2017-07-09 19:46:22', NULL, NULL),
-(11, 1, 'Settings', '/admin/settings', '_self', 'voyager-settings', NULL, NULL, 10, '2017-07-09 17:04:14', '2017-07-10 00:47:14', NULL, NULL),
-(24, 1, 'Vacancies', '/admin/vacancies', '_self', 'voyager-window-list', '#000000', 26, 2, '2017-07-09 22:20:31', '2017-07-12 22:24:11', NULL, ''),
+(11, 1, 'Settings', '/admin/settings', '_self', 'voyager-settings', NULL, NULL, 6, '2017-07-09 17:04:14', '2017-07-19 19:53:42', NULL, NULL),
 (25, 1, 'Regions', '/admin/regions', '_self', 'voyager-world', '#000000', 26, 1, '2017-07-09 22:45:26', '2017-07-10 00:47:14', NULL, ''),
-(26, 1, 'Jobs', '', '_self', 'voyager-group', '#000000', NULL, 2, '2017-07-09 22:49:43', '2017-07-10 00:36:03', NULL, '');
+(26, 1, 'Jobs', '', '_self', 'voyager-group', '#000000', NULL, 2, '2017-07-09 22:49:43', '2017-07-10 00:36:03', NULL, ''),
+(27, 1, 'Vacancies', 'admin/vacancies', '_self', 'voyager-archive', '#000000', 26, 3, '2017-07-19 19:51:14', '2017-07-19 20:29:48', NULL, ''),
+(28, 1, 'Departments', 'admin/departments', '_self', 'voyager-group', '#000000', 26, 2, '2017-07-19 20:29:32', '2017-07-19 20:29:48', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -297,27 +310,6 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (18, '2017_01_15_000000_make_table_name_nullable_in_permissions_table', 1),
 (19, '2017_03_06_000000_add_controller_to_data_types_table', 1),
 (20, '2017_04_21_000000_add_order_to_data_rows_table', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pages`
---
-
-CREATE TABLE `pages` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `author_id` int(11) NOT NULL,
-  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `excerpt` text COLLATE utf8mb4_unicode_ci,
-  `body` text COLLATE utf8mb4_unicode_ci,
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `meta_description` text COLLATE utf8mb4_unicode_ci,
-  `meta_keywords` text COLLATE utf8mb4_unicode_ci,
-  `status` enum('ACTIVE','INACTIVE') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'INACTIVE',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -399,7 +391,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (51, 'read_vacancies', 'vacancies', '2017-07-12 22:22:31', '2017-07-12 22:22:31', NULL),
 (52, 'edit_vacancies', 'vacancies', '2017-07-12 22:22:31', '2017-07-12 22:22:31', NULL),
 (53, 'add_vacancies', 'vacancies', '2017-07-12 22:22:32', '2017-07-12 22:22:32', NULL),
-(54, 'delete_vacancies', 'vacancies', '2017-07-12 22:22:32', '2017-07-12 22:22:32', NULL);
+(54, 'delete_vacancies', 'vacancies', '2017-07-12 22:22:32', '2017-07-12 22:22:32', NULL),
+(55, 'browse_departments', 'departments', '2017-07-19 18:46:41', '2017-07-19 18:46:41', NULL),
+(56, 'read_departments', 'departments', '2017-07-19 18:46:41', '2017-07-19 18:46:41', NULL),
+(57, 'edit_departments', 'departments', '2017-07-19 18:46:41', '2017-07-19 18:46:41', NULL),
+(58, 'add_departments', 'departments', '2017-07-19 18:46:41', '2017-07-19 18:46:41', NULL),
+(59, 'delete_departments', 'departments', '2017-07-19 18:46:41', '2017-07-19 18:46:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -429,11 +426,15 @@ CREATE TABLE `permission_role` (
 
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (1, 1),
+(1, 2),
+(1, 3),
 (2, 1),
 (3, 1),
 (4, 1),
 (5, 1),
+(5, 3),
 (6, 1),
+(6, 3),
 (7, 1),
 (8, 1),
 (9, 1),
@@ -443,14 +444,22 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (13, 1),
 (14, 1),
 (15, 1),
+(15, 3),
 (16, 1),
+(16, 3),
 (17, 1),
 (18, 1),
 (19, 1),
 (20, 1),
+(20, 2),
+(20, 3),
 (21, 1),
+(21, 2),
+(21, 3),
 (22, 1),
+(22, 3),
 (23, 1),
+(23, 3),
 (24, 1),
 (25, 1),
 (26, 1),
@@ -468,39 +477,42 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (43, 1),
 (44, 1),
 (45, 1),
+(45, 2),
+(45, 3),
 (46, 1),
+(46, 2),
+(46, 3),
 (47, 1),
+(47, 3),
 (48, 1),
+(48, 3),
 (49, 1),
 (50, 1),
+(50, 2),
+(50, 3),
 (51, 1),
+(51, 2),
+(51, 3),
 (52, 1),
+(52, 2),
+(52, 3),
 (53, 1),
-(54, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `posts`
---
-
-CREATE TABLE `posts` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `author_id` int(11) NOT NULL,
-  `category_id` int(11) DEFAULT NULL,
-  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `seo_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `excerpt` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `meta_description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `meta_keywords` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` enum('PUBLISHED','DRAFT','PENDING') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'DRAFT',
-  `featured` tinyint(1) NOT NULL DEFAULT '0',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(53, 2),
+(53, 3),
+(54, 1),
+(54, 2),
+(54, 3),
+(55, 1),
+(55, 2),
+(55, 3),
+(56, 1),
+(56, 2),
+(56, 3),
+(57, 1),
+(57, 3),
+(58, 1),
+(58, 3),
+(59, 1);
 
 -- --------------------------------------------------------
 
@@ -527,16 +539,19 @@ INSERT INTO `regions` (`id`, `name`, `latitude`, `longitude`, `location_id`, `cr
 (2, 'North Luzon Operations', '16.2151433', '120.50037500000008', 1, NULL, NULL),
 (3, 'Central Luzon', '15.070145', '120.649044', 1, NULL, NULL),
 (4, 'Modern Trade Operations', '14.5881219', '121.0439725', 1, NULL, NULL),
-(5, 'Metro Operations, Head Office, Metro Sales', '14.4042525', '121.04696360000003', 1, NULL, NULL),
-(6, 'Southern Tagalog Region Operations', '14.1007803', '121.0793705', 1, NULL, NULL),
-(7, 'Bicol Region', '13.4209885', '123.4136736', 1, NULL, NULL),
-(8, 'Iloilo Plant', '10.75844', '122.50033740000003', 2, NULL, NULL),
-(9, 'Tanuan Plant', '11.1022234', '25.02005699999995', 2, NULL, NULL),
-(10, 'Cebu Plant', '10.239339', '123.79384800000003', 2, NULL, NULL),
-(11, 'Bacolod Plant', '10.7050794', '122.96313710000004', 2, NULL, NULL),
-(12, 'Cagayan De Oro Plant', '8.494784', '124.74618099999998', 3, NULL, NULL),
-(13, 'Zamboanga Plant', '6.965789999999999', '122.14028099999996', 3, NULL, NULL),
-(14, 'Davao Plant', '7.030481361402168', '125.51293283700943', 3, NULL, NULL);
+(5, 'Metro Operations', '14.4042525', '121.04696360000003', 1, NULL, NULL),
+(6, 'Head Office', '14.4042525', '121.04696360000003', 1, NULL, NULL),
+(7, 'Metro Sales', '14.4042525', '121.04696360000003', 1, NULL, NULL),
+(8, 'Southern Tagalog Region Operations', '14.1007803', '121.0793705', 1, NULL, NULL),
+(9, 'Bicol Region', '13.4209885', '123.4136736', 1, NULL, NULL),
+(10, 'Iloilo', '10.75844', '122.50033740000003', 2, NULL, '2017-07-14 01:11:35'),
+(11, 'Tanuan', '11.1022234', '25.02005699999995', 2, NULL, '2017-07-14 01:11:07'),
+(12, 'Cebu', '10.239339', '123.79384800000003', 2, NULL, '2017-07-14 01:10:35'),
+(13, 'Bacolod', '10.7050794', '122.96313710000004', 2, NULL, '2017-07-14 01:10:09'),
+(14, 'Cagayan De Oro', '8.494784', '124.74618099999998', 3, NULL, '2017-07-14 01:09:22'),
+(15, 'Zamboanga', '6.965789999999999', '122.14028099999996', 3, NULL, '2017-07-14 01:06:42'),
+(16, 'Davao', '7.030481361402168', '125.51293283700943', 3, NULL, '2017-07-14 01:28:39'),
+(17, 'Cabuyao', '14.23326', '121.10077100000001', 1, '2017-07-14 01:29:39', '2017-07-14 01:29:39');
 
 -- --------------------------------------------------------
 
@@ -558,7 +573,8 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
 (1, 'site_admin', 'Site Administrator', '2017-07-09 17:04:14', '2017-07-12 22:25:32'),
-(2, 'admin', 'Administrator', '2017-07-09 17:04:14', '2017-07-09 19:03:38');
+(2, 'content_manager', 'Content Manager', '2017-07-09 17:04:14', '2017-07-16 21:29:22'),
+(3, 'site_manager', 'Site Manager', '2017-07-16 21:28:45', '2017-07-16 21:28:45');
 
 -- --------------------------------------------------------
 
@@ -616,7 +632,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 1, 'EJFlow', 'ericjoseph.flores1@gmail.com', 'users/default.png', '$2y$10$zFiaZt4Cwt.4khSovjAfs.Wj0yvp/xWAqbmOnK3RKQMqkYqVXrF4S', 'vLB1OkzBJl34MB62Yre2GWCgAv5Qy5zYnIJPyESXgETmnT4LacWwYLkoxaUE', '2017-07-09 17:04:39', '2017-07-09 17:04:39');
+(1, 2, 'EJFlow', 'ericjoseph.flores1@gmail.com', 'users/default.png', '$2y$10$zFiaZt4Cwt.4khSovjAfs.Wj0yvp/xWAqbmOnK3RKQMqkYqVXrF4S', 'iBNetn3Tg6tOW7gm2BIzWJQyXem79ykPayiOtUd2eS3aSH9QGWsqu9CFegiW', '2017-07-09 17:04:39', '2017-07-16 23:49:11'),
+(2, 3, 'Eric Flores', 'ericjoseph.flores2@gmail.com', 'users/default.png', '$2y$10$MwNCI4r2RkeA4JQ0/k1V9OHujuypLhNpeWwM3p0QiPVfX3vl.l68S', '20r4PRHIXlsV2osMvIQGBFpXPtWomEOJABIMkUTDzezdLUVV5PrbfHEWCSGn', '2017-07-16 23:23:59', '2017-07-16 23:48:38'),
+(3, 1, 'Eric Flores', 'ericjoseph.flores3@gmail.com', 'users/default.png', '$2y$10$QLHnr5eIoBWaY4aFcK9EGOT09aFp2qdDB.ofdEje7YIeAz82irkMW', '3n4AWwE0vEOcjtp7hRMjZBANdwkxIICpFrZ4xEsZzQByyhWhcrDBmNnPgEv0', '2017-07-16 23:24:40', '2017-07-16 23:24:40'),
+(4, 1, 'PCPPI-Admin01', 'pcppiadmin01@pcppi.com', 'users/default.png', '$2y$10$2UoqrizKeaJL7a/4ktv4p.NImtNTTYSuQ6JwiA7ZxKL61PdirjRwm', NULL, '2017-07-23 14:17:38', '2017-07-23 14:17:38'),
+(5, 1, 'PCPPI-Admin02', 'pcppiadmin02@pcppi.com', 'users/default.png', '$2y$10$lanUKYIiks6B6BwDBXFI3OPQpbeueGlWm624LsYXWucPRDq8/i7cC', 'K2s02apoX4TIq8oeyaLYFNY9hE4YJfDNYg01WXTU9kI20XaeggT99bRjT47p', '2017-07-23 14:20:31', '2017-07-23 14:20:31'),
+(6, 1, 'PCPPI-Admin03', 'pcppiadmin03@pcppi.com', 'users/default.png', '$2y$10$sfjWoE7leWNw6VIWkxdE.e1PCRgQy58f/61h8YefbLMRFUsfhoEXy', '1SKgjB8aYusU4ShHnvvfQXG72fiincdZLbHreoELIVRAgxHQAaVFD5gnGjIi', '2017-07-23 21:41:45', '2017-07-23 21:41:45');
 
 -- --------------------------------------------------------
 
@@ -626,36 +647,31 @@ INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `password`, `re
 
 CREATE TABLE `vacancies` (
   `id` int(10) UNSIGNED NOT NULL,
-  `closed_at` timestamp NULL DEFAULT NULL,
   `description` tinytext COLLATE utf8_unicode_ci,
   `position` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `applicants` int(10) UNSIGNED DEFAULT NULL,
+  `applicants` int(10) UNSIGNED DEFAULT '0',
   `closed` tinyint(4) DEFAULT '0',
-  `region_id` tinytext COLLATE utf8_unicode_ci,
+  `region_id` int(11) DEFAULT NULL,
   `responsibilities` mediumtext COLLATE utf8_unicode_ci,
-  `qualifications` mediumtext COLLATE utf8_unicode_ci
+  `qualifications` mediumtext COLLATE utf8_unicode_ci,
+  `department_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `vacancies`
 --
 
-INSERT INTO `vacancies` (`id`, `closed_at`, `description`, `position`, `created_at`, `updated_at`, `applicants`, `closed`, `region_id`, `responsibilities`, `qualifications`) VALUES
-(1, NULL, 'Manage', 'Sales Manager', '2017-07-10 20:10:00', '2017-07-12 22:26:53', NULL, 0, '8', '• Handle sales', '• College Graduate');
+INSERT INTO `vacancies` (`id`, `description`, `position`, `created_at`, `updated_at`, `applicants`, `closed`, `region_id`, `responsibilities`, `qualifications`, `department_id`) VALUES
+(1, 'Manage', 'Sales Manager', '2017-07-10 20:10:00', '2017-07-19 19:56:40', 6, 0, 10, '• Handle sales', '• College Graduate', 2),
+(2, 'Sell Pepsi', 'Sales Woman', '2017-07-17 01:09:16', '2017-07-24 02:58:56', 0, 0, 3, '• Sells', '• Woman', 1),
+(3, 'Can Drive', 'Truck Driver', '2017-07-17 01:20:40', '2017-07-18 21:11:12', 1, 0, 17, '• Drive a truck safely', '• Professional Driver', 4),
+(4, 'Manage Trade and Marketing', 'Trade Marketing Manager-Snacks', '2017-07-24 03:20:39', '2017-07-24 03:58:22', 0, 0, 4, '• Plan local and lead the execution of national trade marketing programs IN ORDER TO achieve channel strategies and grow the snacks business 3x in volume,\r\n• Plan local and implement national merchandising standards IN ORDER TO promote snacks product presence and awareness.\r\n• Plan, Monitor, and Control Discounts, Deals, DIPs, Concessions, Powered Coolers, Display Allowances, and other Trade Push spending IN ORDER To maximize utilization thereof.\r\n• Select, evaluate, motivate and train subordinates IN ORDER TO build and sustain a competent trade marketing staff.', '• Candidate must be a Business degree holder\r\n• Minimum 5 years of working experience in Sales Management or Marketing Experience\r\n• In-depth knowledge on the following aspects:\r\n 	•Field sales management experience with minimum 3 years in traditional trade/distributor and account\r\n 	management\r\n  	•Understands market dynamics for consumer goods\r\n   	•Understands key financial indicators', 1);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `categories_slug_unique` (`slug`),
-  ADD KEY `categories_parent_id_foreign` (`parent_id`);
 
 --
 -- Indexes for table `data_rows`
@@ -671,6 +687,12 @@ ALTER TABLE `data_types`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `data_types_name_unique` (`name`),
   ADD UNIQUE KEY `data_types_slug_unique` (`slug`);
+
+--
+-- Indexes for table `departments`
+--
+ALTER TABLE `departments`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `locations`
@@ -699,13 +721,6 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pages`
---
-ALTER TABLE `pages`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `pages_slug_unique` (`slug`);
-
---
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -732,13 +747,6 @@ ALTER TABLE `permission_role`
   ADD PRIMARY KEY (`permission_id`,`role_id`),
   ADD KEY `permission_role_permission_id_index` (`permission_id`),
   ADD KEY `permission_role_role_id_index` (`role_id`);
-
---
--- Indexes for table `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `posts_slug_unique` (`slug`);
 
 --
 -- Indexes for table `regions`
@@ -785,20 +793,20 @@ ALTER TABLE `vacancies`
 --
 
 --
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+--
+-- AUTO_INCREMENT for table `departments`
+--
+ALTER TABLE `departments`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `locations`
 --
@@ -813,42 +821,32 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
--- AUTO_INCREMENT for table `pages`
---
-ALTER TABLE `pages`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 --
 -- AUTO_INCREMENT for table `permission_groups`
 --
 ALTER TABLE `permission_groups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `posts`
---
-ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `regions`
 --
 ALTER TABLE `regions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `settings`
 --
@@ -863,21 +861,15 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `vacancies`
 --
 ALTER TABLE `vacancies`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `categories`
---
-ALTER TABLE `categories`
-  ADD CONSTRAINT `categories_parent_id_foreign` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `data_rows`
