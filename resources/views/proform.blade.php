@@ -152,7 +152,7 @@
 	</div>
 	<div class="container well">
 	<div class="row">
-		<h2 id="titlepad">APPLICATION</h2>
+		<h2 id="titlepad" class="bold">APPLICATION</h2>
 	</div>
 	<div id="forms-section" class="row">
 		<div class="col-md-4 col-md-offset-2">
@@ -409,7 +409,7 @@
 	<div class="container well">
 		<div class="row text-center">
 			<div>
-				<h2 class="text-center">Hiring Process</h2>
+				<h2>Hiring Process</h2>
 			</div>
 			<hr />
 			<div class="col-md-4">

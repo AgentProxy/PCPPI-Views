@@ -57,7 +57,11 @@
     <div class="text-center">
         <div class="pagination" style="margin: auto;"> <?php echo e($vacancies->links()); ?> </div>
     </div>
+<<<<<<< HEAD
     <div class="row text-center" id="padbot">
+=======
+    <div class="row" id="padbot" style="text-align: center">
+>>>>>>> c67ebbf49d8ef4713254a0cf0507c8213abd03fc
         <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
     </div>
 </div>
