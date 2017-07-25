@@ -125,9 +125,9 @@
                         border-radius: 20px;
                     }
 
-                    @media (min-width: 480px) and (max-width: 767px) {
+                    @media (min-width: 768px) and (max-width: 1023px) {
                         h1 {
-                            
+                            margin-top: 5px;
                             font-size: 40px;
                         }
                         h3 {
@@ -136,7 +136,30 @@
 
                         #jsimg{
                             width: 45%;
-                            padding-top: 7px;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 10%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 480px) and (max-width: 767px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
                         }
 
                         .container.well {
@@ -192,10 +215,10 @@
                 <div class="container" id="nojs">
                     <div class="row">
                         <div class="container well">
-                            <div class="col-sm-4 sidep slide">
+                            <div class="col-md-4 sidep slide">
                                 <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
                             </div>
-                            <div class="col-sm-8">
+                            <div class="col-md-8">
                                 <h1><b>Javascript Disabled</b></h1>
                                 <h3><b>You don't have javascript enabled. Please enable it and reload the page</b></h3>
                             </div>
@@ -220,7 +243,6 @@
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
                     <a href="http://bit.ly/CareersatPCPPI" class="fa fa-linkedin" style="margin-left: 2%;">
                     </a>
-
             </div> 
         </div> 
     </footer>

@@ -244,7 +244,7 @@
 						    </div>
 						    <div class="" id="addskill">
 							    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
-							    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
+							    <button type="button" id="add-skill" class="btn btn-primary add-skill">
 					      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 					    		</button>
 					    		<label> Add other skills related to position applying for </label>

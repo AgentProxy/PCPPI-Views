@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This Careers Website is for PCPPI Vacancies only">
     <meta name="keywords" content="Pepsi Philippines, PCPPI Careers, Careers, Pepsi-Cola Philippines Inc.">
-    <meta name="author" content="Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton">
+    <meta name="author" content="Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ A. Panaguiton">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>PCPPI Careers</title>
@@ -58,7 +58,8 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body id="page-top">
-    <div id="app" >
+	<div id="wrapper">
+    <div id="app" class="last">
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -120,34 +121,42 @@
 	<div class="row" id="btnpad">
 		<a href="{{ URL::previous() }}" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
 	</div>
-	<div class="row">
-		<!-- This is for FB's Share
-		CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
-		EX. "http://your-domain/careers-proform/......"
+	<div class="container well" >
+		<div class="row">
+			<h1 id="title">{{$vacancy->position}}</h1>
+			<h3 id="title">{{$vacancy->regions->name}}</h3>
+			<h3 id="title">{{$vacancy->functions->name}}</h3>
+			<h4 id="title" style="white-space:pre-wrap; line-height: 3">{{$vacancy->description}}</h4>
+		</div>
+		<div class="row">
+			<div class="container">
+				<h3>Main Responsibility</h3>
+				<pre style="white-space:pre-wrap; line-height: 3">{{$vacancy->responsibilities}}</pre>
+			</div>
+		</div>
+		<div class="row">
+			<div class="container">
+				<h3>Qualifications</h3>
+				<pre "white-space:pre-wrap; line-height: 3">{{$vacancy->qualifications}}</pre>
+			</div>
+		</div>
+		<div class="row">
+			<div class="container">
+				<!-- This is for FB's Share
+				CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
+				EX. "http://your-domain/careers-proform/......"
 
-		EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
-		 -->
-		<div class="fb-share-button" style="margin-left:47%;" 
-		    data-href="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}"  
-		    data-layout="button"
-			data-size="large"
-		>
-  		</div>
-  		<!-- -->
-	</div>
-	<div class="row">
-		<h1 id="title">{{$vacancy->position}}</h1>
-		<h3 id="title">{{$vacancy->regions->name}}</h3>
-		<h3 id="title">{{$vacancy->functions->name}}</h3>
-		<h4 id="title" style="white-space:pre-wrap; line-height: 3">{{$vacancy->description}}</h4>
-	</div>
-	<div class="row">
-		<h3>Main Responsibility</h3>
-		<pre style="white-space:pre-wrap; line-height: 3">{{$vacancy->responsibilities}}</pre>
-	</div>
-	<div class="row">
-		<h3>Qualifications</h3>
-		<pre "white-space:pre-wrap; line-height: 3">{{$vacancy->qualifications}}</pre>
+				EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
+				 -->
+				<div class="fb-share-button pull-right"
+				    data-href="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}"  
+				    data-layout="button"
+					data-size="large"
+				>
+		  		</div>
+		  		<!-- -->
+	  		</div>
+		</div>
 	</div>
 	<div class="container well">
 	<div class="row">
@@ -282,7 +291,7 @@
 				    </div>
 				    <div class="" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
-					    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
+					    <button type="button" id="add-skill" class="btn btn-primary add-skill">
 			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 			    		</button>
 		    		</div>
@@ -468,8 +477,16 @@
                     }
 
                     h1, h3{
-                        font-size: 30px;
                         text-align: center;
+                        font-family: 'Play', sans-serif;
+                    }
+
+                    h1 {
+                        margin-top: 15%;
+                        font-size: 66px;
+                    }
+                    h3 {
+                        font-size: 20px;
                     }
 
                     #jsimg{
@@ -477,15 +494,111 @@
                         padding-bottom: 75px;
                         padding-top: 75px;
                     }
+
+                    .container.well {
+                        margin-top: 6%;
+                        background: #f6f6f6;
+                        border: 2px solid rgba(0,0,0,0.5);
+                        border-radius: 20px;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 10%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 480px) and (max-width: 767px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 4%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 321px) and (max-width: 479px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 95%;
+                            padding-bottom: 30px;
+                            padding-top: 20px;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 18%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (max-width: 320px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 55%;
+                            padding-bottom: 22px;
+                            padding-top: 16px;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top:10%;
+                        }
+                    }
                 </style>
-                <div id="nojs">
+                <div class="container" id="nojs">
                     <div class="row">
-                        <div class="col-sm-4 sidep slide">
-                            <img id="jsimg" class="center-block" src="img/pep.png" alt="pic">
-                        </div>
-                        <div class="col-sm-8">
-                            <br><br><h1><b>Javascript Disabled<b></h1><br><br><br>
-                            <h3><b>You don't have javascript enabled. Please enable it and reload the page<b></h3>
+                        <div class="container well">
+                            <div class="col-md-4 sidep slide">
+                                <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
+                            </div>
+                            <div class="col-md-8">
+                                <h1><b>Javascript Disabled</b></h1>
+                                <h3><b>You don't have javascript enabled. Please enable it and reload the page</b></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -510,5 +623,6 @@
             </div> 
         </div> 
     </footer>
+    </div>
 </body>
 </html>

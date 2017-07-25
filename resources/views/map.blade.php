@@ -34,7 +34,7 @@
                 </div>
             </div>
         </form>
-        <div class="container bg-grey">
+        <div class="container bg-grey last">
 		<div id="map" class="container center"></div>
         </div>
     <script>

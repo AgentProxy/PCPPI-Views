@@ -1,8 +1,7 @@
 body{
     font-family: 'Quicksand', sans-serif;
     padding-top: 0px;
-    background-image: url('/img/bg.png');
-    background-repeat: repeat;
+    background: #004b93;
     height: 100%;
     color: black
 }
@@ -51,8 +50,8 @@ div#section > h1 {
 
 .btn-back {
     background: #fff;
-    color: #005cb4;
-    border: 2px solid #005cb4;
+    color: #000;
+    border: 2px solid #000;
     font-family: 'Play', sans-serif;
 }
 
@@ -109,6 +108,8 @@ button.navbar-toggle > span.icon-bar {
     padding-top: 2px;
     padding-bottom: 0;
 }
+
+
 
 #logo {
     height: 78px;
@@ -180,6 +181,10 @@ footer.container {
 
 #submit-btn{
     padding-bottom: 10px;
+}
+
+.last {
+    padding-bottom: 10%;
 }
 
 @media(max-width: 991px){
@@ -277,6 +282,10 @@ footer.container {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    body, h1, h2, h3, h4, p, label {
+        font-size: 90%;
     }
 
 }
@@ -388,8 +397,6 @@ footer.container {
     div.thumbnail {
         height: 16em;
     }
-
-
 
     #map {
         height: 60vh;
