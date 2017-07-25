@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Quicksand', sans-serif;
     padding-top: 0px;
@@ -44,6 +48,11 @@ div#section > h1 {
     color: red;
 }
 
+div#job {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .btn-back {
     background: #fff;
     color: #004b93;
@@ -75,6 +84,17 @@ div#section > h1 {
 button.navbar-toggle > span.icon-bar {
     background-color: #005CB4;
     height: 2px;
+}
+
+#btnpad{
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+#captcha {
+    max-width: 300px;
+    background: #ccc;
+    padding: 20px;
 }
 
 .bold {
@@ -110,6 +130,20 @@ div.g-recaptcha {
     width: 50%;
 }
 
+#data-privacy {
+    border: 2px solid rgba(0,0,0,.3);
+    overflow: auto;
+    overflow-y: scroll;
+    width:50%;
+    height:200px;
+    background-color: white;
+    font-size: 18px;
+}
+
+#data-privacy > p{
+    padding: 5px;
+}
+
 
 #logo {
     height: 78px;
@@ -140,9 +174,18 @@ li.open > ul#dropdown-menu {
     margin-top: 50px;
 }
 
+#titlepad{
+        padding-top: 60px;
+        text-align: center;
+}    
+
 div.thumbnail > p {
     padding-top: 5px; 
     font-size: 14px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .thumbnail {
@@ -221,10 +264,6 @@ footer.container {
     a#page-scroll:hover {
         color: #fff;
     }
-
-    #viewjob{
-        text-align: center;
-    }
 }
 
 @media(max-width: 1000px){
@@ -284,9 +323,14 @@ footer.container {
         margin-right: auto;
     }
 
-    body, h1, h2, h3, h4, p, label {
+    body, h1, h2, h3, h4, p, label, button {
         font-size: 90%;
     }
+
+    #titlepad{
+        padding-top: 20px;
+        text-align: center;
+    }    
 
 }
 
@@ -485,9 +529,26 @@ footer.container {
         width: 34px;
     }
 
+    a.btn-back {
+        padding: 2px;
+        width: 27%;
+        font-size: 90%;
+    }
+
+    #btnpad{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     .col-sm-4 > img {
         width: 45%;
         display: block;
+    }
+
+    #data-privacy {
+        width: 80%;
+        height: 80%;
+        font-size: 12px;
     }
 
     div#section {
@@ -566,6 +627,12 @@ footer.container {
         padding: 30px 50px;
     }
 
+    #data-privacy {
+        width: 80%;
+        height: 80%;
+        font-size: 12px;
+    }
+
     div#section {
         padding-top: 30px;
         padding-bottom: 70px;
@@ -591,6 +658,11 @@ footer.container {
         padding: 1px 2px;
     }
 
+    #btnpad{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     a.btn-back {
         font-size: 10px;
     }
@@ -612,20 +684,18 @@ footer.container {
     }
 
     img#logo-footer {
-        width: 14px;
-        height: 14px;
+        width: 9px;
+        height: 9px;
     }
 
     footer {
         padding-top: 50px;
         background: #004b93;
         color: #fff;
-        font-size: 10px;
     }
 
     p.footerp{
-        font-size: 2px;
-        line-height: 4px;
+        font-size: 4px;
     }
 
 }
@@ -647,6 +717,17 @@ footer.container {
     #logo {
         height: 38px;
         width: 34px;
+    }
+
+    #btnpad{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #data-privacy {
+        width: 80%;
+        height: 90%;
+        font-size: 12px;
     }
 
     div#section {
@@ -677,6 +758,10 @@ footer.container {
         margin-bottom: 20px;
     }
 
+    .last {
+        padding-bottom: 15%;
+    }
+
     footer {
         padding-top: 50px;
         background: #004b93;
@@ -684,13 +769,13 @@ footer.container {
     }
 
     p.footerp{
-        font-size: 2.2px;
-        line-height: 2.2px;
+        font-size: 4px;
+        line-height: 4px;
     }
 }
 
-    .navbar-nav{
-        margin-top: 2%;
+.navbar-nav{
+    margin-top: 2%;
         text-align: center;
         float: right;
     }
@@ -734,16 +819,6 @@ footer.container {
     #sxspad{
         padding-bottom: 30px;
     }
-
-    #btnpad{
-        padding-top: 20px;
-        padding-bottom: 60px;
-    }
-
-    #titlepad{
-        padding-top: 60px;
-        text-align: center;
-    }    
 
     #external-sites{
         position: relative;

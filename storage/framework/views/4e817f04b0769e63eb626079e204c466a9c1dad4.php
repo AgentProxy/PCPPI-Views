@@ -121,7 +121,7 @@
 	<div class="row" id="btnpad">
 		<a href="<?php echo e(URL::previous()); ?>" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
 	</div>
-	<div class="container well" >
+	<div id="job" class="container well" >
 		<div class="row">
 			<h1 id="title"><?php echo e($vacancy->position); ?></h1>
 			<h3 id="title"><?php echo e($vacancy->regions->name); ?></h3>
@@ -141,21 +141,19 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="container">
 				<!-- This is for FB's Share
 				CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
 				EX. "http://your-domain/careers-proform/......"
 
 				EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
 				 -->
-				<div class="fb-share-button pull-right"
+				<div class="fb-share-button"
 				    data-href="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>"  
 				    data-layout="button"
-					data-size="large"
+					data-size="large" style="float: right;" 
 				>
 		  		</div>
 		  		<!-- -->
-	  		</div>
 		</div>
 	</div>
 	<div class="container well">
@@ -380,9 +378,9 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
-				<label class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
+				<button class="btn btn-primary btn-lg" id="upload"><span id="upload-text">Upload</span>
 						<input type="file" id="resume" name="resume" style="display: none" required value="<?php echo old('resume'); ?>"/>	
-				</label>
+				</button>
 				<p> Uploaded File: <span id="uploaded-file"> </span></p>
 				<div class="help-block with-errors" id="upload-error" style="color:red;"> Please upload your resume </div>
 			</div>
@@ -391,17 +389,18 @@
 			<div class="col-md-12">
 				<h2 style="text-align: center; text-decoration:underline; "> Data Privacy Policy </h2>
 			</div>
-			<div style="overflow: auto; width:50%; height:200px; background-color: white; font-size: 18px;" class="center-block">
-			By clicking “Submit” I agree that:
-			I have read and accepted the User Agreement and Privacy Policy.
-			I may receive communications from PCPPI.
-			I agree to send my data to PCPPI and 
-			all the inputted data is true.
+			<div id="data-privacy" class="center-block">
+				<p>By clicking “Submit” I agree that:
+				I have read and accepted the User Agreement and Privacy Policy.
+				I may receive communications from PCPPI.
+				I agree to send my data to PCPPI and 
+				all the inputted data is true.
+				</p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col-md-offset-3">
-				<label for="agree">
+			<div class="container text-center">
+				<label  for="agree">
 				<input id="agree" name="agree" data-error="Please read the the policy first" type="checkbox" value="yes" required />
 				I have read and agreed 
 				</label>
@@ -409,27 +408,30 @@
 			</div>
 		</div>
 		<div class="row"> 
-			<div class="g-recaptcha col-md-12 text-center" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
+			<div class="g-recaptcha col-md-3 col-md-offset-4" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
 		</div>
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block">Submit Application</button>
 	</form>
 	</div>
 	<div class="container well">
-		<div class="row">
+		<div class="row text-center">
 			<div>
-				<h2 id="title">Hiring Process</h2>
+				<h2 class="text-center">Hiring Process</h2>
 			</div>
+			<hr />
 			<div class="col-md-4">
-		    	<h2 id="title">Step 1</h2><br>
-		    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+		    	<h2>Step 1</h2>
+		    	<p>Once your application is received, a recruiter will reach out, pending your qualifications.</p>
 			</div>
+			<hr class="visible-sm visible-xs" />
 			<div class="col-md-4">
-		    	<h2 id="title">Step 2</h2><br>
-		    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+		    	<h2>Step 2</h2>
+		    	<p>Series of interviews and qualifying exams will be given as we proceed with your application.</p>
 			</div>
+			<hr class="visible-sm visible-xs" />
 			<div class="col-md-4">
-		    	<h2 id="title">Step 3</h2><br>
-		    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+		    	<h2>Step 3</h2>
+		    	<p>Recruiter will send a notification on your application status via email.</p>
 			</div>
 		</div>
 	</div>

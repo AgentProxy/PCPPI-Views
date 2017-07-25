@@ -121,21 +121,6 @@
 		<a href="<?php echo e(URL::previous()); ?>" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
 	</div>
 	<div class="row">
-		<!-- This is for FB's Share
-		CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
-		EX. "http://your-domain/careers-proform/......"
-
-		EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
-		 -->
-		<div class="fb-share-button" style="margin-left:47%;" 
-		    data-href="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>"  
-		    data-layout="button"
-			data-size="large"
-		>
-  		</div>
-  		<!-- -->
-	</div>
-	<div class="row">
 		<h1 id="title"><?php echo e($vacancy->position); ?></h1>
 		<h3 id="title"><?php echo e($vacancy->regions->name); ?></h3>
 		<h3 id="title"><?php echo e($vacancy->functions->name); ?></h3>
@@ -501,15 +486,23 @@
             Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
-            		<div class="fb-share-button" style="margin-left:47%;" 
-					    data-href="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>"  
-					    data-layout="button"
-						data-size="large"
-					>
-			  		</div>
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
                     <a href="http://bit.ly/CareersatPCPPI" class="fa fa-linkedin" style="margin-left: 2%;">
                     </a> 
+					<!-- This is for FB's Share
+					CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
+					EX. "http://your-domain/careers-proform/......"
+
+					EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
+					 -->
+					<span class="fb-share-button" 
+					    data-href="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>"  
+					    data-layout="button"
+						data-size="large"
+						style="margin-bottom: 100px;" 
+					>
+			  		</span>
+			  		<!-- -->
             </div> 
         </div> 
     </footer>
