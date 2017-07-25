@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <!--
-    This website was created by interns as part of their Internship in PCPPI. The authors
-    are Eric Joseph P. Flores, Alonzo Francisco Locsin and, RJ Panaguiton. All are 3rd Year
-    Computer Science Students in University of The Philippines Visayas. 
-
-    This project was created using the Laravel Framework(https://laravel.com/).
-    This project contains only basic functionalities for a Careers website. The authors allow 
-    other developers to update,edit, and add other functions to this project.
-
-    All CSS files and JS are stored in the public folder. 
+    The head part is present here because of FB's specific meta tags. We cannot extend the head section used in all websites in this specific
+    blade/view because of that reason. 
 
 -->
 <head>
@@ -26,11 +19,11 @@
 
     <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url"           content="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="PCPPI Careers Vacancy" />
-  <meta property="og:description"   content="There is an opening for {{$vacancy->position}}! Apply now and start your Pepsified journey with us!" />
-  <!--<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />-->
+	<meta property="og:url"           content="http://pcppijobs.tk/careers-proform/{{$vacancy->id}}" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="PCPPI Careers Vacancy" />
+	<meta property="og:description"   content="There is an opening for {{$vacancy->position}}! Apply now and start your Pepsified journey with us!" />
+    <meta property="og:image"         content="/img/Pepsi-logo.png" />
 
     <!-- Styles -->
     @yield('head')

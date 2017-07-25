@@ -9,10 +9,6 @@
             <div id="search-bar" class="container">
                 <div class="row">
                     <div class="form-group col-sm-3">
-                        <input type="text" class="form-control" name="job" id="job" placeholder="Job">
-                    </div>
-                    <div class="form-group col-sm-3">
-
                         <select class="form-control" name="region" id="region">
                             <option value="0">All Regions</option>
                             @foreach($regions as $region)
@@ -27,6 +23,9 @@
                             <option value="{{$function->id}}">{{$function->name}}</option>
                             @endforeach
                         </select>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <input type="text" class="form-control" name="job" id="job" placeholder="Job">
                     </div>
                     <div class="col-sm-3" id="search">
                         <input type="submit" value="Search" class="btn btn-primary" style="width: 100%;" />
