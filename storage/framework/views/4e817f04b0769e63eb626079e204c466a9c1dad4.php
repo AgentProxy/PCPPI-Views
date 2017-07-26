@@ -115,12 +115,12 @@
 	<div class="row" id="btnpad">
 		<a href="<?php echo e(URL::previous()); ?>" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
 	</div>
-	<div id="job" class="container well" >
+	<div id="job" class="container well">
 		<div class="row">
-			<h1 id="title"><?php echo e($vacancy->position); ?></h1>
-			<h3 id="title"><?php echo e($vacancy->regions->name); ?></h3>
-			<h3 id="title"><?php echo e($vacancy->functions->name); ?></h3>
-			<h4 id="title" style="white-space:pre-wrap; line-height: 3"><?php echo e($vacancy->description); ?></h4>
+			<h1 class="text-center"><?php echo e($vacancy->position); ?></h1>
+			<h3 class="text-center"><?php echo e($vacancy->regions->name); ?></h3>
+			<h3 class="text-center"><?php echo e($vacancy->functions->name); ?></h3>
+			<h4 class="text-center" style="white-space:pre-wrap; line-height: 3"><?php echo e($vacancy->description); ?></h4>
 		</div>
 		<div class="row">
 			<div class="container">
@@ -402,7 +402,7 @@
 			</div>
 		</div>
 		<div class="row"> 
-			<div class="g-recaptcha col-md-3 col-md-offset-4" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
+			<div class="g-recaptcha" style="width:300px; margin-right: auto; margin-left: auto;" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
 		</div>
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block">Submit Application</button>
 	</form>

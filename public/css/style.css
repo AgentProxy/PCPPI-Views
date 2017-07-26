@@ -65,20 +65,21 @@ div#job {
 }
 
 .btn-view {
-    background: #fff;
-    border: 1px solid #005cb4;
+    background: #005cb4;
+    border: 2px solid #fff;
     border-radius: 40px;
     font-weight: bold;
-    color: #005cb4;
-    box-shadow: inset 0 0 0 0 #005cb4;
+    color: #fff;
+    box-shadow: inset 0 0 0 0 #fff;
     -webkit-transition: 0.4s ease-out;
     -moz-transition: 0.4s ease-out;
     transition: 0.4s ease-out
 }
 
 .btn-view:hover {
-    box-shadow: inset 400px 0 0 0 #005cb4;
+    box-shadow: inset 200px 0 0 0 #00aff0;
     color: #fff;
+    border: 2px solid #005cb4;
 }
 
 button.navbar-toggle > span.icon-bar {
@@ -144,6 +145,11 @@ div.g-recaptcha {
     padding: 5px;
 }
 
+div.g-recaptcha {
+    width:300px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 #logo {
     height: 78px;
@@ -182,6 +188,20 @@ li.open > ul#dropdown-menu {
 div.thumbnail > p {
     padding-top: 5px; 
     font-size: 14px;
+}
+
+#search-results {
+    width: 100%;
+    min-height: 200px;
+}
+
+#search-header {
+    padding-bottom: 3%;
+}
+
+div#viewjob > div.col-md-2 {
+    display: block;
+    margin-top: 1%;
 }
 
 .text-center {
@@ -266,9 +286,18 @@ footer.container {
     }
 }
 
-@media(max-width: 1000px){
+@media(max-width: 991px){
     .logo-bar{
         width: 100px;
+    }
+
+    .panel-body {
+        text-align: center;
+    }
+
+    div#viewjob > div.col-md-2 {
+        margin-top: 0;
+        padding-top: 0;
     }
 }
 
@@ -501,6 +530,11 @@ footer.container {
         height: 200px;
     }
 
+    #data-privacy {
+        width: 60%;
+        height: 90%;
+        font-size: 12px;
+    }
 
     .logo-bar {
         padding-top: 5px;
@@ -532,6 +566,10 @@ footer.container {
         padding: 2px;
         width: 27%;
         font-size: 90%;
+    }
+
+    a.btn.btn-view.btn-lg {
+        font-size: 14px;
     }
 
     #btnpad{
@@ -579,6 +617,10 @@ footer.container {
         width: 95vw;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .panel-body {
+        text-align: center;
     }
 
     footer > div.row {
@@ -666,6 +708,12 @@ footer.container {
         font-size: 10px;
     }
 
+    a.btn.btn-view.btn-lg {
+        font-size: 8px;
+        line-height: 14px;
+        padding: 4px;
+    }
+
     #next, #section {
         font-size: 70%;
     }
@@ -680,6 +728,10 @@ footer.container {
         width: 90vw;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .panel-body {
+        text-align: center;
     }
 
     img#logo-footer {
@@ -723,7 +775,7 @@ footer.container {
     }
 
     #data-privacy {
-        width: 80%;
+        width: 90%;
         height: 90%;
         font-size: 12px;
     }
@@ -741,6 +793,11 @@ footer.container {
     div.thumbnail > p {
         padding-top: 9px;
         font-size: 41%;
+    }
+
+    div#job {
+        padding-left: 8%;
+        padding-right: 8%;
     }
 
     div.thumbnail {
@@ -800,10 +857,6 @@ footer.container {
     display:block;
 }
 
-#title{
-    text-align: center;
-}  
-
 #padtop{
     padding-top: 30px;
 }   
@@ -815,16 +868,6 @@ footer.container {
 #sxspad{
     padding-bottom: 30px;
 }
-
-#btnpad{
-    padding-top: 20px;
-    padding-bottom: 60px;
-}
-
-#titlepad{
-    padding-top: 60px;
-    text-align: center;
-}    
 
 #external-sites{
     position: relative;

@@ -33,7 +33,7 @@
             </div>
         </form>
     </div>
-    <div id="search-results" class="full-height" style="width: 100%; min-height: 200px;">
+    <div id="search-results" class="full-height">
         @forelse($vacancies as $vacancy)
         <div class="panel panel-default"> 
             <div class="panel-heading">
@@ -47,7 +47,7 @@
                         <h4>{{$vacancy->description}}</h4>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">
-                        <a href="/careers-proform/{{$vacancy->id}}" class="btn btn-view btn-lg col-xs-offset-1" role="button">View Details</a>
+                        <a href="/careers-proform/{{$vacancy->id}}" class="btn btn-view btn-lg" role="button">View Details</a>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
     <div class="text-center">
         <div class="pagination" style="margin: auto;"> {{ $vacancies->links() }} </div>
     </div>
-    <div class="row text-center" id="padbot">
+    <div class="row text-center last">
         <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
     </div>
 </div>

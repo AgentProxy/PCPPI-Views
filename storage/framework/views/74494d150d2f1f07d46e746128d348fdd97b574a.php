@@ -31,7 +31,7 @@
             </div>
         </form>
     </div>
-    <div id="search-results" class="full-height" style="width: 100%; min-height: 200px;">
+    <div id="search-results" class="full-height">
         <?php $__empty_1 = true; $__currentLoopData = $vacancies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $vacancy): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
         <div class="panel panel-default"> 
             <div class="panel-heading">
@@ -45,7 +45,7 @@
                         <h4><?php echo e($vacancy->description); ?></h4>
                     </div>
                     <div class="col-md-2" style="padding-top: 15px;">
-                        <a href="/careers-proform/<?php echo e($vacancy->id); ?>" class="btn btn-view btn-lg col-xs-offset-1" role="button">View Details</a>
+                        <a href="/careers-proform/<?php echo e($vacancy->id); ?>" class="btn btn-view btn-lg" role="button">View Details</a>
                     </div>
                 </div>
             </div>
@@ -57,11 +57,7 @@
     <div class="text-center">
         <div class="pagination" style="margin: auto;"> <?php echo e($vacancies->links()); ?> </div>
     </div>
-<<<<<<< HEAD
-    <div class="row text-center" id="padbot">
-=======
-    <div class="row" id="padbot" style="text-align: center">
->>>>>>> c67ebbf49d8ef4713254a0cf0507c8213abd03fc
+    <div class="row text-center last">
         <h4>Can't find any vacancy in desired region and position? Leave your resume <a id="bank" href="/careers-bankform"> here</a>.  </h4>
     </div>
 </div>
