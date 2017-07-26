@@ -51,49 +51,48 @@
 </head>
 <body id="page-top">
     <div id="wrapper">
-    <div id="app" >
-        <nav class="navbar">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="text-align: center;">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>     
-                    </button>
-                    <a class="navbar-brand" href="/careers-home">
-                    <div class="logo-bar">                        
-                        <img class="logo responsive" id="logo" src="/img/small-logo.png" />
-                        <span id="pcppi"> Pepsi-Cola Products Philippines, Inc. - Careers </span>
+        <div id="app" >
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="text-align: center;">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>     
+                        </button>
+                        <a class="navbar-brand" href="/careers-home">
+                            <div class="logo-bar">                        
+                                <img class="logo responsive" id="logo" src="/img/small-logo.png" />
+                                <span id="pcppi"> Pepsi-Cola Products Philippines, Inc. - Careers </span>
+                            </div>
+                        </a>
                     </div>
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul id="items" class="nav navbar-nav">
-                        <li class=""><a href="/careers-home">Home</a></li>
-                        <li class="dropdown clearfix">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
-                            <ul id="dropdown-menu" class="dropdown-menu">
-                                <li><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Main Website Home</a></li>
-                                <li><a href="https://www.pepsiphilippines.com/company.php" target="_blank">Our Company</a></li>
-                                <li><a href="https://www.pepsiphilippines.com/products.php" target="_blank">Products</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown clearfix">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Careers <span class="caret"></span></a>
-                            <ul id="dropdown-menu" class="dropdown-menu">
-                                <li><a href="/careers-internform">Internships</a></li>
-                                <li><a href="/careers-map">Professionals</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>       
-        </nav>
-        @yield('content')
-    </div>
-    <noscript>
-        <div class="noscriptmsg">
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul id="items" class="nav navbar-nav">
+                            <li class=""><a href="/careers-home">Home</a></li>
+                            <li class="dropdown clearfix">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
+                                <ul id="dropdown-menu" class="dropdown-menu">
+                                    <li><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Main Website Home</a></li>
+                                    <li><a href="https://www.pepsiphilippines.com/company.php" target="_blank">Our Company</a></li>
+                                    <li><a href="https://www.pepsiphilippines.com/products.php" target="_blank">Products</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown clearfix">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Careers <span class="caret"></span></a>
+                                <ul id="dropdown-menu" class="dropdown-menu">
+                                    <li><a href="/careers-internform">Internships</a></li>
+                                    <li><a href="/careers-map">Professionals</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>       
+            </nav>
+            @yield('content')
+        </div>
+        <noscript>
+            <div class="noscriptmsg">       
                 <style>
                     #app {
                         display:none;
@@ -225,27 +224,26 @@
                         </div>
                     </div>
                 </div>
-        </div>
-    </noscript>
-
-    <footer class="container text-center">
-        <div class="row">
-            <div class="col-xs-6 col-xs-offset-3"> 
-            <p>      
-                <span>
-                    <img class="logo-footer" id="logo-footer" src="/img/Pepsi-logo.png" />
-                </span>
-            </p>
-            <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
-            Created by: Eric Joseph P. Flores, Alonzo Francisco P. Locsin, RJ A. Panaguiton </p>
             </div>
-            <div class="col-xs-3" id="social" style="">
+        </noscript>
+        <footer class="container text-center">
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3"> 
+                    <p>      
+                        <span>
+                            <img class="logo-footer" id="logo-footer" src="/img/Pepsi-logo.png" />
+                        </span>
+                    </p>
+                    <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
+                    Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
+                </div>
+                <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
                     <a href="http://bit.ly/CareersatPCPPI" class="fa fa-linkedin" style="margin-left: 2%;">
                     </a>
+                </div> 
             </div> 
-        </div> 
-    </footer>
+        </footer>
     </div>
 </body>
 </html>

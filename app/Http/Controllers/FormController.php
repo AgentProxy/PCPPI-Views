@@ -126,6 +126,7 @@ class FormController extends Controller
                 Mail::send('mail.professionals', compact('data'), function($message) use ($data, $input){
                     $message->from($data['email']);
                     $message->replyTo($data['email']);
+                    //$message->to('careers@pcppi.com.ph');
                     $message->to('careers@pcppi.com.ph');
                     $message->subject("PCPPI Professional Applicant (".$data['lname'].")");
                     $message->attach($input['resume']->getRealPath(),[
@@ -143,6 +144,7 @@ class FormController extends Controller
              Mail::send('mail.bank', compact('data'), function($message) use ($data, $input){
                 $message->from($data['email']);
                 $message->replyTo($data['email']);
+                //$message->to('careers@pcppi.com.ph');
                 $message->to('careers@pcppi.com.ph');
                 $message->subject("PCPPI Talent Bank Applicant (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[
@@ -159,6 +161,7 @@ class FormController extends Controller
             Mail::send('mail.interns', compact('data'), function($message) use ($data, $input){
                 $message->from($data['email']);
                 $message->replyTo($data['email']);
+                //$message->to('careers@pcppi.com.ph');
                 $message->to('careers@pcppi.com.ph');
                 $message->subject("PCPPI Applicant Intern (".$data['lname'].")");
                 $message->attach($input['resume']->getRealPath(),[

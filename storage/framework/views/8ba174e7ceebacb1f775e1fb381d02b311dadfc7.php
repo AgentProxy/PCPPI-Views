@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="<?php echo e(config('app.locale')); ?>">
 <!--
-    This website was created by interns as part of their Internship in PCPPI. The authors
-    are Eric Joseph P. Flores, Alonzo Francisco Locsin and, RJ Panaguiton. All are 3rd Year
-    Computer Science Students in University of The Philippines Visayas. 
-
-    This project was created using the Laravel Framework(https://laravel.com/).
-    This project contains only basic functionalities for a Careers website. The authors allow 
-    other developers to update,edit, and add other functions to this project.
-
-    All CSS files and JS are stored in the public folder. 
+    The head part is present here because of FB's specific meta tags. We cannot extend the head section used in all websites in this specific
+    blade/view because of that reason. 
 
 -->
 <head>
@@ -18,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This Careers Website is for PCPPI Vacancies only">
     <meta name="keywords" content="Pepsi Philippines, PCPPI Careers, Careers, Pepsi-Cola Philippines Inc.">
-    <meta name="author" content="Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton">
+    <meta name="author" content="Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ A. Panaguiton">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <title>PCPPI Careers</title>
@@ -26,11 +19,11 @@
 
     <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url"           content="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="PCPPI Careers Vacancy" />
-  <meta property="og:description"   content="There is an opening for <?php echo e($vacancy->position); ?>! Apply now and start your Pepsified journey with us!" />
-  <!--<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />-->
+	<meta property="og:url"           content="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="PCPPI Careers Vacancy" />
+	<meta property="og:description"   content="There is an opening for <?php echo e($vacancy->position); ?>! Apply now and start your Pepsified journey with us!" />
+    <meta property="og:image"         content="/img/Pepsi-logo.png" />
 
     <!-- Styles -->
     <?php echo $__env->yieldContent('head'); ?>
@@ -58,7 +51,8 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body id="page-top">
-    <div id="app" >
+	<div id="wrapper">
+    <div id="app" class="last">
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -120,39 +114,45 @@
 	<div class="row" id="btnpad">
 		<a href="<?php echo e(URL::previous()); ?>" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers List</a>
 	</div>
-	<div class="row">
-		<h1 id="title"><?php echo e($vacancy->position); ?></h1>
-		<h3 id="title"><?php echo e($vacancy->regions->name); ?></h3>
-		<h3 id="title"><?php echo e($vacancy->functions->name); ?></h3>
-		<h4 id="title" style="white-space:pre-wrap; line-height: 3"><?php echo e($vacancy->description); ?></h4>
-	</div>
-	<div class="row">
-		<h3>Main Responsibility</h3>
-		<pre style="white-space:pre-wrap; line-height: 3"><?php echo e($vacancy->responsibilities); ?></pre>
-	</div>
-	<div class="row">
-		<h3>Qualifications</h3>
-		<pre "white-space:pre-wrap; line-height: 3"><?php echo e($vacancy->qualifications); ?></pre>
-	</div>
-	<div class="row">
-		<div>
-			<h2 id="title">Hiring Process</h2>
+	<div class="container well" >
+		<div class="row">
+			<h1 id="title"><?php echo e($vacancy->position); ?></h1>
+			<h3 id="title"><?php echo e($vacancy->regions->name); ?></h3>
+			<h3 id="title"><?php echo e($vacancy->functions->name); ?></h3>
+			<h4 id="title" style="white-space:pre-wrap; line-height: 3"><?php echo e($vacancy->description); ?></h4>
 		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+		<div class="row">
+			<div class="container">
+				<h3>Main Responsibility</h3>
+				<pre style="white-space:pre-wrap; line-height: 3"><?php echo e($vacancy->responsibilities); ?></pre>
+			</div>
 		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+		<div class="row">
+			<div class="container">
+				<h3>Qualifications</h3>
+				<pre "white-space:pre-wrap; line-height: 3"><?php echo e($vacancy->qualifications); ?></pre>
+			</div>
 		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+		<div class="row">
+			<div class="container">
+				<!-- This is for FB's Share
+				CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
+				EX. "http://your-domain/careers-proform/......"
+
+				EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
+				 -->
+				<div class="fb-share-button pull-right"
+				    data-href="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>"  
+				    data-layout="button"
+					data-size="large"
+				>
+		  		</div>
+		  		<!-- -->
+	  		</div>
 		</div>
 	</div>
+	<div class="container well">
 	<div class="row">
-		<br>
 		<h2 id="titlepad">APPLICATION</h2>
 	</div>
 	<div id="forms-section" class="row">
@@ -285,7 +285,7 @@
 				    </div>
 				    <div class="" id="addskill">
 					    <input type="text" id="skill" placeholder="Other Skills" maxlength="75">
-					    <button type="button" id="add-skill" class="btn btn-cherry add-skill">
+					    <button type="button" id="add-skill" class="btn btn-primary add-skill">
 			      			<span class="glyphicon glyphicon-plus add-skill"></span> Add Skill
 			    		</button>
 		    		</div>
@@ -402,10 +402,31 @@
 			</div>
 		</div>
 		<br/>
-		<br/>
-		<div class="g-recaptcha col-md-offset-2" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
-		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
+		<div class="row"> 
+			<div class="g-recaptcha col-md-8 col-md-offset-2" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
+		</div>
+		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block">Submit Application</button>
 	</form>
+	</div>
+	<div class="container well">
+		<div class="row">
+			<div>
+				<h2 id="title">Hiring Process</h2>
+			</div>
+			<div class="col-md-4">
+		    	<h2 id="title">Step 1</h2><br>
+		    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+			</div>
+			<div class="col-md-4">
+		    	<h2 id="title">Step 2</h2><br>
+		    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+			</div>
+			<div class="col-md-4">
+		    	<h2 id="title">Step 3</h2><br>
+		    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- HTML Templates -->
@@ -450,8 +471,16 @@
                     }
 
                     h1, h3{
-                        font-size: 30px;
                         text-align: center;
+                        font-family: 'Play', sans-serif;
+                    }
+
+                    h1 {
+                        margin-top: 15%;
+                        font-size: 66px;
+                    }
+                    h3 {
+                        font-size: 20px;
                     }
 
                     #jsimg{
@@ -459,15 +488,111 @@
                         padding-bottom: 75px;
                         padding-top: 75px;
                     }
+
+                    .container.well {
+                        margin-top: 6%;
+                        background: #f6f6f6;
+                        border: 2px solid rgba(0,0,0,0.5);
+                        border-radius: 20px;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 10%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 480px) and (max-width: 767px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 4%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 321px) and (max-width: 479px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 95%;
+                            padding-bottom: 30px;
+                            padding-top: 20px;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 18%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (max-width: 320px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 55%;
+                            padding-bottom: 22px;
+                            padding-top: 16px;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top:10%;
+                        }
+                    }
                 </style>
-                <div id="nojs">
+                <div class="container" id="nojs">
                     <div class="row">
-                        <div class="col-sm-4 sidep slide">
-                            <img id="jsimg" class="center-block" src="img/pep.png" alt="pic">
-                        </div>
-                        <div class="col-sm-8">
-                            <br><br><h1><b>Javascript Disabled<b></h1><br><br><br>
-                            <h3><b>You don't have javascript enabled. Please enable it and reload the page<b></h3>
+                        <div class="container well">
+                            <div class="col-md-4 sidep slide">
+                                <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
+                            </div>
+                            <div class="col-md-8">
+                                <h1><b>Javascript Disabled</b></h1>
+                                <h3><b>You don't have javascript enabled. Please enable it and reload the page</b></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -483,28 +608,15 @@
                 </span>
             </p>
             <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
-            Created by: Eric Joseph P. Flores, Alonzo Locsin, RJ Panaguiton </p>
+            Created by: Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton </p>
             </div>
             <div class="col-xs-3" id="social" style="">
                     <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
                     <a href="http://bit.ly/CareersatPCPPI" class="fa fa-linkedin" style="margin-left: 2%;">
                     </a> 
-					<!-- This is for FB's Share
-					CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
-					EX. "http://your-domain/careers-proform/......"
-
-					EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
-					 -->
-					<span class="fb-share-button" 
-					    data-href="http://pcppijobs.tk/careers-proform/<?php echo e($vacancy->id); ?>"  
-					    data-layout="button"
-						data-size="large"
-						style="margin-bottom: 100px;" 
-					>
-			  		</span>
-			  		<!-- -->
             </div> 
         </div> 
     </footer>
+    </div>
 </body>
 </html>

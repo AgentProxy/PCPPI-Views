@@ -2,13 +2,13 @@
 
 
 @section('content')
-		@if(count($errors)>0)
-		<ul>
-			@foreach($errors->all() as $error)
-			<li class = "alert alert-danger">{{$error}}</li>
-			@endforeach
-		</ul>
-		@endif
+	@if(count($errors)>0)
+	<ul>
+		@foreach($errors->all() as $error)
+		<li class = "alert alert-danger">{{$error}}</li>
+		@endforeach
+	</ul>
+	@endif
 
 	<div class="container last" id="form">
 		<div class="row" id="btnpad">
@@ -314,27 +314,24 @@
 
 	<!-- HTML Templates --> 	
 	  	<!-- Start of Skills Template -->
-	  		<div id="skill-0" name="skills" style="display: none">
-				<input type="text" name="skills[]" value="" style="display: none">
-			    <span id="delete" style="font-size: 15px; color: red;" class="delete-skill glyphicon glyphicon-minus-sign"></span> 
-			    <span id="skill-label" style="padding-left: 0%;">Programming</span>
-			</div>
+  		<div id="skill-0" name="skills" style="display: none">
+			<input type="text" name="skills[]" value="" style="display: none">
+		    <span id="delete" style="font-size: 15px; color: red;" class="delete-skill glyphicon glyphicon-minus-sign"></span> 
+		    <span id="skill-label" style="padding-left: 0%;">Programming</span>
+		</div>
 		<!-- End of Skills Template -->
 	<!--  -->
 
-	<div class="fa-circle">
-		
+	<div class="fa-circle">	
 	</div>
-
+	<!-- This one is for the display of year in fields-->
 	<script type="text/javascript">
 		for (i = new Date().getFullYear(); i > 1900; i--){
 			$('.year').append($('<option />').val(i).html(i));
 		}  
 	</script>
-
 	<script>
 		var submitted = false;
-		//RETURN LATER IF AFTER DEBUGGING
 		$(window).on('load',function(){
 			document.getElementById('i-recaptcha').reset();
 		});
@@ -348,5 +345,5 @@
 	    	}
 		});	
 	</script>
-
+	
  @endsection

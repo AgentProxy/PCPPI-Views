@@ -1,48 +1,114 @@
-<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script> -->
+<!DOCTYPE html>
+<html lang="<?php echo e(config('app.locale')); ?>">
+<!--
+    The head part is present here because of FB's specific meta tags. We cannot extend the head section used in all websites in this specific
+    blade/view because of that reason. 
 
-<!-- <head>
-  <title>Your Website Title</title> -->
+-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This Careers Website is for PCPPI Vacancies only">
+    <meta name="keywords" content="Pepsi Philippines, PCPPI Careers, Careers, Pepsi-Cola Philippines Inc.">
+    <meta name="author" content="Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ A. Panaguiton">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+    <title>PCPPI Careers</title>
+    <link rel="icon" type="image/ico" href="/img/pcppi3.ico" />
+
     <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <!-- <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Your Website Title" />
-  <meta property="og:description"   content="Your description" />
-  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+	<meta property="og:url"           content="http://pcppijobs.tk/careers-internform" />
+  	<meta property="og:type"          content="website" />
+  	<meta property="og:title"         content="Pepsi-Cola Products Philippines Inc. Internship" />
+  	<meta property="og:description"   content="Pepsi-Cola Products Philippines Inc. accepts and trains interns! Apply now and start your Pepsified journey with us!" />
+    <meta property="og:image"         content="/img/Pepsi-logo.png" />
+
+    <!-- Styles -->
+    <?php echo $__env->yieldContent('head'); ?>
+    <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/social.css">
+    <link rel="stylesheet" type="text/css" href="/css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="/css/w3schools.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/css/scrolling-nav.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>;
+    </script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scrolling-nav.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
+    <script src="/js/validation/validator.js"></script>
+    <script src="/js/validation/proform.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-<body> -->
+<body id="page-top">
+	<div id="wrapper">
+    <div id="app" class="last">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target =".navbar-collapse" style="text-align: center;">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>     
+                    </button>
+                    <a class="navbar-brand" href="/careers-home">
+                    <div class="logo-bar">                        
+                        <img class="logo responsive" id="logo" src="/img/small-logo.png" />
+                        <span id="pcppi"> Pepsi-Cola Products Philippines, Inc. - Careers </span>
+                    </div>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul id="items" class="nav navbar-nav">
+                        <li class="active"><a href="/careers-home">Home</a></li>
+                        <li class="dropdown clearfix">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Main Website <span class="caret"></span></a>
+                            <ul id="dropdown-menu" class="dropdown-menu">
+                                 <li><a href="https://www.pepsiphilippines.com/index.php" target="_blank">Main Website Home</a></li>
+                                <li><a href="https://www.pepsiphilippines.com/company.php" target="_blank">Our Company</a></li>
+                                <li><a href="https://www.pepsiphilippines.com/products.php" target="_blank">Products</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown clearfix">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Careers <span class="caret"></span></a>
+                            <ul id="dropdown-menu" class="dropdown-menu">
+                                <li><a href="/careers-internform">Internships</a></li>
+                                <li><a href="/careers-map">Professionals</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
-  <!-- Load Facebook SDK for JavaScript -->
-  <!-- <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script> -->
+            </div>       
+        </nav>
+        <div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 
-  <!-- Your share button code -->
-<!--   <div class="fb-share-button" 
-    data-href="http://www.your-domain.com/your-page.html" 
-    data-layout="button_count">
-  </div> -->
-
-<?php $__env->startSection('content'); ?>
-<?php if(count($errors)>0): ?>
-<ul>
-	<?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-	<li class = "alert alert-danger"><?php echo e($error); ?></li>
-	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-</ul>
-<?php endif; ?>
+	<?php if(count($errors)>0): ?>
+		<ul>
+			<?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+			<li class = "alert alert-danger"><?php echo e($error); ?></li>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+		</ul>
+	<?php endif; ?>
 
 <div class="container">
 	<div class="row" id="btnpad">
@@ -50,36 +116,32 @@
 			<a href="careers-home" class="btn btn-back btn-lg" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Careers Home</a>
 		</div>
 	</div>
-	<div class="row">
-		<h4> The PCPPI Internship program readies the youth for the future </h4>
+	<div class="container well">
+		<div class="row">
+			<p>Our Program is designed to give graduating students a diverse and rewarding experience throughout their on the job training.</p>
+			<p>PCPPI Internship Program provides hands-on learning opportunities in the field of Operations, Supply Chain, Human Resources, Sales, Finance, and Information Technology Departments, allowing them to grow and broaden their horizon in their chosen careers.</p>
+		</div>
+		<div class="row">
+			<div class="container">
+				<!-- This is for FB's Share
+				CHANGE THE DOMAIN NAME ONLY TO THE DOMAIN NAME USED CURRENTLY NOT THE WHOLE LINK.
+				EX. "http://your-domain/careers-proform/......"
+
+				EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
+				 -->
+				<div class="fb-share-button pull-right"
+				    data-href="http://pcppijobs.tk/careers-internform"  
+				    data-layout="button"
+					data-size="large"
+				>
+		  		</div>
+		  		<!-- -->
+	  		</div>
+		</div> 	
 	</div>
+
+<div class="container well">
 	<div class="row">
-		<!-- This is for FB's Share -->
-		<!-- 
-		<div class="fb-share-button" data-href="careers-internform" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> 
-		-->
-		<iframe class="center-block" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=large&mobile_iframe=true&width=106&height=28&appId" width="106" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-	</div> 
-	<div class="row">
-		<div>
-			<h2 id="title">Hiring Process</h2>
-		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 1</h2><br>
-	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
-		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 2</h2><br>
-	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
-		</div>
-		<div class="col-md-4">
-	    	<h2 id="title">Step 3</h2><br>
-	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
-		</div>
-	</div>
-	
-	<div class="row">
-		<br>
 		<h2  id="titlepad">APPLICATION</h2>
 	</div>
 	<div id="forms-section" class="row">
@@ -238,11 +300,30 @@
 				<div class="help-block with-errors"></div>
 			</div>
 		</div>
-		<br/>
 		<br/> 
 		<div class="g-recaptcha col-md-offset-2" data-sitekey="<?php echo e(env('GOOGLE_RECAPTCHA_KEY')); ?>"></div>
 		<button type="submit" id="Submit" class="btn btn-primary btn-lg center-block" style="margin-top: 5%; margin-bottom: 5%;">Submit Application</button>
 	</form>
+</div>
+<div class="container well">
+	<div class="row">
+		<div>
+			<h2 id="title">Hiring Process</h2>
+		</div>
+		<div class="col-md-4">
+	    	<h2 id="title">Step 1</h2><br>
+	    	<p id="title">Once your application is received, a recruiter will reach out, pending your qualifications.</p>
+		</div>
+		<div class="col-md-4">
+	    	<h2 id="title">Step 2</h2><br>
+	    	<p id="title">Series of interviews and qualifying exams will be given as we proceed with your application.</p>
+		</div>
+		<div class="col-md-4">
+	    	<h2 id="title">Step 3</h2><br>
+	    	<p id="title">Recruiter will send a notification on your application status via email.</p>
+		</div>
+	</div>
+</div>
 </div>
 <script type="text/javascript">
 	for (i = new Date().getFullYear(); i > 1900; i--){
@@ -266,5 +347,161 @@
 	});	
 </script>
 
-<?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</div>
+    <noscript>
+        <div class="noscriptmsg">
+                <style>
+                    #app {
+                        display:none;
+                    }
+
+                    h1, h3{
+                        text-align: center;
+                        font-family: 'Play', sans-serif;
+                    }
+
+                    h1 {
+                        margin-top: 15%;
+                        font-size: 66px;
+                    }
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    #jsimg{
+                        width: 85%;
+                        padding-bottom: 75px;
+                        padding-top: 75px;
+                    }
+
+                    .container.well {
+                        margin-top: 6%;
+                        background: #f6f6f6;
+                        border: 2px solid rgba(0,0,0,0.5);
+                        border-radius: 20px;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 10%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 480px) and (max-width: 767px) {
+                        h1 {
+                            margin-top: 5px;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 45%;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 4%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (min-width: 321px) and (max-width: 479px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 95%;
+                            padding-bottom: 30px;
+                            padding-top: 20px;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top: 18%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    @media (max-width: 320px) {
+                        h1 {
+                            margin-top: 15%;
+                            font-size: 40px;
+                        }
+                        h3 {
+                            font-size: 12px;
+                        }
+
+                        #jsimg{
+                            width: 55%;
+                            padding-bottom: 22px;
+                            padding-top: 16px;
+                        }
+
+                        .container.well {
+                            width: 95vw;
+                            margin-top:10%;
+                        }
+                    }
+                </style>
+                <div class="container" id="nojs">
+                    <div class="row">
+                        <div class="container well">
+                            <div class="col-md-4 sidep slide">
+                                <img id="jsimg" class="center-block" src="img/pepsi.png" alt="pic">
+                            </div>
+                            <div class="col-md-8">
+                                <h1><b>Javascript Disabled</b></h1>
+                                <h3><b>You don't have javascript enabled. Please enable it and reload the page</b></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </noscript>
+
+    <footer class="container text-center bg-white" style="margin: 0; width: 100%;">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3"> 
+            <p>      
+                <span>
+                    <img class="logo-footer" id="logo-footer" src="/img/Pepsi-logo.png" />
+                </span>
+            </p>
+            <p class="footerp"> Contact us at careers@pcppi.com.ph | Copyright © 2017. Pepsi-Cola Products Philippines, Inc. | All Rights Reserved. </br>
+            Created by: Eric Joseph P. Flores, Alonzo Francisco Locsin, RJ Panaguiton </p>
+            </div>
+            <div class="col-xs-3" id="social" style="">
+                    <a href="https://www.facebook.com/PepsiPhilippines" class="fa fa-facebook"></a> 
+                    <a href="http://bit.ly/CareersatPCPPI" class="fa fa-linkedin" style="margin-left: 2%;">
+                    </a> 
+            </div> 
+        </div> 
+    </footer>
+    </div>
+</body>
+</html>

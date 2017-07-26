@@ -1,9 +1,9 @@
 <?php $__env->startSection('content'); ?>
-<div class="container">
+<div class="container bg-grey">
 	<div class="row" id="padtop">
 		 <img class="center-block" src="/img/check.png" width="10%">
 	</div>
-	<div class="row">
+	<div class="row" style="width: 100%; min-height: 35vh;">
 		<h1 id="title">APPLICATION SENT</h1>
 		<h4 id="title">Thank you for applying! We will respond to you as soon as possible.</h4>
 		<h4 id="title">Goodluck!</h4><br><br>

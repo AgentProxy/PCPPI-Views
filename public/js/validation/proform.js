@@ -12,7 +12,6 @@ function check(e){
     Disables Submit button after clicking if all is true to prevent multiple clicks on 
     the Submit button.
   */
-  console.log("helo");
   $(window).off('beforeunload');        //stops the leave page popup box from appearing
   if(grecaptcha.getResponse().length === 0){
     e.preventDefault();
@@ -27,11 +26,11 @@ function check(e){
     } 
   }
   
-$('#Submit').click(function(){
-    $("#Submit").prop('disabled','true');
-    $("#i-recaptcha").submit();
-    return true;
-})
+// $('#i-recaptcha').submit(function(){
+//     $("#Submit").prop('disabled','true');
+//     $("#i-recaptcha").submit();
+//     return true;
+// })
 
 }
 

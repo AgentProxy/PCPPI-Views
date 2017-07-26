@@ -128,16 +128,16 @@
 			EX. "http://your-domain/careers-proform/......"
 
 			EDIT THE META PROPERTIES ABOVE TO CONFIGURE THE LINK PREVIEW WHICH WOULD BE SHARED ON FACEBOK.
-			-->
+			 -->
 			<div class="fb-share-button pull-right"
 			    data-href="http://pcppijobs.tk/careers-internform"  
 			    data-layout="button"
 				data-size="large"
 			>
-		  	</div>
-		  	<!-- -->
-		</div> 	
-	</div>
+	  		</div>
+	  		<!-- -->
+	  	</div>
+	</div> 	
 
 <div class="container well">
 	<div class="row">
